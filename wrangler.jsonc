@@ -1,0 +1,23 @@
+// Portfolio des templates web de Ruben (Goût IA, cycle 1).
+// dev  : dev.gout.yedirhub.com, noindex (Ruben 08/10/2026 07:44).
+// prod : gout.yedirhub.com, accord écrit de Ruben le 08/10/2026 10:50 (« tu peux mettre en prod »).
+// public-dev/ et public-prod/ sont générés par outils/construire-site.py dev|prod.
+{
+  "name": "gout",
+  "compatibility_date": "2026-09-26",
+  "workers_dev": false,
+  "env": {
+    "dev": {
+      "name": "gout-dev",
+      "workers_dev": false,
+      "assets": { "directory": "./public-dev" },
+      "routes": [{ "pattern": "dev.gout.yedirhub.com", "custom_domain": true }]
+    },
+    "prod": {
+      "name": "gout",
+      "workers_dev": false,
+      "assets": { "directory": "./public-prod" },
+      "routes": [{ "pattern": "gout.yedirhub.com", "custom_domain": true }]
+    }
+  }
+}

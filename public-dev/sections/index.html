@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<meta name="description" content="La banque de sections de Yedidia Ruben - Digital Strategist : 62 sections de pages de vente rangées par rôle, du hero au pied.">
+<title>Banque de sections · Yedidia Ruben - Digital Strategist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&family=Newsreader:ital,opsz,wght@1,6..72,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../commun/anim.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:#0E0E0D;color:#E9E5DE;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.haut{padding:110px 0 40px}
+.retour{display:inline-flex;gap:8px;font-size:14px;color:#A9A298;transition:color .3s}
+.retour:hover{color:#D9B48A}
+.sur{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#9C958B;margin-top:40px}
+h1{font-weight:300;font-size:clamp(40px,6.4vw,88px);line-height:.98;letter-spacing:-.04em;margin-top:20px}
+h1 em{font-family:'Newsreader',serif;font-style:italic;font-weight:300;color:#D9B48A}
+.haut p{max-width:560px;margin-top:26px;color:#A9A298;font-size:16px;line-height:1.6}
+
+.corps{display:grid;grid-template-columns:232px 1fr;gap:56px;align-items:start}
+.sommaire{position:sticky;top:28px;max-height:calc(100vh - 56px);overflow-y:auto;scrollbar-width:none;padding:8px 0 24px}
+.filtre{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:22px;margin-bottom:6px;border-bottom:1px solid #262624}
+.filtre button{font:inherit;font-size:12px;height:28px;padding:0 11px;border-radius:999px;border:1px solid #33302C;background:none;color:#B4ADA3;cursor:pointer;transition:all .25s}
+.filtre button:hover{border-color:#6B655D;color:#fff}
+.filtre button[aria-pressed=true]{background:#D9B48A;border-color:#D9B48A;color:#141312}
+.etape{margin-top:20px}
+.etape b{display:block;font-size:10.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#958E84;margin-bottom:6px}
+.etape a{display:flex;justify-content:space-between;align-items:center;padding:7px 0 7px 14px;border-left:1px solid #2C2A27;font-size:14px;color:#A9A298;transition:color .25s,border-color .25s}
+.etape a:hover{color:#fff}
+.etape a.actif{color:#fff;border-left-color:#D9B48A}
+.etape a span{font-size:11px;color:#8F887E;font-variant-numeric:tabular-nums}
+.etape a.vide{opacity:.35;pointer-events:none}
+.barre-tel{display:none}
+dialog.feuille{display:none}
+.type{padding:56px 0 0}
+.type:first-child{padding-top:8px}
+.type[hidden],.v[hidden]{display:none}
+.type .tete{display:flex;align-items:baseline;gap:16px;border-bottom:1px solid #262624;padding-bottom:18px}
+.type h2{font-weight:400;font-size:clamp(28px,3.4vw,44px);letter-spacing:-.03em}
+.type .n{font-size:13px;color:#8A847C}
+dl{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:24px}
+dt{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#D9B48A}
+dd{font-size:14px;line-height:1.55;color:#B4ADA3;margin-top:8px}
+.grille-v{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px}
+.v{background:#171716;border:1px solid #262624;border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:border-color .3s}
+.v:hover{border-color:#4A4640}
+.v .img{display:block;aspect-ratio:16/10;overflow:hidden;background:#000;border-bottom:1px solid #262624}
+.v img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:object-position 3s cubic-bezier(.16,1,.3,1)}
+.v:hover img{object-position:bottom}
+.v .txt{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9C958B}
+.v p{font-size:15px;line-height:1.5;color:#E2DCD3}
+.actions{margin-top:auto;padding-top:6px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.copier{font:inherit;font-size:12.5px;background:none;border:0;padding:4px 0;color:#9C958B;text-decoration:underline;text-underline-offset:3px;cursor:pointer;transition:color .25s}
+.copier:hover{color:#E9E5DE}
+.lien{font-size:14px;color:#D9B48A;display:inline-flex;gap:8px}
+.lien i{font-style:normal;transition:transform .3s}
+.lien:hover i{transform:translate(3px,-3px)}
+footer{border-top:1px solid #262624;margin-top:120px;padding:36px 0 44px}
+footer .wrap{display:flex;justify-content:space-between;align-items:end;gap:20px;font-size:13px;color:#8A847C;line-height:1.5}
+footer strong{display:block;color:#E9E5DE;font-weight:500;font-size:15px}
+@media (max-width:1180px){dl{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:1000px){
+.corps{display:block}.sommaire{display:none}
+.barre-tel{display:flex;position:sticky;top:0;z-index:6;background:#0E0E0D;border-block:1px solid #262624;height:56px;align-items:center;justify-content:space-between;padding:0 20px;margin-inline:-20px}
+.barre-tel .ou{font-size:14px;color:#E9E5DE;display:flex;gap:10px;align-items:baseline;min-width:0}
+.barre-tel .ou small{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#958E84}
+.barre-tel button{font:inherit;font-size:13px;height:36px;padding:0 14px;border-radius:999px;border:1px solid #3A3631;background:#171716;color:#E9E5DE;display:inline-flex;gap:8px;align-items:center;cursor:pointer}
+dialog.feuille[open]{display:block;position:fixed;inset:auto 0 0 0;width:100%;max-width:none;max-height:82vh;margin:0;border:0;border-radius:20px 20px 0 0;background:#141413;color:#E9E5DE;padding:10px 22px 28px;overflow-y:auto;animation:monte .35s cubic-bezier(.16,1,.3,1)}
+dialog.feuille::backdrop{background:rgba(0,0,0,.6)}
+dialog.feuille .poignee{width:40px;height:4px;border-radius:9px;background:#3A3631;margin:4px auto 14px}
+dialog.feuille .filtre{margin-top:4px}dialog.feuille .fermer{float:right;font:inherit;font-size:13px;background:none;border:0;color:#A9A298;padding:6px 0;cursor:pointer}
+@keyframes monte{from{transform:translateY(40px);opacity:0}}
+}
+@media (max-width:700px){.grille-v{grid-template-columns:1fr}dl{grid-template-columns:1fr;gap:16px}.haut{padding:72px 0 32px}.type{padding-top:64px}.v .img{aspect-ratio:3/4}footer .wrap{flex-direction:column;align-items:center;text-align:center}}
+</style>
+</head>
+<body>
+<div data-progression style="background:#D9B48A"></div>
+<header class="haut wrap">
+  <a class="retour" href="../">← Tous les templates</a>
+  <div class="sur" data-rv>Portfolio · Banque de sections</div>
+  <h1 data-lignes>62 sections,<br>rangées par <em>rôle</em></h1>
+  <p data-rv>Chaque section de mes 4 templates, classée selon ce qu'elle fait dans la vente : accrocher, prouver, rassurer, convertir. Pour chaque rôle : la structure de base, la règle qui fait la différence, et les variantes à reprendre.</p>
+</header>
+<div class="wrap corps">
+<nav class="sommaire" aria-label="Sommaire des sections"><div class="filtre" role="group" aria-label="Filtrer par template"><button type="button" data-style="" aria-pressed="true">Tous</button><button type="button" data-style="A" aria-pressed="false" title="Luxe sombre">A</button><button type="button" data-style="B" aria-pressed="false" title="Éditorial chaud">B</button><button type="button" data-style="C" aria-pressed="false" title="Magazine affirmé">C</button><button type="button" data-style="D" aria-pressed="false" title="Médical premium">D</button></div><div class="etape"><b>Accrocher</b><a href="#hero" data-type="hero">Le hero<span>4</span></a><a href="#preuve" data-type="preuve">La preuve<span>6</span></a></div><div class="etape"><b>Toucher</b><a href="#douleur" data-type="douleur">La douleur<span>3</span></a><a href="#differenciation" data-type="differenciation">La bascule<span>3</span></a></div><div class="etape"><b>Montrer</b><a href="#contenu" data-type="contenu">Le contenu<span>11</span></a><a href="#qui" data-type="qui">Qui est derrière<span>4</span></a><a href="#valeur" data-type="valeur">La valeur<span>3</span></a></div><div class="etape"><b>Convertir</b><a href="#offre" data-type="offre">L'offre<span>6</span></a><a href="#bonus" data-type="bonus">Les bonus<span>8</span></a><a href="#garantie" data-type="garantie">La garantie<span>2</span></a><a href="#pour-qui" data-type="pour-qui">Pour qui<span>1</span></a><a href="#relance" data-type="relance">La relance<span>2</span></a></div><div class="etape"><b>Rassurer et finir</b><a href="#faq" data-type="faq">La FAQ<span>4</span></a><a href="#bandeau" data-type="bandeau">Le bandeau<span>1</span></a><a href="#pied" data-type="pied">Le pied<span>4</span></a></div></nav>
+<main>
+<div class="barre-tel"><span class="ou"><small>Section</small><span id="ou">Le hero</span></span><button type="button" id="ouvrir">Sommaire <span aria-hidden="true">☰</span></button></div>
+
+  <section class="type" id="hero">
+    <div class="tete" data-rv><h2>Le hero</h2><span class="n">4 variantes</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Dire qui, quoi, pour qui en une phrase, puis faire cliquer.</dd></div><div><dt>Où</dt><dd>Toujours, en premier.</dd></div><div><dt>Structure</dt><dd>Sur-titre court, titre en 2 à 3 lignes, 2 à 3 lignes de promesse, bouton, preuve sous le bouton. Un portrait ou l&#x27;objet de l&#x27;autre côté.</dd></div><div><dt>La règle</dt><dd>Une seule promesse. Le bouton et sa preuve tiennent dans le premier écran du téléphone.</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="D">
+        <a class="img" href="captures/bureau/D-01-hero.webp" aria-label="Capture entière : Le hero, template Médical premium">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/D-01-hero.webp"><img src="captures/bureau/D-01-hero.webp" alt="Section le hero du template Médical premium" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">D · Médical premium</span>
+          <p>pastilles de verre sur le portrait, filigrane en parallaxe</p>
+          <div class="actions"><a class="lien" href="../styles/D/#hero">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/D-01-hero.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-01-hero.webp" aria-label="Capture entière : Le hero, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-01-hero.webp"><img src="captures/bureau/A-01-hero.webp" alt="Section le hero du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>portrait qui déborde d&#x27;une mosaïque sépia</p>
+          <div class="actions"><a class="lien" href="../styles/A/#hero">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-01-hero.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="B">
+        <a class="img" href="captures/bureau/B-01-hero.webp" aria-label="Capture entière : Le hero, template Éditorial chaud">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/B-01-hero.webp"><img src="captures/bureau/B-01-hero.webp" alt="Section le hero du template Éditorial chaud" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">B · Éditorial chaud</span>
+          <p>visage seul dans la lumière, sceau à l&#x27;épaule</p>
+          <div class="actions"><a class="lien" href="../styles/B/#hero">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/B-01-hero.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="C">
+        <a class="img" href="captures/bureau/C-01-hero.webp" aria-label="Capture entière : Le hero, template Magazine affirmé">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/C-01-hero.webp"><img src="captures/bureau/C-01-hero.webp" alt="Section le hero du template Magazine affirmé" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">C · Magazine affirmé</span>
+          <p>interface de story Instagram posée sur le portrait</p>
+          <div class="actions"><a class="lien" href="../styles/C/#hero">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/C-01-hero.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="preuve">
+    <div class="tete" data-rv><h2>La preuve</h2><span class="n">6 variantes</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Faire parler les autres : « ça a marché pour des gens comme moi ».</dd></div><div><dt>Où</dt><dd>Juste après la promesse, puis en rappel avant l&#x27;offre.</dd></div><div><dt>Structure</dt><dd>Un titre court ou aucun, puis des avis, des messages ou des vidéos, en grille ou en rangée qui déborde.</dd></div><div><dt>La règle</dt><dd>Des avis ou des messages au format réel (Google, WhatsApp) font plus vrai que des citations encadrées.</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="D">
+        <a class="img" href="captures/bureau/D-07-avis.webp" aria-label="Capture entière : La preuve, template Médical premium">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/D-07-avis.webp"><img src="captures/bureau/D-07-avis.webp" alt="Section la preuve du template Médical premium" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">D · Médical premium</span>
+          <p>avis au format Google, sans cadre</p>
+          <div class="actions"><a class="lien" href="../styles/D/#avis">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/D-07-avis.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-02-messages.webp" aria-label="Capture entière : La preuve, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-02-messages.webp"><img src="captures/bureau/A-02-messages.webp" alt="Section la preuve du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>aucun titre, la dernière carte coupée par le bord</p>
+          <div class="actions"><a class="lien" href="../styles/A/#messages">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-02-messages.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-09-temoignages.webp" aria-label="Capture entière : La preuve, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-09-temoignages.webp"><img src="captures/bureau/A-09-temoignages.webp" alt="Section la preuve du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>vidéos, celle du milieu floutée sous un bouton lecture</p>
+          <div class="actions"><a class="lien" href="../styles/A/#temoignages">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-09-temoignages.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-22-temoignages-2.webp" aria-label="Capture entière : La preuve, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-22-temoignages-2.webp"><img src="captures/bureau/A-22-temoignages-2.webp" alt="Section la preuve du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>rappel des preuves avant l&#x27;offre finale</p>
+          <div class="actions"><a class="lien" href="../styles/A/#temoignages-2">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-22-temoignages-2.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="B">
+        <a class="img" href="captures/bureau/B-06-avis.webp" aria-label="Capture entière : La preuve, template Éditorial chaud">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/B-06-avis.webp"><img src="captures/bureau/B-06-avis.webp" alt="Section la preuve du template Éditorial chaud" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">B · Éditorial chaud</span>
+          <p>cartes qui débordent à droite</p>
+          <div class="actions"><a class="lien" href="../styles/B/#avis">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/B-06-avis.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="C">
+        <a class="img" href="captures/bureau/C-09-avis.webp" aria-label="Capture entière : La preuve, template Magazine affirmé">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/C-09-avis.webp"><img src="captures/bureau/C-09-avis.webp" alt="Section la preuve du template Magazine affirmé" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">C · Magazine affirmé</span>
+          <p>des messages plutôt que des citations</p>
+          <div class="actions"><a class="lien" href="../styles/C/#avis">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/C-09-avis.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="douleur">
+    <div class="tete" data-rv><h2>La douleur</h2><span class="n">3 variantes</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Le visiteur se reconnaît : « c&#x27;est moi ».</dd></div><div><dt>Où</dt><dd>Après le hero, avant la solution.</dd></div><div><dt>Structure</dt><dd>Un titre qui nomme la situation, 3 à 5 phrases de vie quotidienne avec les mots clés en gras, une image du problème.</dd></div><div><dt>La règle</dt><dd>Parler de sa vie, pas du produit. Finir sur une bascule : « mais ça ne devrait pas ».</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="D">
+        <a class="img" href="captures/bureau/D-02-douleur.webp" aria-label="Capture entière : La douleur, template Médical premium">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/D-02-douleur.webp"><img src="captures/bureau/D-02-douleur.webp" alt="Section la douleur du template Médical premium" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">D · Médical premium</span>
+          <p>le titre bascule en gras sur « mais ça ne devrait pas »</p>
+          <div class="actions"><a class="lien" href="../styles/D/#douleur">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/D-02-douleur.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="C">
+        <a class="img" href="captures/bureau/C-02-verite.webp" aria-label="Capture entière : La douleur, template Magazine affirmé">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/C-02-verite.webp"><img src="captures/bureau/C-02-verite.webp" alt="Section la douleur du template Magazine affirmé" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">C · Magazine affirmé</span>
+          <p>citation soulignée d&#x27;un trait rouge</p>
+          <div class="actions"><a class="lien" href="../styles/C/#verite">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/C-02-verite.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="C">
+        <a class="img" href="captures/bureau/C-03-douleurs.webp" aria-label="Capture entière : La douleur, template Magazine affirmé">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/C-03-douleurs.webp"><img src="captures/bureau/C-03-douleurs.webp" alt="Section la douleur du template Magazine affirmé" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">C · Magazine affirmé</span>
+          <p>photos en noir et blanc, étiquettes rouges</p>
+          <div class="actions"><a class="lien" href="../styles/C/#douleurs">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/C-03-douleurs.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="differenciation">
+    <div class="tete" data-rv><h2>La bascule</h2><span class="n">3 variantes</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Montrer pourquoi cette solution est différente.</dd></div><div><dt>Où</dt><dd>Entre la douleur et le contenu.</dd></div><div><dt>Structure</dt><dd>Un titre « ce qui change tout », 3 raisons ou 3 cartes, une phrase qui résume.</dd></div><div><dt>La règle</dt><dd>Une seule section sombre ou contrastée par page : elle casse le rythme et attire l&#x27;œil.</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="D">
+        <a class="img" href="captures/bureau/D-05-difference.webp" aria-label="Capture entière : La bascule, template Médical premium">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/D-05-difference.webp"><img src="captures/bureau/D-05-difference.webp" alt="Section la bascule du template Médical premium" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">D · Médical premium</span>
+          <p>la seule section sombre, cartes de verre</p>
+          <div class="actions"><a class="lien" href="../styles/D/#difference">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/D-05-difference.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="B">
+        <a class="img" href="captures/bureau/B-03-raisons.webp" aria-label="Capture entière : La bascule, template Éditorial chaud">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/B-03-raisons.webp"><img src="captures/bureau/B-03-raisons.webp" alt="Section la bascule du template Éditorial chaud" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">B · Éditorial chaud</span>
+          <p>« Raison 01 » en pilule lumineuse</p>
+          <div class="actions"><a class="lien" href="../styles/B/#raisons">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/B-03-raisons.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="C">
+        <a class="img" href="captures/bureau/C-04-bascule.webp" aria-label="Capture entière : La bascule, template Magazine affirmé">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/C-04-bascule.webp"><img src="captures/bureau/C-04-bascule.webp" alt="Section la bascule du template Magazine affirmé" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">C · Magazine affirmé</span>
+          <p>phrase répétée qui sort du cadre</p>
+          <div class="actions"><a class="lien" href="../styles/C/#bascule">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/C-04-bascule.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="contenu">
+    <div class="tete" data-rv><h2>Le contenu</h2><span class="n">11 variantes</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Rendre l&#x27;offre concrète, morceau par morceau.</dd></div><div><dt>Où</dt><dd>Après la bascule. Peut s&#x27;étaler sur plusieurs sections (piliers).</dd></div><div><dt>Structure</dt><dd>Un titre, puis une grille de cartes, une liste numérotée, un carrousel, ou un pilier par section.</dd></div><div><dt>La règle</dt><dd>Un titre court par carte, jamais un paragraphe. Une rangée qui déborde dit « il y en a plus ».</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="D">
+        <a class="img" href="captures/bureau/D-03-specialites.webp" aria-label="Capture entière : Le contenu, template Médical premium">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/D-03-specialites.webp"><img src="captures/bureau/D-03-specialites.webp" alt="Section le contenu du template Médical premium" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">D · Médical premium</span>
+          <p>grille 3 × 2 bordée, sans ombre</p>
+          <div class="actions"><a class="lien" href="../styles/D/#specialites">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/D-03-specialites.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="D">
+        <a class="img" href="captures/bureau/D-06-actes.webp" aria-label="Capture entière : Le contenu, template Médical premium">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/D-06-actes.webp"><img src="captures/bureau/D-06-actes.webp" alt="Section le contenu du template Médical premium" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">D · Médical premium</span>
+          <p>liste éditoriale numérotée « 01 »</p>
+          <div class="actions"><a class="lien" href="../styles/D/#actes">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/D-06-actes.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-03-piliers.webp" aria-label="Capture entière : Le contenu, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-03-piliers.webp"><img src="captures/bureau/A-03-piliers.webp" alt="Section le contenu du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>étiquette à cheval sur le filet</p>
+          <div class="actions"><a class="lien" href="../styles/A/#piliers">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-03-piliers.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-04-pilier-1.webp" aria-label="Capture entière : Le contenu, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-04-pilier-1.webp"><img src="captures/bureau/A-04-pilier-1.webp" alt="Section le contenu du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>pastilles qui débordent de l&#x27;écran</p>
+          <div class="actions"><a class="lien" href="../styles/A/#pilier-1">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-04-pilier-1.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-05-pilier-2.webp" aria-label="Capture entière : Le contenu, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-05-pilier-2.webp"><img src="captures/bureau/A-05-pilier-2.webp" alt="Section le contenu du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>grille de tableur, une étape par case</p>
+          <div class="actions"><a class="lien" href="../styles/A/#pilier-2">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-05-pilier-2.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-06-pilier-3.webp" aria-label="Capture entière : Le contenu, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-06-pilier-3.webp"><img src="captures/bureau/A-06-pilier-3.webp" alt="Section le contenu du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>bulles qui débordent du téléphone</p>
+          <div class="actions"><a class="lien" href="../styles/A/#pilier-3">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-06-pilier-3.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-07-pilier-4.webp" aria-label="Capture entière : Le contenu, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-07-pilier-4.webp"><img src="captures/bureau/A-07-pilier-4.webp" alt="Section le contenu du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>le seul vert reste dans la capture</p>
+          <div class="actions"><a class="lien" href="../styles/A/#pilier-4">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-07-pilier-4.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="B">
+        <a class="img" href="captures/bureau/B-02-ebook.webp" aria-label="Capture entière : Le contenu, template Éditorial chaud">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/B-02-ebook.webp"><img src="captures/bureau/B-02-ebook.webp" alt="Section le contenu du template Éditorial chaud" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">B · Éditorial chaud</span>
+          <p>mockup qui déborde, arabesque derrière</p>
+          <div class="actions"><a class="lien" href="../styles/B/#ebook">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/B-02-ebook.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="B">
+        <a class="img" href="captures/bureau/B-04-contenus.webp" aria-label="Capture entière : Le contenu, template Éditorial chaud">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/B-04-contenus.webp"><img src="captures/bureau/B-04-contenus.webp" alt="Section le contenu du template Éditorial chaud" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">B · Éditorial chaud</span>
+          <p>carrousel qui déborde</p>
+          <div class="actions"><a class="lien" href="../styles/B/#contenus">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/B-04-contenus.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="C">
+        <a class="img" href="captures/bureau/C-05-geant.webp" aria-label="Capture entière : Le contenu, template Magazine affirmé">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/C-05-geant.webp"><img src="captures/bureau/C-05-geant.webp" alt="Section le contenu du template Magazine affirmé" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">C · Magazine affirmé</span>
+          <p>la photo passe devant le mot géant</p>
+          <div class="actions"><a class="lien" href="../styles/C/#geant">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/C-05-geant.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="C">
+        <a class="img" href="captures/bureau/C-06-programme.webp" aria-label="Capture entière : Le contenu, template Magazine affirmé">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/C-06-programme.webp"><img src="captures/bureau/C-06-programme.webp" alt="Section le contenu du template Magazine affirmé" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">C · Magazine affirmé</span>
+          <p>carte posée sur la couture de deux fonds</p>
+          <div class="actions"><a class="lien" href="../styles/C/#programme">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/C-06-programme.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="qui">
+    <div class="tete" data-rv><h2>Qui est derrière</h2><span class="n">4 variantes</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Un humain derrière l&#x27;offre, et un lieu réel.</dd></div><div><dt>Où</dt><dd>Avant l&#x27;offre ou juste après.</dd></div><div><dt>Structure</dt><dd>Un portrait d&#x27;un côté ; de l&#x27;autre, 2 paragraphes en « je » et 2 à 5 preuves de parcours (diplômes, années, chiffres).</dd></div><div><dt>La règle</dt><dd>Un objet du métier ou un cadre de story rend la personne proche. Les chiffres comptent jusqu&#x27;à leur valeur.</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="D">
+        <a class="img" href="captures/bureau/D-04-apropos.webp" aria-label="Capture entière : Qui est derrière, template Médical premium">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/D-04-apropos.webp"><img src="captures/bureau/D-04-apropos.webp" alt="Section qui est derrière du template Médical premium" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">D · Médical premium</span>
+          <p>sceau posé sur la photo</p>
+          <div class="actions"><a class="lien" href="../styles/D/#apropos">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/D-04-apropos.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="D">
+        <a class="img" href="captures/bureau/D-08-cabinet.webp" aria-label="Capture entière : Qui est derrière, template Médical premium">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/D-08-cabinet.webp"><img src="captures/bureau/D-08-cabinet.webp" alt="Section qui est derrière du template Médical premium" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">D · Médical premium</span>
+          <p>photo et carte en quinconce</p>
+          <div class="actions"><a class="lien" href="../styles/D/#cabinet">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/D-08-cabinet.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="B">
+        <a class="img" href="captures/bureau/B-11-qui.webp" aria-label="Capture entière : Qui est derrière, template Éditorial chaud">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/B-11-qui.webp"><img src="captures/bureau/B-11-qui.webp" alt="Section qui est derrière du template Éditorial chaud" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">B · Éditorial chaud</span>
+          <p>cadre de story</p>
+          <div class="actions"><a class="lien" href="../styles/B/#qui">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/B-11-qui.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="C">
+        <a class="img" href="captures/bureau/C-10-nous.webp" aria-label="Capture entière : Qui est derrière, template Magazine affirmé">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/C-10-nous.webp"><img src="captures/bureau/C-10-nous.webp" alt="Section qui est derrière du template Magazine affirmé" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">C · Magazine affirmé</span>
+          <p>mot coupé par la photo</p>
+          <div class="actions"><a class="lien" href="../styles/C/#nous">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/C-10-nous.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="valeur">
+    <div class="tete" data-rv><h2>La valeur</h2><span class="n">3 variantes</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Faire sentir le prix avant de le montrer.</dd></div><div><dt>Où</dt><dd>Juste avant l&#x27;offre.</dd></div><div><dt>Structure</dt><dd>Un récit du chemin parcouru, une pile de prix barrés, puis le vrai prix.</dd></div><div><dt>La règle</dt><dd>Les prix d&#x27;ancrage se barrent un par un. Le vrai prix arrive en dernier, plus grand.</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-10-recit.webp" aria-label="Capture entière : La valeur, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-10-recit.webp"><img src="captures/bureau/A-10-recit.webp" alt="Section la valeur du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>barre cuivre qui coud vers la section suivante</p>
+          <div class="actions"><a class="lien" href="../styles/A/#recit">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-10-recit.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-11-ancrage.webp" aria-label="Capture entière : La valeur, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-11-ancrage.webp"><img src="captures/bureau/A-11-ancrage.webp" alt="Section la valeur du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>4 prix barrés l&#x27;un après l&#x27;autre</p>
+          <div class="actions"><a class="lien" href="../styles/A/#ancrage">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-11-ancrage.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="B">
+        <a class="img" href="captures/bureau/B-07-valeur.webp" aria-label="Capture entière : La valeur, template Éditorial chaud">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/B-07-valeur.webp"><img src="captures/bureau/B-07-valeur.webp" alt="Section la valeur du template Éditorial chaud" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">B · Éditorial chaud</span>
+          <p>lettre géante coupée par le cadre</p>
+          <div class="actions"><a class="lien" href="../styles/B/#valeur">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/B-07-valeur.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="offre">
+    <div class="tete" data-rv><h2>L'offre</h2><span class="n">6 variantes</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Convertir : le prix, ce qu&#x27;il contient, le bouton.</dd></div><div><dt>Où</dt><dd>Après la valeur, et en rappel en fin de page.</dd></div><div><dt>Structure</dt><dd>Une carte ou deux côte à côte : la liste cochée du contenu, le prix en très grand, le bouton, les moyens de paiement.</dd></div><div><dt>La règle</dt><dd>Avec deux offres, la plus chère est la seule claire. L&#x27;urgence (places, date) passe derrière la carte, jamais devant.</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="D">
+        <a class="img" href="captures/bureau/D-09-rdv.webp" aria-label="Capture entière : L&#x27;offre, template Médical premium">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/D-09-rdv.webp"><img src="captures/bureau/D-09-rdv.webp" alt="Section l&#x27;offre du template Médical premium" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">D · Médical premium</span>
+          <p>formulaire en colonne pleine hauteur</p>
+          <div class="actions"><a class="lien" href="../styles/D/#rdv">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/D-09-rdv.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-12-offre.webp" aria-label="Capture entière : L&#x27;offre, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-12-offre.webp"><img src="captures/bureau/A-12-offre.webp" alt="Section l&#x27;offre du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>panneaux rayés en écrin</p>
+          <div class="actions"><a class="lien" href="../styles/A/#offre">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-12-offre.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-19-offre-2.webp" aria-label="Capture entière : L&#x27;offre, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-19-offre-2.webp"><img src="captures/bureau/A-19-offre-2.webp" alt="Section l&#x27;offre du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>rappel de la carte d&#x27;offre</p>
+          <div class="actions"><a class="lien" href="../styles/A/#offre-2">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-19-offre-2.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-23-recap.webp" aria-label="Capture entière : L&#x27;offre, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-23-recap.webp"><img src="captures/bureau/A-23-recap.webp" alt="Section l&#x27;offre du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>3 familles de pictos qui classent la valeur</p>
+          <div class="actions"><a class="lien" href="../styles/A/#recap">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-23-recap.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="B">
+        <a class="img" href="captures/bureau/B-09-offres.webp" aria-label="Capture entière : L&#x27;offre, template Éditorial chaud">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/B-09-offres.webp"><img src="captures/bureau/B-09-offres.webp" alt="Section l&#x27;offre du template Éditorial chaud" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">B · Éditorial chaud</span>
+          <p>l&#x27;offre chère seule claire sur fond sombre</p>
+          <div class="actions"><a class="lien" href="../styles/B/#offres">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/B-09-offres.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="C">
+        <a class="img" href="captures/bureau/C-08-offre.webp" aria-label="Capture entière : L&#x27;offre, template Magazine affirmé">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/C-08-offre.webp"><img src="captures/bureau/C-08-offre.webp" alt="Section l&#x27;offre du template Magazine affirmé" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">C · Magazine affirmé</span>
+          <p>bandes « plus que 18 places » derrière la carte</p>
+          <div class="actions"><a class="lien" href="../styles/C/#offre">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/C-08-offre.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="bonus">
+    <div class="tete" data-rv><h2>Les bonus</h2><span class="n">8 variantes</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Faire basculer l&#x27;indécis : « si j&#x27;entre maintenant, j&#x27;ai plus ».</dd></div><div><dt>Où</dt><dd>Juste après l&#x27;offre, ou entre l&#x27;offre et son rappel.</dd></div><div><dt>Structure</dt><dd>Un titre « qui entre maintenant reçoit plus », un compte à rebours si la date est réelle, puis un bonus par carte avec sa valeur.</dd></div><div><dt>La règle</dt><dd>Chaque bonus a une forme physique (ticket, livre, carte), pas une icône.</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-13-bonus.webp" aria-label="Capture entière : Les bonus, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-13-bonus.webp"><img src="captures/bureau/A-13-bonus.webp" alt="Section les bonus du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>compte à rebours sobre comme une horloge</p>
+          <div class="actions"><a class="lien" href="../styles/A/#bonus">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-13-bonus.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-14-bonus-1.webp" aria-label="Capture entière : Les bonus, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-14-bonus-1.webp"><img src="captures/bureau/A-14-bonus-1.webp" alt="Section les bonus du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>capture de visio</p>
+          <div class="actions"><a class="lien" href="../styles/A/#bonus-1">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-14-bonus-1.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-15-bonus-2.webp" aria-label="Capture entière : Les bonus, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-15-bonus-2.webp"><img src="captures/bureau/A-15-bonus-2.webp" alt="Section les bonus du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>carte mentale</p>
+          <div class="actions"><a class="lien" href="../styles/A/#bonus-2">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-15-bonus-2.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-16-bonus-3.webp" aria-label="Capture entière : Les bonus, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-16-bonus-3.webp"><img src="captures/bureau/A-16-bonus-3.webp" alt="Section les bonus du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>téléphone d&#x27;écoute</p>
+          <div class="actions"><a class="lien" href="../styles/A/#bonus-3">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-16-bonus-3.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-17-bonus-4.webp" aria-label="Capture entière : Les bonus, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-17-bonus-4.webp"><img src="captures/bureau/A-17-bonus-4.webp" alt="Section les bonus du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>ticket découpé</p>
+          <div class="actions"><a class="lien" href="../styles/A/#bonus-4">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-17-bonus-4.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-18-aussi.webp" aria-label="Capture entière : Les bonus, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-18-aussi.webp"><img src="captures/bureau/A-18-aussi.webp" alt="Section les bonus du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>image et texte en cases jointives</p>
+          <div class="actions"><a class="lien" href="../styles/A/#aussi">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-18-aussi.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="B">
+        <a class="img" href="captures/bureau/B-05-bonus.webp" aria-label="Capture entière : Les bonus, template Éditorial chaud">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/B-05-bonus.webp"><img src="captures/bureau/B-05-bonus.webp" alt="Section les bonus du template Éditorial chaud" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">B · Éditorial chaud</span>
+          <p>monogramme géant, éventail de téléphones</p>
+          <div class="actions"><a class="lien" href="../styles/B/#bonus">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/B-05-bonus.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="C">
+        <a class="img" href="captures/bureau/C-07-bonus.webp" aria-label="Capture entière : Les bonus, template Magazine affirmé">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/C-07-bonus.webp"><img src="captures/bureau/C-07-bonus.webp" alt="Section les bonus du template Magazine affirmé" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">C · Magazine affirmé</span>
+          <p>carrousel de couvertures</p>
+          <div class="actions"><a class="lien" href="../styles/C/#bonus">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/C-07-bonus.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="garantie">
+    <div class="tete" data-rv><h2>La garantie</h2><span class="n">2 variantes</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Retirer le risque : « si ça ne vous va pas, je vous rembourse ».</dd></div><div><dt>Où</dt><dd>Après l&#x27;offre.</dd></div><div><dt>Structure</dt><dd>Un objet (sceau, médaillon), un titre « le risque est pour moi », 3 lignes, un bouton.</dd></div><div><dt>La règle</dt><dd>Un objet réel plutôt qu&#x27;un bouclier. Une durée chiffrée.</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-21-garantie.webp" aria-label="Capture entière : La garantie, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-21-garantie.webp"><img src="captures/bureau/A-21-garantie.webp" alt="Section la garantie du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>médaillon cuivre, seul objet en relief</p>
+          <div class="actions"><a class="lien" href="../styles/A/#garantie">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-21-garantie.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="B">
+        <a class="img" href="captures/bureau/B-10-garantie.webp" aria-label="Capture entière : La garantie, template Éditorial chaud">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/B-10-garantie.webp"><img src="captures/bureau/B-10-garantie.webp" alt="Section la garantie du template Éditorial chaud" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">B · Éditorial chaud</span>
+          <p>sceau de cire qui tombe</p>
+          <div class="actions"><a class="lien" href="../styles/B/#garantie">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/B-10-garantie.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="pour-qui">
+    <div class="tete" data-rv><h2>Pour qui</h2><span class="n">1 variante</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Trier : celui qui n&#x27;est pas la cible s&#x27;en va, celui qui l&#x27;est se sent choisi.</dd></div><div><dt>Où</dt><dd>Avant ou après l&#x27;offre.</dd></div><div><dt>Structure</dt><dd>Deux colonnes : « ce n&#x27;est pas pour vous si… » et « c&#x27;est pour vous si… ».</dd></div><div><dt>La règle</dt><dd>L&#x27;asymétrie des fonds (sombre, clair) donne la réponse avant la lecture.</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-20-pour-qui.webp" aria-label="Capture entière : Pour qui, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-20-pour-qui.webp"><img src="captures/bureau/A-20-pour-qui.webp" alt="Section pour qui du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>asymétrie noir et beige</p>
+          <div class="actions"><a class="lien" href="../styles/A/#pour-qui">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-20-pour-qui.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="relance">
+    <div class="tete" data-rv><h2>La relance</h2><span class="n">2 variantes</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Redonner le bouton à celui qui s&#x27;est décidé en route.</dd></div><div><dt>Où</dt><dd>Entre deux blocs longs, et en dernier avant le pied.</dd></div><div><dt>Structure</dt><dd>Une phrase forte, une phrase d&#x27;urgence douce, le bouton.</dd></div><div><dt>La règle</dt><dd>Courte : la phrase et le bouton, rien d&#x27;autre.</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-08-relance.webp" aria-label="Capture entière : La relance, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-08-relance.webp"><img src="captures/bureau/A-08-relance.webp" alt="Section la relance du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>bouton lueur centré</p>
+          <div class="actions"><a class="lien" href="../styles/A/#relance">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-08-relance.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-25-final.webp" aria-label="Capture entière : La relance, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-25-final.webp"><img src="captures/bureau/A-25-final.webp" alt="Section la relance du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>lueur de braise derrière la dernière phrase</p>
+          <div class="actions"><a class="lien" href="../styles/A/#final">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-25-final.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="faq">
+    <div class="tete" data-rv><h2>La FAQ</h2><span class="n">4 variantes</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Lever les dernières objections.</dd></div><div><dt>Où</dt><dd>Avant le pied.</dd></div><div><dt>Structure</dt><dd>Un titre, 3 à 6 questions en accordéon ou visibles, un bouton ou un contact.</dd></div><div><dt>La règle</dt><dd>Les vraies objections (prix, temps, niveau). Une colonne étroite fait « lettre ».</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="D">
+        <a class="img" href="captures/bureau/D-10-faq.webp" aria-label="Capture entière : La FAQ, template Médical premium">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/D-10-faq.webp"><img src="captures/bureau/D-10-faq.webp" alt="Section la faq du template Médical premium" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">D · Médical premium</span>
+          <p>cartes à ombre longue, numéros « 01 | »</p>
+          <div class="actions"><a class="lien" href="../styles/D/#faq">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/D-10-faq.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-24-faq.webp" aria-label="Capture entière : La FAQ, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-24-faq.webp"><img src="captures/bureau/A-24-faq.webp" alt="Section la faq du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>réponses visibles sans clic</p>
+          <div class="actions"><a class="lien" href="../styles/A/#faq">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-24-faq.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="B">
+        <a class="img" href="captures/bureau/B-12-faq.webp" aria-label="Capture entière : La FAQ, template Éditorial chaud">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/B-12-faq.webp"><img src="captures/bureau/B-12-faq.webp" alt="Section la faq du template Éditorial chaud" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">B · Éditorial chaud</span>
+          <p>colonne étroite</p>
+          <div class="actions"><a class="lien" href="../styles/B/#faq">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/B-12-faq.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="C">
+        <a class="img" href="captures/bureau/C-11-faq.webp" aria-label="Capture entière : La FAQ, template Magazine affirmé">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/C-11-faq.webp"><img src="captures/bureau/C-11-faq.webp" alt="Section la faq du template Magazine affirmé" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">C · Magazine affirmé</span>
+          <p>accordéons sur fond rouge sang</p>
+          <div class="actions"><a class="lien" href="../styles/C/#faq">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/C-11-faq.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="bandeau">
+    <div class="tete" data-rv><h2>Le bandeau</h2><span class="n">1 variante</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>Remettre du mouvement entre deux sections calmes.</dd></div><div><dt>Où</dt><dd>Une fois, au milieu de la page.</dd></div><div><dt>Structure</dt><dd>Une ou deux bandes de texte qui défilent, parfois inclinées et croisées.</dd></div><div><dt>La règle</dt><dd>Deux bandes vont en sens contraire. Tout s&#x27;arrête sous « moins d&#x27;animations ».</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="B">
+        <a class="img" href="captures/bureau/B-08-bandeau.webp" aria-label="Capture entière : Le bandeau, template Éditorial chaud">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/B-08-bandeau.webp"><img src="captures/bureau/B-08-bandeau.webp" alt="Section le bandeau du template Éditorial chaud" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">B · Éditorial chaud</span>
+          <p>deux bandes croisées en sens contraire</p>
+          <div class="actions"><a class="lien" href="../styles/B/#bandeau">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/B-08-bandeau.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+  <section class="type" id="pied">
+    <div class="tete" data-rv><h2>Le pied</h2><span class="n">4 variantes</span></div>
+    <dl data-rv><div><dt>Rôle</dt><dd>La légitimité : nom, mentions, contact.</dd></div><div><dt>Où</dt><dd>En dernier.</dd></div><div><dt>Structure</dt><dd>Logo, mentions légales, numéro d&#x27;ordre si le métier est réglementé, liens.</dd></div><div><dt>La règle</dt><dd>Sobre. Un filet de la couleur de la marque peut le signer.</dd></div></dl>
+    <div class="grille-v">
+      <article class="v" data-rv data-style="D">
+        <a class="img" href="captures/bureau/D-11-pied.webp" aria-label="Capture entière : Le pied, template Médical premium">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/D-11-pied.webp"><img src="captures/bureau/D-11-pied.webp" alt="Section le pied du template Médical premium" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">D · Médical premium</span>
+          <p>Logo, mentions légales, numéro d&#x27;ordre si le métier est réglementé, liens.</p>
+          <div class="actions"><a class="lien" href="../styles/D/#pied">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/D-11-pied.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="A">
+        <a class="img" href="captures/bureau/A-26-pied.webp" aria-label="Capture entière : Le pied, template Luxe sombre">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/A-26-pied.webp"><img src="captures/bureau/A-26-pied.webp" alt="Section le pied du template Luxe sombre" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">A · Luxe sombre</span>
+          <p>Logo, mentions légales, numéro d&#x27;ordre si le métier est réglementé, liens.</p>
+          <div class="actions"><a class="lien" href="../styles/A/#pied">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/A-26-pied.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="B">
+        <a class="img" href="captures/bureau/B-13-pied.webp" aria-label="Capture entière : Le pied, template Éditorial chaud">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/B-13-pied.webp"><img src="captures/bureau/B-13-pied.webp" alt="Section le pied du template Éditorial chaud" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">B · Éditorial chaud</span>
+          <p>Logo, mentions légales, numéro d&#x27;ordre si le métier est réglementé, liens.</p>
+          <div class="actions"><a class="lien" href="../styles/B/#pied">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/B-13-pied.md">Copier le prompt</button></div></div>
+      </article>
+      <article class="v" data-rv data-style="C">
+        <a class="img" href="captures/bureau/C-12-pied.webp" aria-label="Capture entière : Le pied, template Magazine affirmé">
+          <picture><source media="(max-width:640px)" srcset="captures/telephone/C-12-pied.webp"><img src="captures/bureau/C-12-pied.webp" alt="Section le pied du template Magazine affirmé" loading="lazy"></picture>
+        </a>
+        <div class="txt"><span class="tag">C · Magazine affirmé</span>
+          <p>Logo, mentions légales, numéro d&#x27;ordre si le métier est réglementé, liens.</p>
+          <div class="actions"><a class="lien" href="../styles/C/#pied">Voir dans le template <i>↗</i></a>
+          <button type="button" class="copier" data-kit="kits/C-12-pied.md">Copier le prompt</button></div></div>
+      </article>
+    </div>
+  </section>
+</main>
+</div>
+<dialog class="feuille" id="feuille" aria-label="Sommaire"><div class="poignee"></div><button class="fermer" type="button" id="fermer">Fermer</button><div class="filtre" role="group" aria-label="Filtrer par template"><button type="button" data-style="" aria-pressed="true">Tous</button><button type="button" data-style="A" aria-pressed="false" title="Luxe sombre">A</button><button type="button" data-style="B" aria-pressed="false" title="Éditorial chaud">B</button><button type="button" data-style="C" aria-pressed="false" title="Magazine affirmé">C</button><button type="button" data-style="D" aria-pressed="false" title="Médical premium">D</button></div><div class="etape"><b>Accrocher</b><a href="#hero" data-type="hero">Le hero<span>4</span></a><a href="#preuve" data-type="preuve">La preuve<span>6</span></a></div><div class="etape"><b>Toucher</b><a href="#douleur" data-type="douleur">La douleur<span>3</span></a><a href="#differenciation" data-type="differenciation">La bascule<span>3</span></a></div><div class="etape"><b>Montrer</b><a href="#contenu" data-type="contenu">Le contenu<span>11</span></a><a href="#qui" data-type="qui">Qui est derrière<span>4</span></a><a href="#valeur" data-type="valeur">La valeur<span>3</span></a></div><div class="etape"><b>Convertir</b><a href="#offre" data-type="offre">L'offre<span>6</span></a><a href="#bonus" data-type="bonus">Les bonus<span>8</span></a><a href="#garantie" data-type="garantie">La garantie<span>2</span></a><a href="#pour-qui" data-type="pour-qui">Pour qui<span>1</span></a><a href="#relance" data-type="relance">La relance<span>2</span></a></div><div class="etape"><b>Rassurer et finir</b><a href="#faq" data-type="faq">La FAQ<span>4</span></a><a href="#bandeau" data-type="bandeau">Le bandeau<span>1</span></a><a href="#pied" data-type="pied">Le pied<span>4</span></a></div></dialog>
+<footer><div class="wrap"><a class="retour" href="../">← Tous les templates</a><span>Réalisé par<strong>Yedidia Ruben - Digital Strategist</strong></span></div></footer>
+<script src="../commun/anim.js" defer></script>
+<script>
+const liens=[...document.querySelectorAll('.etape a')],types=[...document.querySelectorAll('.type')],ou=document.getElementById('ou');
+const vu=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const k=e.target.id;
+ liens.forEach(a=>a.classList.toggle('actif',a.dataset.type===k));const t=e.target.querySelector('h2');if(t)ou.textContent=t.textContent}),{rootMargin:'-30% 0px -65% 0px'});
+types.forEach(s=>vu.observe(s));
+document.querySelectorAll('.filtre button').forEach(b=>b.addEventListener('click',()=>{const s=b.dataset.style;
+ document.querySelectorAll('.filtre button').forEach(x=>x.setAttribute('aria-pressed',String(x.dataset.style===s)));
+ types.forEach(t=>{let n=0;t.querySelectorAll('.v').forEach(v=>{const ok=!s||v.dataset.style===s;v.hidden=!ok;n+=ok});t.hidden=!n;
+  t.querySelector('.n').textContent=n+' variante'+(n>1?'s':'');
+  liens.filter(a=>a.dataset.type===t.id).forEach(a=>{a.classList.toggle('vide',!n);a.querySelector('span').textContent=n})})}));
+const f=document.getElementById('feuille');
+document.getElementById('ouvrir').onclick=()=>f.showModal();document.getElementById('fermer').onclick=()=>f.close();
+f.addEventListener('click',e=>{if(e.target===f||e.target.closest('a'))f.close()});
+document.querySelectorAll('.copier').forEach(b=>b.addEventListener('click',async()=>{
+ const t=await (await fetch(b.dataset.kit)).text();await navigator.clipboard.writeText(t);
+ b.textContent='Copié';setTimeout(()=>b.textContent='Copier le prompt',1800)}));
+</script>
+</body>
+</html>

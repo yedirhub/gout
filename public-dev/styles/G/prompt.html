@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Template G · Récit néon · Prompt · Yedidia Ruben - Digital Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0E0E0D;color:#E9E5DE;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 24px;background:rgba(14,14,13,.9);backdrop-filter:blur(10px);border-bottom:1px solid #262624;font-size:14px}
+header .titre{color:#A9A298;white-space:nowrap} header .titre b{color:#E9E5DE;font-weight:500}
+.onglets{display:flex;gap:2px;padding:4px;border:1px solid #2C2A27;border-radius:999px}
+.onglets a{height:32px;padding:0 14px;display:inline-flex;align-items:center;border-radius:999px;color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s,background .25s}
+.onglets a:hover{color:#fff}
+.onglets a[aria-current]{background:#E9E5DE;color:#141312}
+.retour{color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s} .retour:hover{color:#D9B48A}
+main{padding:40px 20px 0}
+.credit{width:min(1200px,100%);margin:0 auto 22px;font-size:14px;line-height:1.6;color:#A9A298}
+.credit b{color:#E9E5DE;font-weight:500} .credit a{color:#D9B48A;border-bottom:1px solid rgba(217,180,138,.4)}
+main img{display:block;width:min(1200px,100%);margin-inline:auto;border-radius:10px;box-shadow:0 30px 80px -40px #000}
+main img.tel{width:min(390px,100%)}
+.etiquette{width:min(1200px,100%);margin:48px auto 14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A847C}
+.outils{width:min(980px,100%);margin:0 auto 16px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.outils p{font-size:14px;color:#A9A298;line-height:1.6;max-width:560px}
+.outils div{display:flex;gap:8px}
+.outils button,.outils a{font:inherit;font-size:13px;height:38px;padding:0 16px;border-radius:999px;border:1px solid #3A3733;background:none;color:#E9E5DE;cursor:pointer;display:inline-flex;align-items:center;transition:border-color .25s}
+.outils button{background:#D9B48A;border-color:#D9B48A;color:#141312;font-weight:500}
+.outils a:hover{border-color:#D9B48A}
+pre{width:min(980px,100%);margin:0 auto;padding:28px;background:#151514;border:1px solid #262624;border-radius:12px;overflow:auto;max-height:72vh;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#D8D2C8;white-space:pre-wrap;word-break:break-word}
+footer{text-align:center;padding:48px 20px 56px;font-size:13px;color:#8A847C;line-height:1.6}
+footer strong{display:block;color:#E9E5DE;font-weight:500;font-size:15px}
+@media (max-width:980px){header{justify-content:center;padding:10px 8px} header .titre,.retour{display:none} .onglets{max-width:100%;overflow-x:auto;scrollbar-width:none} .onglets a{padding:0 10px}}
+</style>
+</head>
+<body>
+<header>
+  <span class="titre">Template G · <b>Récit néon</b></span>
+  <nav class="onglets" aria-label="Autour du template"><a href="./">La page</a><a href="source.html">Source</a><a href="apercu.html">Notre version</a><a href="design.html">DESIGN.md</a><a href="prompt.html" aria-current=page>Prompt</a></nav>
+  <a class="retour" href="/">Tous les templates</a>
+</header>
+<main>
+<div class="outils"><p>Le prompt complet pour refaire cette page avec le même rendu : la fiche de style, les sections dans l'ordre, le moteur d'animation et les règles.</p><div><button type="button" id="copier">Copier</button><a href="PROMPT.md" download>Télécharger</a></div></div>
+<pre id="texte"># Prompt complet · Template G « Récit néon »
+# Par Yedidia Ruben - Digital Strategist. À coller tel quel dans une IA qui code (Claude, ChatGPT, Gemini).
+
+Tu es un designer web senior. Construis une page de vente complète en un seul fichier HTML, avec exactement le rendu décrit ci-dessous : couleurs, polices, tailles, espacements, boutons, cartes, animations. La fiche de style fait foi ; en cas de doute, applique-la à la lettre plutôt que d&#x27;improviser.
+
+## 1. La fiche de style (DESIGN.md)
+
+# DESIGN.md : Style G « Récit néon » (d&#x27;après la page « Storytelling Lucrativo », Felipe Santos)
+
+&gt; **Source** : `inspi/behance/218430833/01.png` (1920 × 13256), « Página de Vendas - Lançamento », Behance 218430833. Relevé le 08/10/2026, session `fe30eec0`.
+&gt; **Demande de Ruben** : « sur la partie témoignage il y a un flou qui attire l&#x27;attention, certainement que si la souris passe sur une carte elle va se révéler ». C&#x27;est le geste central de ce style : il est construit ainsi.
+
+## 1. Ambiance et intention
+
+- Une communauté de créateurs de contenu : studio la nuit, néons, énergie de lancement.
+- Bleu nuit presque noir partout, une seule couleur chaude (l&#x27;orange) pour les mots qui comptent, du violet et du rose seulement dans la lumière des images.
+- Le récit avant / après porte la page : « des posts ignorés à la référence du marché ».
+- Le visiteur est intrigué : les avis sont flous, il faut passer la souris pour les lire.
+
+## 2. Palette et rôles
+
+- **Nuit** `#09081D` (mesuré au pixel) : le fond de toute la page.
+- **Carte** `#12103A` à `#211C6A` : les cartes d&#x27;avis (dégradé radial plus clair en haut).
+- **Brun nuit** `#21111D` : les cartes FAQ et la bande de garantie (une pointe de rouge).
+- **Orange** `#F56610` (bouton) et `#FF7B2D` (mots, filets) ; **pêche** `#FFAE6E` (plaques derrière les cartes, pied).
+- **Violet** `#7B2CF5` et **rose** `#E0329A` : seulement dans les dégradés de lumière (hero, jetons, éclair).
+- **Texte** `#B9B7CF` ; **texte doux** `#8E8BAE`.
+- **Filet orange** `rgba(255,123,45,.45)` : le contour de presque toutes les cartes.
+- **Vert WhatsApp** `#8CF59A` : le seul vert, sur le bouton de contact.
+
+## 3. Typographie
+
+- Non nommée par l&#x27;auteur. Relevé à l&#x27;œil : grotesque géométrique serrée, très grasse dans les titres, « a » à deux étages. La plus proche sur Google Fonts : **Plus Jakarta Sans** (titres, approche -0,035 em). Texte courant : **Inter**. Rubans : **Archivo 800 italique**.
+
+| Rôle | Police | Taille bureau / téléphone | Graisse | Interligne | Approche |
+|---|---|---|---|---|---|
+| Titre du hero | Plus Jakarta Sans | 34 / 28 px | 700 | 1,18 | -0,035 em |
+| Titre de section | Plus Jakarta Sans | 40 / 28 px | 700 | 1,15 | -0,035 em |
+| Titre de carte | Plus Jakarta Sans | 12 à 15 px | 700 | 1,3 | -0,01 em |
+| Texte | Inter | 13 à 15 px | 400 | 1,6 à 1,75 | 0 |
+| Bouton | Plus Jakarta Sans | 14 px | 800 | 1 | capitales |
+| Rubans | Archivo | 22 px | 800 italique | 1 | 0,02 em, capitales |
+| Prix | Plus Jakarta Sans | 54 px | 800 | 1 | -0,04 em, dégradé blanc vers gris |
+
+## 4. Composants
+
+- **Bouton orange** : 56 px, coins 12 px, dégradé `#FF8A3D` vers `#F56610`, texte brun foncé en capitales, double anneau orange translucide autour (7 px). Une ligne « paiement sécurisé » sous le bouton.
+- **Carte avant / après** : coins 16 px, filet orange, une **plaque pêche décalée** derrière (8 px en bas à droite), une barre « Hana en 2021 » à 3 points, une photo inclinée sur un papier blanc.
+- **Pastille BONUS** : 34 px, coins 12 px, filet orange, petit cadeau orange.
+- **Jeton** : rond de 58 px, dégradé orange vers violet, double anneau.
+- **Carte d&#x27;avis** : coins 16 px, filet orange à 30 %, **contenu flou à 5 px** ; net au survol, au focus clavier et au toucher.
+- **Carte d&#x27;étape** : 196 px, une barre orange collée en haut, image, titre en deux tons, posée en éventail.
+- **Carte de prix** : plaque pêche décalée derrière à gauche, panneau de liste qui dépasse à droite avec une lumière orange en bas.
+- **Sceau de garantie** : rosace pêche, chiffre géant dans un rond.
+- **FAQ** : accordéon natif (`details`), cartes brunes à filet orange, « + » qui tourne en « × ».
+
+## 5. Mise en page
+
+- Colonne de 940 px ; les avis s&#x27;élargissent à 1080 px en 3 colonnes façon mosaïque (hauteurs libres).
+- Les sections s&#x27;enchaînent sur une grille de fond (filets de 96 px), séparées par un filet orange avec une pastille à flèche au centre.
+- Hero et « Qui » : texte à gauche, personne à droite, coupée en bas par la section suivante.
+- Espacement vertical : 80 à 120 px.
+
+## 6. Profondeur et élévation
+
+- Les plaques pêche décalées donnent un relief de carte à jouer.
+- Les étapes se chevauchent en éventail (rotations de -6° à 7°) ; la carte survolée se redresse et passe devant.
+- La boule de cristal brille et respire ; les images de bonus sont des écrans posés en perspective.
+- Deux rubans croisés traversent la page en biais.
+
+## 7. À faire, à ne pas faire
+
+- Faire : un titre en deux lignes, la deuxième (ou la fin) en orange.
+- Faire : des cartes sombres à filet orange, jamais d&#x27;ombre grise.
+- Ne pas faire : de violet dans le texte. Le violet vit dans la lumière.
+- Ne pas faire : de flou sur autre chose que les avis : le flou doit rester une énigme rare.
+
+## 8. Comportement responsive
+
+- Behance ne montre que le bureau. Le téléphone est notre proposition.
+- Sous 820 px : hero et « Qui » en colonne, centrés ; avant / après l&#x27;un sous l&#x27;autre ; jetons en 2 × 2 ; avis en 1 colonne ; étapes à plat ; carte de prix puis liste empilées.
+- Sous 480 px : l&#x27;éventail se remet droit, la liste des salons de la communauté disparaît.
+- Au toucher, un avis se révèle quand on le touche (focus).
+
+## 9. Mouvement
+
+- Moteur commun : `data-rv` partout, `data-compte` sur le prix, `data-parallaxe` sur la personne du hero, `data-incline` sur les cartes avant / après, `data-aimant` sur les boutons, `.reflet` sur le bouton orange, barre de progression violet vers orange.
+- Propre à G : **les avis se révèlent au survol** (flou 5 px vers net, 0,5 s) ; **les rubans défilent** en sens opposés (38 s) ; **la boule respire** (4 s) ; **l&#x27;éventail se redresse** au survol.
+
+## 10. Non mesuré, et choix tranchés seul
+
+- Les polices (§3).
+- Les images : personnes en silhouettes, studio en dégradés et néons dessinés, écrans dessinés, logos d&#x27;outils remplacés par des formes neutres.
+- Le flou : mesuré à l&#x27;œil (environ 5 px) ; la révélation au survol est la lecture de Ruben, pas vue en mouvement.
+- Le prix : en euros, 12 × 17 € ou 197 € en une fois.
+- Le téléphone (§8).
+
+## 11. Consigne pour l&#x27;IA
+
+Construis une page bleu nuit `#09081D` éclairée par des néons orange, violets et roses. Titres en Plus Jakarta Sans 700 très serrés, la fin du titre en orange `#FF7B2D`. Cartes sombres à filet orange, avec une plaque pêche décalée derrière les cartes importantes. Les avis clients sont floutés et se révèlent au survol ou au toucher. Deux rubans en biais défilent en sens opposés. Les étapes sont des cartes posées en éventail. Le pied est une bande orange dégradée.
+
+## 2. Les sections, dans l&#x27;ordre
+
+01. #hero · « Réveillez votre authenticité et donnez au marché entier l&#x27;envie de votre présence. »
+02. #avant-apres · « Des posts ignorés à la référence du marché »
+03. #promesse · « Un petit aperçu de ce qui vous attend dans la communauté »
+04. #temoignages · « Bienvenue dans l&#x27;ère de l&#x27;authenticité »
+05. #etapes · « Les 4 étapes de votre transformation »
+06. #bonus · « Les réseaux du futur »
+07. #offre · « Le prix de la communauté va DOUBLER ! »
+08. #garantie · « Garantie de 8 jours »
+09. #qui · « Hana Diop »
+10. #faq · « Encore un doute ? Une question ? »
+
+## 3. Les animations
+
+Les animations passent par un petit moteur commun (anim.js + anim.css, fournis plus bas). On ne code pas d&#x27;animation à la main : on pose des attributs.
+- data-rv : l&#x27;élément apparaît au défilement, décalé de 70 ms dans son groupe.
+- data-lignes : un titre à &lt;br&gt; monte ligne par ligne derrière un masque.
+- data-compte=&quot;3200&quot; : le chiffre compte jusqu&#x27;à sa valeur quand il entre à l&#x27;écran.
+- data-parallaxe=&quot;0.15&quot; : l&#x27;élément glisse plus lentement que la page.
+- data-incline : la carte s&#x27;incline vers la souris (6° au plus).
+- data-aimant : le bouton est attiré par la souris (6 px au plus).
+- data-progression : la barre de lecture en haut de page.
+Tout s&#x27;arrête sous prefers-reduced-motion : la page reste lisible et complète.
+
+Le moteur, à coller tel quel dans la page :
+
+```css
+/* anim.css : les états de départ des effets de anim.js. Sans la classe .anime (JS absent ou
+   reduced-motion), tout est visible : une page ne doit jamais dépendre du JS pour s&#x27;afficher. */
+.anime [data-rv]{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.16,1,.3,1) var(--d,0ms),transform .8s cubic-bezier(.16,1,.3,1) var(--d,0ms)}
+.anime [data-rv].vu{opacity:1;transform:none}
+.anime [data-rv][data-lignes]{opacity:1;transform:none}
+.ligne{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.ligne&gt;span{display:block}
+.anime [data-lignes] .ligne&gt;span{transform:translateY(105%);transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.anime [data-lignes].vu .ligne&gt;span{transform:none}
+[data-parallaxe]{will-change:transform}
+[data-aimant]{transition:translate .35s cubic-bezier(.16,1,.3,1)}
+[data-progression]{position:fixed;top:0;left:0;right:0;height:2px;transform-origin:0 50%;transform:scaleX(0);z-index:100;pointer-events:none}
+/* Reflet qui balaie un bouton au survol : ajouter la classe .reflet au bouton. */
+.reflet{position:relative;overflow:hidden;isolation:isolate}
+.reflet::after{content:&quot;&quot;;position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.28) 50%,transparent 65%);transform:translateX(-120%)}
+.reflet:hover::after{transform:translateX(120%);transition:transform .9s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){.reflet::after{display:none}}
+```
+
+```js
+/* anim.js : le moteur de mouvement commun aux 4 styles (Goût IA, cycle 1).
+   Chaque page choisit ses effets par attributs ; le style (couleurs, durées) reste dans la page.
+   Rien ne bouge sous prefers-reduced-motion : tout est montré tel quel.
+
+   data-rv               apparaît au défilement (classe .vu posée), décalé de 70 ms dans son groupe
+   data-lignes           titre découpé ligne par ligne (&lt;br&gt;), chaque ligne monte à son tour
+   data-compte=&quot;3200&quot;    chiffre qui compte jusqu&#x27;à sa valeur quand il entre à l&#x27;écran
+   data-parallaxe=&quot;0.15&quot; glisse plus lentement que la page (facteur de vitesse)
+   data-incline          carte qui s&#x27;incline vers la souris (max 6°)
+   data-aimant           bouton attiré par la souris (max 6 px)
+   data-progression      barre de lecture en haut de page
+*/
+(() =&gt; {
+  const calme = matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;).matches;
+  const tactile = matchMedia(&#x27;(hover: none)&#x27;).matches;
+  const $$ = (s, r = document) =&gt; [...r.querySelectorAll(s)];
+
+  // Titres en lignes : on enveloppe chaque ligne pour la faire monter derrière un masque.
+  $$(&#x27;[data-lignes]&#x27;).forEach(t =&gt; {
+    const lignes = t.innerHTML.split(/&lt;br\s*\/?&gt;/i);
+    t.innerHTML = lignes.map((l, i) =&gt;
+      `&lt;span class=&quot;ligne&quot;&gt;&lt;span style=&quot;transition-delay:${i * 90}ms&quot;&gt;${l}&lt;/span&gt;&lt;/span&gt;`).join(&#x27;&#x27;);
+    t.setAttribute(&#x27;data-rv&#x27;, &#x27;&#x27;);
+  });
+
+  if (calme) {
+    $$(&#x27;[data-rv]&#x27;).forEach(e =&gt; e.classList.add(&#x27;vu&#x27;));
+    $$(&#x27;[data-compte]&#x27;).forEach(e =&gt; e.textContent = Number(e.dataset.compte).toLocaleString(&#x27;fr-FR&#x27;));
+    return;
+  }
+  document.documentElement.classList.add(&#x27;anime&#x27;);
+
+  // Apparition : décalage par fratrie, pour que les cartes d&#x27;une grille arrivent l&#x27;une après l&#x27;autre.
+  const vu = new IntersectionObserver(es =&gt; es.forEach(e =&gt; {
+    if (!e.isIntersecting) return;
+    e.target.classList.add(&#x27;vu&#x27;);
+    vu.unobserve(e.target);
+  }), { threshold: 0.12, rootMargin: &#x27;0px 0px -6% 0px&#x27; });
+  $$(&#x27;[data-rv]&#x27;).forEach(el =&gt; {
+    const freres = [...el.parentElement.children].filter(f =&gt; f.hasAttribute(&#x27;data-rv&#x27;));
+    el.style.setProperty(&#x27;--d&#x27;, `${Math.min(freres.indexOf(el), 6) * 70}ms`);
+    vu.observe(el);
+  });
+
+  // Compteurs.
+  const compte = new IntersectionObserver(es =&gt; es.forEach(e =&gt; {
+    if (!e.isIntersecting) return;
+    // Le chiffre final reste écrit tant qu&#x27;on ne le voit pas : une capture ou un robot lit la vraie valeur.
+    const el = e.target, fin = Number(el.dataset.compte), t0 = performance.now(), duree = 1600;
+    el.textContent = &#x27;0&#x27;;
+    const pas = t =&gt; {
+      const p = Math.min((t - t0) / duree, 1), v = 1 - Math.pow(1 - p, 4);
+      el.textContent = Math.round(fin * v).toLocaleString(&#x27;fr-FR&#x27;);
+      if (p &lt; 1) requestAnimationFrame(pas);
+    };
+    requestAnimationFrame(pas);
+    compte.unobserve(el);
+  }), { threshold: 0.6 });
+  $$(&#x27;[data-compte]&#x27;).forEach(e =&gt; compte.observe(e));
+
+  // Parallaxe et barre de lecture, sur une seule boucle.
+  const para = $$(&#x27;[data-parallaxe]&#x27;), barre = document.querySelector(&#x27;[data-progression]&#x27;);
+  let attente = false;
+  const defile = () =&gt; {
+    attente = false;
+    const h = innerHeight;
+    para.forEach(el =&gt; {
+      const r = el.getBoundingClientRect();
+      if (r.bottom &lt; -200 || r.top &gt; h + 200) return;
+      const decal = (r.top + r.height / 2 - h / 2) * Number(el.dataset.parallaxe);
+      el.style.transform = `translate3d(0,${decal.toFixed(1)}px,0)`;
+    });
+    if (barre) barre.style.transform = `scaleX(${scrollY / Math.max(1, document.body.scrollHeight - h)})`;
+  };
+  addEventListener(&#x27;scroll&#x27;, () =&gt; { if (!attente) { attente = true; requestAnimationFrame(defile); } }, { passive: true });
+  defile();
+
+  if (tactile) return;
+
+  // Inclinaison des cartes.
+  $$(&#x27;[data-incline]&#x27;).forEach(c =&gt; {
+    c.style.transition = &#x27;transform .5s cubic-bezier(.16,1,.3,1)&#x27;;
+    c.addEventListener(&#x27;mousemove&#x27;, e =&gt; {
+      const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      c.style.transform = `perspective(900px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 6).toFixed(2)}deg) translateY(-3px)`;
+    });
+    c.addEventListener(&#x27;mouseleave&#x27;, () =&gt; c.style.transform = &#x27;&#x27;);
+  });
+
+  // Boutons aimantés.
+  $$(&#x27;[data-aimant]&#x27;).forEach(b =&gt; {
+    b.addEventListener(&#x27;mousemove&#x27;, e =&gt; {
+      const r = b.getBoundingClientRect();
+      b.style.translate = `${((e.clientX - r.left) / r.width - .5) * 12}px ${((e.clientY - r.top) / r.height - .5) * 8}px`;
+    });
+    b.addEventListener(&#x27;mouseleave&#x27;, () =&gt; b.style.translate = &#x27;&#x27;);
+  });
+})();
+```
+
+## 4. Les règles
+
+- Un seul fichier HTML, CSS dans &lt;style&gt;, aucune bibliothèque en dehors des polices Google.
+- Textes en français, écrits pour le métier donné. Aucun tiret long (cadratin ou demi-cadratin) dans les textes.
+- Images : des silhouettes ou des dégradés de remplacement, jamais une photo inventée d&#x27;une vraie personne.
+- Chaque section porte un id (celui de la liste plus haut) pour qu&#x27;on puisse la viser.
+- Contraste du texte de 4,5 au moins. La page tient de 360 à 1920 px de large sans débordement horizontal.
+- Le bouton principal et sa preuve tiennent dans le premier écran du téléphone.
+
+## 5. Ce que tu rends
+
+Le fichier HTML complet, prêt à ouvrir. Puis, en 5 lignes, ce que tu as dû deviner faute de précision dans la fiche.
+</pre>
+</main>
+<script>
+const b=document.getElementById('copier');
+b.onclick=async()=>{await navigator.clipboard.writeText(document.getElementById('texte').textContent);b.textContent='Copié';setTimeout(()=>b.textContent='Copier',1800)};
+</script>
+<footer>Réalisé par<strong>Yedidia Ruben - Digital Strategist</strong></footer>
+</body>
+</html>

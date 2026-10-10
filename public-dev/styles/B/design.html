@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Template B · Éditorial chaud · DESIGN.md · Yedidia Ruben - Digital Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0E0E0D;color:#E9E5DE;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 24px;background:rgba(14,14,13,.9);backdrop-filter:blur(10px);border-bottom:1px solid #262624;font-size:14px}
+header .titre{color:#A9A298;white-space:nowrap} header .titre b{color:#E9E5DE;font-weight:500}
+.onglets{display:flex;gap:2px;padding:4px;border:1px solid #2C2A27;border-radius:999px}
+.onglets a{height:32px;padding:0 14px;display:inline-flex;align-items:center;border-radius:999px;color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s,background .25s}
+.onglets a:hover{color:#fff}
+.onglets a[aria-current]{background:#E9E5DE;color:#141312}
+.retour{color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s} .retour:hover{color:#D9B48A}
+main{padding:40px 20px 0}
+.credit{width:min(1200px,100%);margin:0 auto 22px;font-size:14px;line-height:1.6;color:#A9A298}
+.credit b{color:#E9E5DE;font-weight:500} .credit a{color:#D9B48A;border-bottom:1px solid rgba(217,180,138,.4)}
+main img{display:block;width:min(1200px,100%);margin-inline:auto;border-radius:10px;box-shadow:0 30px 80px -40px #000}
+main img.tel{width:min(390px,100%)}
+.etiquette{width:min(1200px,100%);margin:48px auto 14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A847C}
+.outils{width:min(980px,100%);margin:0 auto 16px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.outils p{font-size:14px;color:#A9A298;line-height:1.6;max-width:560px}
+.outils div{display:flex;gap:8px}
+.outils button,.outils a{font:inherit;font-size:13px;height:38px;padding:0 16px;border-radius:999px;border:1px solid #3A3733;background:none;color:#E9E5DE;cursor:pointer;display:inline-flex;align-items:center;transition:border-color .25s}
+.outils button{background:#D9B48A;border-color:#D9B48A;color:#141312;font-weight:500}
+.outils a:hover{border-color:#D9B48A}
+pre{width:min(980px,100%);margin:0 auto;padding:28px;background:#151514;border:1px solid #262624;border-radius:12px;overflow:auto;max-height:72vh;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#D8D2C8;white-space:pre-wrap;word-break:break-word}
+footer{text-align:center;padding:48px 20px 56px;font-size:13px;color:#8A847C;line-height:1.6}
+footer strong{display:block;color:#E9E5DE;font-weight:500;font-size:15px}
+@media (max-width:980px){header{justify-content:center;padding:10px 8px} header .titre,.retour{display:none} .onglets{max-width:100%;overflow-x:auto;scrollbar-width:none} .onglets a{padding:0 10px}}
+</style>
+</head>
+<body>
+<header>
+  <span class="titre">Template B · <b>Éditorial chaud</b></span>
+  <nav class="onglets" aria-label="Autour du template"><a href="./">La page</a><a href="source.html">Source</a><a href="apercu.html">Notre version</a><a href="design.html" aria-current=page>DESIGN.md</a><a href="prompt.html">Prompt</a></nav>
+  <a class="retour" href="/">Tous les templates</a>
+</header>
+<main>
+<div class="outils"><p>La fiche de style du template : couleurs, polices, tailles, espacements, composants. À donner à une IA avant de coder.</p><div><button type="button" id="copier">Copier</button><a href="DESIGN.md" download>Télécharger</a></div></div>
+<pre id="texte"># DESIGN.md : Style B « Éditorial chaud » (d&#x27;après la page de vente de l&#x27;e-book « Xô Câncer », @euluidesign)
+
+&gt; **Source** : `refs/brut/ref2.webp` (1400 × 10 638). Relevé le 08/10/2026, session `fe30eec0` (fork B).
+&gt; **Mesures** : couleurs relevées au pixel. L&#x27;image fait 1400 px de large pour un site d&#x27;environ 1440 px, soit un facteur d&#x27;environ 1,03 : on la lit presque à l&#x27;échelle 1.
+&gt; **Template** : `reproduction.html` · **Sections** : `SECTIONS.md` et `sections/*.jpg`.
+
+## 1. Ambiance et intention
+« Salon de velours. » Une experte qui parle à des femmes de 30 à 60 ans, inquiètes pour leur santé, avec la chaleur d&#x27;une confidente et la tenue d&#x27;une revue.
+Le bordeaux presque noir enveloppe, le rose framboise réveille, le crème repose.
+On alterne nuit et jour : chaque passage du sombre au crème relance la lecture.
+
+## 2. Palette et rôles
+| Rôle | Valeur | Où on l&#x27;emploie |
+|---|---|---|
+| Nuit (fond sombre) | `#200810` | Hero, garantie, pied, bas des sections sombres |
+| Bordeaux (fond sombre 2) | `#4C0B1F` | Haut des sections sombres, en dégradé vers la nuit |
+| Prune (carte sombre) | `#591029` | Cartes de contenu, offre « Essentiel » |
+| Crème (fond clair) | `#F5EDE7` | Sections claires |
+| Crème carte | `#F4F3EA` | Cartes posées sur la crème (e-book, avis, FAQ) |
+| Blanc rosé | `#FFFAF9` | Section « Qui suis-je », FAQ |
+| Encre | `#2A0A14` | Titres et texte sur la crème |
+| Accent (UN SEUL) : framboise | `#E8336D` | Mots clés des titres, puces, flèches, prix |
+| Bouton (dégradé) | `#5E1127` → `#E8336D` | Boutons pleins uniquement, avec une lueur rose |
+| Rose poudré | `#E8ADB8` | Avatars, filets, détails décoratifs |
+| Bordure sombre | `rgba(255,255,255,.12)` | Cartes et pastilles sur le sombre |
+| Bordure claire | `#E6D9CF` | Cartes et pastilles sur la crème |
+
+Contrastes calculés : encre/crème `#2A0A14`/`#F5EDE7` = 16,0:1 · blanc/nuit = 19,3:1 · framboise/nuit `#E8336D`/`#200810` = 4,6:1 · blanc/milieu du bouton `#A3224A` = 6,6:1.
+
+## 3. Typographie
+| Usage | Police | Taille | Graisse | Interlignage | Interlettrage |
+|---|---|---|---|---|---|
+| Titre 1 (hero) | Gilda Display | 44 px | 400 | 1,15 | 0 |
+| Titre 2 (section) | Hanken Grotesk + Gilda Display | 38 px | 400 | 1,15 | -0,01 em |
+| Titre de carte | Gilda Display | 34 px | 400 | 1 | 0 |
+| Pastille de rubrique | Hanken Grotesk | 12 px | 500 | 1 | 0 |
+| Texte courant | Hanken Grotesk | 15 px | 400 | 1,6 | 0 |
+| Petit texte | Hanken Grotesk | 12 px | 400 | 1,5 | 0 |
+| Label espacé | Hanken Grotesk | 11 px | 500, capitales | 1 | +0,3 em |
+
+**2 familles.** 🔴 **La signature : un titre mélange les deux familles.** Le mot qui émeut (« 3 raisons », « 7 jours », « vous ») est en serif Gilda Display couleur framboise, le reste en grotesque droite blanche ou encre.
+
+## 4. Composants
+- **Bouton principal** : pilule (rayon 999 px), hauteur 64 px, largeur d&#x27;environ 300 px, dégradé horizontal `#5E1127` → `#E8336D`, texte blanc 16 px. Flèche → dans un rond blanc de 24 px. Lueur `0 0 28px rgba(232,51,109,.55)` et liseré intérieur `inset 0 0 0 1px rgba(255,255,255,.25)`.
+- **Pastille de rubrique** (au-dessus de chaque titre) : pilule de 30 px de haut, bordure 1 px, icône de 14 px et un mot (« Bonus », « FAQ »). Blanche sur le sombre, encre sur la crème.
+- **Carte « raison »** : fond `rgba(32,8,16,.6)`, bordure 1 px `#6D2D40`, rayon 6 px, padding 28 px. Étiquette « Raison 01 » en pilule prune avec une puce framboise.
+- **Carte de contenu** : fond prune `#591029`, rayon 6 px, image en haut (rayon 6 px), losange orné, label espacé « CONTENU 01 », titre serif de 34 px centré.
+- **Carte d&#x27;offre** : 2 côte à côte. « Essentiel » en prune, « Complet » en blanc ; la seconde est mise en avant par le contraste, pas par la taille. Prix géant de 64 px en dégradé rose.
+- **Accordéon FAQ** : carte crème, bordure 1 px `#E6D9CF`, rayon 6 px, chevron framboise.
+- **Encoche** : une bosse arrondie de 70 × 22 px avec un chevron ⌄ framboise, au bas des sections, de la couleur de la section suivante.
+
+## 5. Mise en page
+- Largeur maximale du contenu : **960 px**, centré.
+- Grille : 2 colonnes 50/50 (texte + visuel) ; 2 colonnes pour les raisons et les offres ; un carrousel de cartes de 240 px qui déborde à droite.
+- Rythme vertical entre sections : **120 px**. Généreux, c&#x27;est ce qui fait « revue ».
+- Marge latérale au téléphone : 20 px.
+- **Alternance** : nuit (hero), crème, bordeaux, bordeaux, crème, crème, bordeaux, nuit, blanc rosé, nuit. Les sections claires portent un très grand monogramme rose pâle en filigrane.
+
+## 6. Profondeur et élévation
+- **Ce qui crée la profondeur ici : la lumière.** Lueur rose sous les boutons, halo radial bordeaux dans les sections sombres, ombre colorée sous les mockups.
+- Ombre de mockup : `0 30px 60px -20px rgba(94,17,39,.45)`.
+- Lueur de bouton : `0 0 28px rgba(232,51,109,.55)`.
+- Les cartes sombres n&#x27;ont pas d&#x27;ombre : une bordure prune de 1 px suffit.
+
+## 7. À faire, à ne pas faire
+À faire :
+- Un mot clé de chaque titre en serif framboise, le reste en grotesque.
+- Une pastille de rubrique avec une icône au-dessus de chaque titre.
+- Montrer le produit en objet : tablette, téléphone, livre en 3D, toujours incliné, avec une ombre colorée.
+- Un bandeau croisé qui défile (2 rubans en X) avant l&#x27;offre, pour marquer la rupture « Mais attendez… ».
+- Ancrer le prix : d&#x27;abord la valeur barrée de chaque élément, puis l&#x27;offre.
+
+À ne pas faire :
+- Pas de noir pur, pas de gris : toutes les ombres et tous les sombres tirent vers le bordeaux.
+- Pas de second accent : le rose poudré n&#x27;est qu&#x27;une nuance décorative, jamais un bouton.
+- Pas de serif dans le texte courant : la serif est réservée aux titres et aux prix.
+- Pas de coin carré : 6 px pour les cartes, pilule pour tout ce qui se clique.
+
+## 8. Comportement responsive
+- Points de rupture : 1024 px (les 2 colonnes passent en 1) et 640 px (la typo descend d&#x27;un cran, les offres s&#x27;empilent avec « Complet » en premier).
+- Au téléphone : le portrait du hero passe au-dessus du titre et le carrousel se fait au doigt.
+- Ce qui ne change jamais : la lueur du bouton, le mélange serif/grotesque des titres, l&#x27;alternance nuit/crème.
+
+## 9. Mouvement
+Le mouvement vient du moteur commun (`../../commun/anim.css` et `anim.js`), piloté par des attributs. Seuls les réglages propres à B vivent dans la page.
+
+| Moment | Effet | Attribut / règle | Durée |
+|---|---|---|---|
+| Titres sur plusieurs lignes (h1, raisons, avis, valeur, offres) | chaque ligne monte derrière un masque, 90 ms d&#x27;écart | `data-lignes` | 1 s |
+| Apparition au défilement | montée de 26 px + fondu, 70 ms par carte d&#x27;une même grille | `data-rv` | 800 ms |
+| Chiffres (15 ans, 7 jours, 100 %) | comptent jusqu&#x27;à leur valeur à l&#x27;entrée dans l&#x27;écran ; la vraie valeur reste écrite dans le HTML | `data-compte` | 1,6 s |
+| Barre de lecture | 2 px en haut, dégradé bordeaux → framboise → poudre | `data-progression` | au défilement |
+| Mockups (tablettes, livre, téléphones, lettrine, fauteuil) | parallaxe douce, posée sur une **enveloppe** pour ne pas écraser leurs rotations 3D | `data-parallaxe` (−0,07 à 0,12) | au défilement |
+| Cartes, scène 3D, éventail, offres | s&#x27;inclinent vers la souris (6° max), pas au tactile | `data-incline` | 500 ms |
+| Boutons | attirés par la souris + reflet qui balaie au survol | `reflet data-aimant` | 350 / 900 ms |
+| Bouton du hero | **la lueur rose respire** (28 → 46 px) | `@keyframes souffle` | 3,2 s, en boucle |
+| Prix | **reflet qui glisse dans le dégradé du chiffre** | `@keyframes reflet-prix` | 6 s, en boucle |
+| Sceau de cire | **tombe et se pose** (échelle 1,35 → 1, rotation −14° → 0, léger rebond) quand la garantie entre | `.cire-zone.vu .cire` | 900 ms |
+| Bandeau croisé | défilement infini, sens opposés (gardé) | `linear` | 28 s |
+| Texte du sceau | tourne (gardé) | `linear` | 40 s |
+
+Règles : jamais `data-incline` ou `data-parallaxe` sur un élément qui porte déjà sa propre rotation (tablette, livre, téléphone) ; une carte qui porte `data-rv` et `data-incline` garde ses deux transitions (règle `[data-incline][data-rv]`). Sous `prefers-reduced-motion`, tout est montré tel quel : plus d&#x27;animation, de transition, de compteur ni de parallaxe.
+
+## 10. Non mesuré, et choix tranchés seul (mode C)
+- **Polices exactes** : l&#x27;original semble utiliser une didone de caractère et une grotesque type Helvetica Now. Aucune métadonnée, donc **choix : Gilda Display + Hanken Grotesk** (Google Fonts), les plus proches en licence libre.
+- **Couleur exacte de l&#x27;accent du texte** : les glyphes sont trop fins pour un pixel fiable. `#E8336D` est pris entre le bouton (`#F62960`) et le rose des titres, puis assombri pour tenir 4,5:1 sur la nuit.
+- **Fin du dégradé du bouton** : l&#x27;original finit en `#F62960`, ce qui donne un blanc à 3,6:1. **Choix : finir en `#E8336D`** pour garder le texte lisible.
+- **Photos** : remplacées par des silhouettes monochromes et des dégradés (règle ① : aucun actif d&#x27;autrui).
+- **Sceau en cire** : c&#x27;est une photo dans l&#x27;original. Il est refait en CSS (dégradé radial et relief), donc moins réaliste.
+- **Mouvement et mobile** : image fixe en version ordinateur seulement. Les §8 et §9 sont nos propositions.
+
+## 11. Consigne pour l&#x27;IA
+« Respecte DESIGN.md à la lettre. Ambiance salon de velours : nuit bordeaux `#200810` en alternance avec la crème `#F5EDE7`, un seul accent framboise `#E8336D`. Chaque titre mélange une grotesque droite et un mot clé en Gilda Display framboise. Boutons pilule en dégradé bordeaux→framboise avec une lueur rose. Pastille de rubrique au-dessus de chaque titre. Produit montré en objet 3D incliné. Pas de noir pur, pas de gris, pas de second accent, pas de serif dans le texte courant. »
+</pre>
+</main>
+<script>
+const b=document.getElementById('copier');
+b.onclick=async()=>{await navigator.clipboard.writeText(document.getElementById('texte').textContent);b.textContent='Copié';setTimeout(()=>b.textContent='Copier',1800)};
+</script>
+<footer>Réalisé par<strong>Yedidia Ruben - Digital Strategist</strong></footer>
+</body>
+</html>

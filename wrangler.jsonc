@@ -2,6 +2,7 @@
 // dev  : dev.gout.yedirhub.com, noindex (Ruben 08/10/2026 07:44).
 // prod : gout.yedirhub.com, accord écrit de Ruben le 08/10/2026 10:50 (« tu peux mettre en prod »).
 // public-dev/ et public-prod/ sont générés par outils/construire-site.py dev|prod.
+// Déploiement : node outils/publier-depot.mjs dev|prod -> dépôt yedirhub/gout -> GitHub Actions -> wrangler (10/10/2026). Prod : --accord de Ruben exigé.
 {
   "name": "gout",
   "compatibility_date": "2026-09-26",

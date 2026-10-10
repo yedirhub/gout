@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Template F · Lumière dorée · Prompt · Yedidia Ruben - Digital Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0E0E0D;color:#E9E5DE;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 24px;background:rgba(14,14,13,.9);backdrop-filter:blur(10px);border-bottom:1px solid #262624;font-size:14px}
+header .titre{color:#A9A298;white-space:nowrap} header .titre b{color:#E9E5DE;font-weight:500}
+.onglets{display:flex;gap:2px;padding:4px;border:1px solid #2C2A27;border-radius:999px}
+.onglets a{height:32px;padding:0 14px;display:inline-flex;align-items:center;border-radius:999px;color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s,background .25s}
+.onglets a:hover{color:#fff}
+.onglets a[aria-current]{background:#E9E5DE;color:#141312}
+.retour{color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s} .retour:hover{color:#D9B48A}
+main{padding:40px 20px 0}
+.credit{width:min(1200px,100%);margin:0 auto 22px;font-size:14px;line-height:1.6;color:#A9A298}
+.credit b{color:#E9E5DE;font-weight:500} .credit a{color:#D9B48A;border-bottom:1px solid rgba(217,180,138,.4)}
+main img{display:block;width:min(1200px,100%);margin-inline:auto;border-radius:10px;box-shadow:0 30px 80px -40px #000}
+main img.tel{width:min(390px,100%)}
+.etiquette{width:min(1200px,100%);margin:48px auto 14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A847C}
+.outils{width:min(980px,100%);margin:0 auto 16px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.outils p{font-size:14px;color:#A9A298;line-height:1.6;max-width:560px}
+.outils div{display:flex;gap:8px}
+.outils button,.outils a{font:inherit;font-size:13px;height:38px;padding:0 16px;border-radius:999px;border:1px solid #3A3733;background:none;color:#E9E5DE;cursor:pointer;display:inline-flex;align-items:center;transition:border-color .25s}
+.outils button{background:#D9B48A;border-color:#D9B48A;color:#141312;font-weight:500}
+.outils a:hover{border-color:#D9B48A}
+pre{width:min(980px,100%);margin:0 auto;padding:28px;background:#151514;border:1px solid #262624;border-radius:12px;overflow:auto;max-height:72vh;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#D8D2C8;white-space:pre-wrap;word-break:break-word}
+footer{text-align:center;padding:48px 20px 56px;font-size:13px;color:#8A847C;line-height:1.6}
+footer strong{display:block;color:#E9E5DE;font-weight:500;font-size:15px}
+@media (max-width:980px){header{justify-content:center;padding:10px 8px} header .titre,.retour{display:none} .onglets{max-width:100%;overflow-x:auto;scrollbar-width:none} .onglets a{padding:0 10px}}
+</style>
+</head>
+<body>
+<header>
+  <span class="titre">Template F · <b>Lumière dorée</b></span>
+  <nav class="onglets" aria-label="Autour du template"><a href="./">La page</a><a href="source.html">Source</a><a href="apercu.html">Notre version</a><a href="design.html">DESIGN.md</a><a href="prompt.html" aria-current=page>Prompt</a></nav>
+  <a class="retour" href="/">Tous les templates</a>
+</header>
+<main>
+<div class="outils"><p>Le prompt complet pour refaire cette page avec le même rendu : la fiche de style, les sections dans l'ordre, le moteur d'animation et les règles.</p><div><button type="button" id="copier">Copier</button><a href="PROMPT.md" download>Télécharger</a></div></div>
+<pre id="texte"># Prompt complet · Template F « Lumière dorée »
+# Par Yedidia Ruben - Digital Strategist. À coller tel quel dans une IA qui code (Claude, ChatGPT, Gemini).
+
+Tu es un designer web senior. Construis une page de vente complète en un seul fichier HTML, avec exactement le rendu décrit ci-dessous : couleurs, polices, tailles, espacements, boutons, cartes, animations. La fiche de style fait foi ; en cas de doute, applique-la à la lettre plutôt que d&#x27;improviser.
+
+## 1. La fiche de style (DESIGN.md)
+
+# DESIGN.md : Style F « Lumière dorée » (d&#x27;après le site rarisondesigner.com, Rárison Lucas)
+
+&gt; **Source** : le site en ligne https://rarisondesigner.com/, relevé le 08/10/2026 (session `fe30eec0`) écran par écran en descendant, polices et couleurs lues dans le navigateur.
+&gt; **Demande de Ruben** : « copie conforme et surtout il y a des parties très propres, la carte qui déborde là avec les boutons devant et derrière ».
+&gt; **Même auteur que le style E** : Rárison Lucas signe aussi la page « Código do Crescimento ».
+
+## 1. Ambiance et intention
+
+- Le site d&#x27;un designer qui vend de l&#x27;autorité : noir profond, une seule lumière dorée, comme un projecteur sur une scène.
+- Les titres sortent de l&#x27;ombre : chaque titre part du gris à gauche et finit en blanc ; un mot en italique doré porte la promesse.
+- Les blocs arrivent flous et se mettent au point au défilement : le visiteur a l&#x27;impression que la page fait la mise au point sur lui.
+- Une seule rupture claire : la bande gris perle du prix, d&#x27;où déborde une carte sombre.
+
+## 2. Palette et rôles
+
+- **Noir** `#000000` : le fond de la page.
+- **Carte** `#111111` à `#171717` : dégradé vertical des cartes, filet blanc à 8 %.
+- **Or brossé** : dégradé `#9C8350` vers `#E8D5A8` (boutons, pastille active, puces du prix) ; `#C9AE74` pour le mot doré.
+- **Gris perle** `#E4E4E4` (mesuré) : la bande du prix.
+- **Texte** `#8A8F96` sur noir, `#575C63` sur gris perle ; titres `#FFFFFF`.
+- **Teintes des cartes projets** : chaque carte prend en haut la couleur de son projet (or, olive, émeraude, sable, rose, ambre) et finit en noir.
+
+## 3. Typographie
+
+- Relevé dans le navigateur : **SF Pro Display** (le texte, 57 blocs), **DM Sans** (les titres), **Manrope 300** (les paragraphes), **Benihana 800 italique** (les mots dorés).
+- SF Pro et Benihana ne sont pas sur Google Fonts. Remplacements : **Inter** pour SF Pro, **Playfair Display 800 italique** pour Benihana.
+
+| Rôle | Police | Taille bureau / téléphone | Graisse | Interligne | Approche |
+|---|---|---|---|---|---|
+| Titre du hero | DM Sans | 58 / 40 px | 400 | 1,12 | -0,02 em |
+| Titre de section | DM Sans | 52 / 34 px | 400 | 1,15 | -0,02 em |
+| Mot doré | Playfair Display | même taille | 800 italique | 1 | -0,01 em |
+| Navigation, boutons | Inter | 18 à 19 px | 500 | 1 | -0,02 em |
+| Titre de carte | Inter | 22 px | 500 | 1,38 | -0,02 em |
+| Texte | Manrope / Inter | 17 à 20 px | 300 / 400 | 1,5 à 1,6 | 0 |
+| Prix | Inter | 78 / 52 px | 400 | 1 | -0,02 em |
+
+## 4. Composants
+
+- **Barre de navigation** : verre sombre collé en haut (flou 18 px), 94 px de haut, coins 16 px, filet blanc à 12 %, bouton or à droite.
+- **Bouton or** : 56 px, coins 12 px, dégradé or brossé, texte blanc avec ombre portée brune, halo doré dessous. Toujours suivi d&#x27;un **carré blanc** de 56 px avec une flèche, puis d&#x27;un lien gris.
+- **Pastille de section** : 56 px de haut, coins 12 px, dégradé noir, filet, halo blanc très doux.
+- **Carte projet** : coins 28 px, teinte du projet en haut, image aux coins 22 px, titre blanc sur 2 ou 3 lignes.
+- **Carte d&#x27;étape** : coins 30 px, une étiquette en contour gris ; l&#x27;étape au centre de l&#x27;écran passe en or.
+- **Carte de prix** : coins 24 px, dégradé `#3A3A3A` vers `#111`, prix qui se mélange avant de se poser, bouton or.
+
+## 5. Mise en page
+
+- Contenu : 1080 px au plus ; la bande du prix s&#x27;élargit à 1280 px en trois colonnes (pastille et marque, carte, liste).
+- Projets : grille de 3 sur 2 lignes, 58 px d&#x27;écart. Étapes : 2 sur 2, la colonne de droite décalée de 8 px.
+- Derrière la méthode : 4 filets verticaux qui s&#x27;effacent en haut et en bas.
+- Espacement vertical : 110 à 150 px entre sections.
+
+## 6. Profondeur et élévation
+
+- **La carte qui déborde** : la carte de prix commence dans la bande gris perle et descend de 300 px dans le noir ; un coin noir en biais entame la bande en haut à droite. Le bouton or passe devant le bord de la bande, la pastille « Investissement » flotte à gauche.
+- Les halos dorés remplacent les ombres sur les boutons ; les cartes noires portent une ombre noire profonde.
+- Le hero : des pages de vente inclinées en 3D derrière le portrait, un halo de lumière blanche derrière la tête, des chiffres posés en surimpression.
+- De petites étoiles respirent dans le noir.
+
+## 7. À faire, à ne pas faire
+
+- Faire : un seul mot doré par titre, à la fin de la phrase.
+- Faire : bouton or, puis carré blanc, puis lien : toujours ce trio.
+- Ne pas faire : de deuxième couleur vive. L&#x27;or est la seule lumière.
+- Ne pas faire : de photos en couleur dans « C&#x27;est pour vous ? » : tout y est en noir et blanc.
+
+## 8. Comportement responsive
+
+- Sous 1000 px : la navigation se réduit au bouton menu ; le hero met la scène au-dessus du texte, centré ; projets et étapes en 1 colonne ; la bande du prix empile ses trois colonnes et la carte ne déborde plus.
+- Sous 560 px : le bouton or de la barre disparaît, les cartes « pour vous » passent en 1 colonne.
+
+## 9. Mouvement
+
+- Moteur commun : `data-rv` partout, `data-compte` sur le premier chiffre, `data-parallaxe` sur le fond et les pages 3D, `data-incline` sur le portrait, `data-aimant` sur les boutons or, `.reflet` qui balaie les boutons, barre de progression dorée.
+- **Net au défilement** (classe `.flou`) : les cartes arrivent floues (14 px) et se mettent au point en 1,1 s.
+- **L&#x27;étape au centre** prend l&#x27;or (observateur au milieu de l&#x27;écran).
+- **Le prix se mélange** : des signes au hasard (`?`, `_`, `&lt;`, chiffres) puis le vrai montant se pose de gauche à droite.
+- **La phrase finale** est éclairée par une lampe qui suit la souris (dégradé radial sur le texte).
+
+## 10. Non mesuré, et choix tranchés seul
+
+- Les polices remplacées (§3).
+- Les images : portraits et pages remplacés par des silhouettes et des pages dessinées ; les photos noir et blanc de « pour vous » par des objets dessinés (livre, entonnoir, étiquette, pierre, lampe, miroir).
+- Le prix : l&#x27;original le cache (« R$ ? ») ; le nôtre affiche un montant en francs après le mélange.
+- Le sixième objet (miroir) : l&#x27;original en a cinq ; six remplissent la grille.
+- Le téléphone : la carte de prix ne déborde plus sous 1000 px (elle recouvrait la liste).
+
+## 11. Consigne pour l&#x27;IA
+
+Construis une page noire éclairée par une seule lumière dorée. Titres en DM Sans 400 en dégradé du gris au blanc, un mot en Playfair Display italique doré à la fin. Barre de navigation en verre collée en haut, boutons or brossé suivis d&#x27;un carré blanc à flèche. Les cartes arrivent floues et se mettent au point. Une bande gris perle porte une carte de prix sombre qui déborde dans le noir en dessous. Termine par une grande phrase éclairée par la souris.
+
+## 2. Les sections, dans l&#x27;ordre
+
+01. #hero · « Votre autorité existe déjà, elle n&#x27;est juste pas encore vue »
+02. #projets · « Chaque projet est une œuvre unique. »
+03. #methode · « Je livre une méthode construite en 4 étapes. »
+04. #qui · « Je m&#x27;appelle Inès Kaboré, j&#x27;ai 27 ans, je suis designer et créatrice de la Méthode Lueur. »
+05. #pour-qui · « La Méthode Lueur a été construite pour vous si : »
+06. #prix · « Combien ça coûte ? »
+07. #relance
+
+## 3. Les animations
+
+Les animations passent par un petit moteur commun (anim.js + anim.css, fournis plus bas). On ne code pas d&#x27;animation à la main : on pose des attributs.
+- data-rv : l&#x27;élément apparaît au défilement, décalé de 70 ms dans son groupe.
+- data-lignes : un titre à &lt;br&gt; monte ligne par ligne derrière un masque.
+- data-compte=&quot;3200&quot; : le chiffre compte jusqu&#x27;à sa valeur quand il entre à l&#x27;écran.
+- data-parallaxe=&quot;0.15&quot; : l&#x27;élément glisse plus lentement que la page.
+- data-incline : la carte s&#x27;incline vers la souris (6° au plus).
+- data-aimant : le bouton est attiré par la souris (6 px au plus).
+- data-progression : la barre de lecture en haut de page.
+Tout s&#x27;arrête sous prefers-reduced-motion : la page reste lisible et complète.
+
+Le moteur, à coller tel quel dans la page :
+
+```css
+/* anim.css : les états de départ des effets de anim.js. Sans la classe .anime (JS absent ou
+   reduced-motion), tout est visible : une page ne doit jamais dépendre du JS pour s&#x27;afficher. */
+.anime [data-rv]{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.16,1,.3,1) var(--d,0ms),transform .8s cubic-bezier(.16,1,.3,1) var(--d,0ms)}
+.anime [data-rv].vu{opacity:1;transform:none}
+.anime [data-rv][data-lignes]{opacity:1;transform:none}
+.ligne{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.ligne&gt;span{display:block}
+.anime [data-lignes] .ligne&gt;span{transform:translateY(105%);transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.anime [data-lignes].vu .ligne&gt;span{transform:none}
+[data-parallaxe]{will-change:transform}
+[data-aimant]{transition:translate .35s cubic-bezier(.16,1,.3,1)}
+[data-progression]{position:fixed;top:0;left:0;right:0;height:2px;transform-origin:0 50%;transform:scaleX(0);z-index:100;pointer-events:none}
+/* Reflet qui balaie un bouton au survol : ajouter la classe .reflet au bouton. */
+.reflet{position:relative;overflow:hidden;isolation:isolate}
+.reflet::after{content:&quot;&quot;;position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.28) 50%,transparent 65%);transform:translateX(-120%)}
+.reflet:hover::after{transform:translateX(120%);transition:transform .9s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){.reflet::after{display:none}}
+```
+
+```js
+/* anim.js : le moteur de mouvement commun aux 4 styles (Goût IA, cycle 1).
+   Chaque page choisit ses effets par attributs ; le style (couleurs, durées) reste dans la page.
+   Rien ne bouge sous prefers-reduced-motion : tout est montré tel quel.
+
+   data-rv               apparaît au défilement (classe .vu posée), décalé de 70 ms dans son groupe
+   data-lignes           titre découpé ligne par ligne (&lt;br&gt;), chaque ligne monte à son tour
+   data-compte=&quot;3200&quot;    chiffre qui compte jusqu&#x27;à sa valeur quand il entre à l&#x27;écran
+   data-parallaxe=&quot;0.15&quot; glisse plus lentement que la page (facteur de vitesse)
+   data-incline          carte qui s&#x27;incline vers la souris (max 6°)
+   data-aimant           bouton attiré par la souris (max 6 px)
+   data-progression      barre de lecture en haut de page
+*/
+(() =&gt; {
+  const calme = matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;).matches;
+  const tactile = matchMedia(&#x27;(hover: none)&#x27;).matches;
+  const $$ = (s, r = document) =&gt; [...r.querySelectorAll(s)];
+
+  // Titres en lignes : on enveloppe chaque ligne pour la faire monter derrière un masque.
+  $$(&#x27;[data-lignes]&#x27;).forEach(t =&gt; {
+    const lignes = t.innerHTML.split(/&lt;br\s*\/?&gt;/i);
+    t.innerHTML = lignes.map((l, i) =&gt;
+      `&lt;span class=&quot;ligne&quot;&gt;&lt;span style=&quot;transition-delay:${i * 90}ms&quot;&gt;${l}&lt;/span&gt;&lt;/span&gt;`).join(&#x27;&#x27;);
+    t.setAttribute(&#x27;data-rv&#x27;, &#x27;&#x27;);
+  });
+
+  if (calme) {
+    $$(&#x27;[data-rv]&#x27;).forEach(e =&gt; e.classList.add(&#x27;vu&#x27;));
+    $$(&#x27;[data-compte]&#x27;).forEach(e =&gt; e.textContent = Number(e.dataset.compte).toLocaleString(&#x27;fr-FR&#x27;));
+    return;
+  }
+  document.documentElement.classList.add(&#x27;anime&#x27;);
+
+  // Apparition : décalage par fratrie, pour que les cartes d&#x27;une grille arrivent l&#x27;une après l&#x27;autre.
+  const vu = new IntersectionObserver(es =&gt; es.forEach(e =&gt; {
+    if (!e.isIntersecting) return;
+    e.target.classList.add(&#x27;vu&#x27;);
+    vu.unobserve(e.target);
+  }), { threshold: 0.12, rootMargin: &#x27;0px 0px -6% 0px&#x27; });
+  $$(&#x27;[data-rv]&#x27;).forEach(el =&gt; {
+    const freres = [...el.parentElement.children].filter(f =&gt; f.hasAttribute(&#x27;data-rv&#x27;));
+    el.style.setProperty(&#x27;--d&#x27;, `${Math.min(freres.indexOf(el), 6) * 70}ms`);
+    vu.observe(el);
+  });
+
+  // Compteurs.
+  const compte = new IntersectionObserver(es =&gt; es.forEach(e =&gt; {
+    if (!e.isIntersecting) return;
+    // Le chiffre final reste écrit tant qu&#x27;on ne le voit pas : une capture ou un robot lit la vraie valeur.
+    const el = e.target, fin = Number(el.dataset.compte), t0 = performance.now(), duree = 1600;
+    el.textContent = &#x27;0&#x27;;
+    const pas = t =&gt; {
+      const p = Math.min((t - t0) / duree, 1), v = 1 - Math.pow(1 - p, 4);
+      el.textContent = Math.round(fin * v).toLocaleString(&#x27;fr-FR&#x27;);
+      if (p &lt; 1) requestAnimationFrame(pas);
+    };
+    requestAnimationFrame(pas);
+    compte.unobserve(el);
+  }), { threshold: 0.6 });
+  $$(&#x27;[data-compte]&#x27;).forEach(e =&gt; compte.observe(e));
+
+  // Parallaxe et barre de lecture, sur une seule boucle.
+  const para = $$(&#x27;[data-parallaxe]&#x27;), barre = document.querySelector(&#x27;[data-progression]&#x27;);
+  let attente = false;
+  const defile = () =&gt; {
+    attente = false;
+    const h = innerHeight;
+    para.forEach(el =&gt; {
+      const r = el.getBoundingClientRect();
+      if (r.bottom &lt; -200 || r.top &gt; h + 200) return;
+      const decal = (r.top + r.height / 2 - h / 2) * Number(el.dataset.parallaxe);
+      el.style.transform = `translate3d(0,${decal.toFixed(1)}px,0)`;
+    });
+    if (barre) barre.style.transform = `scaleX(${scrollY / Math.max(1, document.body.scrollHeight - h)})`;
+  };
+  addEventListener(&#x27;scroll&#x27;, () =&gt; { if (!attente) { attente = true; requestAnimationFrame(defile); } }, { passive: true });
+  defile();
+
+  if (tactile) return;
+
+  // Inclinaison des cartes.
+  $$(&#x27;[data-incline]&#x27;).forEach(c =&gt; {
+    c.style.transition = &#x27;transform .5s cubic-bezier(.16,1,.3,1)&#x27;;
+    c.addEventListener(&#x27;mousemove&#x27;, e =&gt; {
+      const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      c.style.transform = `perspective(900px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 6).toFixed(2)}deg) translateY(-3px)`;
+    });
+    c.addEventListener(&#x27;mouseleave&#x27;, () =&gt; c.style.transform = &#x27;&#x27;);
+  });
+
+  // Boutons aimantés.
+  $$(&#x27;[data-aimant]&#x27;).forEach(b =&gt; {
+    b.addEventListener(&#x27;mousemove&#x27;, e =&gt; {
+      const r = b.getBoundingClientRect();
+      b.style.translate = `${((e.clientX - r.left) / r.width - .5) * 12}px ${((e.clientY - r.top) / r.height - .5) * 8}px`;
+    });
+    b.addEventListener(&#x27;mouseleave&#x27;, () =&gt; b.style.translate = &#x27;&#x27;);
+  });
+})();
+```
+
+## 4. Les règles
+
+- Un seul fichier HTML, CSS dans &lt;style&gt;, aucune bibliothèque en dehors des polices Google.
+- Textes en français, écrits pour le métier donné. Aucun tiret long (cadratin ou demi-cadratin) dans les textes.
+- Images : des silhouettes ou des dégradés de remplacement, jamais une photo inventée d&#x27;une vraie personne.
+- Chaque section porte un id (celui de la liste plus haut) pour qu&#x27;on puisse la viser.
+- Contraste du texte de 4,5 au moins. La page tient de 360 à 1920 px de large sans débordement horizontal.
+- Le bouton principal et sa preuve tiennent dans le premier écran du téléphone.
+
+## 5. Ce que tu rends
+
+Le fichier HTML complet, prêt à ouvrir. Puis, en 5 lignes, ce que tu as dû deviner faute de précision dans la fiche.
+</pre>
+</main>
+<script>
+const b=document.getElementById('copier');
+b.onclick=async()=>{await navigator.clipboard.writeText(document.getElementById('texte').textContent);b.textContent='Copié';setTimeout(()=>b.textContent='Copier',1800)};
+</script>
+<footer>Réalisé par<strong>Yedidia Ruben - Digital Strategist</strong></footer>
+</body>
+</html>

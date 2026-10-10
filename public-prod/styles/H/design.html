@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Template H · Sauge apaisée · DESIGN.md · Yedidia Ruben - Digital Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0E0E0D;color:#E9E5DE;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 24px;background:rgba(14,14,13,.9);backdrop-filter:blur(10px);border-bottom:1px solid #262624;font-size:14px}
+header .titre{color:#A9A298;white-space:nowrap} header .titre b{color:#E9E5DE;font-weight:500}
+.onglets{display:flex;gap:2px;padding:4px;border:1px solid #2C2A27;border-radius:999px}
+.onglets a{height:32px;padding:0 14px;display:inline-flex;align-items:center;border-radius:999px;color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s,background .25s}
+.onglets a:hover{color:#fff}
+.onglets a[aria-current]{background:#E9E5DE;color:#141312}
+.retour{color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s} .retour:hover{color:#D9B48A}
+main{padding:40px 20px 0}
+.credit{width:min(1200px,100%);margin:0 auto 22px;font-size:14px;line-height:1.6;color:#A9A298}
+.credit b{color:#E9E5DE;font-weight:500} .credit a{color:#D9B48A;border-bottom:1px solid rgba(217,180,138,.4)}
+main img{display:block;width:min(1200px,100%);margin-inline:auto;border-radius:10px;box-shadow:0 30px 80px -40px #000}
+main img.tel{width:min(390px,100%)}
+.etiquette{width:min(1200px,100%);margin:48px auto 14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A847C}
+.outils{width:min(980px,100%);margin:0 auto 16px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.outils p{font-size:14px;color:#A9A298;line-height:1.6;max-width:560px}
+.outils div{display:flex;gap:8px}
+.outils button,.outils a{font:inherit;font-size:13px;height:38px;padding:0 16px;border-radius:999px;border:1px solid #3A3733;background:none;color:#E9E5DE;cursor:pointer;display:inline-flex;align-items:center;transition:border-color .25s}
+.outils button{background:#D9B48A;border-color:#D9B48A;color:#141312;font-weight:500}
+.outils a:hover{border-color:#D9B48A}
+pre{width:min(980px,100%);margin:0 auto;padding:28px;background:#151514;border:1px solid #262624;border-radius:12px;overflow:auto;max-height:72vh;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#D8D2C8;white-space:pre-wrap;word-break:break-word}
+footer{text-align:center;padding:48px 20px 56px;font-size:13px;color:#8A847C;line-height:1.6}
+footer strong{display:block;color:#E9E5DE;font-weight:500;font-size:15px}
+@media (max-width:980px){header{justify-content:center;padding:10px 8px} header .titre,.retour{display:none} .onglets{max-width:100%;overflow-x:auto;scrollbar-width:none} .onglets a{padding:0 10px}}
+</style>
+</head>
+<body>
+<header>
+  <span class="titre">Template H · <b>Sauge apaisée</b></span>
+  <nav class="onglets" aria-label="Autour du template"><a href="./">La page</a><a href="source.html">Source</a><a href="apercu.html">Notre version</a><a href="design.html" aria-current=page>DESIGN.md</a><a href="prompt.html">Prompt</a></nav>
+  <a class="retour" href="/">Tous les templates</a>
+</header>
+<main>
+<div class="outils"><p>La fiche de style du template : couleurs, polices, tailles, espacements, composants. À donner à une IA avant de coder.</p><div><button type="button" id="copier">Copier</button><a href="DESIGN.md" download>Télécharger</a></div></div>
+<pre id="texte"># DESIGN.md : Style H « Sauge apaisée » (d&#x27;après la page « Eunoia », Jean Lucas)
+
+&gt; **Source** : `inspi/behance/247594873/`, page de vente d&#x27;un complément naturel « Eunoia », Behance 247594873. Relevé le 08/10/2026, session `fe30eec0`.
+&gt; **Demande de Ruben** : la mettre dans le lot de 5 (« Eunoia »). Aucune consigne de détail : tout est relevé sur l&#x27;image.
+
+## 1. Ambiance et intention
+
+- Un complément bien-être vendu comme un rituel : calme, doux, presque une page de spa.
+- Vert sauge partout, du blanc cassé et du gris perle pour respirer, une seule touche jaune pâle pour les économies.
+- Le produit (un pot vert à couvercle crème) revient dans chaque section : hero, ingrédients, vedette, kits.
+- Beaucoup de pastilles arrondies : chaque idée tient dans une capsule.
+
+## 2. Palette et rôles
+
+- **Sauge** `#55645C` / `#566A61` : boutons, panneaux, pastilles d&#x27;icônes.
+- **Sauge claire** `#86948D` : cartes d&#x27;ingrédients ; `#66746D` pour les cartes « pour qui » (texte blanc lisible).
+- **Sauge pâle** `#A9B4AE` : pastilles de liste.
+- **Nuit** `#2A3833` : texte des titres ; **forêt** `#0F251B` : carte « après » et pots.
+- **Perle** `#E5E7E7` : bandes de fond, FAQ fermée ; **crème** `#F4F2EE` : cartes de kits et de moments.
+- **Jaune pâle** `#F0E2A6` : badges d&#x27;économie ; pastels bleu, menthe, jaune, rose pour les 4 conseils.
+- **Bois** `#8A6A40` vers `#5A4224` : le socle sous le pot vedette.
+
+## 3. Typographie
+
+- Non nommée par l&#x27;auteur. Relevé à l&#x27;œil : grotesque arrondie, aérée. La plus proche sur Google Fonts : **Manrope**. Le nom de marque : **Tenor Sans** (capitales fines à empattement léger).
+
+| Rôle | Police | Taille bureau / téléphone | Graisse | Interligne | Approche |
+|---|---|---|---|---|---|
+| Titre du hero | Manrope | 44 / 32 px | 500 | 1,15 | -0,02 em |
+| Titre de section | Manrope | 32 / 26 px | 500 | 1,2 | -0,02 em |
+| Nom de marque | Tenor Sans | 56 à 230 px | 400 | 1 | 0,01 em |
+| Texte | Manrope | 13 à 16 px | 400 | 1,5 | 0 |
+| Pastille | Manrope | 13 à 15 px | 500 | 1,3 | 0 |
+| Bouton | Manrope | 12 px | 700 | 1,2 | capitales |
+| Prix | Manrope | 34 px | 700 | 1 | -0,02 em |
+
+## 4. Composants
+
+- **Pot** : dessiné en CSS (`.pot`, taille réglée par `--l`), corps vert dégradé, couvercle crème, rond doré et nom en Tenor Sans.
+- **Bouton** : 52 px, pilule sauge, texte blanc en capitales, rond blanc à flèche à droite. Lien WhatsApp avec message prérempli.
+- **Pastille d&#x27;étape** : rond sauge avec icône blanche + capsule sauge pâle avec le texte.
+- **Carte « pour qui »** : coins 12 px, filet gris, fond sauge, petite tuile blanche à fleur en haut.
+- **Carte d&#x27;ingrédient** : coins 12 px, sauge claire, tuile blanche à icône, « Action » et « Résultat » en gras.
+- **Duel avant / après** : colonne sauge avec croix rouges, carte forêt avec coches.
+- **Carte de kit** : crème, pots qui débordent par le haut, badge jaune, bouton, 3 garanties en icônes ; le kit du milieu porte un filet.
+- **FAQ** : accordéon natif, gris perle fermé, sauge ouvert avec texte blanc.
+- **Tampon tournant** : texte en cercle autour d&#x27;une fleur, sur la carte « Qui ».
+
+## 5. Mise en page
+
+- Colonne de 1080 px ; les grands panneaux sauge s&#x27;élargissent à 1066 px aux coins de 48 px.
+- Les sections alternent blanc, perle et panneau sauge ; plusieurs panneaux chevauchent la frontière entre deux fonds.
+- « Pour qui » : 5 photos en éventail, puis une grille de 4 colonnes de cartes, le tout cerclé d&#x27;un texte en ellipse.
+- Espacement vertical : 80 à 120 px.
+
+## 6. Profondeur et élévation
+
+- Les photos débordent de leur carte (intro, rituel) ; les pots débordent des cartes de kits.
+- Le pot vedette se pose sur un socle en bois devant le nom géant en filigrane, une cartouche blanche par-dessus.
+- Ombres vertes très douces sous les pots, jamais grises.
+
+## 7. À faire, à ne pas faire
+
+- Faire : une idée par pastille, une icône par pastille.
+- Faire : remontrer le pot à chaque grande section.
+- Ne pas faire : de couleur vive. Le jaune pâle ne sert qu&#x27;aux économies.
+- Ne pas faire : de texte blanc sur la sauge claire `#86948D` : trop faible (3,2), foncer à `#66746D`.
+
+## 8. Comportement responsive
+
+- Behance ne montre que le bureau. Le téléphone est notre proposition.
+- Sous 820 px : hero en colonne, cartes « pour qui » en 2 colonnes, ingrédients en 1, duel empilé, kits empilés, conseils en 2 × 2.
+- Le pot vedette passe à 170 px ; l&#x27;ellipse de texte reste derrière.
+
+## 9. Mouvement
+
+- Moteur commun : `data-rv` partout, `data-parallaxe` sur les photos, `data-aimant` sur les boutons, barre de progression sauge.
+- Propre à H : **le texte en ellipse tourne** (startOffset animé, 12 s) ; **le tampon tourne** sur lui-même ; **deux bandeaux défilent** (puces et phrase en capitales).
+
+## 10. Non mesuré, et choix tranchés seul
+
+- Les polices (§3).
+- La marque « Sérène », les textes, les prix en euros (trio 3 × 17 €, duo 2 × 19 €, cure 6 × 15 €).
+- Les images : personnes en silhouettes, pots dessinés en CSS, ingrédients en icônes.
+- La sauge claire des cartes « pour qui » foncée pour le contraste.
+- Le téléphone (§8).
+
+## 11. Consigne pour l&#x27;IA
+
+Construis une page de vente bien-être en vert sauge `#55645C`, blanc cassé et gris perle. Titres en Manrope 500, nom de marque en Tenor Sans. Chaque idée tient dans une pastille arrondie avec son icône. Un pot vert à couvercle crème revient dans chaque section et déborde des cartes. Un texte tourne en ellipse autour des cartes « pour qui ». Termine par trois kits crème, le kit du milieu mis en avant, un badge jaune pâle pour l&#x27;économie.
+</pre>
+</main>
+<script>
+const b=document.getElementById('copier');
+b.onclick=async()=>{await navigator.clipboard.writeText(document.getElementById('texte').textContent);b.textContent='Copié';setTimeout(()=>b.textContent='Copier',1800)};
+</script>
+<footer>Réalisé par<strong>Yedidia Ruben - Digital Strategist</strong></footer>
+</body>
+</html>

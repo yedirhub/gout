@@ -1,0 +1,20 @@
+/* portfolio.css : le bloc discret posé au milieu du pied de chaque template (Ruben, 08/10/2026 18:46).
+   Injecté par outils/construire-site.py, jamais écrit dans les reproduction.html.
+   Il prend la couleur du pied qui l'accueille : rien à régler par template.
+   Les règles des templates visent l'élément (a, strong, nav) : on passe par #pied pour garder la main. */
+#pied .pf-centre{flex:1 1 auto;display:flex;flex-direction:column;align-items:center;gap:8px;margin:0;padding:0;text-align:center;
+  font-family:'Inter Tight',system-ui,sans-serif;font-size:12px;line-height:1.5;letter-spacing:0;text-transform:none;font-weight:400;color:inherit}
+#pied .pf-centre *{font-family:inherit;letter-spacing:0;text-transform:none;margin:0;padding:0}
+#pied .pf-par{color:inherit;opacity:.9}
+#pied .pf-par strong{font-weight:500;color:inherit;opacity:1;display:inline}
+#pied .pf-liens{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 16px;background:none;border:0;position:static}
+#pied .pf-liens a{color:inherit;opacity:.72;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px;text-decoration-color:currentColor;transition:opacity .25s}
+#pied .pf-liens a:hover,#pied .pf-liens a:focus-visible{opacity:1}
+/* A : pied centré en bloc, le nôtre vient dessous. */
+footer#pied:not(:has(.wrap)):not(.pied) .pf-centre{margin-top:14px}
+/* D : posé sous la colonne du centre. */
+#pied .centre .pf-centre{margin-top:10px}
+@media (max-width:820px){
+  #pied .wrap:has(> .pf-centre),#pied.pied{flex-wrap:wrap}
+  #pied .wrap > .pf-centre,#pied.pied > .pf-centre{order:3;flex-basis:100%;margin-top:6px}
+}

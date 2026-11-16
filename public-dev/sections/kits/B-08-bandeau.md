@@ -331,4 +331,6 @@ footer .droite span{color:#C9A9B3}
 .hero .btn{animation:souffle 3.2s ease-in-out infinite}
 @media (max-width:640px){.livre-para{position:relative;inset:auto}.btn.caps{font-size:12.5px;letter-spacing:0;padding:0 18px;gap:8px}}
 @keyframes souffle{50%{box-shadow:0 0 46px rgba(232,51,109,.72),inset 0 0 0 1px rgba(255,255,255,.3)}}
+
+/* Checkup banque 16/11/2026 : le décor qui sort de l'écran est coupé par SA section, plus par le body. */ #ebook{overflow-x:clip}
 ```

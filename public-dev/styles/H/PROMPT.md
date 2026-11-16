@@ -98,18 +98,18 @@ Construis une page de vente bien-être en vert sauge `#55645C`, blanc cassé et 
 
 ## 2. Les sections, dans l'ordre
 
-01. #hero · « Votre corps le sent quand votre esprit est en paix. »
-02. #intro
-03. #rituel
-04. #pour-qui · « Pour qui ? »
-05. #resultats · « Les résultats attendus »
-06. #conseils · « Nos conseils de prise : »
-07. #savoir · « Le saviez-vous ? »
-08. #abonnement · « Comment ça marche : »
-09. #simplifier · « Simplifiez votre routine avec Sérène »
-10. #offre · « Les kits Sérène »
-11. #qui
-12. #faq · « Questions fréquentes »
+01. #hero · Le hero : Dire qui, quoi, pour qui en une phrase, puis faire cliquer.
+02. #intro · Le contenu : Rendre l'offre concrète, morceau par morceau.
+03. #rituel · Le contenu : Rendre l'offre concrète, morceau par morceau.
+04. #pour-qui · Pour qui : Trier : celui qui n'est pas la cible s'en va, celui qui l'est se sent choisi.
+05. #resultats · La preuve : Faire parler les autres : « ça a marché pour des gens comme moi ».
+06. #conseils · Le contenu : Rendre l'offre concrète, morceau par morceau.
+07. #savoir · La bascule : Montrer pourquoi cette solution est différente.
+08. #abonnement · Le contenu : Rendre l'offre concrète, morceau par morceau.
+09. #simplifier · La relance : Redonner le bouton à celui qui s'est décidé en route.
+10. #offre · L'offre : Convertir : le prix, ce qu'il contient, le bouton. Le geste : pots qui débordent des cartes de kits.
+11. #qui · Qui est derrière : Un humain derrière l'offre, et un lieu réel. Le geste : tampon tournant sur la carte.
+12. #faq · La FAQ : Lever les dernières objections.
 
 ## 3. Les animations
 

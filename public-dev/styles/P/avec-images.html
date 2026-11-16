@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Template Style P, noir et or : page de vente d'un atelier de style en 5 jours, fond noir, serif en capitales, or brossé, emblème à trois pétales.">
+<title>Avec images · Style P · Noir et or · template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/anim.css">
+<style>
+:root{
+  --noir:#000000; --nuit:#0A0A0A; --carte:#161616; --carte2:#1F1F1F; --filet:#2B2B2B; --barre:#1D1D1D;
+  --or:#D99C44; --or-vif:#F3A240; --or-c:#D5AC50; --or-f:#B37E1E; --brun:#522700; --or-txt:#D29A4E; --or-sombre:#8A5A12;
+  --blanc:#FFFFFF; --texte:#E4E4E4; --gris:#ABABAB; --rouge:#E0585F;
+  --perle:#EDEDED; --perle2:#D9D9D6; --encre:#1A1A1A; --encre2:#3A3A3A;
+  --courbe:cubic-bezier(.16,1,.3,1);
+  --titre:'Spectral',Georgia,serif; --corps:'Source Serif 4',Georgia,serif; --logo:'Playfair Display',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--corps);font-size:15px;line-height:1.55;color:var(--texte);background:var(--noir);-webkit-font-smoothing:antialiased;overflow-x:clip}
+svg{display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--titre);font-weight:400;color:var(--blanc);line-height:1.15}
+b,strong{font-weight:600;color:var(--blanc)}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto;position:relative;z-index:1}
+section{position:relative}
+.centre{text-align:center}
+.or{color:var(--or-txt)}
+
+/* Emplacement d'image : cadre teinté or sur noir, format écrit au centre */
+.emplacement{position:relative;overflow:hidden;width:100%;background:radial-gradient(80% 60% at 50% 35%,#2B1E0C,#0E0C09 75%);border:1px solid rgba(217,156,68,.28)}
+.emplacement[data-format="3:4"]{aspect-ratio:3/4}
+.emplacement[data-format="4:3"]{aspect-ratio:4/3}
+.emplacement[data-format="16:9"]{aspect-ratio:16/9}
+.emplacement[data-format="1:1"]{aspect-ratio:1/1}
+.emplacement[data-format="9:16"]{aspect-ratio:9/16}
+.emplacement::after{content:attr(data-format);position:absolute;left:50%;top:50%;translate:-50% -50%;padding:6px 12px;border:1px solid rgba(243,162,64,.35);font:500 11px/1 var(--titre);letter-spacing:.24em;color:rgba(243,162,64,.75)}
+.emplacement:has(img)::after{display:none}
+.clair .emplacement{background:linear-gradient(160deg,#E9E2D6,#C9BBA4);border-color:rgba(138,90,18,.25)}
+.clair .emplacement::after{color:var(--or-sombre);border-color:rgba(138,90,18,.4)}
+
+/* Marque : « Trio d'Allure », serif à fort contraste et emblème à trois pétales */
+.marque{display:inline-flex;align-items:center;gap:6px;color:var(--blanc)}
+.marque .mots{font-family:var(--logo);line-height:.82;letter-spacing:-.02em}
+.marque .mots span{display:block}
+.marque .mots .l1{font-size:1em}
+.marque .mots .l1 small{font-size:.32em;font-family:var(--titre);margin-left:3px;vertical-align:.4em;color:var(--or)}
+.marque .mots .l2{font-family:var(--titre);font-size:.66em;letter-spacing:.06em;margin-top:.12em}
+.marque svg{width:1.5em;height:1.25em;color:var(--or)}
+
+/* Bouton : lingot d'or brossé, texte serif foncé, flèche oblique */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;padding:10px 24px;border-radius:3px;
+  background:linear-gradient(180deg,#E3BC64 0%,var(--or-c) 45%,var(--or-f) 100%);color:#1A1205;
+  font:600 15px/1.2 var(--corps);box-shadow:0 0 0 1px rgba(255,214,140,.25) inset,0 8px 26px rgba(217,156,68,.35);transition:box-shadow .4s var(--courbe),filter .4s}
+.btn:hover{filter:brightness(1.08);box-shadow:0 0 0 1px rgba(255,214,140,.4) inset,0 10px 36px rgba(217,156,68,.55)}
+.btn svg{width:13px;height:13px;flex:none}
+.btn.caps{font:600 12.5px/1.2 var(--titre);letter-spacing:.06em;text-transform:uppercase}
+
+/* 01 · Hero */
+.hero{padding:96px 0 40px;overflow:hidden;background:radial-gradient(40% 60% at 70% 45%,rgba(120,72,10,.22),transparent 70%),var(--noir)}
+.hero .arche{position:absolute;left:3%;top:90px;width:110px;height:430px;border:1px solid #191919;border-radius:60px 60px 0 0;opacity:.8}
+.hero .arche::before,.hero .arche::after{content:"";position:absolute;left:12px;right:12px;height:1px;background:#191919;top:34%}
+.hero .arche::after{top:62%}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;min-height:560px}
+.hero .txt{padding-left:4%;max-width:470px}
+.hero .marque{font-size:46px;margin-bottom:22px}
+.hero .date{font:400 14px/1 var(--titre);letter-spacing:.08em;color:var(--gris);margin-bottom:14px}
+.hero h1{font-size:clamp(30px,2.6vw,36px);text-transform:uppercase;letter-spacing:.01em;line-height:1.1;margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--or-txt)}
+.hero p{font-size:15.5px;line-height:1.45;color:var(--texte);margin-bottom:30px}
+.hero p em{font-style:normal;color:var(--or-txt)}
+.scene{position:relative;justify-self:center;width:min(440px,100%)}
+.scene .halo{position:absolute;left:50%;top:40%;width:150%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(243,162,64,.42) 0,rgba(217,156,68,.14) 30%,transparent 62%)}
+.scene .anneau{position:absolute;right:-6%;top:16%;width:46%;aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(217,156,68,.55);display:grid;place-items:center}
+.scene .anneau svg{width:58%;height:58%;color:var(--or);opacity:.8}
+.scene .triangle{position:absolute;left:-14%;right:-14%;bottom:0;height:62%;background:linear-gradient(180deg,rgba(80,52,16,.0),rgba(80,52,16,.45));clip-path:polygon(50% 0,100% 100%,0 100%)}
+.scene .emplacement{z-index:1;border:0;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent);mask-image:linear-gradient(180deg,#000 72%,transparent);background:radial-gradient(70% 55% at 55% 30%,#4A2E0C,#120C05 80%)}
+
+/* 02 · Détails de l'atelier : carrousel de cartes à photo */
+.atelier{padding:70px 0 90px;overflow:hidden}
+.atelier h2,.temoins h2{font-size:clamp(26px,2.4vw,34px);text-transform:uppercase;letter-spacing:.01em;text-align:center}
+.caroussel{position:relative;max-width:1000px;margin:44px auto 0;padding:0 44px}
+.piste{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 10px}
+.piste::-webkit-scrollbar{display:none}
+.jour{flex:0 0 calc((100% - 36px)/3);scroll-snap-align:start;padding:10px 10px 22px;border-radius:10px;background:linear-gradient(180deg,#1B1B1B,#0E0E0E);border:1px solid #3A2C17;box-shadow:0 0 0 1px rgba(0,0,0,.6),0 14px 34px rgba(0,0,0,.6)}
+.jour .emplacement{border-radius:4px;border:0}
+.jour small{display:block;margin:18px 12px 4px;font:400 12px/1 var(--corps);color:var(--gris)}
+.jour h3{margin:0 12px;padding-bottom:14px;border-bottom:1px solid var(--filet);font-size:20px;font-family:var(--corps)}
+.jour p{margin:14px 12px 0;font-size:13.5px;line-height:1.5;color:var(--gris)}
+.fl{position:absolute;top:50%;translate:0 -50%;width:44px;height:44px;display:grid;place-items:center;border:0;background:none;color:var(--or);cursor:pointer}
+.fl svg{width:12px;height:16px}
+.fl.g{left:0}.fl.d{right:0}
+.atelier .cta{margin-top:40px}
+
+/* 03 · Problèmes et bénéfices : deux cartes sombres, emblème qui les coiffe */
+.duel{padding:30px 0 110px;overflow:hidden}
+.duel .grille{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:80px;max-width:1000px;margin:0 auto}
+.duel .emb{position:absolute;left:50%;top:-58px;translate:-50% 0;width:170px;height:150px;color:var(--or);z-index:2;filter:drop-shadow(0 0 22px rgba(243,162,64,.35))}
+.cote{position:relative;padding:56px 44px 50px;border-radius:14px;background:linear-gradient(170deg,#262626,#121212 60%,#0C0C0C);border:1px solid #202020;box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.cote::before{content:"";position:absolute;top:-1px;left:22%;width:24%;height:3px;border-radius:2px;background:var(--rouge);box-shadow:0 0 18px 4px rgba(224,88,95,.55)}
+.cote.bien::before{left:auto;right:22%;background:var(--or-vif);box-shadow:0 0 18px 4px rgba(243,162,64,.55)}
+.cote h3{display:flex;align-items:center;justify-content:center;gap:16px;font-family:var(--corps);font-size:30px;margin-bottom:34px}
+.cote h3 svg{width:38px;height:38px}
+.cote ul{list-style:none;display:grid;gap:22px}
+.cote li{font-size:15px;line-height:1.45;color:var(--texte)}
+.cote li em{font-style:normal;color:var(--rouge)}
+.cote.bien li em{color:var(--or-txt)}
+
+/* 04 · Témoignages : bande claire au bord biseauté, captures de messages */
+.clair{background:var(--perle);color:var(--encre)}
+.clair h2,.clair h3{color:var(--encre)}
+.clair b{color:var(--encre)}
+.temoins{width:min(1460px,100%);margin:0 auto;padding:90px 0 40px;clip-path:polygon(0 30px,52% 0,100% 30px,100% 100%,0 100%);overflow:hidden}
+.temoins .caroussel{max-width:1300px;padding:0 60px;margin-top:40px}
+.temoins .piste{gap:14px;-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.35),#000 18%,#000 82%,rgba(0,0,0,.35));mask-image:linear-gradient(90deg,rgba(0,0,0,.35),#000 18%,#000 82%,rgba(0,0,0,.35))}
+.msg{flex:0 0 calc((100% - 56px)/5);min-width:220px;scroll-snap-align:center;padding:14px 12px;background:#0F1412 repeating-linear-gradient(45deg,rgba(255,255,255,.025) 0 6px,transparent 6px 14px);border-radius:2px;min-height:340px;display:flex;flex-direction:column;justify-content:flex-end}
+.msg .bulle{position:relative;padding:10px 12px 18px;border-radius:0 8px 8px 8px;background:#232A27;font:400 13px/1.45 system-ui,sans-serif;color:#EDEDED}
+.msg .bulle::before{content:"";position:absolute;left:-7px;top:0;border:7px solid transparent;border-top-color:#232A27;border-right-color:#232A27;border-width:0 7px 9px 0}
+.msg .bulle time{position:absolute;right:10px;bottom:4px;font-size:10px;color:#9CA6A1}
+.msg .qui{display:flex;align-items:center;gap:8px;margin-top:10px;font:500 11.5px/1 system-ui,sans-serif;color:#B9C2BE}
+.msg .qui i{width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--or-c),var(--brun))}
+.temoins .fl{width:44px;height:44px;border-radius:50%;background:#FFFFFF;color:var(--encre);box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.temoins .fl svg{width:9px;height:12px}
+
+/* 05 · Garantie, dans la même bande claire */
+.garantie{width:min(1460px,100%);margin:0 auto;padding:60px 0 80px}
+.garantie .wrap{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;max-width:860px}
+.sceau{display:flex;align-items:center;gap:16px;color:var(--or-sombre)}
+.sceau svg{width:110px;height:92px;color:#B98232}
+.sceau b{font:400 clamp(30px,3vw,40px)/1 var(--titre);text-transform:uppercase;color:#8A5A12;letter-spacing:.02em}
+.garantie p{font-size:17px;line-height:1.45;color:var(--encre2)}
+
+/* 06 · La mentore : fond clair à feuillage, portrait sur cadre doré */
+.mentore{width:min(1460px,100%);margin:0 auto;padding:80px 0 110px;overflow:hidden;background:linear-gradient(100deg,#F2F2F0 0%,#E4E4E1 45%,#CFCFCB 100%);clip-path:polygon(0 0,100% 0,100% calc(100% - 26px),62% calc(100% - 26px),58% 100%,0 100%)}
+.mentore .feuille{position:absolute;color:#2F4A2C;opacity:.9}
+.mentore .f1{right:-30px;top:-20px;width:240px;height:300px;rotate:200deg}
+.mentore .f2{left:-70px;bottom:-110px;width:200px;height:260px;rotate:20deg}
+.mentore .f3{right:40px;bottom:-60px;width:150px;height:200px;rotate:-20deg;opacity:.7}
+.mentore .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1000px}
+.mentore .txt{padding-left:4%}
+.mentore small{font:400 15px/1 var(--corps);color:var(--or-sombre)}
+.mentore h2{font-family:var(--corps);font-size:clamp(30px,3vw,40px);color:#8A5A12;margin:10px 0 26px;padding-bottom:14px;background:linear-gradient(var(--or),var(--or)) left bottom/80px 1px no-repeat}
+.mentore p{font-size:16px;line-height:1.45;color:var(--encre)}
+.mentore p+p{margin-top:20px}
+.portrait{position:relative;width:min(380px,100%);justify-self:center}
+.portrait .dore{position:absolute;inset:8% -8% 0 4%;border-radius:22px;background:linear-gradient(135deg,#F2C26E,#B37E1E 55%,#6E4610)}
+.portrait .rond{position:absolute;right:-16%;top:22%;width:44%;aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(255,230,180,.85);background:radial-gradient(circle,rgba(255,210,120,.55),transparent 65%);z-index:2;display:grid;place-items:center}
+.portrait .rond svg{width:56%;height:56%;color:#FFF3D6}
+.portrait .emplacement{border-radius:18px}
+
+/* 07 · Offre */
+.offre{padding:80px 0 60px;background:radial-gradient(50% 60% at 60% 40%,rgba(120,72,10,.14),transparent 70%)}
+.offre .wrap{display:grid;grid-template-columns:1fr 360px;gap:70px;align-items:center;max-width:860px}
+.offre h2{font-size:clamp(26px,2.6vw,32px);line-height:1.15;margin-bottom:12px}
+.offre h3{font:400 18px/1.3 var(--corps);color:var(--texte);margin-bottom:14px}
+.coches{list-style:none;display:grid;gap:12px}
+.coches li{display:flex;gap:10px;font-size:14.5px;line-height:1.4;color:var(--or-txt)}
+.coches svg{width:14px;height:14px;flex:none;margin-top:4px;color:var(--or)}
+.prix{padding:44px 32px 36px;border:1px solid #303030;background:linear-gradient(180deg,#0E0E0E,#050505);text-align:center}
+.prix .marque{font-size:46px}
+.prix .sous{margin-top:12px;text-align:left;font-size:16px;color:var(--blanc)}
+.prix .montant{display:block;text-align:left;margin:4px 0 22px;font:500 52px/1 var(--corps);letter-spacing:-.02em;color:var(--blanc)}
+.prix .montant small{font-size:24px;font-weight:400;letter-spacing:0}
+.prix .btn{width:100%}
+.moyens{display:flex;justify-content:center;flex-wrap:wrap;gap:6px;margin:14px 0 22px}
+.moyens span{height:16px;padding:0 6px;border-radius:2px;background:#202020;font:600 8.5px/16px system-ui,sans-serif;color:#9A9A9A;letter-spacing:.04em}
+.encart{display:flex;gap:12px;align-items:flex-start;text-align:left;padding:12px 16px;margin-top:8px;background:#1C1C1C;font-size:13px;line-height:1.4;color:var(--gris)}
+.encart svg{width:18px;height:18px;flex:none;color:var(--or);margin-top:1px}
+
+/* 08 · FAQ */
+.faq{padding:40px 0 60px}
+.faq h2{font:400 26px/1.2 var(--corps);margin-bottom:24px}
+.faq .liste{max-width:640px;margin:0 auto;display:grid;gap:12px;text-align:left}
+.faq details{background:var(--barre)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:44px;padding:8px 18px;font:400 14px/1.3 var(--corps);color:var(--texte)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:8px;height:8px;border-right:1.5px solid var(--gris);border-bottom:1.5px solid var(--gris);rotate:45deg;translate:0 -2px;flex:none;transition:rotate .3s var(--courbe)}
+.faq details[open] summary::after{rotate:225deg;translate:0 2px}
+.faq details p{padding:0 18px 16px;font-size:14px;color:var(--gris)}
+
+/* 09 · Relance WhatsApp */
+.relance{padding:40px 0 70px;background:radial-gradient(40% 70% at 50% 30%,rgba(255,255,255,.05),transparent 70%)}
+.relance h2{font:400 clamp(28px,2.8vw,36px)/1.15 var(--corps)}
+.relance p{max-width:440px;margin:14px auto 26px;font-size:15px;color:var(--texte)}
+.relance .btn svg{width:16px;height:16px}
+
+/* 10 · Pied */
+#pied{background:var(--noir);color:var(--gris);font-size:13px}
+#pied .wrap{display:flex;align-items:center;gap:24px;padding:26px 0 40px;max-width:860px}
+#pied .wrap>span{white-space:nowrap}
+#pied .trait{flex:1;height:1px;background:linear-gradient(90deg,var(--or),rgba(217,156,68,.15))}
+#pied .droite{display:flex;align-items:center;gap:8px;white-space:nowrap}
+#pied .droite svg{width:16px;height:16px;color:var(--or)}
+
+@media (max-width:1080px){
+  .jour{flex-basis:calc((100% - 18px)/2)}
+  .msg{flex-basis:calc((100% - 28px)/3)}
+  .duel .grille{gap:40px}
+  .cote{padding:56px 28px 44px}
+  .offre .wrap{gap:40px}
+}
+@media (max-width:820px){
+  .hero{padding:40px 0 30px}
+  .hero .arche{display:none}
+  .hero .wrap{grid-template-columns:1fr;min-height:0;gap:10px}
+  .hero .scene{order:-1;width:min(340px,82%)}
+  .hero .txt{padding-left:0;max-width:560px}
+  .hero .marque{font-size:38px;margin-bottom:14px}
+  .hero h1{font-size:28px}
+  .caroussel{padding:0 36px}
+  .duel{padding-top:60px}
+  .duel .grille{grid-template-columns:1fr;gap:70px;max-width:540px}
+  .duel .emb{top:-60px;width:140px;height:124px}
+  .cote{padding-top:76px}
+  .mentore .f1{top:-150px;right:-110px;width:200px}
+  .mentore .f2{bottom:-150px;left:-90px}
+  .temoins{clip-path:polygon(0 18px,52% 0,100% 18px,100% 100%,0 100%);padding-top:70px}
+  .temoins .caroussel{padding:0 50px}
+  .garantie .wrap{grid-template-columns:1fr;gap:20px;justify-items:center;text-align:center}
+  .mentore{padding:60px 0 90px}
+  .mentore .wrap{grid-template-columns:1fr;gap:50px}
+  .mentore .txt{padding-left:0}
+  .portrait{width:min(320px,80%)}
+  .offre .wrap{grid-template-columns:1fr;max-width:420px}
+}
+@media (max-width:520px){
+  .jour{flex-basis:100%}
+  .msg{flex-basis:100%;min-width:0}
+  .temoins .piste{-webkit-mask-image:none;mask-image:none}
+  .hero h1{font-size:24px}
+  .hero p{font-size:14.5px}
+  .cote{padding:50px 20px 36px}
+  .cote h3{font-size:25px}
+  .sceau svg{width:80px;height:68px}
+  .prix{padding:36px 20px 28px}
+  .prix .montant{font-size:42px}
+  #pied .wrap{flex-direction:column;align-items:flex-start;gap:14px}
+  #pied .trait{width:100%;flex:none}
+  #pied .wrap>span{white-space:normal}
+}
+</style>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/portfolio.css">
+<link rel="stylesheet" href="../../commun/flottant.css">
+</head>
+<body>
+<div data-progression style="background:var(--or)"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="embleme" viewBox="0 0 120 100"><g fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"><path d="M6 6 H50 C58 30 61 54 60 94 C38 72 18 42 6 6 Z"/><path d="M114 6 H70 C62 30 59 54 60 94 C82 72 102 42 114 6 Z"/><path d="M60 30 C71 45 71 62 60 76 C49 62 49 45 60 30 Z"/></g></symbol>
+  <symbol id="fleche" viewBox="0 0 12 12"><path d="M3 9 L9 3 M4 3 H9 V8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="tri-g" viewBox="0 0 12 16"><path d="M11 1 L1 8 L11 15 Z" fill="currentColor"/></symbol>
+  <symbol id="tri-d" viewBox="0 0 12 16"><path d="M1 1 L11 8 L1 15 Z" fill="currentColor"/></symbol>
+  <symbol id="alerte" viewBox="0 0 40 40"><path d="M20 5 L37 34 H3 Z" fill="none" stroke="#B3343C" stroke-width="2.4" stroke-linejoin="round"/><path d="M20 15 V24" stroke="#B3343C" stroke-width="2.6" stroke-linecap="round"/><circle cx="20" cy="29" r="1.7" fill="#B3343C"/></symbol>
+  <symbol id="case" viewBox="0 0 40 40"><rect x="4" y="7" width="29" height="29" rx="2" fill="none" stroke="#D99C44" stroke-width="2.4"/><path d="M11 20 L18 27 L37 6" fill="none" stroke="#D99C44" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="coche" viewBox="0 0 14 14"><path d="M2 7.5 L5.5 11 L12 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="feuille" viewBox="0 0 100 140"><path d="M50 4 C92 34 96 96 50 136 C4 96 8 34 50 4 Z" fill="currentColor"/><path d="M50 10 V132 M50 40 L76 26 M50 62 L82 48 M50 86 L80 74 M50 40 L24 26 M50 62 L18 48 M50 86 L20 74" stroke="#F2F2F0" stroke-opacity=".25" stroke-width="2" fill="none"/></symbol>
+  <symbol id="cadenas" viewBox="0 0 20 20"><rect x="4" y="9" width="12" height="9" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M7 9 V6 A3 3 0 0 1 13 6 V9" fill="none" stroke="currentColor" stroke-width="1.5"/></symbol>
+  <symbol id="couronne" viewBox="0 0 20 20"><path d="M3 15 L4 6 L8 10 L10 4 L12 10 L16 6 L17 15 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path d="M4 20 L5.2 16.3 A8 8 0 1 1 8 19 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9.2 C9 12 11.6 14.8 14.6 15 L15.6 13.6 L13.8 12.7 L13 13.4 C12 13 11 12 10.6 11 L11.3 10.2 L10.4 8.4 Z" fill="currentColor"/></symbol>
+  <symbol id="insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+</svg>
+
+<section class="hero" id="hero">
+  <span class="arche" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="txt">
+      <div class="marque" data-rv aria-label="Trio d'Allure"><span class="mots"><span class="l1">Trio<small>d'</small></span><span class="l2">ALLURE</span></span><svg aria-hidden="true"><use href="#embleme"/></svg></div>
+      <p class="date" data-rv>Atelier en direct · 24/11 à 19 h</p>
+      <h1 data-lignes data-rv><em>Transformez</em> votre image en 5 jours et <em>affirmez</em> votre assurance</h1>
+      <p data-rv>Découvrez comment construire votre <em>trio de style</em> et devenir une <em>référence d'élégance</em>. Vous achetez des vêtements sans arrêt, mais vous n'avez jamais rien à vous mettre ? L'image que vous renvoyez vous met mal à l'aise ? <em>Alors cet atelier est pour vous.</em></p>
+      <a class="btn reflet" href="#offre" data-rv data-aimant>Je réserve ma place <svg aria-hidden="true"><use href="#fleche"/></svg></a>
+    </div>
+    <div class="scene">
+      <span class="halo" aria-hidden="true" data-parallaxe="0.04"></span>
+      <span class="triangle" aria-hidden="true"></span>
+      <span class="anneau" aria-hidden="true"><svg><use href="#embleme"/></svg></span>
+      <div class="emplacement" data-img="P-hero" data-format="3:4" data-alt="Leïla Benali, conseillère en image, en pull noir à col roulé, la main levée près du visage, sur fond noir"><img src="images/P-hero.jpg" alt="Leïla Benali, conseillère en image, en pull noir à col roulé, la main levée près du visage, sur fond noir" loading="lazy" decoding="async" onerror="this.remove()"></div>
+    </div>
+  </div>
+</section>
+
+<section class="atelier" id="atelier">
+  <div class="wrap">
+    <h2 data-rv>Le programme de l'atelier</h2>
+    <div class="caroussel" data-rv>
+      <button class="fl g" type="button" aria-label="Jour précédent" data-dir="-1"><svg><use href="#tri-g"/></svg></button>
+      <div class="piste" tabindex="0" aria-label="Les 5 jours de l'atelier">
+        <article class="jour"><div class="emplacement" data-img="P-jour-1" data-format="4:3" data-alt="Leïla assise dans un fauteuil de cuir, tailleur blanc, sourire posé"><img src="images/P-jour-1.jpg" alt="Leïla assise dans un fauteuil de cuir, tailleur blanc, sourire posé" loading="lazy" decoding="async" onerror="this.remove()"></div><small>Jour 1</small><h3>L'atout visuel</h3><p>Les techniques pour lire votre silhouette et faire de votre image un vrai atout.</p></article>
+        <article class="jour"><div class="emplacement" data-img="P-jour-2" data-format="4:3" data-alt="Leïla de face, veste blanche et colliers dorés, regard direct"><img src="images/P-jour-2.jpg" alt="Leïla de face, veste blanche et colliers dorés, regard direct" loading="lazy" decoding="async" onerror="this.remove()"></div><small>Jour 2</small><h3>Les codes qui marquent</h3><p>Devenez la femme dont on se souvient : les codes d'image qui rendent une présence attirante et persuasive.</p></article>
+        <article class="jour"><div class="emplacement" data-img="P-jour-3" data-format="4:3" data-alt="Leïla qui rit, cheveux noirs ondulés, lumière douce de fenêtre"><img src="images/P-jour-3.jpg" alt="Leïla qui rit, cheveux noirs ondulés, lumière douce de fenêtre" loading="lazy" decoding="async" onerror="this.remove()"></div><small>Jour 3</small><h3>Votre trio de style</h3><p>Trouver et appliquer vos trois styles dominants pour une image cohérente et élégante.</p></article>
+        <article class="jour"><div class="emplacement" data-img="P-jour-4" data-format="4:3" data-alt="Leïla devant un portant de vêtements, elle compose une tenue sur cintre"><img src="images/P-jour-4.jpg" alt="Leïla devant un portant de vêtements, elle compose une tenue sur cintre" loading="lazy" decoding="async" onerror="this.remove()"></div><small>Jour 4</small><h3>La garde-robe utile</h3><p>Trier, associer, compléter : chaque pièce que vous possédez se met à travailler pour vous.</p></article>
+        <article class="jour"><div class="emplacement" data-img="P-jour-5" data-format="4:3" data-alt="Leïla debout, bras croisés, posture assurée dans un bureau sombre"><img src="images/P-jour-5.jpg" alt="Leïla debout, bras croisés, posture assurée dans un bureau sombre" loading="lazy" decoding="async" onerror="this.remove()"></div><small>Jour 5</small><h3>Posture et présence</h3><p>Le geste, la voix, la façon d'entrer dans une pièce : l'image qui se voit avant de parler.</p></article>
+      </div>
+      <button class="fl d" type="button" aria-label="Jour suivant" data-dir="1"><svg><use href="#tri-d"/></svg></button>
+    </div>
+    <div class="centre cta" data-rv><a class="btn reflet" href="#offre" data-aimant>Je m'inscris et je transforme mon style <svg aria-hidden="true"><use href="#fleche"/></svg></a></div>
+  </div>
+</section>
+
+<section class="duel" id="problemes">
+  <div class="wrap">
+    <div class="grille">
+      <svg class="emb" aria-hidden="true" data-rv><use href="#embleme"/></svg>
+      <div class="cote mal" data-rv>
+        <h3><svg aria-hidden="true"><use href="#alerte"/></svg>Ce qui coince</h3>
+        <ul>
+          <li><em>Vous achetez beaucoup, sans jamais rien à porter :</em> fini la frustration de payer des vêtements qui ne vont avec rien ou qui dorment au placard.</li>
+          <li><em>Vous dépensez trop en vêtements :</em> économisez en comprenant enfin vos vrais besoins et votre style.</li>
+          <li><em>L'image que vous renvoyez vous gêne :</em> construisez une image qui vous rend sûre de vous et forte.</li>
+          <li><em>On ne vous prend pas au sérieux au travail :</em> gagnez en présence et en impact dans votre métier.</li>
+          <li><em>Vous ne savez pas composer une tenue :</em> apprenez à associer les pièces avec harmonie et allure.</li>
+          <li><em>Vos achats neufs ne vont pas avec l'ancien :</em> intégrez chaque nouvelle pièce à votre garde-robe existante.</li>
+        </ul>
+      </div>
+      <div class="cote bien" data-rv>
+        <h3><svg aria-hidden="true"><use href="#case"/></svg>Ce qui change</h3>
+        <ul>
+          <li><em>Des pièces qui vous ressemblent :</em> sachez repérer et choisir les vêtements qui disent qui vous êtes.</li>
+          <li><em>Toute votre garde-robe sert :</em> utilisez avec intelligence les pièces que vous avez déjà.</li>
+          <li><em>Moins de dépenses :</em> coupez les achats inutiles, n'achetez que ce qui compte vraiment.</li>
+          <li><em>À l'aise partout :</em> gagnez en assurance pour chaque occasion, du bureau au mariage.</li>
+          <li><em>Belle et attirante, chaque jour :</em> une image qui met en valeur votre beauté naturelle.</li>
+          <li><em>Une référence :</em> devenez une icône de style que l'on remarque et que l'on admire.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="temoins clair" id="temoignages">
+  <div class="wrap"><h2 data-rv>Ce que disent mes élèves</h2></div>
+  <div class="caroussel" data-rv>
+    <button class="fl g" type="button" aria-label="Message précédent" data-dir="-1"><svg><use href="#tri-g"/></svg></button>
+    <div class="piste" tabindex="0" aria-label="Messages d'élèves">
+      <div class="msg"><p class="bulle">Leïla, merci ! J'ai trié mon placard hier soir avec la méthode du jour 4. J'ai trouvé 9 tenues sans rien acheter. 9 ! <time>21:14</time></p><p class="qui"><i></i>Awa, Dakar</p></div>
+      <div class="msg"><p class="bulle">J'avais commencé votre programme quand mon fils avait 4 mois. Je me sentais perdue, loin de moi. Aujourd'hui mon mari remarque mes tenues avant que je sorte, et surtout je me sens à nouveau moi. Merci pour tout. <time>18:37</time></p><p class="qui"><i></i>Mariam, Abidjan</p></div>
+      <div class="msg"><p class="bulle">Je veux vous dire ma gratitude pour ces 5 jours. Votre façon d'expliquer est simple et directe. Je comprends enfin pourquoi certaines tenues me tassent. J'ai déjà refait ma valise pour Paris. <time>14:02</time></p><p class="qui"><i></i>Inès, Casablanca</p></div>
+      <div class="msg"><p class="bulle">Franchement j'avais honte de mes photos de profil. Hier en réunion le directeur m'a demandé de présenter le projet. Je ne pense pas que ce soit un hasard. <time>09:48</time></p><p class="qui"><i></i>Fatou, Lomé</p></div>
+      <div class="msg"><p class="bulle">Le trio de style, c'est ce qui m'a débloquée. Je n'achète plus au hasard. Ce mois-ci j'ai dépensé moitié moins et je n'ai jamais été aussi bien habillée. <time>20:05</time></p><p class="qui"><i></i>Sandrine, Douala</p></div>
+      <div class="msg"><p class="bulle">Merci Leïla. Je ne pensais pas qu'un atelier en ligne pouvait changer autant. Même ma posture a changé, mes collègues me l'ont dit. <time>12:30</time></p><p class="qui"><i></i>Kadiatou, Conakry</p></div>
+    </div>
+    <button class="fl d" type="button" aria-label="Message suivant" data-dir="1"><svg><use href="#tri-d"/></svg></button>
+  </div>
+</section>
+
+<section class="garantie clair" id="garantie">
+  <div class="wrap">
+    <div class="sceau" data-rv><svg aria-hidden="true"><use href="#embleme"/></svg><b>Satisfaction<br>garantie</b></div>
+    <p data-rv>Vous verrez une <b>vraie transformation de votre image</b> et de la façon dont vous vous sentez, en <b>5 jours seulement</b>. Cet atelier est pensé pour des résultats rapides et qui durent. Sinon, je vous rembourse.</p>
+  </div>
+</section>
+
+<section class="mentore clair" id="mentore">
+  <svg class="feuille f1" aria-hidden="true" data-parallaxe="0.05"><use href="#feuille"/></svg>
+  <svg class="feuille f2" aria-hidden="true" data-parallaxe="-0.04"><use href="#feuille"/></svg>
+  <svg class="feuille f3" aria-hidden="true"><use href="#feuille"/></svg>
+  <div class="wrap">
+    <div class="txt">
+      <small data-rv>Qui sera votre mentore ?</small>
+      <h2 data-rv>Leïla Benali</h2>
+      <p data-rv>Onze ans dans la mode, entre Casablanca et Abidjan. Formée au stylisme, spécialisée en <b>conseil en image, production de mode et image personnelle</b>, j'accompagne aujourd'hui des femmes actives, des dirigeantes et des créatrices.</p>
+      <p data-rv>Au fil des années, j'ai réuni ce que m'ont appris le terrain et l'observation pour bâtir une <b>méthode qui relie image, posture et comportement</b>. Une approche <b>claire et concrète</b>, qui fait de votre apparence un outil de communication et vous aide à <b>construire une image qui ouvre des portes.</b></p>
+    </div>
+    <div class="portrait" data-rv>
+      <span class="dore" aria-hidden="true"></span>
+      <span class="rond" aria-hidden="true"><svg><use href="#embleme"/></svg></span>
+      <div class="emplacement" data-img="P-mentore" data-format="3:4" data-alt="Leïla Benali assise dans un fauteuil de cuir brun, pull col roulé crème et pantalon large blanc, bague dorée"><img src="images/P-mentore.jpg" alt="Leïla Benali assise dans un fauteuil de cuir brun, pull col roulé crème et pantalon large blanc, bague dorée" loading="lazy" decoding="async" onerror="this.remove()"></div>
+    </div>
+  </div>
+</section>
+
+<section class="offre" id="offre">
+  <div class="wrap">
+    <div>
+      <h2 data-rv>Transformez votre style en seulement 5 jours</h2>
+      <h3 data-rv>Ce que vous allez recevoir :</h3>
+      <ul class="coches">
+        <li data-rv><svg aria-hidden="true"><use href="#coche"/></svg>5 jours d'atelier en direct avec Leïla Benali</li>
+        <li data-rv><svg aria-hidden="true"><use href="#coche"/></svg>Des techniques concrètes pour bâtir votre trio de style</li>
+        <li data-rv><svg aria-hidden="true"><use href="#coche"/></svg>Un test de style pour trouver vos éléments clés</li>
+        <li data-rv><svg aria-hidden="true"><use href="#coche"/></svg>L'accès à un groupe privé pour échanger entre élèves</li>
+        <li data-rv><svg aria-hidden="true"><use href="#coche"/></svg>Les replays, à revoir pendant 3 mois</li>
+      </ul>
+    </div>
+    <div class="prix" data-rv>
+      <div class="marque" aria-label="Trio d'Allure"><span class="mots"><span class="l1">Trio<small>d'</small></span><span class="l2">ALLURE</span></span><svg aria-hidden="true"><use href="#embleme"/></svg></div>
+      <p class="sous">Un investissement de seulement :</p>
+      <span class="montant">25 000 <small>F CFA</small></span>
+      <a class="btn caps reflet" href="https://wa.me/22500000000?text=Bonjour%20Le%C3%AFla%2C%20je%20r%C3%A9serve%20ma%20place%20%C3%A0%20l%27atelier%20Trio%20d%27Allure." target="_blank" rel="noopener" data-aimant>Je réserve ma place <svg aria-hidden="true"><use href="#fleche"/></svg></a>
+      <div class="moyens" aria-label="Moyens de paiement acceptés"><span>WAVE</span><span>ORANGE MONEY</span><span>MTN MOMO</span><span>VISA</span><span>MASTERCARD</span></div>
+      <p class="encart"><svg aria-hidden="true"><use href="#cadenas"/></svg><span><b>100 % sécurisé :</b> vos données restent protégées sur notre serveur.</span></p>
+      <p class="encart"><svg aria-hidden="true"><use href="#couronne"/></svg><span><b>Devenez une référence :</b> une icône de style et d'élégance.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="faq centre" id="faq">
+  <div class="wrap">
+    <h2 data-rv>Questions fréquentes</h2>
+    <div class="liste">
+      <details data-rv><summary>L'atelier est-il enregistré ?</summary><p>Oui. Chaque jour est enregistré et le replay reste disponible pendant 3 mois.</p></details>
+      <details data-rv><summary>Faut-il du matériel particulier pour participer ?</summary><p>Un téléphone, votre placard et un miroir. Rien d'autre.</p></details>
+      <details data-rv><summary>C'est quoi, le trio de style ?</summary><p>Vos trois styles dominants : ils guident chaque achat et chaque tenue pour une image cohérente.</p></details>
+      <details data-rv><summary>Comment je m'inscris ?</summary><p>Cliquez sur « Je réserve ma place », payez par Wave, Orange Money ou carte, et vous recevez l'accès sur WhatsApp.</p></details>
+      <details data-rv><summary>Et si je ne peux pas être là le jour même ?</summary><p>Vous suivez le replay quand vous voulez et vous posez vos questions dans le groupe privé.</p></details>
+      <details data-rv><summary>Quels sont les moyens de paiement ?</summary><p>Wave, Orange Money, MTN MoMo, Visa et Mastercard.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="relance centre" id="relance">
+  <div class="wrap">
+    <h2 data-rv><span class="or">Une question</span> sur l'atelier ?</h2>
+    <p data-rv>Écrivez-moi sur WhatsApp, je réponds moi-même à toutes vos questions.</p>
+    <a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Le%C3%AFla%2C%20j%27ai%20une%20question%20sur%20l%27atelier." target="_blank" rel="noopener" data-rv data-aimant>Écrire à Leïla sur WhatsApp <svg aria-hidden="true"><use href="#wa"/></svg></a>
+  </div>
+</section>
+
+<footer id="pied">
+  <div class="wrap">
+    <span>© 2026 Leïla Benali · Trio d'Allure. Tous droits réservés.</span>
+    <span class="trait" aria-hidden="true"></span>
+    <div class="pf-centre"><span class="pf-par">Réalisé par <strong>Yedidia Ruben - Digital Strategist</strong></span></div><div class="droite"><svg aria-hidden="true"><use href="#insta"/></svg>@trio.dallure</div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.caroussel').forEach(function(c){
+  var p=c.querySelector('.piste');
+  c.querySelectorAll('.fl').forEach(function(b){b.addEventListener('click',function(){
+    var el=p.firstElementChild, pas=el?el.getBoundingClientRect().width+14:300;
+    p.scrollBy({left:pas*(+b.dataset.dir),behavior:'smooth'});
+  });});
+});
+</script>
+<script src="../../commun/anim.js" defer></script>
+
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template P<b>Noir et or</b></span><nav aria-label="Autour du template P"><ul><li><a href="./">Template</a></li><li><a href="avec-images.html" aria-current=page>Template avec images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html">Design<small>DESIGN.md</small></a></li><li><a href="prompt.html">Prompt de la page<small>kit</small></a></li><li><a href="prompts.html">Prompts des images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template P : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">P</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+</body>
+</html>

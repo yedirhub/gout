@@ -99,15 +99,15 @@ Construis une page noire posée dans un cadre aux coins très arrondis bordé d'
 
 ## 2. Les sections, dans l'ordre
 
-01. #hero · « Devenez stratège de lancements à fort impact avec Malik Diallo ! »
-02. #carriere · « Faites grimper votre carrière »
-03. #pour-qui · « C'est pour qui ? »
-04. #temoignages · « Ce que disent mes élèves »
-05. #inclus
-06. #offre
-07. #qui · « Qui est Malik Diallo ? »
-08. #faq
-09. #support · « Encore une question ? Écrivez à notre équipe sur WhatsApp. »
+01. #hero · Le hero : Dire qui, quoi, pour qui en une phrase, puis faire cliquer. Le geste : duo en hero, cartes vitrées.
+02. #carriere · La douleur : Le visiteur se reconnaît : « c'est moi ».
+03. #pour-qui · Pour qui : Trier : celui qui n'est pas la cible s'en va, celui qui l'est se sent choisi.
+04. #temoignages · La preuve : Faire parler les autres : « ça a marché pour des gens comme moi ».
+05. #inclus · Le contenu : Rendre l'offre concrète, morceau par morceau.
+06. #offre · L'offre : Convertir : le prix, ce qu'il contient, le bouton.
+07. #qui · Qui est derrière : Un humain derrière l'offre, et un lieu réel.
+08. #faq · La FAQ : Lever les dernières objections.
+09. #support · La relance : Redonner le bouton à celui qui s'est décidé en route.
 
 ## 3. Les animations
 

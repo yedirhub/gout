@@ -1,0 +1,270 @@
+{
+  "template": "X",
+  "personnage": {
+    "nom": "Kevin Ondo",
+    "genre": "homme",
+    "age": 28,
+    "ville": "Brazzaville",
+    "physique": "peau brun foncé, mini-dreads courts, mince, attitude décontractée",
+    "signature": "casque audio autour du cou, sweat à capuche",
+    "metier": "gestionnaire de publicité payante, fondateur de l'agence Mayombe Médias",
+    "tenue": "sweat à capuche noir #0C0C0C ou orange brûlé #D4592F, casque audio noir mat",
+    "regle": "même visage, même coiffure, même signature sur chaque image où il apparaît"
+  },
+  "palette": {
+    "fond": "#000000",
+    "nuit": "#070707",
+    "carte": "#0C0C0C",
+    "orange": "#FF4C01",
+    "orange_bouton": "#F85707",
+    "orange_brule": "#B03702",
+    "braise": "#7F341D",
+    "fond_portrait": "#D4592F"
+  },
+  "images": [
+    {
+      "id": "X-hero",
+      "fichier": "images/X-hero.jpg",
+      "section": "hero",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "portrait de cinéma du fondateur d'une agence de publicité",
+        "personnage": "Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche",
+        "action": "assis dans un fauteuil en cuir, regard grave vers la gauche hors cadre, épaules légèrement tournées",
+        "cadrage": "plan taille, sujet à droite, espace négatif sombre à gauche pour le texte",
+        "objectif": "85 mm, f/1.8",
+        "lumiere": "clair-obscur, lampe de bureau chaude derrière lui, contre-jour orangé sur les épaules, visage à moitié dans l'ombre",
+        "decor": "bureau sombre à Brazzaville, bibliothèque floue en arrière-plan, lampe ambrée",
+        "palette": [
+          "#000000",
+          "#7F341D",
+          "#FF4C01"
+        ],
+        "ambiance": "film noir, sérieux, maîtrise",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "sourire forcé",
+          "lumière plate de studio"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : portrait de cinéma du fondateur d'une agence de publicité, avec Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche ; assis dans un fauteuil en cuir, regard grave vers la gauche hors cadre, épaules légèrement tournées ; cadrage plan taille, sujet à droite, espace négatif sombre à gauche pour le texte ; objectif 85 mm, f/1.8 ; lumière : clair-obscur, lampe de bureau chaude derrière lui, contre-jour orangé sur les épaules, visage à moitié dans l'ombre ; décor : bureau sombre à Brazzaville, bibliothèque floue en arrière-plan, lampe ambrée ; couleurs dominantes #000000, #7F341D, #FF4C01 ; ambiance film noir, sérieux, maîtrise ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/236475491/01.png : haut de page, portrait de droite"
+    },
+    {
+      "id": "X-probleme",
+      "fichier": "images/X-probleme.jpg",
+      "section": "probleme",
+      "format": "1:1",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "silhouette d'un patron en costume vu de dos, seul au milieu d'un long couloir boisé",
+        "personnage": null,
+        "action": "il marche lentement, une mallette ouverte d'où tombent des billets qui jonchent le sol",
+        "cadrage": "plan large symétrique, sujet au centre, couloir en point de fuite",
+        "objectif": "35 mm, f/2.8",
+        "lumiere": "une seule lumière au bout du couloir, sol qui brille, tout le reste dans le noir",
+        "decor": "couloir à boiseries sombres et portes fermées",
+        "palette": [
+          "#000000",
+          "#3A1B0C",
+          "#B03702"
+        ],
+        "ambiance": "perte, gâchis silencieux",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visage visible",
+          "billets lisibles"
+        ]
+      },
+      "prompt": "Photo au format 1:1 : silhouette d'un patron en costume vu de dos, seul au milieu d'un long couloir boisé ; il marche lentement, une mallette ouverte d'où tombent des billets qui jonchent le sol ; cadrage plan large symétrique, sujet au centre, couloir en point de fuite ; objectif 35 mm, f/2.8 ; lumière : une seule lumière au bout du couloir, sol qui brille, tout le reste dans le noir ; décor : couloir à boiseries sombres et portes fermées ; couleurs dominantes #000000, #3A1B0C, #B03702 ; ambiance perte, gâchis silencieux ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/236475491/01.png : section « O problema », photo de gauche"
+    },
+    {
+      "id": "X-decision",
+      "fichier": "images/X-decision.jpg",
+      "section": "decision",
+      "format": "4:3",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "deux chemins : le fondateur confiant au premier plan et un commerçant inquiet derrière lui",
+        "personnage": "Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche",
+        "action": "Kevin regarde au loin, serein, le menton relevé ; derrière, un commerçant de 40 ans en chemise noire se tient la tête d'une main, les yeux baissés",
+        "cadrage": "plan poitrine, Kevin à gauche au premier plan, le commerçant à droite en retrait",
+        "objectif": "50 mm, f/2",
+        "lumiere": "lumière latérale chaude venant de la gauche, fond qui tombe dans le noir",
+        "decor": "fond noir, fenêtre lointaine floue",
+        "palette": [
+          "#000000",
+          "#0C0C0C",
+          "#7F341D"
+        ],
+        "ambiance": "contraste entre assurance et frustration",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "les deux hommes ont le même visage"
+        ]
+      },
+      "prompt": "Photo au format 4:3 : deux chemins : le fondateur confiant au premier plan et un commerçant inquiet derrière lui, avec Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche ; Kevin regarde au loin, serein, le menton relevé ; derrière, un commerçant de 40 ans en chemise noire se tient la tête d'une main, les yeux baissés ; cadrage plan poitrine, Kevin à gauche au premier plan, le commerçant à droite en retrait ; objectif 50 mm, f/2 ; lumière : lumière latérale chaude venant de la gauche, fond qui tombe dans le noir ; décor : fond noir, fenêtre lointaine floue ; couleurs dominantes #000000, #0C0C0C, #7F341D ; ambiance contraste entre assurance et frustration ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/236475491/01.png : section « a decisão é simples », les deux hommes au centre"
+    },
+    {
+      "id": "X-portrait",
+      "fichier": "images/X-portrait.jpg",
+      "section": "qui",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "portrait éditorial du fondateur sur fond orange uni",
+        "personnage": "Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche",
+        "action": "assis, coude posé sur une table rouge orangé, main au menton, regard droit vers l'objectif, sérieux et accessible",
+        "cadrage": "plan taille, sujet centré, un peu d'air au-dessus de la tête",
+        "objectif": "85 mm, f/4",
+        "lumiere": "lumière de studio douce et frontale, légère ombre portée sur le fond",
+        "decor": "fond de studio orange brûlé uni, table rouge orangé",
+        "palette": [
+          "#D4592F",
+          "#B03702",
+          "#0C0C0C"
+        ],
+        "ambiance": "confiance, franchise",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "fond texturé ou décor chargé"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : portrait éditorial du fondateur sur fond orange uni, avec Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche ; assis, coude posé sur une table rouge orangé, main au menton, regard droit vers l'objectif, sérieux et accessible ; cadrage plan taille, sujet centré, un peu d'air au-dessus de la tête ; objectif 85 mm, f/4 ; lumière : lumière de studio douce et frontale, légère ombre portée sur le fond ; décor : fond de studio orange brûlé uni, table rouge orangé ; couleurs dominantes #D4592F, #B03702, #0C0C0C ; ambiance confiance, franchise ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/236475491/01.png : section « Quem lidera », photo sur fond orange"
+    },
+    {
+      "id": "X-temoin-1",
+      "fichier": "images/X-temoin-1.jpg",
+      "section": "temoignages",
+      "format": "1:1",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "portrait d'Aminata Koné, femme de 35 ans, gérante d'une boutique de cosmétiques à Abidjan",
+        "personnage": null,
+        "action": "sourire franc, regard caméra",
+        "cadrage": "gros plan visage et épaules, centré",
+        "objectif": "85 mm, f/2.8",
+        "lumiere": "lumière douce et chaude venant de la gauche, fond sombre",
+        "decor": "fond uni anthracite",
+        "palette": [
+          "#0C0C0C",
+          "#7F341D"
+        ],
+        "ambiance": "satisfaction crédible",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 1:1 : portrait d'Aminata Koné, femme de 35 ans, gérante d'une boutique de cosmétiques à Abidjan ; sourire franc, regard caméra ; cadrage gros plan visage et épaules, centré ; objectif 85 mm, f/2.8 ; lumière : lumière douce et chaude venant de la gauche, fond sombre ; décor : fond uni anthracite ; couleurs dominantes #0C0C0C, #7F341D ; ambiance satisfaction crédible ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/236475491/01.png : carrousel « Depoimentos », vignettes des avis"
+    },
+    {
+      "id": "X-temoin-2",
+      "fichier": "images/X-temoin-2.jpg",
+      "section": "temoignages",
+      "format": "1:1",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "portrait de Merveille Nzaba, homme de 30 ans, fondateur d'une marque de jus naturels à Pointe-Noire",
+        "personnage": null,
+        "action": "léger sourire, regard caméra, tee-shirt noir",
+        "cadrage": "gros plan visage et épaules, centré",
+        "objectif": "85 mm, f/2.8",
+        "lumiere": "lumière douce et chaude venant de la gauche, fond sombre",
+        "decor": "fond uni anthracite",
+        "palette": [
+          "#0C0C0C",
+          "#7F341D"
+        ],
+        "ambiance": "satisfaction crédible",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 1:1 : portrait de Merveille Nzaba, homme de 30 ans, fondateur d'une marque de jus naturels à Pointe-Noire ; léger sourire, regard caméra, tee-shirt noir ; cadrage gros plan visage et épaules, centré ; objectif 85 mm, f/2.8 ; lumière : lumière douce et chaude venant de la gauche, fond sombre ; décor : fond uni anthracite ; couleurs dominantes #0C0C0C, #7F341D ; ambiance satisfaction crédible ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/236475491/01.png : carrousel « Depoimentos », vignettes des avis"
+    },
+    {
+      "id": "X-temoin-3",
+      "fichier": "images/X-temoin-3.jpg",
+      "section": "temoignages",
+      "format": "1:1",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "portrait de Fatou Diop, femme de 42 ans, directrice d'une école de formation à Dakar",
+        "personnage": null,
+        "action": "sourire posé, regard caméra, foulard sobre",
+        "cadrage": "gros plan visage et épaules, centré",
+        "objectif": "85 mm, f/2.8",
+        "lumiere": "lumière douce et chaude venant de la gauche, fond sombre",
+        "decor": "fond uni anthracite",
+        "palette": [
+          "#0C0C0C",
+          "#7F341D"
+        ],
+        "ambiance": "satisfaction crédible",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 1:1 : portrait de Fatou Diop, femme de 42 ans, directrice d'une école de formation à Dakar ; sourire posé, regard caméra, foulard sobre ; cadrage gros plan visage et épaules, centré ; objectif 85 mm, f/2.8 ; lumière : lumière douce et chaude venant de la gauche, fond sombre ; décor : fond uni anthracite ; couleurs dominantes #0C0C0C, #7F341D ; ambiance satisfaction crédible ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/236475491/01.png : carrousel « Depoimentos », vignettes des avis"
+    },
+    {
+      "id": "X-faq",
+      "fichier": "images/X-faq.jpg",
+      "section": "faq",
+      "format": "4:3",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "le fondateur au travail, de nuit",
+        "personnage": "Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche",
+        "action": "il répond à un message sur son téléphone, l'ordinateur portable ouvert affiche un tableau de bord flou, petit sourire",
+        "cadrage": "plan taille de trois quarts, sujet à gauche, écran à droite",
+        "objectif": "35 mm, f/2",
+        "lumiere": "lumière de l'écran sur le visage, lampe orangée en fond",
+        "decor": "bureau sombre, tasse, carnet, fenêtre de nuit floue",
+        "palette": [
+          "#000000",
+          "#FF4C01",
+          "#0C0C0C"
+        ],
+        "ambiance": "disponible, sérieux, proche",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "écran lisible avec chiffres nets"
+        ]
+      },
+      "prompt": "Photo au format 4:3 : le fondateur au travail, de nuit, avec Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche ; il répond à un message sur son téléphone, l'ordinateur portable ouvert affiche un tableau de bord flou, petit sourire ; cadrage plan taille de trois quarts, sujet à gauche, écran à droite ; objectif 35 mm, f/2 ; lumière : lumière de l'écran sur le visage, lampe orangée en fond ; décor : bureau sombre, tasse, carnet, fenêtre de nuit floue ; couleurs dominantes #000000, #FF4C01, #0C0C0C ; ambiance disponible, sérieux, proche ; sans aucun texte ni logo.",
+      "reference": null
+    }
+  ]
+}

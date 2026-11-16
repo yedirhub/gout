@@ -1,0 +1,255 @@
+{
+ "template": "U",
+ "personnage": {
+  "nom": "Estelle Nkoghe",
+  "genre": "femme",
+  "age": 39,
+  "ville": "Libreville",
+  "physique": "peau brun clair, carré lisse noir au menton, visage anguleux",
+  "signature": "boucles d'oreilles perle, chemise ample",
+  "metier": "stratège financière d'entreprise et expert-comptable de formation",
+  "tenue": "chemise ample blanche ou bordeaux, blazer crème, boucles d'oreilles perle",
+  "regle": "même visage, même coiffure, même signature sur chaque image où il apparaît"
+ },
+ "palette": {
+  "nuit": "#100C07",
+  "noir": "#070707",
+  "creme": "#F8F2EB",
+  "creme_froide": "#F3F1ED",
+  "or": "#B79E80",
+  "bronze": "#9C7E5F",
+  "brun_texte": "#452D18",
+  "ardoise": "#323435",
+  "bordeaux": "#280101",
+  "rubis": "#8F1110",
+  "foret": "#0F2907",
+  "mousse": "#1F3211"
+ },
+ "images": [
+  {
+   "id": "U-hero",
+   "fichier": "images/U-hero.jpg",
+   "section": "hero",
+   "format": "4:3",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "la fondatrice à son bureau, devant un ordinateur portable ouvert",
+    "personnage": "Estelle Nkoghe, femme de 39 ans, peau brun clair, carré lisse noir au menton, visage anguleux, boucles d'oreilles perle, chemise ample, chemise ample bordeaux",
+    "action": "mains jointes près du visage, grand sourire vers l'objectif",
+    "cadrage": "plan taille, sujet à droite, espace négatif sombre à gauche pour le titre",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière chaude de lampe, contre-jour doux, fond sombre",
+    "decor": "bureau élégant le soir, rideaux crème flous, fleurs blanches",
+    "palette": [
+     "#100C07",
+     "#B79E80",
+     "#6B1F2A"
+    ],
+    "ambiance": "confiance chaleureuse, réussite tranquille",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "cheveux longs ou bouclés",
+     "boucles d'oreilles autres que des perles",
+     "visage différent d'une image à l'autre"
+    ]
+   },
+   "prompt": "Photo au format 4:3 : la fondatrice à son bureau, devant un ordinateur portable ouvert, Estelle Nkoghe, femme de 39 ans, peau brun clair, carré lisse noir au menton, visage anguleux, boucles d'oreilles perle, chemise ample, chemise ample bordeaux, mains jointes près du visage, grand sourire vers l'objectif, plan taille, sujet à droite, espace négatif sombre à gauche pour le titre, objectif 85 mm, f/2, lumière chaude de lampe, contre-jour doux, fond sombre, décor : bureau élégant le soir, rideaux crème flous, fleurs blanches, couleurs #100C07, #B79E80, #6B1F2A, ambiance confiance chaleureuse, réussite tranquille, sans aucun texte ni logo.",
+   "reference": "inspi/behance/243974351/01.png : haut de page, portrait à droite"
+  },
+  {
+   "id": "U-video",
+   "fichier": "images/U-video.jpg",
+   "section": "video",
+   "format": "16:9",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "la fondatrice qui parle face caméra, image de vidéo",
+    "personnage": "Estelle Nkoghe, femme de 39 ans, peau brun clair, carré lisse noir au menton, visage anguleux, boucles d'oreilles perle, chemise ample, chemise ample blanche sous un blazer crème",
+    "action": "explique avec un stylo à la main",
+    "cadrage": "plan poitrine, sujet centré",
+    "objectif": "50 mm, f/2.8",
+    "lumiere": "lumière douce de fenêtre, haute clé",
+    "decor": "mur blanc à moulures, fauteuil en rotin",
+    "palette": [
+     "#F8F2EB",
+     "#FFFFFF",
+     "#B79E80"
+    ],
+    "ambiance": "pédagogique, lumineuse",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "cheveux longs ou bouclés",
+     "boucles d'oreilles autres que des perles",
+     "visage différent d'une image à l'autre"
+    ]
+   },
+   "prompt": "Photo au format 16:9 : la fondatrice qui parle face caméra, image de vidéo, Estelle Nkoghe, femme de 39 ans, peau brun clair, carré lisse noir au menton, visage anguleux, boucles d'oreilles perle, chemise ample, chemise ample blanche sous un blazer crème, explique avec un stylo à la main, plan poitrine, sujet centré, objectif 50 mm, f/2.8, lumière douce de fenêtre, haute clé, décor : mur blanc à moulures, fauteuil en rotin, couleurs #F8F2EB, #FFFFFF, #B79E80, ambiance pédagogique, lumineuse, sans aucun texte ni logo.",
+   "reference": "inspi/behance/243974351/01.png : bloc vidéo sous le hero"
+  },
+  {
+   "id": "U-cas-1",
+   "fichier": "images/U-cas-1.jpg",
+   "section": "cas",
+   "format": "3:4",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "une architecte d'intérieur gabonaise d'une trentaine d'années penchée sur un plan au crayon",
+    "personnage": null,
+    "action": "dessine, concentrée",
+    "cadrage": "plan taille de profil, sujet à gauche",
+    "objectif": "35 mm, f/2.8",
+    "lumiere": "lumière naturelle latérale",
+    "decor": "atelier clair, table en bois, échantillons de tissus",
+    "palette": [
+     "#F8F2EB",
+     "#B79E80"
+    ],
+    "ambiance": "authentique, travail en cours",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage de la fondatrice",
+     "interface Instagram dans l'image"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : une architecte d'intérieur gabonaise d'une trentaine d'années penchée sur un plan au crayon, dessine, concentrée, plan taille de profil, sujet à gauche, objectif 35 mm, f/2.8, lumière naturelle latérale, décor : atelier clair, table en bois, échantillons de tissus, couleurs #F8F2EB, #B79E80, ambiance authentique, travail en cours, sans aucun texte ni logo.",
+   "reference": "inspi/behance/243974351/01.png : publication 1 des cas de réussite"
+  },
+  {
+   "id": "U-cas-2",
+   "fichier": "images/U-cas-2.jpg",
+   "section": "cas",
+   "format": "3:4",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "une consultante en marque d'Afrique centrale, menton posé sur les mains",
+    "personnage": null,
+    "action": "écoute pendant un atelier de groupe",
+    "cadrage": "plan rapproché, sujet au centre, voisins flous",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière chaude de salle de réunion",
+    "decor": "table de travail, carnets, verres d'eau",
+    "palette": [
+     "#100C07",
+     "#B79E80"
+    ],
+    "ambiance": "concentration, sérieux",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage de la fondatrice",
+     "interface Instagram dans l'image"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : une consultante en marque d'Afrique centrale, menton posé sur les mains, écoute pendant un atelier de groupe, plan rapproché, sujet au centre, voisins flous, objectif 85 mm, f/2, lumière chaude de salle de réunion, décor : table de travail, carnets, verres d'eau, couleurs #100C07, #B79E80, ambiance concentration, sérieux, sans aucun texte ni logo.",
+   "reference": "inspi/behance/243974351/01.png : publication 2 des cas de réussite"
+  },
+  {
+   "id": "U-cas-3",
+   "fichier": "images/U-cas-3.jpg",
+   "section": "cas",
+   "format": "3:4",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "une esthéticienne qui sourit à l'objectif pendant un soin du visage",
+    "personnage": null,
+    "action": "applique un soin sur une cliente allongée",
+    "cadrage": "plan taille, esthéticienne à droite, cliente au premier plan",
+    "objectif": "35 mm, f/2.8",
+    "lumiere": "lumière douce et diffuse",
+    "decor": "institut clair, linge blanc, plantes",
+    "palette": [
+     "#FFFFFF",
+     "#F3F1ED",
+     "#B79E80"
+    ],
+    "ambiance": "accueillant, soigné",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage de la fondatrice",
+     "interface Instagram dans l'image"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : une esthéticienne qui sourit à l'objectif pendant un soin du visage, applique un soin sur une cliente allongée, plan taille, esthéticienne à droite, cliente au premier plan, objectif 35 mm, f/2.8, lumière douce et diffuse, décor : institut clair, linge blanc, plantes, couleurs #FFFFFF, #F3F1ED, #B79E80, ambiance accueillant, soigné, sans aucun texte ni logo.",
+   "reference": "inspi/behance/243974351/01.png : publication 3 des cas de réussite"
+  },
+  {
+   "id": "U-qui-fond",
+   "fichier": "images/U-qui-fond.jpg",
+   "section": "qui",
+   "format": "9:16",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "gros plan de la fondatrice en image d'ambiance",
+    "personnage": "Estelle Nkoghe, femme de 39 ans, peau brun clair, carré lisse noir au menton, visage anguleux, boucles d'oreilles perle, chemise ample, chemise ample blanche",
+    "action": "sourit, cheveux dans le mouvement",
+    "cadrage": "très gros plan sur le bas du visage et l'épaule, sujet décentré",
+    "objectif": "85 mm, f/1.8",
+    "lumiere": "lumière dorée douce",
+    "decor": "fond crème uni",
+    "palette": [
+     "#F8F2EB",
+     "#B79E80"
+    ],
+    "ambiance": "doux, intime, presque flou",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "cheveux longs ou bouclés",
+     "boucles d'oreilles autres que des perles",
+     "visage différent d'une image à l'autre"
+    ]
+   },
+   "prompt": "Photo au format 9:16 : gros plan de la fondatrice en image d'ambiance, Estelle Nkoghe, femme de 39 ans, peau brun clair, carré lisse noir au menton, visage anguleux, boucles d'oreilles perle, chemise ample, chemise ample blanche, sourit, cheveux dans le mouvement, très gros plan sur le bas du visage et l'épaule, sujet décentré, objectif 85 mm, f/1.8, lumière dorée douce, décor : fond crème uni, couleurs #F8F2EB, #B79E80, ambiance doux, intime, presque flou, sans aucun texte ni logo.",
+   "reference": "inspi/behance/243974351/01.png : grande photo pâle à droite du bloc « Sobre mim »"
+  },
+  {
+   "id": "U-portrait",
+   "fichier": "images/U-portrait.jpg",
+   "section": "qui",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "portrait de la fondatrice assise à califourchon sur une chaise en bois",
+    "personnage": "Estelle Nkoghe, femme de 39 ans, peau brun clair, carré lisse noir au menton, visage anguleux, boucles d'oreilles perle, chemise ample, chemise ample blanche",
+    "action": "menton dans la main, sourire franc",
+    "cadrage": "plan taille, sujet centré",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière de studio douce et chaude",
+    "decor": "fond beige uni",
+    "palette": [
+     "#B09378",
+     "#F8F2EB",
+     "#FFFFFF"
+    ],
+    "ambiance": "proche, experte, rassurante",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "cheveux longs ou bouclés",
+     "boucles d'oreilles autres que des perles",
+     "visage différent d'une image à l'autre"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : portrait de la fondatrice assise à califourchon sur une chaise en bois, Estelle Nkoghe, femme de 39 ans, peau brun clair, carré lisse noir au menton, visage anguleux, boucles d'oreilles perle, chemise ample, chemise ample blanche, menton dans la main, sourire franc, plan taille, sujet centré, objectif 85 mm, f/2, lumière de studio douce et chaude, décor : fond beige uni, couleurs #B09378, #F8F2EB, #FFFFFF, ambiance proche, experte, rassurante, sans aucun texte ni logo.",
+   "reference": "inspi/behance/243974351/01.png : photo du bloc « Sobre mim »"
+  }
+ ]
+}

@@ -1,0 +1,358 @@
+{
+ "template": "W",
+ "personnage": {
+  "nom": "Aïcha Mahamat",
+  "genre": "femme",
+  "age": 44,
+  "ville": "N'Djamena",
+  "physique": "peau brun moyen, voile léger, visage serein, petites rides d'expression",
+  "signature": "blouse blanche, stéthoscope autour du cou",
+  "metier": "médecin généraliste, directrice médicale de MédiKa (télémédecine pour entreprises)",
+  "tenue": "blouse blanche #FFFFFF sur haut bleu marine #0D2D3D, voile léger bleu clair #E4EDFF",
+  "regle": "même visage, même coiffure, même signature sur chaque image où il apparaît"
+ },
+ "palette": {
+  "bleu_vif": "#125CFE",
+  "bleu_marque": "#005AB2",
+  "marine": "#0D2D3D",
+  "logo": "#021B52",
+  "texte": "#484F58",
+  "fond": "#EFF1F3",
+  "bleu_pale": "#F0F6FF",
+  "pastille": "#E4EDFF",
+  "vert": "#1FA35B",
+  "jaune": "#FFC83D"
+ },
+ "images": [
+  {
+   "id": "W-hero",
+   "fichier": "images/W-hero.jpg",
+   "section": "hero",
+   "format": "4:3",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "capture d'une téléconsultation vue sur tablette",
+    "personnage": "Aïcha Mahamat, femme de 44 ans, peau brun moyen, voile léger, visage serein, petites rides d'expression, blouse blanche, stéthoscope autour du cou",
+    "action": "assise à son bureau, sourire bienveillant, salue la caméra d'une main",
+    "cadrage": "plan poitrine, sujet au centre droit, bibliothèque floue derrière",
+    "objectif": "50 mm, f/2,8",
+    "lumiere": "lumière du jour douce venant d'une fenêtre à gauche",
+    "decor": "cabinet médical clair, étagères blanches, plante verte",
+    "palette": [
+     "#FFFFFF",
+     "#EFF1F3",
+     "#125CFE",
+     "#005AB2"
+    ],
+    "ambiance": "rassurante, professionnelle",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "écran d'application illisible ou avec du faux texte",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 4:3 : capture d'une téléconsultation vue sur tablette, avec Aïcha Mahamat, femme de 44 ans, peau brun moyen, voile léger, visage serein, petites rides d'expression, blouse blanche, stéthoscope autour du cou, assise à son bureau, sourire bienveillant, salue la caméra d'une main ; plan poitrine, sujet au centre droit, bibliothèque floue derrière ; objectif 50 mm, f/2,8 ; lumière du jour douce venant d'une fenêtre à gauche ; décor : cabinet médical clair, étagères blanches, plante verte ; palette blanche et bleue ; ambiance rassurante, professionnelle ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/253385723/01.png : haut de page, tablette en consultation"
+  },
+  {
+   "id": "W-equipe",
+   "fichier": "images/W-equipe.jpg",
+   "section": "intro",
+   "format": "4:3",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "collègues de bureau autour d'un téléphone",
+    "personnage": null,
+    "action": "une femme et un homme d'une trentaine d'années regardent un téléphone en souriant",
+    "cadrage": "plan taille, deux sujets au centre",
+    "objectif": "35 mm, f/2,8",
+    "lumiere": "lumière naturelle de bureau, très claire",
+    "decor": "open space moderne à Abidjan, murs blancs, touches de bleu",
+    "palette": [
+     "#FFFFFF",
+     "#EFF1F3",
+     "#125CFE",
+     "#005AB2"
+    ],
+    "ambiance": "complicité au travail",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "écran d'application illisible ou avec du faux texte",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 4:3 : collègues de bureau autour d'un téléphone, sans le personnage, personnes d'Afrique de l'Ouest, une femme et un homme d'une trentaine d'années regardent un téléphone en souriant ; plan taille, deux sujets au centre ; objectif 35 mm, f/2,8 ; lumière naturelle de bureau, très claire ; décor : open space moderne à Abidjan, murs blancs, touches de bleu ; palette blanche et bleue ; ambiance complicité au travail ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/253385723/01.png : panneau d'intro, photo du haut"
+  },
+  {
+   "id": "W-collaboratrice",
+   "fichier": "images/W-collaboratrice.jpg",
+   "section": "intro",
+   "format": "1:1",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "collaboratrice qui ouvre l'application de santé",
+    "personnage": null,
+    "action": "jeune femme assise à son poste, regarde son téléphone, écran bleu et blanc visible",
+    "cadrage": "plan rapproché par-dessus l'épaule",
+    "objectif": "50 mm, f/2",
+    "lumiere": "lumière douce de fin de matinée",
+    "decor": "bureau clair, ordinateur flou",
+    "palette": [
+     "#FFFFFF",
+     "#EFF1F3",
+     "#125CFE",
+     "#005AB2"
+    ],
+    "ambiance": "simplicité du quotidien",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "écran d'application illisible ou avec du faux texte",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 1:1 : collaboratrice qui ouvre l'application de santé, sans le personnage, personnes d'Afrique de l'Ouest, jeune femme assise à son poste, regarde son téléphone, écran bleu et blanc visible ; plan rapproché par-dessus l'épaule ; objectif 50 mm, f/2 ; lumière douce de fin de matinée ; décor : bureau clair, ordinateur flou ; palette blanche et bleue ; ambiance simplicité du quotidien ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/253385723/01.png : panneau d'intro, photo du bas"
+  },
+  {
+   "id": "W-generaliste",
+   "fichier": "images/W-generaliste.jpg",
+   "section": "solution",
+   "format": "16:9",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "consultation vidéo sur téléphone",
+    "personnage": "Aïcha Mahamat, femme de 44 ans, peau brun moyen, voile léger, visage serein, petites rides d'expression, blouse blanche, stéthoscope autour du cou",
+    "action": "main d'un patient qui tient un téléphone, Aïcha Mahamat visible à l'écran en train d'expliquer",
+    "cadrage": "gros plan du téléphone, main au premier plan, fond flou",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière intérieure douce",
+    "decor": "salon clair, boîte de médicaments sur la table",
+    "palette": [
+     "#FFFFFF",
+     "#EFF1F3",
+     "#125CFE",
+     "#005AB2"
+    ],
+    "ambiance": "disponibilité",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "écran d'application illisible ou avec du faux texte",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 16:9 : consultation vidéo sur téléphone, avec Aïcha Mahamat, femme de 44 ans, peau brun moyen, voile léger, visage serein, petites rides d'expression, blouse blanche, stéthoscope autour du cou, main d'un patient qui tient un téléphone, Aïcha Mahamat visible à l'écran en train d'expliquer ; gros plan du téléphone, main au premier plan, fond flou ; objectif 85 mm, f/2 ; lumière intérieure douce ; décor : salon clair, boîte de médicaments sur la table ; palette blanche et bleue ; ambiance disponibilité ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/253385723/01.png : carte Clínico Geral 24h"
+  },
+  {
+   "id": "W-specialites",
+   "fichier": "images/W-specialites.jpg",
+   "section": "solution",
+   "format": "16:9",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "téléphone ouvert sur la liste des spécialités",
+    "personnage": null,
+    "action": "main qui fait défiler l'application, écran bleu et blanc",
+    "cadrage": "gros plan, téléphone en diagonale",
+    "objectif": "50 mm, f/2,8",
+    "lumiere": "lumière du jour sur une table blanche",
+    "decor": "table blanche, tasse de café floue",
+    "palette": [
+     "#FFFFFF",
+     "#EFF1F3",
+     "#125CFE",
+     "#005AB2"
+    ],
+    "ambiance": "clarté",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "écran d'application illisible ou avec du faux texte",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 16:9 : téléphone ouvert sur la liste des spécialités, sans le personnage, personnes d'Afrique de l'Ouest, main qui fait défiler l'application, écran bleu et blanc ; gros plan, téléphone en diagonale ; objectif 50 mm, f/2,8 ; lumière du jour sur une table blanche ; décor : table blanche, tasse de café floue ; palette blanche et bleue ; ambiance clarté ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/253385723/01.png : carte 12 especialidades"
+  },
+  {
+   "id": "W-suivi",
+   "fichier": "images/W-suivi.jpg",
+   "section": "solution",
+   "format": "16:9",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "deux soignantes qui consultent une tablette",
+    "personnage": "Aïcha Mahamat, femme de 44 ans, peau brun moyen, voile léger, visage serein, petites rides d'expression, blouse blanche, stéthoscope autour du cou",
+    "action": "Aïcha Mahamat et une collègue psychologue regardent ensemble un dossier sur tablette",
+    "cadrage": "plan taille, deux sujets côte à côte",
+    "objectif": "50 mm, f/2,8",
+    "lumiere": "lumière blanche diffuse",
+    "decor": "couloir de clinique clair",
+    "palette": [
+     "#FFFFFF",
+     "#EFF1F3",
+     "#125CFE",
+     "#005AB2"
+    ],
+    "ambiance": "coopération, calme",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "écran d'application illisible ou avec du faux texte",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 16:9 : deux soignantes qui consultent une tablette, avec Aïcha Mahamat, femme de 44 ans, peau brun moyen, voile léger, visage serein, petites rides d'expression, blouse blanche, stéthoscope autour du cou, Aïcha Mahamat et une collègue psychologue regardent ensemble un dossier sur tablette ; plan taille, deux sujets côte à côte ; objectif 50 mm, f/2,8 ; lumière blanche diffuse ; décor : couloir de clinique clair ; palette blanche et bleue ; ambiance coopération, calme ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/253385723/01.png : carte Nutricionista e Psicólogo"
+  },
+  {
+   "id": "W-trajet",
+   "fichier": "images/W-trajet.jpg",
+   "section": "solution",
+   "format": "16:9",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "collaborateur qui utilise l'application dans un bus",
+    "personnage": null,
+    "action": "main qui tient un téléphone ouvert sur l'application, passagers flous derrière",
+    "cadrage": "gros plan sur le téléphone, fond flou",
+    "objectif": "50 mm, f/2",
+    "lumiere": "lumière de jour par les vitres",
+    "decor": "intérieur de bus urbain",
+    "palette": [
+     "#FFFFFF",
+     "#EFF1F3",
+     "#125CFE",
+     "#005AB2"
+    ],
+    "ambiance": "simplicité",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "écran d'application illisible ou avec du faux texte",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 16:9 : collaborateur qui utilise l'application dans un bus, sans le personnage, personnes d'Afrique de l'Ouest, main qui tient un téléphone ouvert sur l'application, passagers flous derrière ; gros plan sur le téléphone, fond flou ; objectif 50 mm, f/2 ; lumière de jour par les vitres ; décor : intérieur de bus urbain ; palette blanche et bleue ; ambiance simplicité ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/253385723/01.png : carte Uma experiência digital simples"
+  },
+  {
+   "id": "W-examens",
+   "fichier": "images/W-examens.jpg",
+   "section": "solution",
+   "format": "16:9",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "téléphone posé sur des résultats d'analyse",
+    "personnage": null,
+    "action": "téléphone avec l'application ouverte, stéthoscope à côté, feuilles d'analyse",
+    "cadrage": "plongée à 45 degrés",
+    "objectif": "35 mm, f/4",
+    "lumiere": "lumière douce et froide",
+    "decor": "bureau blanc",
+    "palette": [
+     "#FFFFFF",
+     "#EFF1F3",
+     "#125CFE",
+     "#005AB2"
+    ],
+    "ambiance": "ordre, soin",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "écran d'application illisible ou avec du faux texte",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 16:9 : téléphone posé sur des résultats d'analyse, sans le personnage, personnes d'Afrique de l'Ouest, téléphone avec l'application ouverte, stéthoscope à côté, feuilles d'analyse ; plongée à 45 degrés ; objectif 35 mm, f/4 ; lumière douce et froide ; décor : bureau blanc ; palette blanche et bleue ; ambiance ordre, soin ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/253385723/01.png : carte Gaveta de Exames"
+  },
+  {
+   "id": "W-ordonnances",
+   "fichier": "images/W-ordonnances.jpg",
+   "section": "solution",
+   "format": "16:9",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "médecin qui valide une ordonnance",
+    "personnage": "Aïcha Mahamat, femme de 44 ans, peau brun moyen, voile léger, visage serein, petites rides d'expression, blouse blanche, stéthoscope autour du cou",
+    "action": "Aïcha Mahamat valide une ordonnance sur sa tablette avec un stylet",
+    "cadrage": "plan poitrine, sujet à droite",
+    "objectif": "50 mm, f/2,8",
+    "lumiere": "lumière du jour douce",
+    "decor": "cabinet clair, flacons flous",
+    "palette": [
+     "#FFFFFF",
+     "#EFF1F3",
+     "#125CFE",
+     "#005AB2"
+    ],
+    "ambiance": "précision",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "écran d'application illisible ou avec du faux texte",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 16:9 : médecin qui valide une ordonnance, avec Aïcha Mahamat, femme de 44 ans, peau brun moyen, voile léger, visage serein, petites rides d'expression, blouse blanche, stéthoscope autour du cou, Aïcha Mahamat valide une ordonnance sur sa tablette avec un stylet ; plan poitrine, sujet à droite ; objectif 50 mm, f/2,8 ; lumière du jour douce ; décor : cabinet clair, flacons flous ; palette blanche et bleue ; ambiance précision ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/253385723/01.png : carte Gaveta de Receitas"
+  },
+  {
+   "id": "W-equipe-medicale",
+   "fichier": "images/W-equipe-medicale.jpg",
+   "section": "marque-employeur",
+   "format": "4:3",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "réunion en visioconférence de l'équipe médicale",
+    "personnage": "Aïcha Mahamat, femme de 44 ans, peau brun moyen, voile léger, visage serein, petites rides d'expression, blouse blanche, stéthoscope autour du cou",
+    "action": "tablette tenue par une main, grille de six soignants à l'écran, Aïcha Mahamat en grand au premier plan de l'écran",
+    "cadrage": "plan rapproché sur la tablette, stéthoscope sur le bureau",
+    "objectif": "50 mm, f/2,8",
+    "lumiere": "lumière de fenêtre claire",
+    "decor": "bureau en bois clair, fenêtre lumineuse",
+    "palette": [
+     "#FFFFFF",
+     "#EFF1F3",
+     "#125CFE",
+     "#005AB2"
+    ],
+    "ambiance": "équipe soudée",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "écran d'application illisible ou avec du faux texte",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 4:3 : réunion en visioconférence de l'équipe médicale, avec Aïcha Mahamat, femme de 44 ans, peau brun moyen, voile léger, visage serein, petites rides d'expression, blouse blanche, stéthoscope autour du cou, tablette tenue par une main, grille de six soignants à l'écran, Aïcha Mahamat en grand au premier plan de l'écran ; plan rapproché sur la tablette, stéthoscope sur le bureau ; objectif 50 mm, f/2,8 ; lumière de fenêtre claire ; décor : bureau en bois clair, fenêtre lumineuse ; palette blanche et bleue ; ambiance équipe soudée ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/253385723/01.png : section marque employeur, tablette en visioconférence"
+  }
+ ]
+}

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Template K · Bascule menthe · DESIGN.md · Yedidia Ruben - Digital Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/flottant.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0E0E0D;color:#E9E5DE;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 24px;background:rgba(14,14,13,.9);backdrop-filter:blur(10px);border-bottom:1px solid #262624;font-size:14px}
+header .titre{color:#A9A298;white-space:nowrap} header .titre b{color:#E9E5DE;font-weight:500}
+.onglets{display:flex;gap:2px;padding:4px;border:1px solid #2C2A27;border-radius:999px}
+.onglets a{height:32px;padding:0 14px;display:inline-flex;align-items:center;border-radius:999px;color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s,background .25s}
+.onglets a:hover{color:#fff}
+.onglets a[aria-current]{background:#E9E5DE;color:#141312}
+.retour{color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s} .retour:hover{color:#D9B48A}
+main{padding:40px 20px 0}
+.credit{width:min(1200px,100%);margin:0 auto 22px;font-size:14px;line-height:1.6;color:#A9A298}
+.credit b{color:#E9E5DE;font-weight:500} .credit a{color:#D9B48A;border-bottom:1px solid rgba(217,180,138,.4)}
+main img{display:block;width:min(1200px,100%);margin-inline:auto;border-radius:10px;box-shadow:0 30px 80px -40px #000}
+main img.tel{width:min(390px,100%)}
+.etiquette{width:min(1200px,100%);margin:48px auto 14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A847C}
+.outils{width:min(980px,100%);margin:0 auto 16px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.outils p{font-size:14px;color:#A9A298;line-height:1.6;max-width:560px}
+.outils div{display:flex;gap:8px}
+.outils button,.outils a{font:inherit;font-size:13px;height:38px;padding:0 16px;border-radius:999px;border:1px solid #3A3733;background:none;color:#E9E5DE;cursor:pointer;display:inline-flex;align-items:center;transition:border-color .25s}
+.outils button{background:#D9B48A;border-color:#D9B48A;color:#141312;font-weight:500}
+.outils a:hover{border-color:#D9B48A}
+pre{width:min(980px,100%);margin:0 auto;padding:28px;background:#151514;border:1px solid #262624;border-radius:12px;overflow:auto;max-height:72vh;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#D8D2C8;white-space:pre-wrap;word-break:break-word}
+footer{text-align:center;padding:48px 20px 56px;font-size:13px;color:#8A847C;line-height:1.6}
+footer strong{display:block;color:#E9E5DE;font-weight:500;font-size:15px}
+@media (max-width:1180px){.onglets a{padding:0 10px}}
+@media (max-width:980px){header{justify-content:center;padding:14px 16px} .onglets,.retour{display:none} header .titre{white-space:normal;text-align:center}}
+/* ancien : sous 980 px, onglets en bande qui défilait de côté ; retirée le 16/11/2026, le bouton flottant porte la navigation */
+</style>
+</head>
+<body>
+<header>
+  <span class="titre">Template K · <b>Bascule menthe</b></span>
+  <nav class="onglets" aria-label="Autour du template"><a href="./">La page</a><a href="avec-images.html">Avec images</a><a href="source.html">Source</a><a href="apercu.html">Notre version</a><a href="design.html" aria-current=page>DESIGN.md</a><a href="prompt.html">Prompt</a><a href="prompts.html">Prompts images</a></nav>
+  <a class="retour" href="/">Tous les templates</a>
+</header>
+<main>
+<div class="outils"><p>La fiche de style du template : couleurs, polices, tailles, espacements, composants. À donner à une IA avant de coder.</p><div><button type="button" id="copier">Copier</button><a href="DESIGN.md" download>Télécharger</a></div></div>
+<pre id="texte"># DESIGN.md : Style K « Bascule menthe » (d&#x27;après la page « Página de Vendas - Produtividade », Felipe Santos)
+
+&gt; **Source** : `inspi/behance/211996631/01.png` (la page entière, 1920 × 13 779). Behance 211996631. Relevé le 16/11/2026.
+&gt; **Demande de Ruben** : pas de consigne de détail, lot du 16/11/2026.
+
+## 1. Ambiance et intention
+
+- Une méthode de productivité vendue comme un tableau de bord : sombre, net, précis, presque une interface d&#x27;application.
+- Noir anthracite partout, une seule couleur vive : la **menthe électrique**, réservée aux mots clés, aux icônes et aux boutons.
+- Le geste qui la signe : **la carte à interrupteurs** (trois réglages allumés en menthe) et **les titres en deux tons** (1re ligne grise en dégradé, 2e ligne menthe).
+- Des lignes verticales très fines rythment le fond, comme une grille de mise en page laissée visible.
+- Différence avec E « Néon vert » (néon vert-jaune, Michroma) et J « Calque émeraude » (vert mousse, serif italique, éditeur) : ici le fond est gris-noir neutre, la couleur tire sur le turquoise, une seule police sans serif, et le décor est celui d&#x27;une application.
+
+## 2. Palette et rôles (relevé au pixel, PIL, sur 01.png)
+
+- **Anthracite** `#0D0C0F` : fond de toute la page ; `#040907` à `#06120F` dans le hero.
+- **Carte** `#1C1C1C`, haut de carte `#333333` (témoignages, offre en dégradé vertical).
+- **Menthe électrique** `#11F7CE` (titres) et `#01F6B3` (pied, grand 7, interrupteurs).
+- **Bouton** : dégradé `#00D7A1` vers `#83FBDE`, texte `#00261C` (contraste 11,6).
+- **Piste de barre** `#1E312F`.
+- **Rouge** : cartes « avant » de `#3B0A0F` vers le noir, filet `#6A1A20`, pastille `#C62F3A`.
+- **Gris titre** `#8D8D8D` en dégradé vers `#D7D7DA`.
+- **Or** `#FCDB49` : les 5 étoiles du sceau seulement.
+- **Blanc** `#FFFFFF` vers `#E9E9E9` : FAQ et la carte de témoignage mise en avant.
+
+## 3. Typographie
+
+- Non nommée par l&#x27;auteur. Relevé à l&#x27;œil : grotesque serrée et moderne (proche de Inter Display). Google Fonts la plus proche et différente des styles voisins : **Geist**.
+
+| Rôle | Police | Taille bureau / téléphone | Graisse | Interligne | Approche |
+|---|---|---|---|---|---|
+| Titre du hero | Geist | 40 / 30 px | 600 | 1,15 | -0,025 em |
+| Titre en deux tons | Geist | 38 / 28 px | 500 | 1,15 | -0,025 em |
+| Nom du mentor | Geist | 80 / 56 px | 600 | 0,95 | -0,04 em |
+| Prix | Geist | 46 px | 700 | 1 | -0,05 em |
+| Texte | Geist | 11 à 15,5 px | 400 | 1,55 à 1,7 | 0 |
+| Pastille | Geist | 11 px | 500 à 600 | 1 | 0,06 à 0,16 em, capitales |
+| Bouton | Geist | 12,5 px | 600 | 1,2 | capitales |
+
+## 4. Composants
+
+- **Bouton** : rectangle de 46 px aux coins de 4 px, dégradé menthe, halo menthe, flèche fine ; le dégradé glisse au survol.
+- **Pastille** : capsule sombre à filet gris avec petite icône menthe ; variante blanche à texte noir espacé (« Témoignages »).
+- **Tuile d&#x27;icône** : carré de 46 px aux coins de 9 px, dégradé gris, icône menthe.
+- **Interrupteur** (`.bascule`, `role=&quot;switch&quot;`) : piste de 40 × 24 px, menthe et lumineuse quand il est allumé ; cliquable.
+- **Duel** : 3 cartes rouges à croix contre 3 cartes vertes à coche, coins de 5 px.
+- **Mur de témoignages** : 3 colonnes en maçonnerie, cartes grises en dégradé, une carte blanche mise en avant avec une flèche de souris.
+- **Courbe de progression** : carte noire, courbe exponentielle à points lumineux, barre à 91 %.
+- **Éventail de modules** : 5 affiches 9:16 qui se chevauchent, la centrale plus haute, trait menthe en bas.
+- **Liste de modules** : lignes à « + » menthe et nombre de leçons à droite.
+- **Carte prix** : logo, prix barré, prix en dégradé blanc vers gris, liste des inclusions dans un volet collé à droite.
+- **Sceau** : cercle sombre, texte qui tourne, 5 étoiles or, cœur menthe à flèche, grand « 7 » menthe qui dépasse.
+- **FAQ** : barres blanches numérotées, « + » à droite.
+
+## 5. Mise en page
+
+- Colonne étroite : la plupart des blocs tiennent entre 520 et 780 px dans une page de 1100.
+- Tout est centré sauf les blocs en deux colonnes (réglages, vidéo, garantie, mentor).
+- Filets horizontaux fins entre les sections ; un filet menthe lumineux sous le hero et au-dessus de la structure.
+- Espacement vertical : 70 à 90 px.
+
+## 6. Profondeur et élévation
+
+- Ombres noires longues sous les cartes (30 px de flou, 60 % d&#x27;opacité).
+- Halos menthe sous les boutons, autour des interrupteurs allumés et derrière la courbe.
+- Le portrait du hero et celui du mentor se fondent dans le noir (masque en dégradé), sans cadre.
+
+## 7. À faire, à ne pas faire
+
+- Faire : une seule couleur vive, la menthe ; tout le reste en gris.
+- Faire : la 2e ligne du titre en menthe, la 1re en gris dégradé.
+- Ne pas faire : de coins très arrondis ; les cartes restent à 4 à 12 px.
+- Ne pas faire : de texte gris sous `#9B9CA1` sur l&#x27;anthracite (contraste minimum 7).
+
+## 8. Comportement responsive
+
+- Behance ne montre que le bureau. Le téléphone est notre proposition.
+- Sous 900 px : hero en colonne, réglages, vidéo, garantie et mentor en une colonne, mur de témoignages en 2 colonnes, offre en 2 lignes.
+- Sous 640 px : piliers et duel en une colonne, éventail réduit à 3 modules, mur en 1 colonne, carte prix et volet empilés.
+
+## 9. Mouvement
+
+- Moteur commun : `data-rv` partout, `data-parallaxe` sur les bulles du hero, `data-aimant` sur les boutons, barre de progression menthe.
+- Propre à K : **les interrupteurs basculent** au clic ; **la barre de progression se remplit** jusqu&#x27;à 91 % ; **le texte du sceau tourne** ; **le dégradé du bouton glisse** au survol.
+
+## 10. Non mesuré, et choix tranchés seul
+
+- La police (§3).
+- La marque « Méthode Axe », la mentore Awa Sangaré (Bamako), les textes et les prix en F CFA (99 000 F au lieu de 250 000 F, ou 12 x 9 900 F).
+- Les logos d&#x27;applications du dock remplacés par des pictos neutres (aucune marque réelle).
+- Les avatars des témoignages remplacés par des initiales.
+- Le téléphone (§8).
+
+## 11. Images
+
+Personnage : **Awa Sangaré**, 31 ans, Bamako, coach en organisation personnelle ; peau brun moyen, tresses fines sans nœud relevées en chignon haut, visage ovale, regard direct ; signature : petites créoles dorées, carnet noir à élastique. Tenue : chemise noire, accents menthe.
+
+| id | Format | Rôle | Personnage |
+|---|---|---|---|
+| K-hero | 3:4 | Portrait du hero, fondu dans le noir | oui |
+| K-video | 16:9 | Vignette de la leçon vidéo dans l&#x27;ordinateur | oui |
+| K-module-1 | 9:16 | Module « Planifier et organiser » | non |
+| K-module-2 | 9:16 | Module « Énergie et efficacité » | oui |
+| K-module-3 | 9:16 | Module « L&#x27;essence de l&#x27;équilibre » (central) | non |
+| K-module-4 | 9:16 | Module « L&#x27;architecture des habitudes » | oui |
+| K-module-5 | 9:16 | Module « Constance et discipline » | non |
+| K-mentor | 3:4 | Portrait noir et blanc de la mentore | oui |
+
+## 12. Consigne pour l&#x27;IA
+
+Construis une page de vente de méthode de productivité sur fond anthracite `#0D0C0F`, en Geist. Une seule couleur vive : la menthe électrique `#11F7CE`. Chaque titre tient en deux lignes, la 1re en gris dégradé, la 2e en menthe. Ajoute une carte de réglages à trois interrupteurs allumés, un duel de cartes rouges et vertes, un mur de témoignages gris avec une carte blanche mise en avant, une courbe de progression lumineuse, un éventail de 5 modules, une carte prix sombre avec son volet d&#x27;inclusions et un sceau de garantie à grand 7 menthe. Boutons rectangulaires en dégradé menthe.
+</pre>
+</main>
+<script>
+const b=document.getElementById('copier');
+b.onclick=async()=>{await navigator.clipboard.writeText(document.getElementById('texte').textContent);b.textContent='Copié';setTimeout(()=>b.textContent='Copier',1800)};
+</script>
+<footer>Réalisé par<strong>Yedidia Ruben - Digital Strategist</strong></footer>
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template K<b>Bascule menthe</b></span><nav aria-label="Autour du template K"><ul><li><a href="./">Template</a></li><li><a href="avec-images.html">Template avec images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html" aria-current=page>Design<small>DESIGN.md</small></a></li><li><a href="prompt.html">Prompt de la page<small>kit</small></a></li><li><a href="prompts.html">Prompts des images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template K : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">K</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+
+</body>
+</html>

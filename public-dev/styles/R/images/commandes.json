@@ -1,0 +1,392 @@
+{
+  "template": "R",
+  "personnage": {
+    "nom": "Thierry Kalala",
+    "genre": "homme",
+    "age": 36,
+    "ville": "Kinshasa",
+    "physique": "peau brun foncé, cheveux courts bouclés, barbe pleine courte, épaules larges",
+    "signature": "lunettes rectangulaires noires, sweat uni",
+    "metier": "designer d'identité visuelle, formateur en ligne",
+    "tenue": "sweat uni noir ou vert sombre, veste en jean, touches violettes #7360D3",
+    "regle": "même visage, même coiffure, même signature sur chaque image où il apparaît"
+  },
+  "palette": {
+    "violet": "#7360D3",
+    "violet_profond": "#5F49B9",
+    "lilas": "#AFB3F2",
+    "brume": "#CED1F7",
+    "ciel": "#EFF2FA",
+    "rose": "#FF3175",
+    "nuit": "#0F0F11",
+    "nuit_pied": "#1C1B20",
+    "menthe": "#A6F5DD"
+  },
+  "images": [
+    {
+      "id": "R-hero",
+      "fichier": "images/R-hero.jpg",
+      "section": "hero",
+      "format": "16:9",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "un designer graphique à son bureau de studio le soir",
+        "personnage": "Thierry Kalala, homme de 36 ans, peau brun foncé, cheveux courts bouclés, barbe pleine courte, épaules larges, lunettes rectangulaires noires, sweat uni",
+        "action": "sourit face à l'objectif, avant-bras posés sur le bureau, une tasse grise à la main, ordinateur portable fermé au premier plan à droite",
+        "cadrage": "plan taille, sujet légèrement à droite, espace sombre à gauche et en bas pour le titre",
+        "objectif": "50 mm, f/2",
+        "lumiere": "lampe de bureau chaude à gauche, mur bleu nuit, contraste doux",
+        "decor": "étagères en bois, petite lampe d'architecte, tableau rose sombre au mur, nuancier posé sur le bureau",
+        "palette": [
+          "#0F0F11",
+          "#2B2550",
+          "#7360D3"
+        ],
+        "ambiance": "chaleureuse et confiante, studio de création à Kinshasa",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visage déformé",
+          "lunettes rondes"
+        ]
+      },
+      "prompt": "Photo au format 16:9 : un designer graphique à son bureau de studio le soir, Thierry Kalala, homme de 36 ans, peau brun foncé, cheveux courts bouclés, barbe pleine courte, épaules larges, lunettes rectangulaires noires, sweat uni, sourit face à l'objectif, avant-bras posés sur le bureau, une tasse grise à la main, ordinateur portable fermé au premier plan à droite ; cadrage plan taille, sujet légèrement à droite, espace sombre à gauche et en bas pour le titre, objectif 50 mm, f/2, lumière lampe de bureau chaude à gauche, mur bleu nuit, contraste doux, décor : étagères en bois, petite lampe d'architecte, tableau rose sombre au mur, nuancier posé sur le bureau, couleurs dominantes #0F0F11, #2B2550, #7360D3, ambiance chaleureuse et confiante, studio de création à Kinshasa, sans aucun texte ni logo.",
+      "reference": "inspi/behance/201269095/05.png : haut de la page (hero, photo pleine largeur)"
+    },
+    {
+      "id": "R-nuancier",
+      "fichier": "images/R-nuancier.jpg",
+      "section": "pourquoi",
+      "format": "1:1",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "le designer qui présente un nuancier de couleurs",
+        "personnage": "Thierry Kalala, homme de 36 ans, peau brun foncé, cheveux courts bouclés, barbe pleine courte, épaules larges, lunettes rectangulaires noires, sweat uni",
+        "action": "tient un nuancier ouvert en éventail contre son menton, regard malicieux vers l'objectif",
+        "cadrage": "plan poitrine, sujet au centre, fond flou",
+        "objectif": "85 mm, f/1.8",
+        "lumiere": "lumière douce de face, petite lampe allumée derrière",
+        "decor": "bureau clair, étagère en bois floue, lampe noire",
+        "palette": [
+          "#7360D3",
+          "#E4E6FB",
+          "#2E5E4E"
+        ],
+        "ambiance": "joueuse et experte",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 1:1 : le designer qui présente un nuancier de couleurs, Thierry Kalala, homme de 36 ans, peau brun foncé, cheveux courts bouclés, barbe pleine courte, épaules larges, lunettes rectangulaires noires, sweat uni, tient un nuancier ouvert en éventail contre son menton, regard malicieux vers l'objectif ; cadrage plan poitrine, sujet au centre, fond flou, objectif 85 mm, f/1.8, lumière lumière douce de face, petite lampe allumée derrière, décor : bureau clair, étagère en bois floue, lampe noire, couleurs dominantes #7360D3, #E4E6FB, #2E5E4E, ambiance joueuse et experte, sans aucun texte ni logo.",
+      "reference": "inspi/behance/201269095/05.png : section « Por que participar », photo à gauche"
+    },
+    {
+      "id": "R-affiche",
+      "fichier": "images/R-affiche.jpg",
+      "section": "design",
+      "format": "4:3",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "façade d'immeuble de Kinshasa habillée de grandes bâches publicitaires d'une marque fictive",
+        "personnage": null,
+        "action": "bâches jaune et blanc avec des pictogrammes de visages, sans lettres lisibles",
+        "cadrage": "contre-plongée légère, immeuble à droite, ciel clair",
+        "objectif": "35 mm, f/8",
+        "lumiere": "jour, ciel blanc laiteux",
+        "decor": "immeuble de 5 étages, fenêtres, quelques arbres",
+        "palette": [
+          "#F5D33B",
+          "#FFFFFF",
+          "#151C5E"
+        ],
+        "ambiance": "marque qui s'affiche en grand dans la ville",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "lettres ou mots lisibles"
+        ]
+      },
+      "prompt": "Photo au format 4:3 : façade d'immeuble de Kinshasa habillée de grandes bâches publicitaires d'une marque fictive, bâches jaune et blanc avec des pictogrammes de visages, sans lettres lisibles ; cadrage contre-plongée légère, immeuble à droite, ciel clair, objectif 35 mm, f/8, lumière jour, ciel blanc laiteux, décor : immeuble de 5 étages, fenêtres, quelques arbres, couleurs dominantes #F5D33B, #FFFFFF, #151C5E, ambiance marque qui s'affiche en grand dans la ville, sans aucun texte ni logo.",
+      "reference": "inspi/behance/201269095/05.png : section « Por que investir em design », mockup d'affiches"
+    },
+    {
+      "id": "R-tablette",
+      "fichier": "images/R-tablette.jpg",
+      "section": "quand",
+      "format": "16:9",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "le designer qui suit un atelier en ligne sur une tablette",
+        "personnage": "Thierry Kalala, homme de 36 ans, peau brun foncé, cheveux courts bouclés, barbe pleine courte, épaules larges, lunettes rectangulaires noires, sweat uni",
+        "action": "assis dans un fauteuil, regarde l'écran de la tablette, concentré, veste en jean sur son sweat",
+        "cadrage": "plan taille, sujet à gauche, grand espace sombre à droite pour le texte",
+        "objectif": "50 mm, f/2",
+        "lumiere": "lumière de fenêtre froide à gauche, pièce sombre",
+        "decor": "salon sombre, grande baie vitrée, plante floue",
+        "palette": [
+          "#0F0F11",
+          "#3A5A8A",
+          "#2B2550"
+        ],
+        "ambiance": "calme, concentration, soirée",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 16:9 : le designer qui suit un atelier en ligne sur une tablette, Thierry Kalala, homme de 36 ans, peau brun foncé, cheveux courts bouclés, barbe pleine courte, épaules larges, lunettes rectangulaires noires, sweat uni, assis dans un fauteuil, regarde l'écran de la tablette, concentré, veste en jean sur son sweat ; cadrage plan taille, sujet à gauche, grand espace sombre à droite pour le texte, objectif 50 mm, f/2, lumière lumière de fenêtre froide à gauche, pièce sombre, décor : salon sombre, grande baie vitrée, plante floue, couleurs dominantes #0F0F11, #3A5A8A, #2B2550, ambiance calme, concentration, soirée, sans aucun texte ni logo.",
+      "reference": "inspi/behance/201269095/05.png : section « Quando e como », photo pleine largeur"
+    },
+    {
+      "id": "R-portrait",
+      "fichier": "images/R-portrait.jpg",
+      "section": "pas-cher",
+      "format": "9:16",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "portrait du designer devant un fond gris de studio",
+        "personnage": "Thierry Kalala, homme de 36 ans, peau brun foncé, cheveux courts bouclés, barbe pleine courte, épaules larges, lunettes rectangulaires noires, sweat uni",
+        "action": "regarde l'objectif, léger sourire, bras croisés",
+        "cadrage": "plan poitrine serré, sujet au centre",
+        "objectif": "85 mm, f/2.8",
+        "lumiere": "lumière de studio douce et égale",
+        "decor": "fond uni gris clair",
+        "palette": [
+          "#E4E6FB",
+          "#0F0F11",
+          "#AFB3F2"
+        ],
+        "ambiance": "nette, graphique, sérieuse",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 9:16 : portrait du designer devant un fond gris de studio, Thierry Kalala, homme de 36 ans, peau brun foncé, cheveux courts bouclés, barbe pleine courte, épaules larges, lunettes rectangulaires noires, sweat uni, regarde l'objectif, léger sourire, bras croisés ; cadrage plan poitrine serré, sujet au centre, objectif 85 mm, f/2.8, lumière lumière de studio douce et égale, décor : fond uni gris clair, couleurs dominantes #E4E6FB, #0F0F11, #AFB3F2, ambiance nette, graphique, sérieuse, sans aucun texte ni logo.",
+      "reference": "inspi/behance/201269095/05.png : section « Por que tão barato », moitié gauche du visuel"
+    },
+    {
+      "id": "R-formateur",
+      "fichier": "images/R-formateur.jpg",
+      "section": "formateur",
+      "format": "4:3",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "portrait du formateur dans son studio",
+        "personnage": "Thierry Kalala, homme de 36 ans, peau brun foncé, cheveux courts bouclés, barbe pleine courte, épaules larges, lunettes rectangulaires noires, sweat uni",
+        "action": "assis, une main au menton, montre au poignet, veste en jean sur sweat noir, regarde l'objectif",
+        "cadrage": "plan taille, sujet à droite, fond sombre à gauche",
+        "objectif": "50 mm, f/2",
+        "lumiere": "lumière latérale chaude, fond presque noir",
+        "decor": "fauteuil en cuir brun, mur sombre",
+        "palette": [
+          "#0F0F11",
+          "#3A5A8A",
+          "#7360D3"
+        ],
+        "ambiance": "autorité tranquille",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 4:3 : portrait du formateur dans son studio, Thierry Kalala, homme de 36 ans, peau brun foncé, cheveux courts bouclés, barbe pleine courte, épaules larges, lunettes rectangulaires noires, sweat uni, assis, une main au menton, montre au poignet, veste en jean sur sweat noir, regarde l'objectif ; cadrage plan taille, sujet à droite, fond sombre à gauche, objectif 50 mm, f/2, lumière lumière latérale chaude, fond presque noir, décor : fauteuil en cuir brun, mur sombre, couleurs dominantes #0F0F11, #3A5A8A, #7360D3, ambiance autorité tranquille, sans aucun texte ni logo.",
+      "reference": "inspi/behance/201269095/05.png : section « Seus professores », carte du formateur"
+    },
+    {
+      "id": "R-projet-1",
+      "fichier": "images/R-projet-1.jpg",
+      "section": "realisations",
+      "format": "1:1",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "livret d'identité visuelle rouge brique posé de biais",
+        "personnage": null,
+        "action": "objet seul, coins nets, papier mat",
+        "cadrage": "vue de dessus, livret au centre légèrement tourné",
+        "objectif": "50 mm, f/5.6",
+        "lumiere": "lumière naturelle douce",
+        "decor": "feuillage vert très sombre en fond",
+        "palette": [
+          "#C2462E",
+          "#1E3A26",
+          "#0F0F11"
+        ],
+        "ambiance": "projet d'identité haut de gamme",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "lettres lisibles sur le livret"
+        ]
+      },
+      "prompt": "Photo au format 1:1 : livret d'identité visuelle rouge brique posé de biais, objet seul, coins nets, papier mat ; cadrage vue de dessus, livret au centre légèrement tourné, objectif 50 mm, f/5.6, lumière lumière naturelle douce, décor : feuillage vert très sombre en fond, couleurs dominantes #C2462E, #1E3A26, #0F0F11, ambiance projet d'identité haut de gamme, sans aucun texte ni logo.",
+      "reference": "inspi/behance/201269095/05.png : section portfolio, grande tuile à droite"
+    },
+    {
+      "id": "R-projet-2",
+      "fichier": "images/R-projet-2.jpg",
+      "section": "realisations",
+      "format": "1:1",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "affiche de marque fictive rose vif et noire avec un visage graphique coloré façon cubiste",
+        "personnage": null,
+        "action": "affiche collée sur un mur noir",
+        "cadrage": "de face, affiche centrée",
+        "objectif": "50 mm, f/5.6",
+        "lumiere": "lumière égale de studio",
+        "decor": "mur noir mat",
+        "palette": [
+          "#E64AE0",
+          "#0F0F11",
+          "#F5D33B"
+        ],
+        "ambiance": "créative et audacieuse",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "lettres lisibles"
+        ]
+      },
+      "prompt": "Photo au format 1:1 : affiche de marque fictive rose vif et noire avec un visage graphique coloré façon cubiste, affiche collée sur un mur noir ; cadrage de face, affiche centrée, objectif 50 mm, f/5.6, lumière lumière égale de studio, décor : mur noir mat, couleurs dominantes #E64AE0, #0F0F11, #F5D33B, ambiance créative et audacieuse, sans aucun texte ni logo.",
+      "reference": "inspi/behance/201269095/05.png : section portfolio, petite tuile en bas"
+    },
+    {
+      "id": "R-profil-1",
+      "fichier": "images/R-profil-1.jpg",
+      "section": "pour-qui",
+      "format": "4:3",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "jeune homme de 22 ans en reconversion, casque audio autour du cou",
+        "personnage": null,
+        "action": "assis devant un vieil ordinateur, fait un signe de la main à l'objectif",
+        "cadrage": "plan taille, sujet au centre",
+        "objectif": "35 mm, f/2.8",
+        "lumiere": "lumière chaude d'une petite lampe",
+        "decor": "chambre d'étudiant, bureau encombré",
+        "palette": [
+          "#C27A6A",
+          "#2B2550",
+          "#0F0F11"
+        ],
+        "ambiance": "spontanée, débutant motivé",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 4:3 : jeune homme de 22 ans en reconversion, casque audio autour du cou, assis devant un vieil ordinateur, fait un signe de la main à l'objectif ; cadrage plan taille, sujet au centre, objectif 35 mm, f/2.8, lumière lumière chaude d'une petite lampe, décor : chambre d'étudiant, bureau encombré, couleurs dominantes #C27A6A, #2B2550, #0F0F11, ambiance spontanée, débutant motivé, sans aucun texte ni logo.",
+      "reference": "inspi/behance/201269095/05.png : section « Pra quem é », 1re rangée"
+    },
+    {
+      "id": "R-profil-2",
+      "fichier": "images/R-profil-2.jpg",
+      "section": "pour-qui",
+      "format": "4:3",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "jeune femme designer débutante de 25 ans en sweat jaune et casquette",
+        "personnage": null,
+        "action": "main au menton, regarde l'objectif avec curiosité",
+        "cadrage": "plan poitrine, sujet au centre",
+        "objectif": "50 mm, f/2",
+        "lumiere": "néons colorés bleu et violet derrière elle",
+        "decor": "salle de jeux d'arcade floue",
+        "palette": [
+          "#F2B233",
+          "#5F49B9",
+          "#2B6DE0"
+        ],
+        "ambiance": "énergique, curieuse",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 4:3 : jeune femme designer débutante de 25 ans en sweat jaune et casquette, main au menton, regarde l'objectif avec curiosité ; cadrage plan poitrine, sujet au centre, objectif 50 mm, f/2, lumière néons colorés bleu et violet derrière elle, décor : salle de jeux d'arcade floue, couleurs dominantes #F2B233, #5F49B9, #2B6DE0, ambiance énergique, curieuse, sans aucun texte ni logo.",
+      "reference": "inspi/behance/201269095/05.png : section « Pra quem é », 2e rangée"
+    },
+    {
+      "id": "R-profil-3",
+      "fichier": "images/R-profil-3.jpg",
+      "section": "pour-qui",
+      "format": "4:3",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "designer confirmé de 40 ans, chemise verte",
+        "personnage": null,
+        "action": "assis à un bureau, mains jointes, sourire posé",
+        "cadrage": "plan taille, sujet au centre",
+        "objectif": "50 mm, f/2.8",
+        "lumiere": "lampe de bureau chaude, pièce sombre",
+        "decor": "bureau avec ordinateur portable et étagère",
+        "palette": [
+          "#2E5E4E",
+          "#0F0F11",
+          "#C9A27A"
+        ],
+        "ambiance": "expérience, assurance",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 4:3 : designer confirmé de 40 ans, chemise verte, assis à un bureau, mains jointes, sourire posé ; cadrage plan taille, sujet au centre, objectif 50 mm, f/2.8, lumière lampe de bureau chaude, pièce sombre, décor : bureau avec ordinateur portable et étagère, couleurs dominantes #2E5E4E, #0F0F11, #C9A27A, ambiance expérience, assurance, sans aucun texte ni logo.",
+      "reference": "inspi/behance/201269095/05.png : section « Pra quem é », 3e rangée"
+    },
+    {
+      "id": "R-faq",
+      "fichier": "images/R-faq.jpg",
+      "section": "faq",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "le designer qui ajuste ses lunettes, l'air pensif",
+        "personnage": "Thierry Kalala, homme de 36 ans, peau brun foncé, cheveux courts bouclés, barbe pleine courte, épaules larges, lunettes rectangulaires noires, sweat uni",
+        "action": "une main sur la monture de ses lunettes, tasse noire posée devant lui sur un bureau blanc",
+        "cadrage": "plan taille, sujet à droite, fond sombre à gauche",
+        "objectif": "50 mm, f/2",
+        "lumiere": "faisceau d'une lampe d'architecte noire en haut à droite, clair-obscur",
+        "decor": "bureau blanc brillant, lampe noire, mur sombre",
+        "palette": [
+          "#0B0B0D",
+          "#E6E6EE",
+          "#2B2550"
+        ],
+        "ambiance": "réfléchie, dramatique",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : le designer qui ajuste ses lunettes, l'air pensif, Thierry Kalala, homme de 36 ans, peau brun foncé, cheveux courts bouclés, barbe pleine courte, épaules larges, lunettes rectangulaires noires, sweat uni, une main sur la monture de ses lunettes, tasse noire posée devant lui sur un bureau blanc ; cadrage plan taille, sujet à droite, fond sombre à gauche, objectif 50 mm, f/2, lumière faisceau d'une lampe d'architecte noire en haut à droite, clair-obscur, décor : bureau blanc brillant, lampe noire, mur sombre, couleurs dominantes #0B0B0D, #E6E6EE, #2B2550, ambiance réfléchie, dramatique, sans aucun texte ni logo.",
+      "reference": "inspi/behance/201269095/05.png : section FAQ, photo à droite"
+    }
+  ]
+}

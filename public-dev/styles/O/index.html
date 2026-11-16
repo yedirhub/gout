@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Template Style O, faisceau de scène : page de vente d'une formation à la prise de parole, noir pur, orange vif en aplats, boutons vert lime lumineux, programme en cartes.">
+<title>Style O · Faisceau de scène · template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/anim.css">
+<style>
+:root{
+  --noir:#000000; --nuit:#101010; --orange:#F5761D; --orange-f:#C85A0C; --lime:#89F21B; --vert-wa:#2DC547;
+  --blanc:#FFFFFF; --texte:#E6E6E6; --gris:#BABABA; --filet:#5E5E5E; --perle:#D9D9D9; --filigrane:#EBEBEB; --rouge:#FF2A1A;
+  --courbe:cubic-bezier(.16,1,.3,1);
+  --police:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--police);font-size:16px;line-height:1.5;color:var(--texte);background:var(--noir);-webkit-font-smoothing:antialiased;overflow-x:clip}
+svg{display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--police);color:var(--blanc);line-height:1.2;font-weight:700;text-transform:uppercase;letter-spacing:-.005em}
+h2{font-size:clamp(24px,2.4vw,30px);text-align:center}
+.o{color:var(--orange)}
+.wrap{width:min(920px,100% - 40px);margin-inline:auto;position:relative;z-index:1}
+section{position:relative}
+.centre{text-align:center}
+
+/* Emplacements d'image */
+.emplacement{position:relative;overflow:hidden;width:100%;background:radial-gradient(70% 60% at 50% 40%,rgba(245,118,29,.28),transparent 70%),linear-gradient(180deg,#1A1A1A,#0A0A0A);border:1px solid rgba(245,118,29,.45)}
+.emplacement[data-format="16:9"]{aspect-ratio:16/9}.emplacement[data-format="4:3"]{aspect-ratio:4/3}.emplacement[data-format="1:1"]{aspect-ratio:1/1}.emplacement[data-format="3:4"]{aspect-ratio:3/4}.emplacement[data-format="9:16"]{aspect-ratio:9/16}
+.emplacement::after{content:attr(data-format);position:absolute;left:50%;top:50%;translate:-50% -50%;padding:4px 10px;border-radius:20px;background:var(--orange);font:700 11px/1 var(--police);letter-spacing:.06em;color:#000}
+.emplacement:has(img)::after{display:none}
+
+/* Bouton vert lime lumineux : le geste de la page */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;min-width:min(340px,100%);padding:0 34px;border-radius:30px;background:var(--lime);color:#0A0A0A;
+  font:700 16px/1.2 var(--police);text-transform:uppercase;box-shadow:0 0 22px rgba(137,242,27,.7),0 0 4px rgba(137,242,27,.9);transition:box-shadow .4s var(--courbe),translate .35s var(--courbe)}
+.btn:hover{box-shadow:0 0 38px rgba(137,242,27,.95),0 0 6px rgba(137,242,27,1)}
+.btn.blanc{background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.btn.blanc:hover{box-shadow:0 12px 34px rgba(0,0,0,.3)}
+.btn.wa{background:var(--vert-wa);color:#fff;box-shadow:0 0 26px rgba(45,197,71,.7);font-size:19px}
+.btn.wa svg{width:26px;height:26px}
+.action{text-align:center;margin-top:50px}
+
+/* 01 · Hero : le faisceau orange derrière l'oratrice */
+.hero{background:radial-gradient(60% 80% at 75% 40%,#2A1608,#0B0704 55%,#000 80%);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.02) 0 2px,transparent 2px 9px);mask-image:linear-gradient(180deg,#000,transparent 70%);-webkit-mask-image:linear-gradient(180deg,#000,transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;align-items:end;min-height:560px}
+.hero .txt{padding:70px 0 70px;position:relative;z-index:2}
+.logo{display:inline-grid;justify-items:start;gap:2px}
+.logo small{display:flex;align-items:center;gap:10px;font:500 9px/1 var(--police);letter-spacing:.32em;color:var(--gris);text-transform:uppercase;width:100%}
+.logo small::before,.logo small::after{content:"";flex:1;height:1px;background:var(--gris)}
+.logo b{font:italic 900 30px/1 var(--police);color:var(--orange);letter-spacing:-.02em;text-transform:uppercase}
+.logo span{font:italic 800 14px/1 var(--police);color:#fff;text-transform:uppercase}
+.hero h1{font-size:clamp(26px,2.6vw,34px);line-height:1.3;margin:30px 0 14px}
+.hero p{font-size:17px;line-height:1.4;max-width:440px;color:#fff}
+.hero .btn{margin-top:36px;min-width:270px}
+.scene{position:relative;align-self:stretch}
+.faisceau{position:absolute;left:46%;top:-10%;width:150px;height:120%;background:linear-gradient(90deg,#F5761D,#FF9A3A 50%,#F5761D);transform:skewX(-6deg);box-shadow:0 0 60px rgba(245,118,29,.6)}
+.faisceau::before,.faisceau::after{content:"";position:absolute;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 0 20px 8px rgba(255,200,120,.9)}
+.faisceau::before{left:-8px;top:24%}
+.faisceau::after{right:-8px;top:42%}
+.scene .emplacement{position:absolute;left:0;right:-6%;bottom:0;width:auto;border:0;background:radial-gradient(60% 60% at 50% 40%,rgba(245,118,29,.22),transparent 70%),transparent;box-shadow:inset 0 0 0 1px rgba(245,118,29,.35);-webkit-mask-image:linear-gradient(180deg,#000 75%,transparent);mask-image:linear-gradient(180deg,#000 75%,transparent)}
+.infos{position:relative;z-index:3;background:var(--orange)}
+.infos ul{list-style:none;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;width:min(920px,100% - 40px);margin:0 auto;padding:9px 0}
+.infos li{display:flex;align-items:center;gap:8px;font-size:13px;color:#fff;font-weight:500}
+.infos svg{width:20px;height:20px;flex:none}
+
+/* 02 · L'appel : carte orange sur fond blanc, mot géant derrière */
+.appel{background:#fff;padding:110px 0 0;overflow:hidden}
+.appel .geant{position:relative;z-index:0;margin-top:-140px;font:italic 900 clamp(90px,19vw,300px)/.8 var(--police);color:var(--filigrane);text-transform:uppercase;letter-spacing:-.03em;text-align:center;white-space:nowrap;user-select:none}
+.carte-appel{position:relative;z-index:1;width:min(540px,100%);margin:0 auto;padding:50px 66px 44px;border-radius:14px;background:var(--orange);text-align:center;box-shadow:-60px 30px 80px rgba(0,0,0,.12)}
+.carte-appel h2{font-size:clamp(23px,2.2vw,27px);line-height:1.38}
+.carte-appel p{margin:16px 0 34px;font-size:16px;color:#fff;line-height:1.4}
+.carte-appel .btn{min-width:min(270px,100%)}
+
+/* 03 · Programme : 5 cartes à filet gris */
+.programme{padding:120px 0 40px}
+.programme h2{margin-bottom:46px}
+.cours{display:grid;gap:30px}
+.cours article{padding:56px 36px 50px;border-radius:16px;border:1px solid var(--gris);min-height:330px}
+.cours .tete{display:flex;align-items:center;gap:18px;margin-bottom:34px}
+.cours .tag{flex:none;height:44px;padding:0 18px;display:grid;place-items:center;border-radius:6px;background:var(--orange);font:600 19px/1 var(--police);color:#fff;text-transform:uppercase}
+.cours h3{font-size:18px;font-weight:600;line-height:1.4;max-width:500px}
+.puces{list-style:none;display:grid;gap:22px}
+.puces li{display:flex;align-items:center;gap:10px;font-size:16px;color:#fff;line-height:1.4}
+.puces li::before{content:"";flex:none;width:20px;height:20px;border-radius:50%;background:var(--orange) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M8 6l4 4-4 4' stroke='white' stroke-width='2.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100%}
+
+/* 04 · Résultats : vignettes vidéo en 2 colonnes */
+.resultats{padding:90px 0 40px}
+.resultats h2{line-height:1.4;margin-bottom:50px}
+.videos{display:grid;grid-template-columns:1fr 1fr;gap:24px 24px}
+.vid{position:relative}
+.vid .emplacement{border:0;background:linear-gradient(180deg,#262626,#141414)}
+.vid .emplacement::after{top:auto;bottom:14px}
+.vid .lecture{position:absolute;left:50%;top:50%;translate:-50% -50%;width:70px;height:70px;border-radius:50%;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(4px);display:grid;place-items:center;color:#fff;z-index:2}
+.vid .lecture svg{width:26px;height:26px;margin-left:5px}
+
+/* 05 · Ce que vous saurez faire : lignes à flèche */
+.capable{padding:100px 0 40px}
+.capable h2{line-height:1.35}
+.capable h2::after{content:"";display:block;width:190px;height:6px;margin:16px auto 0;background:var(--orange)}
+.lignes{list-style:none;max-width:564px;margin:40px auto 0}
+.lignes li{display:flex;align-items:center;gap:13px;padding:24px 0 12px;border-bottom:1px solid var(--gris);font-size:16px;line-height:1.4;color:var(--texte)}
+.lignes li b{color:#fff;font-weight:600}
+.lignes i{flex:none;width:26px;height:26px;border-radius:50%;background:var(--orange);display:grid;place-items:center;color:#fff}
+.lignes i svg{width:14px;height:14px}
+
+/* 06 · Pour qui : cartes numérotées */
+.pour{padding:120px 0 40px}
+.pour h2{line-height:1.35;margin-bottom:46px}
+.grille-pour{display:grid;grid-template-columns:1fr 1fr;gap:21px;max-width:652px;margin:0 auto}
+.grille-pour div{display:flex;align-items:center;gap:13px;min-height:146px;padding:20px 40px 20px 20px;border-radius:8px;border:1px solid var(--gris);font-size:16px;color:#fff;line-height:1.4}
+.grille-pour span{flex:none;width:26px;height:26px;border-radius:50%;background:var(--orange);display:grid;place-items:center;font:700 14px/1 var(--police);color:#fff}
+
+/* 07 · Offre : deux formules */
+.offre{padding:120px 0 40px}
+.offre .accroche{max-width:560px;margin:0 auto;font-size:clamp(21px,2.1vw,25px);line-height:1.33}
+.offre .accroche+p{max-width:480px;margin:14px auto 0;font-size:16px;color:#fff;text-align:center}
+.offre hr{border:0;border-top:1px solid var(--gris);max-width:536px;margin:60px auto 64px}
+.offre h2.choix{margin-bottom:46px}
+.formule{border-radius:16px;border:1px solid var(--gris);overflow:hidden;text-align:center}
+.formule+.formule{margin-top:40px}
+.formule h3{height:42px;display:grid;place-items:center;background:var(--orange);font-size:20px;font-weight:600}
+.formule .corps{padding:42px 56px 56px}
+.formule ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px;text-align:left}
+.formule li{display:flex;align-items:center;gap:10px;min-height:66px;padding:10px 20px;border-radius:6px;border:1px solid var(--gris);font-size:12px;line-height:1.4;color:#fff}
+.formule li::before{content:"";flex:none;width:17px;height:17px;border-radius:50%;background:var(--orange) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100%}
+.formule .avant{margin-top:38px;font-size:18px;color:#fff;text-transform:uppercase}
+.formule .avant s{color:#8C8C8C}
+.formule .prix{display:block;font:700 clamp(54px,8vw,100px)/1.05 var(--police);letter-spacing:-.03em;color:#fff;margin:6px 0 30px}
+.formule .prix small{font-size:.42em;letter-spacing:0;margin-left:.15em}
+
+/* 08 · La mentore */
+.mentore{padding:120px 0 90px;overflow:hidden}
+.mentore .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:20px;align-items:center}
+.mentore .kicker{font:500 11px/1 var(--police);letter-spacing:.18em;color:var(--orange);text-transform:uppercase}
+.mentore h2{text-align:left;font-size:clamp(24px,2.4vw,27px);margin:14px 0 26px}
+.mentore p{font-size:16px;line-height:1.4;color:#fff;max-width:400px}
+.mentore p+p{margin-top:22px}
+.mentore .portrait{position:relative;padding:20px 0}
+.mentore .portrait::before{content:"";position:absolute;left:20%;top:16%;width:60%;height:50%;border-radius:50%;background:radial-gradient(circle,rgba(245,118,29,.9),rgba(245,118,29,.2) 50%,transparent 70%);filter:blur(30px)}
+.mentore .grand .emplacement{border:0;-webkit-mask-image:linear-gradient(180deg,#000 70%,transparent);mask-image:linear-gradient(180deg,#000 70%,transparent);background:radial-gradient(60% 60% at 50% 40%,rgba(245,118,29,.25),transparent 70%),linear-gradient(180deg,rgba(26,26,26,.7),rgba(10,10,10,.4));box-shadow:inset 0 0 0 1px rgba(245,118,29,.35)}
+.mentore .petit{position:absolute;width:30%;border-radius:6px;overflow:hidden;box-shadow:0 18px 30px rgba(0,0,0,.5);z-index:2}
+.mentore .petit .emplacement{border:1px solid var(--orange)}
+.mentore .petit.a{left:4%;top:20%}
+.mentore .petit.b{right:0;top:52%}
+
+/* 09 · Pourquoi un prix si bas : bande orange */
+.pourquoi{background:var(--orange);padding:76px 0 90px}
+.pourquoi h2{font-size:clamp(24px,2.4vw,27px);line-height:1.4;max-width:450px;margin:0 auto}
+.pourquoi hr{border:0;border-top:1px solid rgba(255,255,255,.55);max-width:450px;margin:14px auto 22px}
+.pourquoi p{max-width:450px;margin:0 auto;text-align:center;font-size:16px;line-height:1.4;color:#fff}
+.pourquoi .action{margin-top:36px}
+
+/* 10 · Attention : alerte et rappel des formules */
+.alerte{padding:120px 0 40px}
+.alerte .wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:710px}
+.danger{padding:60px 22px 46px;border-radius:12px;border:1px solid var(--gris);text-align:center}
+.danger svg{width:170px;height:150px;margin:0 auto;color:var(--rouge)}
+.danger .grand-titre{display:block;font:700 clamp(32px,3.4vw,42px)/1.1 var(--police);color:#fff;text-transform:uppercase;margin:12px 0 16px}
+.danger .sous{font:700 17px/1.4 var(--police);color:#fff;text-transform:uppercase}
+.danger .sous span{color:var(--rouge)}
+.danger hr{border:0;border-top:1px solid var(--gris);margin:20px 0}
+.danger p{font-size:15px;line-height:1.45;color:#fff}
+.danger p b{color:var(--orange);font-weight:600}
+.minis{display:grid;gap:30px}
+.mini{border-radius:12px;border:1px solid var(--gris);overflow:hidden;text-align:center}
+.mini h3{height:42px;display:grid;place-items:center;background:var(--orange);font-size:20px;font-weight:600}
+.mini .prix{display:block;font:700 clamp(40px,4.4vw,58px)/1 var(--police);color:#fff;letter-spacing:-.02em;margin:34px 0 22px}
+.mini .prix small{font-size:.42em}
+.mini .btn{min-width:0;width:calc(100% - 60px);margin:0 30px 34px;font-size:15px}
+
+/* 11 · FAQ : le mot géant qui s'efface, rangées orange */
+.faq{padding:120px 0 40px}
+.faq .geant{display:block;text-align:center;font:800 clamp(64px,7vw,88px)/.8 var(--police);text-transform:uppercase;background:linear-gradient(180deg,#fff 0%,#7A7A7A 55%,#000 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.faq h2{margin:4px 0 44px}
+.faq details{border-radius:6px;background:var(--orange);margin-bottom:17px}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;min-height:58px;padding:10px 20px;font-size:16px;color:#fff}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"";flex:none;width:26px;height:26px;border-radius:50%;background:#fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M13 7v12M7 13h12' stroke='%23F5761D' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") center/100%;transition:rotate .35s var(--courbe)}
+.faq details[open] summary::before{rotate:45deg}
+.faq details p{padding:0 20px 20px 56px;font-size:15px;line-height:1.5;color:#fff}
+
+/* 12 · Une question ? */
+.contact{padding:110px 0 120px}
+.contact h2{font-size:clamp(26px,2.6vw,32px)}
+.contact p{margin:10px 0 30px;font-size:18px;color:#fff}
+
+/* 13 · Pied */
+#pied{background:var(--nuit);font-size:11px;color:#E6E6E6;text-transform:uppercase;letter-spacing:.02em}
+#pied .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:76px;padding:16px 0}
+#pied .droite{display:flex;align-items:center;gap:8px;text-align:right}
+#pied .droite a{display:inline-flex;align-items:center;gap:8px;min-height:44px}
+#pied .droite svg{width:18px;height:18px}
+
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;min-height:0}
+  .hero .txt{padding:50px 0 20px;text-align:center}
+  .hero p{margin-inline:auto}
+  .scene{height:auto;min-height:0;margin:0 auto;width:min(480px,100%)}
+  .scene .emplacement{position:relative;right:auto}
+  .faisceau{left:58%;width:90px}
+  .infos ul{justify-content:center;gap:8px 22px}
+  .carte-appel{padding:40px 26px 36px}
+  .appel .geant{margin-top:-60px}
+  .cours article{padding:36px 22px 34px;min-height:0}
+  .cours .tete{flex-direction:column;align-items:flex-start;gap:14px}
+  .mentore .wrap{grid-template-columns:1fr;gap:40px}
+  .mentore .portrait{max-width:480px;width:100%;margin:0 auto}
+  .alerte .wrap{grid-template-columns:1fr;max-width:440px}
+}
+@media (max-width:620px){
+  .videos{grid-template-columns:1fr 1fr;gap:12px}
+  .vid .lecture{width:50px;height:50px}
+  .grille-pour{grid-template-columns:1fr}
+  .grille-pour div{min-height:0;padding:20px}
+  .formule .corps{padding:30px 18px 36px}
+  .formule ul{grid-template-columns:1fr}
+  .btn{padding:0 22px;font-size:15px}
+  .btn.wa{font-size:16px}
+  .hero h1{font-size:24px}
+  #pied .wrap{flex-direction:column;text-align:center;gap:4px}
+}
+@media (prefers-reduced-motion:reduce){.faq summary::before{transition:none}}
+</style>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/portfolio.css">
+<link rel="stylesheet" href="../../commun/flottant.css">
+</head>
+<body>
+<div data-progression style="background:var(--orange)"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="cal" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#fff"/><path d="M6 7.5h8v6.5H6z M6 9.5h8 M8 6v2 M12 6v2" fill="none" stroke="#F5761D" stroke-width="1.3" stroke-linejoin="round"/></symbol>
+  <symbol id="horloge" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8.2" fill="none" stroke="#fff" stroke-width="1.6"/><path d="M10 5.5V10l3 2" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="camera" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#fff"/><path d="M5 7.5h7v5H5z M12 9.3l3-1.8v5l-3-1.8z" fill="#F5761D"/></symbol>
+  <symbol id="triangle" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" fill="#fff"/><path d="M10 5.5l4.5 8h-9z" fill="none" stroke="#F5761D" stroke-width="1.4" stroke-linejoin="round"/><path d="M10 9v2.2" stroke="#F5761D" stroke-width="1.4" stroke-linecap="round"/></symbol>
+  <symbol id="lire" viewBox="0 0 24 24"><path d="M6 3.5L20 12 6 20.5z" fill="currentColor"/></symbol>
+  <symbol id="fleche" viewBox="0 0 14 14"><path d="M2 7h10M8 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="danger" viewBox="0 0 170 150"><path d="M85 12 L160 140 H10 Z" fill="none" stroke="currentColor" stroke-width="14" stroke-linejoin="round"/><path d="M85 52 V98" stroke="currentColor" stroke-width="14" stroke-linecap="round"/><circle cx="85" cy="118" r="8" fill="currentColor"/></symbol>
+  <symbol id="whatsapp" viewBox="0 0 24 24"><path d="M12 2.8 A9.2 9.2 0 0 0 4.1 16.7 L2.8 21.2 L7.4 20 A9.2 9.2 0 1 0 12 2.8 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.5 C9 12 12 15 15.5 15 L16.2 13.6 L14.4 12.8 L13.6 13.6 C12.2 13 11 11.8 10.4 10.4 L11.2 9.6 L10.4 7.8 Z" fill="currentColor"/></symbol>
+</svg>
+
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="txt">
+      <div class="logo" data-rv aria-label="Formation Parole d'impact"><small>Formation</small><b>Parole</b><span>d'impact</span></div>
+      <h1 data-rv>Apprenez à prendre la parole de façon mémorable et à <span class="o">gagner au moins 300&nbsp;000 F par mois</span></h1>
+      <p data-rv>grâce aux conférences, aux lives et aux ateliers, avec une méthode <span class="o">déjà suivie par plus de 800 professionnels formés</span>.</p>
+      <a class="btn reflet" href="#offre" data-rv data-aimant>Je participe&nbsp;!</a>
+    </div>
+    <div class="scene">
+      <span class="faisceau" aria-hidden="true" data-parallaxe="0.04"></span>
+      <div class="emplacement" data-img="O-hero" data-format="1:1" data-alt="Clarisse Mbarga, formatrice en prise de parole, sourire ouvert, micro serre-tête, sur fond sombre éclairé d'orange"></div>
+    </div>
+  </div>
+  <div class="infos">
+    <ul>
+      <li><svg aria-hidden="true"><use href="#cal"/></svg>Du 15 au 19 septembre</li>
+      <li><svg aria-hidden="true"><use href="#horloge"/></svg>Chaque soir à 20&nbsp;h</li>
+      <li><svg aria-hidden="true"><use href="#camera"/></svg>En direct sur Zoom</li>
+      <li><svg aria-hidden="true"><use href="#triangle"/></svg>Places limitées</li>
+    </ul>
+  </div>
+</section>
+
+<section class="appel" id="appel">
+  <div class="wrap">
+    <div class="carte-appel" data-rv>
+      <h2>Pendant que les autres disent «&nbsp;je commence l'an prochain&nbsp;», faites autrement&nbsp;!</h2>
+      <p>En 5 soirs seulement, votre prise de parole passe du brouillon à la scène, avec une méthode déjà suivie par plus de 800 professionnels.</p>
+      <a class="btn blanc" href="#offre" data-aimant>Je participe&nbsp;!</a>
+    </div>
+  </div>
+  <div class="geant" aria-hidden="true" data-parallaxe="-0.03">Parole</div>
+</section>
+
+<section class="programme" id="programme">
+  <div class="wrap">
+    <h2 data-rv>Le programme complet<br><span class="o">5 soirs pour changer de voix</span></h2>
+    <div class="cours">
+      <article data-rv><div class="tete"><span class="tag">Cours 1</span><h3>La structure parfaite pour une prise de parole mémorable</h3></div>
+        <ul class="puces"><li>L'état d'esprit d'une oratrice qui marque</li><li>Comment sortir du «&nbsp;trou noir&nbsp;» et construire son message</li><li>Les ressorts des interventions qui donnent des résultats</li><li>Les 3 piliers d'une parole inoubliable en ligne</li></ul></article>
+      <article data-rv><div class="tete"><span class="tag">Cours 2</span><h3>Construire votre méthode unique de parole en ligne</h3></div>
+        <ul class="puces"><li>Trouver ce qui vous distingue face caméra</li><li>Mettre votre histoire au service de votre message</li><li>Asseoir votre autorité à l'écran</li></ul></article>
+      <article data-rv><div class="tete"><span class="tag">Cours 3</span><h3>Rendre chaque intervention inoubliable grâce au récit</h3></div>
+        <ul class="puces"><li>Les histoires qui vendent sans jamais forcer</li><li>Les images et exemples qui touchent à travers l'écran</li><li>Les techniques de récit qui créent l'émotion</li></ul></article>
+      <article data-rv><div class="tete"><span class="tag">Cours 4</span><h3>Pas à pas pour une intervention mémorable, sur scène et en ligne</h3></div>
+        <ul class="puces"><li>Les 90 premières secondes, sur scène, en live ou en atelier</li><li>Briser la glace avec assurance, en salle comme en ligne</li><li>Tenir l'attention dès la première phrase</li></ul></article>
+      <article data-rv><div class="tete"><span class="tag">Cours 5</span><h3>Vivre de sa parole&nbsp;: 300&nbsp;000 F par mois avec conférences et lives</h3></div>
+        <ul class="puces"><li>Se faire payer pour parler, même sans notoriété</li><li>Construire une offre irrésistible en fin d'intervention</li><li>Le système complet pour encaisser chaque mois, sur scène ou en ligne</li></ul></article>
+    </div>
+    <div class="action"><a class="btn reflet" href="#offre" data-aimant>Je participe&nbsp;!</a></div>
+  </div>
+</section>
+
+<section class="resultats" id="resultats">
+  <div class="wrap">
+    <h2 data-rv>Ne vous étonnez pas d'obtenir<br>des <span class="o">résultats</span> comme ceux-ci...</h2>
+    <div class="videos">
+      <div class="vid" data-rv><div class="emplacement" data-img="O-temoin-1" data-format="1:1" data-alt="Témoignage vidéo d'une entrepreneure de Douala, face caméra"></div><span class="lecture" aria-hidden="true"><svg><use href="#lire"/></svg></span></div>
+      <div class="vid" data-rv><div class="emplacement" data-img="O-temoin-2" data-format="1:1" data-alt="Témoignage vidéo d'un consultant sur scène, micro à la main"></div><span class="lecture" aria-hidden="true"><svg><use href="#lire"/></svg></span></div>
+      <div class="vid" data-rv><div class="emplacement" data-img="O-temoin-3" data-format="1:1" data-alt="Témoignage vidéo d'une coach qui anime un live depuis son bureau"></div><span class="lecture" aria-hidden="true"><svg><use href="#lire"/></svg></span></div>
+      <div class="vid" data-rv><div class="emplacement" data-img="O-temoin-4" data-format="1:1" data-alt="Témoignage vidéo d'un formateur devant un tableau blanc"></div><span class="lecture" aria-hidden="true"><svg><use href="#lire"/></svg></span></div>
+    </div>
+    <div class="action"><a class="btn reflet" href="#offre" data-aimant>Je participe&nbsp;!</a></div>
+  </div>
+</section>
+
+<section class="capable" id="capable">
+  <div class="wrap">
+    <h2 data-rv>À la fin des 5 cours<br>vous saurez&nbsp;:</h2>
+    <ul class="lignes">
+      <li data-rv><i aria-hidden="true"><svg><use href="#fleche"/></svg></i><span><b>Sortir votre parole du brouillon</b>, avec une structure mémorable sur scène comme en ligne ;</span></li>
+      <li data-rv><i aria-hidden="true"><svg><use href="#fleche"/></svg></i><span><b>Rester authentique</b> et capter l'attention, même si vous êtes de nature réservée ;</span></li>
+      <li data-rv><i aria-hidden="true"><svg><use href="#fleche"/></svg></i><span><b>Gagner du temps</b> pour préparer vos lives, ateliers et conférences ;</span></li>
+      <li data-rv><i aria-hidden="true"><svg><use href="#fleche"/></svg></i><span><b>Prendre de l'assurance</b> et dompter le trac, les blocages et le «&nbsp;trou noir&nbsp;» ;</span></li>
+      <li data-rv><i aria-hidden="true"><svg><use href="#fleche"/></svg></i><span><b>Vivre de votre parole</b> avec au moins 300&nbsp;000 F par mois.</span></li>
+    </ul>
+    <div class="action"><a class="btn reflet" href="#offre" data-aimant>Je participe&nbsp;!</a></div>
+  </div>
+</section>
+
+<section class="pour" id="pour-qui">
+  <div class="wrap">
+    <h2 data-rv>La formation Parole d'impact<br>est faite pour vous si vous...</h2>
+    <div class="grille-pour">
+      <div data-rv><span>01</span>Ne savez pas par où commencer pour préparer votre première intervention, en ligne ou en salle ;</div>
+      <div data-rv><span>02</span>N'arrivez pas à faire réagir votre public pendant vos lives et vos webinaires ;</div>
+      <div data-rv><span>03</span>Parlez déjà en public sans en vivre, et voulez que chaque intervention vous rapporte ;</div>
+      <div data-rv><span>04</span>Voulez gagner au moins 300&nbsp;000 F par mois sur scène et en ligne ;</div>
+      <div data-rv><span>05</span>Voulez devenir la voix de référence de votre domaine ;</div>
+      <div data-rv><span>06</span>Voulez enfin oser et porter votre message à ceux qui l'attendent.</div>
+    </div>
+    <div class="action"><a class="btn reflet" href="#offre" data-aimant>Je participe&nbsp;!</a></div>
+  </div>
+</section>
+
+<section class="offre" id="offre">
+  <div class="wrap">
+    <h2 class="accroche" data-rv>La formation peut vous rapporter <span class="o">au moins 300&nbsp;000 F par mois grâce aux lives et aux conférences</span>, et pourtant son prix en est très loin</h2>
+    <p data-rv>Vous aurez tout ce qu'il faut pour préparer vos interventions vite, sereinement et sans peur.</p>
+    <hr>
+    <h2 class="choix" data-rv>Choisissez votre formule&nbsp;:</h2>
+    <div class="formule" data-rv>
+      <h3>Formule essentielle</h3>
+      <div class="corps">
+        <ul><li>Accès aux 5 soirs de cours sur Zoom</li><li>Fiches pratiques et support de cours</li></ul>
+        <p class="avant"><s>Au lieu de 75&nbsp;000 F</s> seulement&nbsp;:</p>
+        <span class="prix">15&nbsp;000<small>F</small></span>
+        <a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Clarisse%2C%20je%20prends%20la%20formule%20essentielle%20Parole%20d%27impact." target="_blank" rel="noopener" data-aimant>Je prends l'essentielle&nbsp;!</a>
+      </div>
+    </div>
+    <div class="formule" data-rv>
+      <h3>Formule VIP</h3>
+      <div class="corps">
+        <ul><li>Accès aux 5 soirs de cours sur Zoom</li><li>Fiches pratiques et support de cours</li><li>Accès aux replays des cours</li><li>4 ateliers pratiques en direct après la formation, pour vous entraîner devant le groupe</li></ul>
+        <p class="avant"><s>Au lieu de 190&nbsp;000 F</s> seulement&nbsp;:</p>
+        <span class="prix">35&nbsp;000<small>F</small></span>
+        <a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Clarisse%2C%20je%20prends%20la%20formule%20VIP%20Parole%20d%27impact." target="_blank" rel="noopener" data-aimant>Je prends la VIP&nbsp;!</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mentore" id="mentore">
+  <div class="wrap">
+    <div>
+      <span class="kicker" data-rv>Rencontrez votre formatrice</span>
+      <h2 data-rv>Qui est Clarisse Mbarga&nbsp;?</h2>
+      <p data-rv>Clarisse Mbarga forme dirigeants, cadres et entrepreneurs à la prise de parole depuis plus de 20 ans. Elle a parlé devant plus de 50&nbsp;000 personnes et formé plus de 800 professionnels entre Yaoundé, Douala et Abidjan.</p>
+      <p data-rv>Ancienne présentatrice radio, elle a bâti sa méthode sur trois leviers&nbsp;: la structure, le récit et la présence, pour aider chacun à oser dire ce qu'il a à dire.</p>
+      <p data-rv>Elle accompagne celles et ceux qui savent qu'ils ont un message, mais restent bloqués par le trac, le manque de méthode ou la peur de vendre.</p>
+    </div>
+    <div class="portrait">
+      <div class="grand"><div class="emplacement" data-img="O-mentore" data-format="4:3" data-alt="Clarisse Mbarga sur scène, micro serre-tête, gestuelle ouverte, lumière orange derrière elle"></div></div>
+      <div class="petit a" data-parallaxe="0.05"><div class="emplacement" data-img="O-scene-1" data-format="4:3" data-alt="Clarisse Mbarga face à une salle pleine, vue depuis la scène"></div></div>
+      <div class="petit b" data-parallaxe="-0.05"><div class="emplacement" data-img="O-scene-2" data-format="4:3" data-alt="Public qui écoute Clarisse Mbarga dans une grande salle de conférence"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="pourquoi" id="pourquoi">
+  <div class="wrap centre">
+    <h2 data-rv>Pourquoi un prix si bas pour une formation de 5 soirs qui vaut autant&nbsp;?</h2>
+    <hr>
+    <p data-rv>Je vais être franche&nbsp;: la raison est simple. Je veux que beaucoup de personnes qui ne me connaissent pas encore découvrent ma méthode et ma façon d'enseigner.</p>
+    <div class="action"><a class="btn blanc" href="#offre" data-aimant>Je participe&nbsp;!</a></div>
+  </div>
+</section>
+
+<section class="alerte" id="alerte">
+  <div class="wrap">
+    <div class="danger" data-rv>
+      <svg aria-hidden="true"><use href="#danger"/></svg>
+      <span class="grand-titre">Attention&nbsp;!</span>
+      <p class="sous"><span>Les places sont limitées</span> et le prix peut augmenter à tout moment.</p>
+      <hr>
+      <p><b>Réservez votre place</b> et faites de votre parole une source de revenus&nbsp;!</p>
+    </div>
+    <div class="minis">
+      <div class="mini" data-rv><h3>Formule essentielle</h3><span class="prix">15&nbsp;000<small>F</small></span><a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Clarisse%2C%20je%20prends%20la%20formule%20essentielle%20Parole%20d%27impact." target="_blank" rel="noopener">Je participe&nbsp;!</a></div>
+      <div class="mini" data-rv><h3>Formule VIP</h3><span class="prix">35&nbsp;000<small>F</small></span><a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Clarisse%2C%20je%20prends%20la%20formule%20VIP%20Parole%20d%27impact." target="_blank" rel="noopener">Je participe&nbsp;!</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <span class="geant" aria-hidden="true">FAQ</span>
+    <h2 data-rv><span class="o">Questions</span> fréquentes</h2>
+    <details data-rv><summary>Pour qui est la formation Parole d'impact&nbsp;?</summary><p>Pour toute personne qui veut parler en public, en ligne ou en salle, et en faire une source de revenus&nbsp;: entrepreneurs, coachs, cadres, formateurs.</p></details>
+    <details data-rv><summary>Où et quand a lieu la formation&nbsp;?</summary><p>En direct sur Zoom, du 15 au 19 septembre, chaque soir à 20&nbsp;h (heure de Yaoundé).</p></details>
+    <details data-rv><summary>Je ne peux pas être en direct. Puis-je revoir les cours&nbsp;?</summary><p>Oui, avec la formule VIP&nbsp;: les replays restent disponibles après la formation.</p></details>
+    <details data-rv><summary>Quelle différence entre la formule VIP et la formule essentielle&nbsp;?</summary><p>La VIP ajoute les replays et 4 ateliers pratiques en direct pour vous entraîner devant le groupe.</p></details>
+    <details data-rv><summary>Est-ce que ça marche si je n'ai jamais parlé en ligne&nbsp;?</summary><p>Oui. Le premier cours part de zéro&nbsp;: structure, posture et premières minutes.</p></details>
+    <details data-rv><summary>Y a-t-il une attestation&nbsp;?</summary><p>Oui, une attestation de participation est remise à la fin des 5 cours.</p></details>
+  </div>
+</section>
+
+<section class="contact centre" id="contact">
+  <div class="wrap">
+    <h2 data-rv>Une <span class="o">question</span>&nbsp;?</h2>
+    <p data-rv>Écrivez à l'équipe d'accompagnement&nbsp;!</p>
+    <a class="btn wa" href="https://wa.me/22500000000?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20la%20formation%20Parole%20d%27impact." target="_blank" rel="noopener" data-rv data-aimant><svg aria-hidden="true"><use href="#whatsapp"/></svg>Écrire sur WhatsApp</a>
+  </div>
+</section>
+
+<footer id="pied">
+  <div class="wrap">
+    <span>Clarisse Mbarga © Tous droits réservés<br>Template · Style O «&nbsp;Faisceau de scène&nbsp;»</span>
+    <div class="pf-centre"><span class="pf-par">Réalisé par <strong>Yedidia Ruben - Digital Strategist</strong></span></div><div class="droite"><a href="https://wa.me/22500000000?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20Parole%20d%27impact." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#whatsapp"/></svg>+225 00 00 00 00</a></div>
+  </div>
+</footer>
+
+<script src="../../commun/anim.js" defer></script>
+
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template O<b>Faisceau de scène</b></span><nav aria-label="Autour du template O"><ul><li><a href="./" aria-current=page>Template</a></li><li><a href="avec-images.html">Template avec images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html">Design<small>DESIGN.md</small></a></li><li><a href="prompt.html">Prompt de la page<small>kit</small></a></li><li><a href="prompts.html">Prompts des images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template O : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">O</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+</body>
+</html>

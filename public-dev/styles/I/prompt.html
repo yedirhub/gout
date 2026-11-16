@@ -6,6 +6,7 @@
 <meta name="robots" content="noindex">
 <title>Template I · Rose scène · Prompt · Yedidia Ruben - Digital Strategist</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/flottant.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#0E0E0D;color:#E9E5DE;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -32,7 +33,9 @@ main img.tel{width:min(390px,100%)}
 pre{width:min(980px,100%);margin:0 auto;padding:28px;background:#151514;border:1px solid #262624;border-radius:12px;overflow:auto;max-height:72vh;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#D8D2C8;white-space:pre-wrap;word-break:break-word}
 footer{text-align:center;padding:48px 20px 56px;font-size:13px;color:#8A847C;line-height:1.6}
 footer strong{display:block;color:#E9E5DE;font-weight:500;font-size:15px}
-@media (max-width:980px){header{justify-content:center;padding:10px 8px} header .titre,.retour{display:none} .onglets{max-width:100%;overflow-x:auto;scrollbar-width:none} .onglets a{padding:0 10px}}
+@media (max-width:1180px){.onglets a{padding:0 10px}}
+@media (max-width:980px){header{justify-content:center;padding:14px 16px} .onglets,.retour{display:none} header .titre{white-space:normal;text-align:center}}
+/* ancien : sous 980 px, onglets en bande qui défilait de côté ; retirée le 16/11/2026, le bouton flottant porte la navigation */
 </style>
 </head>
 <body>
@@ -142,16 +145,16 @@ Construis une page de vente façon carnet de collage : fond crème quadrillé `#
 
 ## 2. Les sections, dans l&#x27;ordre
 
-01. #haut · « Votre meilleur portfolio de social media, c&#x27;est votre propre profil. »
-02. #pour-qui · « Cette méthode est pour vous qui : »
-03. #secret · « Parce qu&#x27;une social media qui devient une référence (et se paie comme telle), c&#x27;est une social media qui le prouve sur son propre profil. »
-04. #methode · « La méthode ÉCLAT est une méthode à moi, en 5 étapes, créée pour les social media qui ne savent pas créer du contenu pour elles-mêmes. »
-05. #avis · « et détendez-vous, je ne vous demande pas de me croire les yeux fermés. Croyez plutôt ce que d&#x27;autres social media ont dit après leur premier contact avec la méthode : »
-06. #contenu · « Jetez un œil à ce que vous allez trouver à l&#x27;intérieur (petits spoilers) »
-07. #prix
-08. #qui · « Maëlle Ouattara ? »
-09. #faq · « Il vous reste une question ? Détendez-vous, j&#x27;y réponds »
-10. #fin · « montez sur cette scène, une bonne fois pour toutes »
+01. #haut · Le hero : Dire qui, quoi, pour qui en une phrase, puis faire cliquer. Le geste : bords déchirés et gribouillis.
+02. #pour-qui · Pour qui : Trier : celui qui n&#x27;est pas la cible s&#x27;en va, celui qui l&#x27;est se sent choisi.
+03. #secret · La bascule : Montrer pourquoi cette solution est différente.
+04. #methode · Le contenu : Rendre l&#x27;offre concrète, morceau par morceau.
+05. #avis · La preuve : Faire parler les autres : « ça a marché pour des gens comme moi ».
+06. #contenu · Le contenu : Rendre l&#x27;offre concrète, morceau par morceau.
+07. #prix · L&#x27;offre : Convertir : le prix, ce qu&#x27;il contient, le bouton.
+08. #qui · Qui est derrière : Un humain derrière l&#x27;offre, et un lieu réel.
+09. #faq · La FAQ : Lever les dernières objections.
+10. #fin · La relance : Redonner le bouton à celui qui s&#x27;est décidé en route.
 
 ## 3. Les animations
 
@@ -308,5 +311,8 @@ const b=document.getElementById('copier');
 b.onclick=async()=>{await navigator.clipboard.writeText(document.getElementById('texte').textContent);b.textContent='Copié';setTimeout(()=>b.textContent='Copier',1800)};
 </script>
 <footer>Réalisé par<strong>Yedidia Ruben - Digital Strategist</strong></footer>
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template I<b>Rose scène</b></span><nav aria-label="Autour du template I"><ul><li><a href="./">Template</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html">Design<small>DESIGN.md</small></a></li><li><a href="prompt.html" aria-current=page>Prompt de la page<small>kit</small></a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template I : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">I</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+
 </body>
 </html>

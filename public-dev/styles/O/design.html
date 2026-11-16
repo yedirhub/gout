@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Template O · Faisceau de scène · DESIGN.md · Yedidia Ruben - Digital Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/flottant.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0E0E0D;color:#E9E5DE;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 24px;background:rgba(14,14,13,.9);backdrop-filter:blur(10px);border-bottom:1px solid #262624;font-size:14px}
+header .titre{color:#A9A298;white-space:nowrap} header .titre b{color:#E9E5DE;font-weight:500}
+.onglets{display:flex;gap:2px;padding:4px;border:1px solid #2C2A27;border-radius:999px}
+.onglets a{height:32px;padding:0 14px;display:inline-flex;align-items:center;border-radius:999px;color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s,background .25s}
+.onglets a:hover{color:#fff}
+.onglets a[aria-current]{background:#E9E5DE;color:#141312}
+.retour{color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s} .retour:hover{color:#D9B48A}
+main{padding:40px 20px 0}
+.credit{width:min(1200px,100%);margin:0 auto 22px;font-size:14px;line-height:1.6;color:#A9A298}
+.credit b{color:#E9E5DE;font-weight:500} .credit a{color:#D9B48A;border-bottom:1px solid rgba(217,180,138,.4)}
+main img{display:block;width:min(1200px,100%);margin-inline:auto;border-radius:10px;box-shadow:0 30px 80px -40px #000}
+main img.tel{width:min(390px,100%)}
+.etiquette{width:min(1200px,100%);margin:48px auto 14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A847C}
+.outils{width:min(980px,100%);margin:0 auto 16px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.outils p{font-size:14px;color:#A9A298;line-height:1.6;max-width:560px}
+.outils div{display:flex;gap:8px}
+.outils button,.outils a{font:inherit;font-size:13px;height:38px;padding:0 16px;border-radius:999px;border:1px solid #3A3733;background:none;color:#E9E5DE;cursor:pointer;display:inline-flex;align-items:center;transition:border-color .25s}
+.outils button{background:#D9B48A;border-color:#D9B48A;color:#141312;font-weight:500}
+.outils a:hover{border-color:#D9B48A}
+pre{width:min(980px,100%);margin:0 auto;padding:28px;background:#151514;border:1px solid #262624;border-radius:12px;overflow:auto;max-height:72vh;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#D8D2C8;white-space:pre-wrap;word-break:break-word}
+footer{text-align:center;padding:48px 20px 56px;font-size:13px;color:#8A847C;line-height:1.6}
+footer strong{display:block;color:#E9E5DE;font-weight:500;font-size:15px}
+@media (max-width:1180px){.onglets a{padding:0 10px}}
+@media (max-width:980px){header{justify-content:center;padding:14px 16px} .onglets,.retour{display:none} header .titre{white-space:normal;text-align:center}}
+/* ancien : sous 980 px, onglets en bande qui défilait de côté ; retirée le 16/11/2026, le bouton flottant porte la navigation */
+</style>
+</head>
+<body>
+<header>
+  <span class="titre">Template O · <b>Faisceau de scène</b></span>
+  <nav class="onglets" aria-label="Autour du template"><a href="./">La page</a><a href="avec-images.html">Avec images</a><a href="source.html">Source</a><a href="apercu.html">Notre version</a><a href="design.html" aria-current=page>DESIGN.md</a><a href="prompt.html">Prompt</a><a href="prompts.html">Prompts images</a></nav>
+  <a class="retour" href="/">Tous les templates</a>
+</header>
+<main>
+<div class="outils"><p>La fiche de style du template : couleurs, polices, tailles, espacements, composants. À donner à une IA avant de coder.</p><div><button type="button" id="copier">Copier</button><a href="DESIGN.md" download>Télécharger</a></div></div>
+<pre id="texte"># DESIGN.md : Style O « Faisceau de scène » (d&#x27;après la page « Página de Vendas - Formação Oratória de Alto Impacto », Gustavo Loff)
+
+&gt; **Source** : `inspi/behance/240933795/01.png` (1505 × 16383 px), page de vente d&#x27;une formation à la prise de parole, Behance 240933795. Relevé le 16/11/2026.
+&gt; **Demande de Ruben** : pas de consigne de détail, lot du 16/11/2026.
+
+## 1. Ambiance et intention
+
+- Une page de vente longue et directe, qui parle fort : tout en capitales grasses, noir pur, orange en aplats.
+- Le geste du hero : un faisceau orange vertical, comme un projecteur de scène, derrière l&#x27;oratrice.
+- Un seul bouton répété partout : pilule vert lime qui luit, comme un néon. C&#x27;est la seule couleur froide de la page, elle ne sert qu&#x27;à l&#x27;action.
+- Le rythme alterne noir, une respiration blanche, et deux bandes orange pleines.
+
+## 2. Palette et rôles
+
+- **Noir** `#000000` : fond de presque toute la page ; **nuit** `#101010` : le pied.
+- **Orange** `#F5761D` : bande d&#x27;infos, carte d&#x27;appel, étiquettes « Cours », pastilles, en-têtes des formules, bande « Pourquoi », rangées de FAQ.
+- **Vert lime** `#89F21B` : tous les boutons d&#x27;achat, avec un halo du même vert.
+- **Blanc** `#FFFFFF` : titres, fond de la section d&#x27;appel, bouton sur orange.
+- **Filigrane** `#EBEBEB` (relevé `#E1E1E1` à `#CFCFCF`) : le mot géant derrière la carte d&#x27;appel.
+- **Filet** `#BABABA` : contour fin des cartes du programme, des formules, des lignes.
+- **Rouge** `#FF2A1A` : le triangle d&#x27;alerte et « Les places sont limitées ».
+- **Vert WhatsApp** `#2DC547` : le seul bouton de contact.
+
+## 3. Typographie
+
+- Relevé à l&#x27;œil : grotesque neutre, très proche d&#x27;**Inter** (Google Fonts), seule police de la page. Le logo est en Inter 900 italique.
+
+| Rôle | Police | Taille bureau / téléphone | Graisse | Interligne | Approche |
+|---|---|---|---|---|---|
+| Logo | Inter italique | 30 px | 900 | 1 | -0,02 em, capitales |
+| Titre du hero | Inter | 34 / 24 px | 700 | 1,3 | capitales |
+| Titre de section | Inter | 30 / 24 px | 700 | 1,2 à 1,4 | capitales |
+| Titre de cours | Inter | 18 px | 600 | 1,4 | capitales |
+| Texte | Inter | 16 px | 400 | 1,4 à 1,5 | 0 |
+| Prix | Inter | 100 / 54 px | 700 | 1,05 | -0,03 em |
+| Bouton | Inter | 16 px | 700 | 1,2 | capitales |
+
+## 4. Composants
+
+- **Bouton néon** : pilule vert lime 48 px, texte noir en capitales, halo vert de 22 px qui grandit au survol.
+- **Bande d&#x27;infos** : orange pleine sous le hero, 4 infos à pictogramme blanc (dates, heure, Zoom, places).
+- **Carte d&#x27;appel** : orange, coins 14 px, titre en capitales blanches, bouton blanc ; elle chevauche un mot géant gris clair en italique.
+- **Carte de cours** : filet gris, coins 16 px, étiquette orange « Cours 1 », titre en capitales, puces rondes orange à chevron.
+- **Vignette vidéo** : carré, bouton lecture en verre dépoli.
+- **Ligne de bénéfice** : rond orange à flèche, début en gras, filet gris dessous.
+- **Carte « pour qui »** : filet gris, numéro dans un rond orange.
+- **Formule** : en-tête orange, avantages en petites cartes à filet et coche orange, ancien prix barré, prix géant, bouton néon.
+- **FAQ** : rangées orange pleines, rond blanc à « + » orange qui tourne en croix à l&#x27;ouverture ; le mot « FAQ » géant s&#x27;efface du blanc au noir.
+
+## 5. Mise en page
+
+- Colonne de 920 px ; les listes et grilles se resserrent à 560 à 710 px au centre.
+- Ordre : hero et bande d&#x27;infos, appel (fond blanc), programme, résultats, ce que vous saurez faire, pour qui, offre, formatrice, pourquoi ce prix (bande orange), alerte, FAQ, contact, pied.
+- Un bouton néon après chaque bloc de preuve.
+- Espacement vertical : 90 à 120 px entre sections.
+
+## 6. Profondeur et élévation
+
+- Presque plat : des filets gris, pas d&#x27;ombre, sauf la grande ombre douce de la carte d&#x27;appel sur le blanc.
+- La lumière fait la profondeur : halo vert des boutons, faisceau et lueur orange derrière les portraits.
+
+## 7. Images
+
+| Id | Format | Rôle |
+|---|---|---|
+| O-hero | 1:1 | Clarisse devant le faisceau orange, sourire ouvert |
+| O-temoin-1 à O-temoin-4 | 1:1 | Vignettes des témoignages vidéo |
+| O-mentore | 4:3 | Clarisse sur scène, micro serre-tête |
+| O-scene-1 | 4:3 | Clarisse face à une salle pleine |
+| O-scene-2 | 4:3 | Le public dans la salle |
+
+- **Personnage** : Clarisse Mbarga, 45 ans, Yaoundé, peau brun moyen, cheveux naturels très courts grisonnants aux tempes, pommettes hautes, gestuelle ouverte ; grandes boucles d&#x27;oreilles géométriques, micro serre-tête discret.
+
+## 8. À faire, à ne pas faire
+
+- Faire : tout titre en capitales, une partie en orange.
+- Faire : le vert lime pour l&#x27;action seulement, jamais pour un texte ou un décor.
+- Ne pas faire : de texte blanc sur le vert lime (le texte des boutons reste noir).
+- Ne pas faire : d&#x27;ombre portée sur le noir : la profondeur vient de la lumière.
+
+## 9. Comportement responsive
+
+- Behance ne montre que le bureau. Le téléphone est notre proposition.
+- Sous 860 px : hero en colonne, portrait sous le texte, faisceau affiné ; titres de cours sous leur étiquette ; formatrice en colonne ; alerte et rappel des formules empilés.
+- Sous 620 px : « pour qui » et avantages des formules en une colonne ; vignettes vidéo gardées en 2 colonnes.
+
+## 10. Mouvement
+
+- Moteur commun : `data-rv`, `data-parallaxe` sur le faisceau, le mot géant et les petites photos de la formatrice, `data-aimant` et `.reflet` sur les boutons, barre de progression orange.
+- Propre à O : le halo vert des boutons s&#x27;intensifie au survol ; le « + » de la FAQ tourne en croix.
+
+## 11. Non mesuré, et choix tranchés seul
+
+- La police (§3).
+- La marque « Parole d&#x27;impact », les textes, les prix en francs CFA (15 000 F et 35 000 F, au lieu de 75 000 F et 190 000 F).
+- Le hero montre une seule personne (la source en montre deux).
+- 4 vignettes de témoignages au lieu de 6.
+- Le téléphone (§9).
+
+## 12. Consigne pour l&#x27;IA
+
+Construis une page de vente de formation à la prise de parole sur fond noir pur, en Inter capitales grasses. Un faisceau orange `#F5761D` vertical derrière l&#x27;oratrice dans le hero, puis une bande orange d&#x27;infos. Une carte orange sur fond blanc devant un mot géant gris clair en italique. Programme en 5 cartes à filet gris avec étiquette orange « Cours ». Tous les boutons en pilule vert lime `#89F21B` qui luit. Deux formules à en-tête orange et prix géant. FAQ en rangées orange pleines.
+</pre>
+</main>
+<script>
+const b=document.getElementById('copier');
+b.onclick=async()=>{await navigator.clipboard.writeText(document.getElementById('texte').textContent);b.textContent='Copié';setTimeout(()=>b.textContent='Copier',1800)};
+</script>
+<footer>Réalisé par<strong>Yedidia Ruben - Digital Strategist</strong></footer>
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template O<b>Faisceau de scène</b></span><nav aria-label="Autour du template O"><ul><li><a href="./">Template</a></li><li><a href="avec-images.html">Template avec images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html" aria-current=page>Design<small>DESIGN.md</small></a></li><li><a href="prompt.html">Prompt de la page<small>kit</small></a></li><li><a href="prompts.html">Prompts des images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template O : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">O</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+
+</body>
+</html>

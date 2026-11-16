@@ -1,0 +1,363 @@
+# Prompt · Section « Le contenu » du template H « Sauge apaisée »
+# Par Yedidia Ruben - Digital Strategist. À coller dans une IA qui code, avec ta page.
+
+Construis une section « Le contenu » pour ma page, dans le même esprit que le code de référence plus bas. Garde la structure, le geste et les proportions ; reprends mes couleurs, mes polices et mes textes à moi.
+
+- Son rôle : Rendre l'offre concrète, morceau par morceau.
+- Où la placer : Après la bascule. Peut s'étaler sur plusieurs sections (piliers).
+- Sa structure : Un titre, puis une grille de cartes, une liste numérotée, un carrousel, ou un pilier par section.
+- La règle qui fait la différence : Un titre court par carte, jamais un paragraphe. Une rangée qui déborde dit « il y en a plus ».
+- Animations : attributs data-rv, data-lignes, data-compte, data-incline, data-aimant (moteur anim.js). Sans le moteur, retire-les.
+- Aucun tiret long dans les textes. Contraste de 4,5 au moins. Lisible de 360 à 1920 px.
+
+## Le code de référence (HTML)
+
+```html
+<section class="intro" id="intro">
+  <div class="wrap">
+    <div class="bloc" data-rv>
+      <div class="txt">
+        <div class="titre"><span class="marque">Sérène</span><small>n'est pas qu'un complément, c'est une reconnexion.</small></div>
+        <p><b>Plus qu'un complément.</b> Des retrouvailles avec vous-même. Sérène est une expérience quotidienne d'équilibre, en 30 doses de bien-être.</p>
+        <p>Chaque gélule réunit des actifs naturels qui aident le corps à se détendre, l'esprit à s'éclaircir et le rythme à ralentir.</p>
+        <p>En prenant soin de votre corps, vous vous reconnectez à vous-même. Sans pression. Sans culpabilité. Sans formule miracle.</p>
+        <p class="note"><b>Ce n'est pas qu'un complément.</b> C'est une pause guidée : un moment de présence physique, émotionnelle et mentale pour retrouver la paix que le quotidien vous a fait oublier.</p>
+      </div>
+      <div class="photo" aria-hidden="true" data-incline><svg width="300" height="360"><use href="#femme-c"/></svg><div class="pot"><i></i><span>Sérène</span></div></div>
+    </div>
+  </div>
+</section>
+```
+
+## Le CSS du template d'origine (la section en dépend, ne garde que ce qu'elle utilise)
+
+```css
+:root{
+  --sauge:#55645C; --sauge2:#566A61; --sauge-c:#86948D; --sauge-p:#A9B4AE; --nuit:#2A3833; --foret:#0F251B;
+  --perle:#E5E7E7; --creme:#F4F2EE; --blanc:#FDFDFD; --encre:#1E2A25; --texte:#3E4A44; --doux:#5E6A64;
+  --jaune:#F0E2A6; --ciel:#D6E8F4; --menthe:#DDF0E4; --rose:#F8DADC;
+  --courbe:cubic-bezier(.16,1,.3,1);
+  --titre:'Manrope',system-ui,sans-serif; --logo:'Tenor Sans','Manrope',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--titre);font-size:15px;line-height:1.6;color:var(--texte);background:var(--blanc);-webkit-font-smoothing:antialiased;overflow-x:clip}
+svg{display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--titre);color:var(--encre);line-height:1.2;letter-spacing:-.01em}
+h2{font-size:clamp(26px,2.6vw,34px);font-weight:600}
+b,strong{font-weight:700;color:var(--encre)}
+.wrap{width:min(940px,100% - 40px);margin-inline:auto;position:relative;z-index:1}
+section{position:relative}
+.centre{text-align:center}
+.marque{font-family:var(--logo);font-weight:400;color:var(--sauge2);letter-spacing:.01em}
+
+/* Bouton : pilule sauge, flèche dans un rond blanc */
+.btn{display:inline-flex;align-items:center;gap:16px;height:52px;padding:0 14px 0 40px;border-radius:30px;background:var(--sauge);color:#fff;
+  font:500 13px/1.25 var(--titre);text-transform:uppercase;letter-spacing:.01em;box-shadow:0 10px 26px rgba(42,56,51,.28);transition:box-shadow .4s var(--courbe),background .4s}
+.btn:hover{background:var(--nuit);box-shadow:0 14px 34px rgba(42,56,51,.38)}
+.btn .rond{width:24px;height:24px;border-radius:50%;background:#fff;color:var(--sauge);display:grid;place-items:center;flex:none}
+.btn .rond svg{width:12px;height:12px}
+
+/* Le pot : corps vert forêt, couvercle crème, nom en Tenor Sans */
+.pot{position:relative;width:var(--l,110px);aspect-ratio:1/1.05;border-radius:10px 10px 14px 14px;background:linear-gradient(90deg,#1E3A2C,#2D5440 45%,#1E3A2C);box-shadow:0 18px 30px rgba(15,37,27,.3)}
+.pot::before{content:"";position:absolute;left:-2%;right:-2%;top:-14%;height:30%;border-radius:10px 10px 4px 4px;background:linear-gradient(90deg,#E9E5DC,#FFFFFF 45%,#DCD7CC)}
+.pot span{position:absolute;left:0;right:0;top:46%;text-align:center;font:400 calc(var(--l,110px) * .2)/1 var(--logo);color:#E8D9B0}
+.pot i{position:absolute;left:50%;top:28%;translate:-50% 0;width:18%;aspect-ratio:1;border-radius:50%;border:1px solid #E8D9B0;opacity:.8}
+
+/* Pastille sauge et puce ronde */
+.puce{display:inline-flex;align-items:center;height:30px;padding:0 14px;border-radius:16px;border:2px solid #fff;background:var(--perle);font:500 12px/1 var(--titre);color:var(--encre);box-shadow:0 4px 12px rgba(0,0,0,.12)}
+
+/* 01 · Hero */
+.hero{padding:90px 0 0;background:radial-gradient(60% 70% at 25% 30%,#F4F4F2,#E9EAE7 70%);overflow:hidden}
+.hero::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-60px;height:120px;border-radius:50% 50% 0 0;background:var(--blanc);z-index:2}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px;min-height:520px}
+.hero .txt{padding-top:40px}
+.hero .marque{font-size:34px}
+.hero h1{font-size:clamp(28px,2.6vw,34px);font-weight:500;margin:6px 0 18px}
+.hero p{font-size:14.5px;color:var(--texte);margin-bottom:18px;max-width:420px}
+.hero .btn{margin-top:10px}
+.scene{position:relative}
+.fleur{position:absolute;left:50%;top:44%;width:560px;height:560px;translate:-50% -50%;color:var(--sauge2);opacity:.55}
+.scene .personne{position:absolute;left:50%;bottom:0;translate:-50% 0;height:92%}
+.scene .pot{position:absolute;left:47%;bottom:40px;--l:118px;z-index:3}
+.scene .puce{position:absolute;z-index:3}
+.bandeau{position:relative;z-index:3;margin:-60px auto 0;width:min(470px,100% - 40px);display:flex;align-items:center;gap:24px;padding:16px 40px;border-radius:40px;background:var(--nuit);color:#E9EEEB;font-size:14px;line-height:1.4;box-shadow:0 20px 40px rgba(15,37,27,.3)}
+.bandeau .marque{font-size:40px;color:#fff;flex:none}
+
+/* Les puces qui défilent sous le hero */
+.defile{overflow:hidden;padding:26px 0 30px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.defile div{display:flex;gap:14px;width:max-content;animation:file 40s linear infinite}
+.defile span{display:inline-flex;align-items:center;height:34px;padding:0 16px;border-radius:18px;border:2px solid var(--sauge-p);font:500 13px/1 var(--titre);color:var(--texte);white-space:nowrap}
+@keyframes file{to{transform:translateX(-50%)}}
+
+/* 02 · Présentation : la photo dépasse de la carte */
+.intro{padding:40px 0 90px}
+.intro .bloc{position:relative;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;border-radius:16px;background:var(--perle);padding:0 0 0 30px;margin-top:30px}
+.intro .bloc::before{content:"";position:absolute;left:-6px;top:22%;width:8px;height:40%;border-radius:4px;background:var(--sauge)}
+.intro .txt{padding:40px 30px 40px 0;font-size:12.5px;line-height:1.65}
+.intro .titre{display:flex;align-items:baseline;gap:10px;margin-bottom:18px}
+.intro .titre .marque{font-size:28px}
+.intro .titre small{font-size:13px;color:var(--sauge2)}
+.intro .note{margin-top:16px;padding:12px 18px;border-radius:12px;border:3px solid var(--sauge-p);background:#D9DEDB;text-align:center;font-size:12px}
+.intro .photo{position:relative;height:430px;margin:-30px 0 -20px;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#F1EEE8,#DCD6CC)}
+.intro .photo svg{position:absolute;bottom:0;left:40%;translate:-50% 0;height:84%}
+.intro .photo .pot{position:absolute;right:20px;bottom:40px;--l:60px}
+
+/* 03 · Le rituel en étapes */
+.rituel{background:var(--perle);border-radius:60px 60px 0 0;padding:70px 0 0;overflow:hidden}
+.rituel .wrap{display:grid;grid-template-columns:1fr 1fr;width:min(1000px,100% - 40px)}
+.rituel .sous{font:500 14px/1 var(--titre);color:var(--encre)}
+.rituel .marque{font-size:64px;line-height:1.05;display:block;margin:6px 0 18px}
+.etapes{list-style:none;display:grid;gap:8px}
+.etapes li{display:flex;align-items:center;gap:8px}
+.etapes .ico{width:38px;height:38px;border-radius:50%;background:var(--sauge2);display:grid;place-items:center;flex:none;color:#fff}
+.etapes .ico svg{width:18px;height:18px}
+.etapes span{display:inline-flex;align-items:center;height:36px;padding:0 24px;border-radius:20px;background:var(--sauge-p);font:500 14px/1 var(--titre);color:var(--encre)}
+.rituel .note{margin-top:14px;max-width:420px;padding:12px 24px;border-radius:14px;border:3px solid var(--sauge-p);background:var(--creme);font-size:12px;line-height:1.5}
+.rituel .fin{margin:14px 0 60px;font:600 12px/1.4 var(--titre);color:var(--encre)}
+.rituel .portrait{position:relative;min-height:540px}
+.rituel .portrait svg.personne{position:absolute;bottom:0;left:50%;translate:-50% 0;height:100%}
+.rituel .portrait .pot{position:absolute;left:22%;bottom:150px;--l:96px;transform:rotate(-12deg)}
+.rituel .feuille{position:absolute;right:-60px;top:20px;width:260px;height:480px;color:var(--sauge2);opacity:.45;filter:blur(8px)}
+.rappel{position:relative;z-index:2;margin:-110px auto 0;width:min(664px,100% - 40px);padding:30px 40px 34px;border-radius:14px;border:1px solid #CFCFCF;background:#fff;text-align:center;font-size:14px;line-height:1.6;color:var(--encre)}
+.rappel p+p{margin-top:16px}
+.rappel .btn{margin-top:24px}
+.rituel+.apres-rituel{height:60px}
+
+/* 04 · C'est pour vous : photos en éventail et texte qui tourne */
+.pour{background:var(--perle);padding:60px 0 60px;overflow:hidden;clip-path:polygon(0 0,46% 0,50% 30px,54% 0,100% 0,100% 100%,0 100%)}
+.anneau{position:absolute;inset:0;pointer-events:none;color:var(--sauge2)}
+.anneau svg{width:100%;height:100%}
+.anneau text{font:400 22px var(--titre);letter-spacing:.12em;fill:currentColor}
+.photos{position:relative;display:flex;justify-content:center;margin:30px 0 30px}
+.photos div{width:150px;height:240px;border-radius:12px;margin-inline:-14px;box-shadow:0 18px 30px rgba(0,0,0,.18);overflow:hidden;position:relative;background:linear-gradient(180deg,#EFEBE4,#CFC8BC)}
+.photos div svg{position:absolute;bottom:0;left:50%;translate:-50% 0;height:80%}
+.photos div:nth-child(1){rotate:-8deg;translate:0 16px}
+.photos div:nth-child(2){rotate:-3deg;z-index:1}
+.photos div:nth-child(3){z-index:3;translate:0 -10px;background:linear-gradient(180deg,#F5F2EC,#D8D2C6)}
+.photos div:nth-child(4){rotate:3deg;z-index:1}
+.photos div:nth-child(5){rotate:8deg;translate:0 16px}
+.pour h2{font-size:32px;font-weight:500}
+.cibles{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:664px;margin:24px auto 0;text-align:left}
+.cible{padding:14px 14px 18px;border-radius:12px;border:2px solid #9AA59F;background:#66746D;color:#fff;font-size:13px;line-height:1.35}
+.cible b{color:#fff}
+.cible .f{width:30px;height:30px;border-radius:6px;background:#fff;display:grid;place-items:center;margin-bottom:12px;color:var(--sauge2)}
+.cible .f svg{width:20px;height:20px}
+.cible.large{grid-column:span 2}
+.cible.trois{grid-column:span 1}
+
+/* 05 · Résultats : le grand panneau vert */
+.resultats{padding:0 0 0}
+.panneau{position:relative;width:min(1066px,100% - 40px);margin:0 auto;border-radius:50px;background:var(--sauge2);padding:60px 0 0;overflow:hidden;color:#fff}
+.panneau h2{color:#fff;font-weight:500}
+.panneau .sous{color:#D9E0DC;margin-top:4px}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:750px;margin:34px auto 0;text-align:left}
+.res .c{padding:18px 18px 20px;border-radius:12px;background:var(--sauge-c);font-size:11.5px;line-height:1.5;color:#1A2621}
+.res .c .f{width:40px;height:40px;border-radius:8px;background:#fff;display:grid;place-items:center;margin-bottom:16px;color:var(--sauge2)}
+.res .c .f svg{width:24px;height:24px}
+.res .c h3{font-size:16px;font-weight:600;margin-bottom:8px}
+.res .c b{color:#1A2621}
+.res .img{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;padding:0;overflow:hidden}
+.res .img .ph{background:linear-gradient(180deg,#E8DFD2 60%,#B89A70 60%);display:grid;place-items:end center;padding-bottom:18px}
+.res .img .ph .pot{--l:96px}
+.res .img .t{padding:30px 22px;align-self:center;color:#fff;font:600 14px/1.5 var(--titre)}
+.duel{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:680px;margin:40px auto 0;text-align:left}
+.duel>div{padding:18px;border-radius:12px}
+.duel .avant{padding-top:24px}
+.duel .depuis{background:var(--foret)}
+.duel h3{height:34px;display:grid;place-items:center;border-radius:2px;font:500 12px/1 var(--titre);color:#fff;background:#6E7E76;margin-bottom:16px}
+.duel .depuis h3{background:#566A61}
+.duel li{list-style:none;display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:12.5px;color:#fff}
+.duel li i{width:18px;height:18px;border-radius:5px;flex:none;display:grid;place-items:center;font:700 11px/1 var(--titre);font-style:normal}
+.duel .avant li i{background:#C9343E;color:#fff}
+.duel .depuis li i{background:#566A61;color:#fff}
+.vedette{position:relative;margin-top:50px;height:380px;display:grid;place-items:end center}
+.vedette .geant::before{content:attr(data-mot)}
+.vedette .geant{position:absolute;left:0;right:0;top:20px;text-align:center;font:400 clamp(110px,17vw,230px)/1 var(--logo);color:rgba(255,255,255,.07);white-space:nowrap}
+.vedette .pot{--l:230px;margin-bottom:30px}
+.vedette .socle{position:absolute;left:0;right:0;bottom:0;height:60px;background:linear-gradient(180deg,#8A6A40,#5A4224)}
+.vedette .cartouche{position:absolute;left:50%;bottom:64px;translate:-50% 0;width:min(680px,90%);padding:14px 40px;border-radius:12px;background:#FAFAFA;color:var(--doux);font-size:16px;line-height:1.45;text-align:center;z-index:2}
+.vedette .cartouche b{color:var(--sauge)}
+
+/* 06 · Conseils et moments */
+.conseils{padding:30px 0 60px}
+.conseils h2{font-size:20px;font-weight:700}
+.astuces{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;max-width:686px;margin:30px auto 0;text-align:left}
+.astuce .nom{height:30px;display:grid;place-items:center;border-radius:16px 16px 4px 4px;background:var(--sauge);font:400 19px/1 var(--logo);color:#fff}
+.astuce .avec{margin-top:2px;height:28px;display:grid;place-items:center;border-radius:4px 4px 16px 16px;font-size:11px;color:var(--encre)}
+.astuce p{margin-top:16px;font-size:11px;line-height:1.55}
+.moments{max-width:750px;margin:12px auto 0;padding:30px 36px;border-radius:12px;border:1px solid #CFCFCF}
+.moments h3{font-size:19px;font-weight:600;margin-bottom:22px}
+.moments .grille{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+.moments .m{padding:24px 20px;border-radius:10px;background:var(--creme);font-size:10.5px;line-height:1.55}
+.moments .m svg{width:42px;height:42px;color:var(--encre);margin-bottom:12px}
+.moments .m h4{font:700 15px/1 var(--titre);color:var(--encre);margin-bottom:14px}
+.moments .total{margin-top:20px;font-size:14.5px;color:var(--encre)}
+
+/* 07 · Le saviez-vous : pyramide de pastilles et trois cercles */
+.savoir{padding:60px 0 0}
+.carte-grise{position:relative;width:min(1066px,100% - 40px);margin:0 auto;border-radius:40px;background:var(--perle);padding:80px 40px 40px;text-align:center}
+.carte-grise .medaillon{position:absolute;left:50%;top:-50px;translate:-50% 0;width:100px;height:100px;border-radius:50%;background:var(--sauge2);box-shadow:0 0 0 12px #C9D0CC;display:grid;place-items:center;color:#fff}
+.carte-grise .medaillon svg{width:40px;height:40px}
+.carte-grise h2{font-size:32px;color:#2D3B35}
+.carte-grise>p{max-width:540px;margin:12px auto 0;font-size:14.5px;color:var(--encre)}
+.pyramide{display:grid;justify-items:center;gap:8px;margin:20px 0 22px}
+.pyramide div{display:flex;align-items:center;gap:6px}
+.pyramide div:nth-child(2){translate:-14px 0}
+.pyramide div:nth-child(3){translate:-26px 0}
+.pyramide div:nth-child(4){translate:-32px 0}
+.pyramide div:nth-child(5){translate:-40px 0}
+.pyramide i{width:36px;height:36px;border-radius:50%;background:var(--sauge2);display:grid;place-items:center;color:#fff}
+.pyramide i svg{width:18px;height:18px}
+.pyramide span{height:36px;display:flex;align-items:center;padding:0 24px;border-radius:20px;background:var(--sauge-p);font:500 14px/1 var(--titre);color:var(--encre)}
+.carte-grise hr{border:0;border-top:1px solid #9AA59F;max-width:690px;margin:22px auto}
+.cercles{display:flex;justify-content:center;margin:22px 0 22px}
+.cercles span{width:126px;height:126px;margin-inline:-11px;border-radius:50%;border:1px solid #6E7A74;display:grid;place-items:center;font:500 15px/1 var(--titre);color:#4A5650}
+.devise{display:inline-block;padding:9px 34px;border-radius:24px;border:3px solid #8C9A93;background:#C9D0CC;font:500 15px/1.3 var(--titre);color:var(--encre)}
+.epices{position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle at 45% 40%,#C7A47A 0 28%,#8A5A34 29% 50%,#A4602F 51% 60%,transparent 61%);filter:drop-shadow(0 18px 20px rgba(0,0,0,.2))}
+.epices.e1{left:-10px;top:60px}
+.epices.e2{right:-10px;bottom:60px}
+
+/* 08 · Abonnement */
+.abo{padding:50px 0 60px}
+.abo .carte{position:relative;display:grid;grid-template-columns:270px 1fr;align-items:end;margin-top:60px;border-radius:12px;background:linear-gradient(90deg,var(--sauge2),#93A099)}
+.abo .carte .p{position:relative;height:250px;margin-top:-50px}
+.abo .carte .p svg{position:absolute;bottom:0;left:55%;translate:-50% 0;height:100%}
+.abo .carte .t{padding:34px 40px 30px 10px;color:#fff;font-size:11.5px;line-height:1.6}
+.abo .carte h3{color:#2A3833;font-size:20px;font-weight:600;margin-bottom:16px}
+.abo .carte .t p+p{margin-top:10px}
+.avantages{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.av{border-radius:12px;overflow:hidden;background:var(--sauge2);color:#fff;font-size:11px;text-align:center}
+.av .ph{position:relative;height:100px;background:linear-gradient(180deg,#EDE6DA,#C9BCA6)}
+.av .ph .pot{position:absolute;left:50%;bottom:10px;translate:-50% 0;--l:52px}
+.av .puce{position:relative;margin:-15px auto 0;z-index:2}
+.av p{padding:14px 30px 20px}
+
+/* 09 · Offre : les kits */
+.simplifier{background:var(--perle);padding:60px 0 50px;clip-path:polygon(0 0,46% 0,50% 30px,54% 0,100% 0,100% 100%,0 100%)}
+.simplifier h2 .marque{font-size:1.05em}
+.simplifier .intro-s{margin-top:12px;font-size:12px;color:var(--encre)}
+.cadre-vert{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px;padding:30px 26px;border-radius:12px;background:var(--sauge2);text-align:left}
+.cadre-vert div{padding:26px 20px;border-radius:12px;background:#fff;font-size:10.5px;line-height:1.5}
+.cadre-vert i{width:40px;height:40px;border-radius:6px;background:var(--sauge2);display:grid;place-items:center;color:#fff;margin-bottom:14px}
+.cadre-vert i svg{width:22px;height:22px}
+.cadre-vert h3{font-size:13px;font-weight:600;margin-bottom:14px}
+.offre{padding:60px 0 70px}
+.offre h2 .marque{font-size:1.05em}
+.offre .sous{margin-top:10px;font-size:12px;color:var(--encre)}
+.kits{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.kit{position:relative;padding:110px 18px 22px;margin-top:40px;border-radius:12px;background:var(--creme);text-align:center;font-size:12.5px;color:var(--encre)}
+.kit .pots{position:absolute;left:0;right:0;top:-40px;height:130px;display:flex;justify-content:center;align-items:flex-end}
+.kit .pots .pot{--l:84px;margin-inline:-8px}
+.kit .pots.quatre .pot{--l:64px;margin-inline:-3px}
+.kit .pots .pot:nth-child(odd){translate:0 -18px}
+.kit .combo{font-size:14px}
+.kit .nb{display:inline-grid;place-items:center;height:30px;padding:0 48px;margin:10px 0 14px;border-radius:16px;background:var(--sauge);color:#fff;font-size:14px}
+.kit .prix{display:block;margin:12px 0 4px;font:700 30px/1 var(--titre);letter-spacing:-.04em;color:var(--encre)}
+.kit .prix small{font-size:18px;font-weight:500;letter-spacing:0}
+.kit .eco{display:inline-grid;place-items:center;height:26px;padding:0 34px;margin:14px 0 16px;border-radius:14px;background:var(--jaune);font-size:11.5px}
+.kit .btn{height:46px;padding:0 10px 0 36px;font-size:11px;background:linear-gradient(90deg,#3C5248,#2A3833)}
+.kit .confiance{display:flex;justify-content:center;gap:12px;margin-top:20px;font-size:8px;line-height:1.2;color:var(--doux)}
+.kit .confiance span{display:flex;align-items:center;gap:4px;text-align:left}
+.kit .confiance svg{width:14px;height:14px}
+.kit .livraison{margin-top:14px;font-size:12px;color:var(--doux)}
+.kit.phare{background:#EFECE5;box-shadow:0 0 0 2px var(--sauge-p)}
+
+/* 10 · Qui : la marque, le cachet qui tourne */
+.bande-texte{background:var(--perle);overflow:hidden;padding:12px 0}
+.bande-texte div{display:flex;width:max-content;gap:40px;animation:file 50s linear infinite;font:500 14px/1 var(--titre);letter-spacing:.06em;color:var(--sauge2);text-transform:uppercase;white-space:nowrap}
+.bande-texte b{color:var(--sauge2)}
+.qui{padding:50px 0 60px}
+.qui .carte{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;max-width:800px;margin:0 auto;padding:26px 40px 26px 26px;border-radius:30px;background:var(--perle);box-shadow:0 10px 30px rgba(0,0,0,.06)}
+.qui .ph{position:relative;height:294px;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#EEEAE3,#CFC7BA)}
+.qui .ph svg{position:absolute;bottom:0;height:86%}
+.qui .ph svg:nth-child(1){left:6%}
+.qui .ph svg:nth-child(2){left:44%;height:96%}
+.qui .ph svg:nth-child(3){left:28%;height:58%}
+.cachet{position:absolute;left:calc(50% - 50px);top:12px;width:76px;height:76px;border-radius:50%;background:#fff;border:1px solid #CFCFCF;z-index:2;color:var(--sauge2)}
+.cachet svg.tour{width:100%;height:100%;animation:tourne 18s linear infinite}
+.cachet svg.tour text{font:600 7.4px var(--titre);letter-spacing:.14em;fill:currentColor}
+.cachet svg.c{position:absolute;inset:0;margin:auto;width:28px;height:28px}
+@keyframes tourne{to{rotate:360deg}}
+.qui .titre{padding-left:34px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.qui .titre .marque{font-size:54px;line-height:1}
+.qui .titre b{font:500 15px/1 var(--titre)}
+.qui p{margin-top:16px;font-size:14px;line-height:1.55;color:var(--encre)}
+.fleur-fond{position:absolute;left:-80px;top:-20px;width:420px;height:420px;color:#E3E6E4;z-index:0}
+
+/* 11 · FAQ */
+.faq{padding:10px 0 60px}
+.faq h2{font-size:26px;font-weight:500;color:#111;margin-bottom:22px}
+.faq .liste{max-width:680px;margin:0 auto;display:grid;gap:12px;text-align:left}
+.faq details{border-radius:6px;background:var(--perle);border:1px solid #DADDDC}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:0 26px;height:50px;font:500 13.5px/1 var(--titre);color:var(--encre)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";width:10px;height:10px;border-radius:2px;background:var(--sauge2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10'%3E%3Cpath d='M3 4l2 2 2-2' stroke='white' fill='none'/%3E%3C/svg%3E") center/100%;transition:rotate .3s var(--courbe)}
+.faq details[open]{background:var(--sauge2);border-color:var(--sauge2)}
+.faq details[open] summary{color:#fff;border-bottom:1px solid rgba(255,255,255,.4)}
+.faq details[open] summary::after{rotate:180deg;background-color:rgba(255,255,255,.25)}
+.faq details p{padding:12px 26px 16px;font-size:11.5px;color:var(--encre)}
+.faq details[open] p{color:#fff}
+
+/* 12 · Pied */
+#pied{background:var(--perle);color:var(--encre);font-size:11px}
+#pied .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;padding:50px 0 30px;width:min(750px,100% - 40px);margin:0 auto}
+#pied h4{font:600 14px/1 var(--titre);color:#2D3B35;margin-bottom:14px}
+#pied .cols p{margin-bottom:8px}
+#pied .paiement{display:flex;flex-wrap:wrap;gap:6px;max-width:230px}
+#pied .paiement i{width:24px;height:14px;border-radius:2px;background:#C9CFCC}
+#pied .bas{border-top:1px solid #A9B4AE}
+#pied .bas .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;width:min(750px,100% - 40px);padding:40px 0 50px}
+#pied .droite{display:flex;align-items:center;gap:10px;text-align:right}
+#pied .droite svg{width:18px;height:18px;color:#1E2A25}
+
+@media (max-width:820px){
+  .hero .wrap{grid-template-columns:1fr;text-align:center}
+  .hero p{margin-inline:auto}
+  .hero .scene{height:440px}
+  .fleur{width:420px;height:420px}
+  .bandeau{flex-direction:column;gap:6px;text-align:center;padding:16px 26px;border-radius:30px}
+  .intro .bloc{grid-template-columns:1fr;padding:0}
+  .intro .bloc::before{display:none}
+  .intro .txt{padding:30px 22px}
+  .intro .photo{margin:0;height:340px}
+  .rituel{border-radius:36px 36px 0 0}
+  .rituel .wrap{grid-template-columns:1fr}
+  .rituel .marque{font-size:52px}
+  .etapes span{height:auto;min-height:36px;padding:8px 18px;line-height:1.3}
+  .rituel .portrait{min-height:420px}
+  .rituel .fin{margin-bottom:20px}
+  .rappel{margin-top:-60px;padding:26px 22px}
+  .photos div{width:110px;height:180px}
+  .cibles{grid-template-columns:1fr 1fr}
+  .cible.large{grid-column:span 2}
+  .panneau{border-radius:30px}
+  .res{grid-template-columns:1fr;padding:0 20px}
+  .res .img{grid-column:auto}
+  .duel{grid-template-columns:1fr;gap:16px;padding:0 20px}
+  .vedette{height:300px}
+  .vedette .pot{--l:170px}
+  .vedette .cartouche{font-size:14px;padding:12px 18px}
+  .astuces{grid-template-columns:1fr 1fr}
+  .moments .grille{grid-template-columns:1fr}
+  .carte-grise{padding:80px 18px 30px;border-radius:28px}
+  .pyramide div:nth-child(n){translate:none}
+  .pyramide span{height:auto;min-height:36px;padding:8px 16px;line-height:1.3;text-align:left}
+  .epices{display:none}
+  .cercles span{width:100px;height:100px;font-size:13px}
+  .abo .carte{grid-template-columns:1fr}
+  .abo .carte .p{height:220px;margin-top:-40px}
+  .abo .carte .t{padding:20px 22px 26px}
+  .avantages,.cadre-vert,.kits{grid-template-columns:1fr}
+  .kits{gap:40px;max-width:360px;margin-inline:auto}
+  .qui .carte{grid-template-columns:1fr;padding:20px}
+  .cachet{left:auto;right:16px;top:16px}
+  .qui .titre .marque{font-size:44px}
+  #pied .cols{grid-template-columns:1fr}
+  #pied .bas .wrap{flex-direction:column;text-align:center}
+}
+@media (prefers-reduced-motion:reduce){.defile div,.bande-texte div,.cachet svg.tour,.anneau svg{animation:none}}
+
+/* Checkup banque 16/11/2026 : le décor qui sort de l'écran est coupé par SA section, plus par le body. */ #qui{overflow-x:clip}
+```

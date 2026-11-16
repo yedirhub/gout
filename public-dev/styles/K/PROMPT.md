@@ -1,0 +1,284 @@
+# Prompt complet · Template K « Bascule menthe »
+# Par Yedidia Ruben - Digital Strategist. À coller tel quel dans une IA qui code (Claude, ChatGPT, Gemini).
+
+Tu es un designer web senior. Construis une page de vente complète en un seul fichier HTML, avec exactement le rendu décrit ci-dessous : couleurs, polices, tailles, espacements, boutons, cartes, animations. La fiche de style fait foi ; en cas de doute, applique-la à la lettre plutôt que d'improviser.
+
+## 1. La fiche de style (DESIGN.md)
+
+# DESIGN.md : Style K « Bascule menthe » (d'après la page « Página de Vendas - Produtividade », Felipe Santos)
+
+> **Source** : `inspi/behance/211996631/01.png` (la page entière, 1920 × 13 779). Behance 211996631. Relevé le 16/11/2026.
+> **Demande de Ruben** : pas de consigne de détail, lot du 16/11/2026.
+
+## 1. Ambiance et intention
+
+- Une méthode de productivité vendue comme un tableau de bord : sombre, net, précis, presque une interface d'application.
+- Noir anthracite partout, une seule couleur vive : la **menthe électrique**, réservée aux mots clés, aux icônes et aux boutons.
+- Le geste qui la signe : **la carte à interrupteurs** (trois réglages allumés en menthe) et **les titres en deux tons** (1re ligne grise en dégradé, 2e ligne menthe).
+- Des lignes verticales très fines rythment le fond, comme une grille de mise en page laissée visible.
+- Différence avec E « Néon vert » (néon vert-jaune, Michroma) et J « Calque émeraude » (vert mousse, serif italique, éditeur) : ici le fond est gris-noir neutre, la couleur tire sur le turquoise, une seule police sans serif, et le décor est celui d'une application.
+
+## 2. Palette et rôles (relevé au pixel, PIL, sur 01.png)
+
+- **Anthracite** `#0D0C0F` : fond de toute la page ; `#040907` à `#06120F` dans le hero.
+- **Carte** `#1C1C1C`, haut de carte `#333333` (témoignages, offre en dégradé vertical).
+- **Menthe électrique** `#11F7CE` (titres) et `#01F6B3` (pied, grand 7, interrupteurs).
+- **Bouton** : dégradé `#00D7A1` vers `#83FBDE`, texte `#00261C` (contraste 11,6).
+- **Piste de barre** `#1E312F`.
+- **Rouge** : cartes « avant » de `#3B0A0F` vers le noir, filet `#6A1A20`, pastille `#C62F3A`.
+- **Gris titre** `#8D8D8D` en dégradé vers `#D7D7DA`.
+- **Or** `#FCDB49` : les 5 étoiles du sceau seulement.
+- **Blanc** `#FFFFFF` vers `#E9E9E9` : FAQ et la carte de témoignage mise en avant.
+
+## 3. Typographie
+
+- Non nommée par l'auteur. Relevé à l'œil : grotesque serrée et moderne (proche de Inter Display). Google Fonts la plus proche et différente des styles voisins : **Geist**.
+
+| Rôle | Police | Taille bureau / téléphone | Graisse | Interligne | Approche |
+|---|---|---|---|---|---|
+| Titre du hero | Geist | 40 / 30 px | 600 | 1,15 | -0,025 em |
+| Titre en deux tons | Geist | 38 / 28 px | 500 | 1,15 | -0,025 em |
+| Nom du mentor | Geist | 80 / 56 px | 600 | 0,95 | -0,04 em |
+| Prix | Geist | 46 px | 700 | 1 | -0,05 em |
+| Texte | Geist | 11 à 15,5 px | 400 | 1,55 à 1,7 | 0 |
+| Pastille | Geist | 11 px | 500 à 600 | 1 | 0,06 à 0,16 em, capitales |
+| Bouton | Geist | 12,5 px | 600 | 1,2 | capitales |
+
+## 4. Composants
+
+- **Bouton** : rectangle de 46 px aux coins de 4 px, dégradé menthe, halo menthe, flèche fine ; le dégradé glisse au survol.
+- **Pastille** : capsule sombre à filet gris avec petite icône menthe ; variante blanche à texte noir espacé (« Témoignages »).
+- **Tuile d'icône** : carré de 46 px aux coins de 9 px, dégradé gris, icône menthe.
+- **Interrupteur** (`.bascule`, `role="switch"`) : piste de 40 × 24 px, menthe et lumineuse quand il est allumé ; cliquable.
+- **Duel** : 3 cartes rouges à croix contre 3 cartes vertes à coche, coins de 5 px.
+- **Mur de témoignages** : 3 colonnes en maçonnerie, cartes grises en dégradé, une carte blanche mise en avant avec une flèche de souris.
+- **Courbe de progression** : carte noire, courbe exponentielle à points lumineux, barre à 91 %.
+- **Éventail de modules** : 5 affiches 9:16 qui se chevauchent, la centrale plus haute, trait menthe en bas.
+- **Liste de modules** : lignes à « + » menthe et nombre de leçons à droite.
+- **Carte prix** : logo, prix barré, prix en dégradé blanc vers gris, liste des inclusions dans un volet collé à droite.
+- **Sceau** : cercle sombre, texte qui tourne, 5 étoiles or, cœur menthe à flèche, grand « 7 » menthe qui dépasse.
+- **FAQ** : barres blanches numérotées, « + » à droite.
+
+## 5. Mise en page
+
+- Colonne étroite : la plupart des blocs tiennent entre 520 et 780 px dans une page de 1100.
+- Tout est centré sauf les blocs en deux colonnes (réglages, vidéo, garantie, mentor).
+- Filets horizontaux fins entre les sections ; un filet menthe lumineux sous le hero et au-dessus de la structure.
+- Espacement vertical : 70 à 90 px.
+
+## 6. Profondeur et élévation
+
+- Ombres noires longues sous les cartes (30 px de flou, 60 % d'opacité).
+- Halos menthe sous les boutons, autour des interrupteurs allumés et derrière la courbe.
+- Le portrait du hero et celui du mentor se fondent dans le noir (masque en dégradé), sans cadre.
+
+## 7. À faire, à ne pas faire
+
+- Faire : une seule couleur vive, la menthe ; tout le reste en gris.
+- Faire : la 2e ligne du titre en menthe, la 1re en gris dégradé.
+- Ne pas faire : de coins très arrondis ; les cartes restent à 4 à 12 px.
+- Ne pas faire : de texte gris sous `#9B9CA1` sur l'anthracite (contraste minimum 7).
+
+## 8. Comportement responsive
+
+- Behance ne montre que le bureau. Le téléphone est notre proposition.
+- Sous 900 px : hero en colonne, réglages, vidéo, garantie et mentor en une colonne, mur de témoignages en 2 colonnes, offre en 2 lignes.
+- Sous 640 px : piliers et duel en une colonne, éventail réduit à 3 modules, mur en 1 colonne, carte prix et volet empilés.
+
+## 9. Mouvement
+
+- Moteur commun : `data-rv` partout, `data-parallaxe` sur les bulles du hero, `data-aimant` sur les boutons, barre de progression menthe.
+- Propre à K : **les interrupteurs basculent** au clic ; **la barre de progression se remplit** jusqu'à 91 % ; **le texte du sceau tourne** ; **le dégradé du bouton glisse** au survol.
+
+## 10. Non mesuré, et choix tranchés seul
+
+- La police (§3).
+- La marque « Méthode Axe », la mentore Awa Sangaré (Bamako), les textes et les prix en F CFA (99 000 F au lieu de 250 000 F, ou 12 x 9 900 F).
+- Les logos d'applications du dock remplacés par des pictos neutres (aucune marque réelle).
+- Les avatars des témoignages remplacés par des initiales.
+- Le téléphone (§8).
+
+## 11. Images
+
+Personnage : **Awa Sangaré**, 31 ans, Bamako, coach en organisation personnelle ; peau brun moyen, tresses fines sans nœud relevées en chignon haut, visage ovale, regard direct ; signature : petites créoles dorées, carnet noir à élastique. Tenue : chemise noire, accents menthe.
+
+| id | Format | Rôle | Personnage |
+|---|---|---|---|
+| K-hero | 3:4 | Portrait du hero, fondu dans le noir | oui |
+| K-video | 16:9 | Vignette de la leçon vidéo dans l'ordinateur | oui |
+| K-module-1 | 9:16 | Module « Planifier et organiser » | non |
+| K-module-2 | 9:16 | Module « Énergie et efficacité » | oui |
+| K-module-3 | 9:16 | Module « L'essence de l'équilibre » (central) | non |
+| K-module-4 | 9:16 | Module « L'architecture des habitudes » | oui |
+| K-module-5 | 9:16 | Module « Constance et discipline » | non |
+| K-mentor | 3:4 | Portrait noir et blanc de la mentore | oui |
+
+## 12. Consigne pour l'IA
+
+Construis une page de vente de méthode de productivité sur fond anthracite `#0D0C0F`, en Geist. Une seule couleur vive : la menthe électrique `#11F7CE`. Chaque titre tient en deux lignes, la 1re en gris dégradé, la 2e en menthe. Ajoute une carte de réglages à trois interrupteurs allumés, un duel de cartes rouges et vertes, un mur de témoignages gris avec une carte blanche mise en avant, une courbe de progression lumineuse, un éventail de 5 modules, une carte prix sombre avec son volet d'inclusions et un sceau de garantie à grand 7 menthe. Boutons rectangulaires en dégradé menthe.
+
+## 2. Les sections, dans l'ordre
+
+01. #hero · Le hero : Dire qui, quoi, pour qui en une phrase, puis faire cliquer. Le geste : Portrait fondu, tuiles d'icônes en verre.
+02. #ascension · La valeur : Faire sentir le prix avant de le montrer. Le geste : Titre deux tons, trois tuiles d'icônes menthe.
+03. #duel · La douleur : Le visiteur se reconnaît : « c'est moi ». Le geste : Cartes rouges à croix contre cartes vertes.
+04. #ordre · Le contenu : Rendre l'offre concrète, morceau par morceau. Le geste : Ordinateur à calendrier, dock d'applications.
+05. #reglages · La bascule : Montrer pourquoi cette solution est différente. Le geste : Carte à trois interrupteurs allumés.
+06. #temoignages · La preuve : Faire parler les autres : « ça a marché pour des gens comme moi ». Le geste : Mur en maçonnerie, une carte blanche.
+07. #constance · Le contenu : Rendre l'offre concrète, morceau par morceau. Le geste : Vidéo dans l'ordinateur, bouton menthe.
+08. #avancees · La preuve : Faire parler les autres : « ça a marché pour des gens comme moi ». Le geste : Courbe lumineuse, barre remplie à 91 %.
+09. #structure · Le contenu : Rendre l'offre concrète, morceau par morceau. Le geste : Éventail de 5 modules, liste à « + ».
+10. #offre · L'offre : Convertir : le prix, ce qu'il contient, le bouton. Le geste : Carte prix sombre et volet d'inclusions.
+11. #garantie · La garantie : Retirer le risque : « si ça ne vous va pas, je vous rembourse ». Le geste : Sceau étoilé qui tourne, grand 7 menthe.
+12. #mentor · Qui est derrière : Un humain derrière l'offre, et un lieu réel. Le geste : Nom géant deux tons, portrait noir et blanc.
+13. #faq · La FAQ : Lever les dernières objections. Le geste : Barres blanches numérotées sur fond sombre.
+14. #pied · Le pied : La légitimité : nom, mentions, contact. Le geste : Bande menthe pleine largeur.
+
+## 3. Les animations
+
+Les animations passent par un petit moteur commun (anim.js + anim.css, fournis plus bas). On ne code pas d'animation à la main : on pose des attributs.
+- data-rv : l'élément apparaît au défilement, décalé de 70 ms dans son groupe.
+- data-lignes : un titre à <br> monte ligne par ligne derrière un masque.
+- data-compte="3200" : le chiffre compte jusqu'à sa valeur quand il entre à l'écran.
+- data-parallaxe="0.15" : l'élément glisse plus lentement que la page.
+- data-incline : la carte s'incline vers la souris (6° au plus).
+- data-aimant : le bouton est attiré par la souris (6 px au plus).
+- data-progression : la barre de lecture en haut de page.
+Tout s'arrête sous prefers-reduced-motion : la page reste lisible et complète.
+
+Le moteur, à coller tel quel dans la page :
+
+```css
+/* anim.css : les états de départ des effets de anim.js. Sans la classe .anime (JS absent ou
+   reduced-motion), tout est visible : une page ne doit jamais dépendre du JS pour s'afficher. */
+.anime [data-rv]{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.16,1,.3,1) var(--d,0ms),transform .8s cubic-bezier(.16,1,.3,1) var(--d,0ms)}
+.anime [data-rv].vu{opacity:1;transform:none}
+.anime [data-rv][data-lignes]{opacity:1;transform:none}
+.ligne{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.ligne>span{display:block}
+.anime [data-lignes] .ligne>span{transform:translateY(105%);transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.anime [data-lignes].vu .ligne>span{transform:none}
+[data-parallaxe]{will-change:transform}
+[data-aimant]{transition:translate .35s cubic-bezier(.16,1,.3,1)}
+[data-progression]{position:fixed;top:0;left:0;right:0;height:2px;transform-origin:0 50%;transform:scaleX(0);z-index:100;pointer-events:none}
+/* Reflet qui balaie un bouton au survol : ajouter la classe .reflet au bouton. */
+.reflet{position:relative;overflow:hidden;isolation:isolate}
+.reflet::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.28) 50%,transparent 65%);transform:translateX(-120%)}
+.reflet:hover::after{transform:translateX(120%);transition:transform .9s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){.reflet::after{display:none}}
+```
+
+```js
+/* anim.js : le moteur de mouvement commun aux 4 styles (Goût IA, cycle 1).
+   Chaque page choisit ses effets par attributs ; le style (couleurs, durées) reste dans la page.
+   Rien ne bouge sous prefers-reduced-motion : tout est montré tel quel.
+
+   data-rv               apparaît au défilement (classe .vu posée), décalé de 70 ms dans son groupe
+   data-lignes           titre découpé ligne par ligne (<br>), chaque ligne monte à son tour
+   data-compte="3200"    chiffre qui compte jusqu'à sa valeur quand il entre à l'écran
+   data-parallaxe="0.15" glisse plus lentement que la page (facteur de vitesse)
+   data-incline          carte qui s'incline vers la souris (max 6°)
+   data-aimant           bouton attiré par la souris (max 6 px)
+   data-progression      barre de lecture en haut de page
+*/
+(() => {
+  const calme = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const tactile = matchMedia('(hover: none)').matches;
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+
+  // Titres en lignes : on enveloppe chaque ligne pour la faire monter derrière un masque.
+  $$('[data-lignes]').forEach(t => {
+    const lignes = t.innerHTML.split(/<br\s*\/?>/i);
+    t.innerHTML = lignes.map((l, i) =>
+      `<span class="ligne"><span style="transition-delay:${i * 90}ms">${l}</span></span>`).join('');
+    t.setAttribute('data-rv', '');
+  });
+
+  if (calme) {
+    $$('[data-rv]').forEach(e => e.classList.add('vu'));
+    $$('[data-compte]').forEach(e => e.textContent = Number(e.dataset.compte).toLocaleString('fr-FR'));
+    return;
+  }
+  document.documentElement.classList.add('anime');
+
+  // Apparition : décalage par fratrie, pour que les cartes d'une grille arrivent l'une après l'autre.
+  const vu = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('vu');
+    vu.unobserve(e.target);
+  }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  $$('[data-rv]').forEach(el => {
+    const freres = [...el.parentElement.children].filter(f => f.hasAttribute('data-rv'));
+    el.style.setProperty('--d', `${Math.min(freres.indexOf(el), 6) * 70}ms`);
+    vu.observe(el);
+  });
+
+  // Compteurs.
+  const compte = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    // Le chiffre final reste écrit tant qu'on ne le voit pas : une capture ou un robot lit la vraie valeur.
+    const el = e.target, fin = Number(el.dataset.compte), t0 = performance.now(), duree = 1600;
+    el.textContent = '0';
+    const pas = t => {
+      const p = Math.min((t - t0) / duree, 1), v = 1 - Math.pow(1 - p, 4);
+      el.textContent = Math.round(fin * v).toLocaleString('fr-FR');
+      if (p < 1) requestAnimationFrame(pas);
+    };
+    requestAnimationFrame(pas);
+    compte.unobserve(el);
+  }), { threshold: 0.6 });
+  $$('[data-compte]').forEach(e => compte.observe(e));
+
+  // Parallaxe et barre de lecture, sur une seule boucle.
+  const para = $$('[data-parallaxe]'), barre = document.querySelector('[data-progression]');
+  let attente = false;
+  const defile = () => {
+    attente = false;
+    const h = innerHeight;
+    para.forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > h + 200) return;
+      const decal = (r.top + r.height / 2 - h / 2) * Number(el.dataset.parallaxe);
+      el.style.transform = `translate3d(0,${decal.toFixed(1)}px,0)`;
+    });
+    if (barre) barre.style.transform = `scaleX(${scrollY / Math.max(1, document.body.scrollHeight - h)})`;
+  };
+  addEventListener('scroll', () => { if (!attente) { attente = true; requestAnimationFrame(defile); } }, { passive: true });
+  defile();
+
+  if (tactile) return;
+
+  // Inclinaison des cartes.
+  $$('[data-incline]').forEach(c => {
+    c.style.transition = 'transform .5s cubic-bezier(.16,1,.3,1)';
+    c.addEventListener('mousemove', e => {
+      const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      c.style.transform = `perspective(900px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 6).toFixed(2)}deg) translateY(-3px)`;
+    });
+    c.addEventListener('mouseleave', () => c.style.transform = '');
+  });
+
+  // Boutons aimantés.
+  $$('[data-aimant]').forEach(b => {
+    b.addEventListener('mousemove', e => {
+      const r = b.getBoundingClientRect();
+      b.style.translate = `${((e.clientX - r.left) / r.width - .5) * 12}px ${((e.clientY - r.top) / r.height - .5) * 8}px`;
+    });
+    b.addEventListener('mouseleave', () => b.style.translate = '');
+  });
+})();
+```
+
+## 4. Les règles
+
+- Un seul fichier HTML, CSS dans <style>, aucune bibliothèque en dehors des polices Google.
+- Textes en français, écrits pour le métier donné. Aucun tiret long (cadratin ou demi-cadratin) dans les textes.
+- Images : des silhouettes ou des dégradés de remplacement, jamais une photo inventée d'une vraie personne.
+- Chaque section porte un id (celui de la liste plus haut) pour qu'on puisse la viser.
+- Contraste du texte de 4,5 au moins. La page tient de 360 à 1920 px de large sans débordement horizontal.
+- Le bouton principal et sa preuve tiennent dans le premier écran du téléphone.
+
+## 5. Ce que tu rends
+
+Le fichier HTML complet, prêt à ouvrir. Puis, en 5 lignes, ce que tu as dû deviner faute de précision dans la fiche.

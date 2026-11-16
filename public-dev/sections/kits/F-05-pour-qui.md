@@ -1,0 +1,263 @@
+# Prompt · Section « Pour qui » du template F « Lumière dorée »
+# Par Yedidia Ruben - Digital Strategist. À coller dans une IA qui code, avec ta page.
+
+Construis une section « Pour qui » pour ma page, dans le même esprit que le code de référence plus bas. Garde la structure, le geste et les proportions ; reprends mes couleurs, mes polices et mes textes à moi.
+
+- Son rôle : Trier : celui qui n'est pas la cible s'en va, celui qui l'est se sent choisi.
+- Où la placer : Avant ou après l'offre.
+- Sa structure : Deux colonnes : « ce n'est pas pour vous si… » et « c'est pour vous si… ».
+- La règle qui fait la différence : L'asymétrie des fonds (sombre, clair) donne la réponse avant la lecture.
+- Animations : attributs data-rv, data-lignes, data-compte, data-incline, data-aimant (moteur anim.js). Sans le moteur, retire-les.
+- Aucun tiret long dans les textes. Contraste de 4,5 au moins. Lisible de 360 à 1920 px.
+
+## Le code de référence (HTML)
+
+```html
+<section class="pour centre" id="pour-qui">
+  <span class="etoile" style="left:36%;top:26%;animation-delay:2s"></span>
+  <div class="wrap">
+    <span class="pastille" data-rv>C'est pour vous ?</span>
+    <h2 class="degrade" data-rv>La Méthode Lueur a été construite pour vous si :</h2>
+    <div class="cartes-nb">
+      <div class="nb flou" data-rv><div class="img"><svg><use href="#livre"/></svg></div><p>Vous avez un vrai savoir, mais votre profil ne le montre pas</p></div>
+      <div class="nb flou" data-rv><div class="img"><svg><use href="#entonnoir"/></svg></div><p>Vous payez de la publicité, mais votre page laisse fuir les ventes</p></div>
+      <div class="nb flou" data-rv><div class="img"><svg><use href="#etiquette"/></svg></div><p>Vous voulez vendre plus cher, mais votre image ne justifie pas le prix</p></div>
+      <div class="nb flou" data-rv><div class="img"><svg><use href="#pierre"/></svg></div><p>Vous avez essayé les modèles, l'IA et les petits prix, sans bouger d'un pas</p></div>
+      <div class="nb flou" data-rv><div class="img"><svg><use href="#lampe"/></svg></div><p>Vous avez honte d'envoyer le lien de votre profil pendant une vente</p></div>
+      <div class="nb flou" data-rv><div class="img"><svg><use href="#miroir"/></svg></div><p>Vous savez ce que vous valez, et vous voulez que ça se voie</p></div>
+    </div>
+    <h2 class="fin degrade" data-rv>Si vous vous êtes reconnue, vous êtes <em class="or">au bon endroit.</em></h2>
+  </div>
+</section>
+```
+
+## Le CSS du template d'origine (la section en dépend, ne garde que ce qu'elle utilise)
+
+```css
+:root{
+  --noir:#000; --nuit:#0A0A0A; --carte:#111; --carte2:#161616; --gris-clair:#E4E4E4;
+  --texte:#8A8F96; --doux:#B9BDC2; --blanc:#fff;
+  --or1:#9C8350; --or2:#E8D5A8; --or:#C9AE74;
+  --filet:rgba(255,255,255,.12);
+  --courbe:cubic-bezier(.16,1,.3,1);
+  --titre:'DM Sans',system-ui,sans-serif; --ui:'Inter',system-ui,sans-serif; --corps:'Manrope',system-ui,sans-serif; --serif:'Playfair Display',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--corps);font-weight:300;font-size:17px;line-height:1.6;color:var(--texte);background:var(--noir);-webkit-font-smoothing:antialiased;overflow-x:clip}
+svg{display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--titre);font-weight:400;color:var(--blanc);line-height:1.15;letter-spacing:-.02em}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto;position:relative;z-index:1}
+section{position:relative}
+.centre{text-align:center}
+
+/* Le titre qui sort de l'ombre : dégradé gris vers blanc, de gauche à droite */
+.degrade{background:linear-gradient(90deg,#5E5E5E 0%,#fff 22%,#fff 80%,#9A9A9A 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* Le mot en or : italique serif, dégradé brossé, halo doux */
+em.or{font-family:var(--serif);font-style:italic;font-weight:800;letter-spacing:-.01em;padding-right:.06em;
+  background:linear-gradient(180deg,#F3E4BF 0%,var(--or) 55%,#8E7442 100%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 18px rgba(201,174,116,.35))}
+
+/* Net au défilement : le bloc arrive flou et se met au point */
+.anime [data-rv].flou{filter:blur(14px);transition:opacity .9s var(--courbe) var(--d,0ms),transform .9s var(--courbe) var(--d,0ms),filter 1.1s var(--courbe) var(--d,0ms)}
+.anime [data-rv].flou.vu{filter:none}
+
+/* Pastille de section */
+.pastille{display:inline-flex;align-items:center;height:56px;padding:0 34px;border-radius:12px;border:1px solid var(--filet);
+  background:linear-gradient(180deg,#1A1A1A,#0C0C0C);color:#fff;font:500 20px/1 var(--ui);letter-spacing:-.01em;
+  box-shadow:0 0 40px rgba(255,255,255,.06),inset 0 1px 0 rgba(255,255,255,.08)}
+
+/* Boutons : or brossé, blanc carré, lien */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:56px;padding:0 30px;border-radius:12px;font:500 19px/1 var(--ui);letter-spacing:-.02em;transition:box-shadow .4s var(--courbe),translate .35s var(--courbe)}
+.btn-or{background:linear-gradient(90deg,var(--or1) 0%,#C4AA74 50%,var(--or2) 100%);color:#fff;text-shadow:0 1px 2px rgba(60,44,12,.55);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 10px 34px rgba(201,174,116,.38)}
+.btn-or:hover{box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 12px 50px rgba(201,174,116,.6)}
+.btn-blanc{background:#fff;color:#111}
+.carre{width:56px;padding:0;background:#fff;color:#111}
+.carre svg{width:18px;height:18px}
+.lien{color:#6E737A;font:400 17px/1 var(--ui)}
+.lien:hover{color:#fff}
+
+/* Barre de navigation en verre, collée en haut */
+.nav{position:sticky;top:16px;z-index:50;width:min(1080px,100% - 40px);margin:16px auto 0;height:94px;padding:0 20px 0 52px;display:flex;align-items:center;justify-content:space-between;
+  border:1px solid var(--filet);border-radius:16px;background:rgba(10,10,10,.62);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.nav ul{display:flex;gap:33px;list-style:none;font:500 18px/1 var(--ui);color:#fff;letter-spacing:-.02em}
+.nav ul a:hover{color:var(--or2)}
+.nav .btn{height:57px}
+.burger{display:none;width:44px;height:44px;border-radius:10px;border:1px solid var(--filet);background:none;color:#fff}
+
+/* Particules : de petites étoiles qui respirent */
+.etoile{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff;box-shadow:0 0 12px 4px rgba(190,200,255,.35);animation:scintille 4s ease-in-out infinite;pointer-events:none;z-index:0}
+@keyframes scintille{50%{opacity:.25}}
+
+/* 01 · Hero */
+.hero{margin-top:-110px;padding:200px 0 110px;overflow:hidden;background:radial-gradient(70% 70% at 70% 35%,#2A2318 0%,#0B0A08 55%,#000 100%)}
+.hero .fond{position:absolute;inset:-10% -5% auto;height:120%;transform:perspective(1100px) rotateX(18deg) rotateZ(-14deg);opacity:.16;display:grid;grid-template-columns:repeat(6,1fr);gap:28px;pointer-events:none}
+.hero .fond span{border-radius:10px;background:linear-gradient(180deg,#3A3326,#0E0C08);height:220px}
+.hero .fond span:nth-child(odd){margin-top:90px}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:20px;align-items:center}
+.hero h1{font-size:clamp(40px,4.4vw,58px);line-height:1.12}
+.hero p{margin:22px 0 34px;font-size:20px;line-height:1.5;color:#9A9FA6;max-width:440px}
+.hero .actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.scene{position:relative;height:620px;perspective:1300px}
+.panneaux{position:absolute;inset:6% 0 18% 4%;transform-style:preserve-3d;transform:rotateY(-24deg) rotateX(6deg)}
+.panneau{position:absolute;width:30%;height:58%;border-radius:8px;overflow:hidden;background:linear-gradient(170deg,#F2E8D4,#B9A27A);box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.panneau::before{content:"";position:absolute;inset:10% 12% auto;height:16%;border-radius:4px;background:rgba(30,24,14,.65)}
+.panneau::after{content:"";position:absolute;inset:34% 12% 14%;border-radius:4px;background:repeating-linear-gradient(180deg,rgba(30,24,14,.28) 0 6px,transparent 6px 14px)}
+.panneau.p1{left:0;top:6%;transform:translateZ(-160px)}
+.panneau.p2{left:24%;top:-4%;transform:translateZ(-300px);background:linear-gradient(170deg,#2C2A27,#0F0E0C)}
+.panneau.p3{right:6%;top:2%;transform:translateZ(-220px)}
+.panneau.p4{right:-6%;top:40%;transform:translateZ(-120px);background:linear-gradient(170deg,#3C3A35,#151412)}
+.halo{position:absolute;left:50%;top:30%;width:420px;height:420px;translate:-50% -50%;border-radius:50%;background:radial-gradient(circle,rgba(255,240,205,.75) 0%,rgba(230,200,140,.25) 30%,transparent 65%);filter:blur(6px)}
+.portrait{position:absolute;left:50%;bottom:0;width:72%;height:92%;translate:-50% 0;-webkit-mask-image:linear-gradient(180deg,#000 72%,transparent);mask-image:linear-gradient(180deg,#000 72%,transparent)}
+.portrait svg{width:100%;height:100%}
+.chiffres{position:absolute;font:400 13px/1.75 var(--ui);color:#C9CDD2;text-shadow:0 1px 8px #000}
+.chiffres.c1{left:-2%;top:62%;display:grid;grid-template-columns:auto auto;column-gap:46px}
+.chiffres.c1 b{font-weight:500;text-align:right;color:#fff}
+.chiffres.c2{right:0;top:54%}
+.chiffres.c2 small{display:block;font-size:12px;color:#8E939A}
+.chiffres.c2 b{display:block;font-weight:500;color:#fff;margin-bottom:8px;font-size:14px}
+.chiffres.c2 .t{font-weight:600;color:#9DA2A8;margin-bottom:6px}
+
+/* 02 · Projets */
+.projets{padding:120px 0 120px}
+.projets h2,.methode h2,.pour h2{font-size:clamp(34px,4vw,52px);margin:52px 0 22px}
+.projets .sous{max-width:640px;margin:0 auto;font-size:20px;color:#7B8087}
+.grille{display:grid;grid-template-columns:repeat(3,1fr);gap:58px;margin-top:70px;text-align:left}
+.projet{position:relative;padding:38px 38px 32px;border-radius:28px;border:1px solid rgba(255,255,255,.08);overflow:hidden;
+  background:linear-gradient(180deg,var(--teinte) 0%,#111 48%,#0B0B0B 100%);transition:translate .5s var(--courbe)}
+.projet:hover{translate:0 -6px}
+.projet .img{position:relative;height:190px;border-radius:22px;overflow:hidden;background:var(--fond-img)}
+.projet .img svg{position:absolute;bottom:0;height:90%;left:50%;translate:-50% 0}
+.projet .img i{position:absolute;inset:auto auto 14% 8%;width:38%;height:46%;border-radius:6px;background:rgba(255,255,255,.18);transform:rotate(-8deg)}
+.projet h3{margin-top:20px;font:500 22px/1.38 var(--ui);letter-spacing:-.02em}
+.p-or{--teinte:#5B5141;--fond-img:linear-gradient(160deg,#D9CBB1,#6A5C46)}
+.p-olive{--teinte:#3C4A13;--fond-img:linear-gradient(160deg,#3F5121,#0F1508)}
+.p-emeraude{--teinte:#0F4D3A;--fond-img:linear-gradient(160deg,#155A47,#06140F)}
+.p-sable{--teinte:#544A3C;--fond-img:linear-gradient(160deg,#B79C78,#2C241A)}
+.p-rose{--teinte:#5B2834;--fond-img:linear-gradient(160deg,#E6B7C2,#6E3242)}
+.p-ambre{--teinte:#5A4A1D;--fond-img:linear-gradient(160deg,#6E5A2C,#17120A)}
+.projets .suite{margin-top:58px}
+
+/* 03 · Méthode : la grille de filets verticaux derrière */
+.methode{padding:130px 0 150px;overflow:hidden}
+.filets{position:absolute;inset:0;width:min(1080px,100% - 40px);margin-inline:auto;display:grid;grid-template-columns:repeat(4,1fr);pointer-events:none;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 15%,#000 80%,transparent);mask-image:linear-gradient(180deg,transparent,#000 15%,#000 80%,transparent)}
+.filets span{border-left:1px solid rgba(255,255,255,.1)}
+.filets span:last-child{border-right:1px solid rgba(255,255,255,.1)}
+.methode .sous{font-size:19px;color:#6E737A;margin-bottom:34px}
+.etapes{display:grid;grid-template-columns:1fr 1fr;gap:30px;max-width:814px;margin:0 auto;text-align:left}
+.etape{padding:46px 38px 50px;border-radius:30px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(180deg,#171717,#0D0D0D);box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.etape:nth-child(even){translate:0 8px}
+.etape .tag{display:inline-flex;align-items:center;height:40px;padding:0 34px;border-radius:8px;border:1px solid #2E2E2E;color:#8A8F96;font:600 18px/1 var(--ui);letter-spacing:-.02em;transition:all .6s var(--courbe)}
+.etape.actif .tag{border-color:transparent;background:linear-gradient(90deg,var(--or1),var(--or2));color:#fff;text-shadow:0 1px 2px rgba(60,44,12,.5);box-shadow:0 6px 24px rgba(201,174,116,.35)}
+.etape h3{font:500 22px/1.3 var(--ui);margin:20px 0 10px;letter-spacing:-.02em}
+.etape p{font:400 18px/1.5 var(--ui);color:#7A7F86}
+
+/* 04 · Qui */
+.qui{padding:110px 0 140px}
+.qui .wrap{display:grid;grid-template-columns:1fr 400px;gap:80px;align-items:center}
+.qui h2{font-size:clamp(34px,3.6vw,44px);line-height:1.3}
+.qui h2 em.or{font-size:1.1em}
+.qui p{margin:28px 0 36px;font:400 20px/1.6 var(--ui);color:#6E737A}
+.qui p b{color:#A9ADB3;font-weight:600}
+.qui .actions{display:flex;gap:20px}
+.cadre-photo{position:relative;height:450px;border-radius:44px;padding:12px;background:linear-gradient(160deg,rgba(201,174,116,.55),rgba(201,174,116,.05) 45%,rgba(201,174,116,.3));box-shadow:0 0 70px rgba(201,174,116,.18)}
+.cadre-photo .in{position:relative;height:100%;border-radius:34px;overflow:hidden;background:radial-gradient(60% 50% at 45% 28%,#F6E9CC 0%,#8C7550 30%,#2B241B 65%,#16120D 100%)}
+.cadre-photo svg{position:absolute;bottom:0;left:50%;translate:-50% 0;height:88%}
+
+/* 05 · Pour qui */
+.pour{padding:110px 0 120px}
+.cartes-nb{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.nb .img{height:334px;border-radius:14px;overflow:hidden;position:relative;background:radial-gradient(70% 60% at 40% 30%,#6A6A6A 0%,#2A2A2A 50%,#0E0E0E 100%)}
+.nb .img svg{position:absolute;inset:0;margin:auto;width:58%;height:58%;color:#D9D9D9;filter:drop-shadow(0 18px 24px rgba(0,0,0,.7))}
+.nb p{margin:18px 22px 40px;text-align:center;font:400 20px/1.6 var(--ui);color:#73787F}
+.pour .fin{font-size:clamp(28px,3.2vw,42px);margin-top:30px}
+
+/* 06 · Prix : la carte sombre déborde de la bande claire, les boutons passent devant */
+.prix{background:var(--gris-clair);padding:170px 0 0;margin-bottom:260px}
+.prix::before{content:"";position:absolute;top:0;right:0;width:68%;height:28px;background:#000;clip-path:polygon(0 0,100% 0,100% 100%,3% 100%)}
+.prix::after{content:"";position:absolute;left:0;right:0;bottom:-260px;height:260px;background:#000;z-index:0}
+.prix .wrap{display:grid;grid-template-columns:1fr 528px 1fr;gap:40px;align-items:center;width:min(1280px,100% - 40px)}
+.prix .gauche .pastille{background:linear-gradient(180deg,#F2F2F2,#D7D7D7);border-color:#B9B9B9;color:#333;box-shadow:0 6px 18px rgba(0,0,0,.08);height:60px}
+.marque{display:flex;align-items:center;gap:8px;margin-top:22px;color:#4A4A4A}
+.marque b{font:600 24px/1 var(--titre)}
+.marque span{font:400 24px/1 var(--titre)}
+.marque small{display:block;font:400 10px/1.4 var(--ui);color:#595959}
+.rond{width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#F2D7A1,#7A5A2C 55%,#1A120A);box-shadow:0 0 0 4px #fff,0 0 0 5px #DDD,10px 0 0 4px rgba(0,0,0,.04)}
+.devis{position:relative;z-index:3;margin-bottom:-300px;padding:96px 50px 90px;border-radius:24px;text-align:center;
+  background:linear-gradient(180deg,#3A3A3A 0%,#1C1C1C 45%,#111 100%);box-shadow:0 50px 90px rgba(0,0,0,.45)}
+.devis h2{font-size:44px}
+.devis p{margin:24px 0 0;text-align:left;font:400 20px/1.6 var(--ui);color:#8A8F96}
+.devis hr{border:0;border-top:1px solid rgba(255,255,255,.7);margin:36px 0}
+.devis .montant{display:block;margin:46px 0 40px;font:400 78px/1 var(--ui);color:#fff;letter-spacing:-.02em;white-space:nowrap}
+.devis .montant i{font-style:normal;color:#6E6E6E}
+.devis .btn{position:relative;z-index:4}
+.droite-prix ul{list-style:none;display:grid;gap:26px;color:#575C63;font:400 18px/1.55 var(--ui)}
+.droite-prix li{position:relative;padding-left:24px}
+.droite-prix li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border-radius:50%;background:var(--or2);box-shadow:0 0 0 3px rgba(232,213,168,.35)}
+.droite-prix b{font-weight:600;color:#3F444A}
+
+/* 07 · Relance : la phrase éclairée par la souris */
+.relance{padding:200px 0 0;overflow:hidden}
+.phrase{font:500 clamp(40px,5.4vw,78px)/1.1 var(--ui);letter-spacing:-.03em;text-align:center;
+  background:radial-gradient(260px 160px at var(--mx,50%) var(--my,50%),#fff 0%,#9A9A9A 45%,#1E1E1E 80%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bas{display:flex;justify-content:space-between;gap:40px;margin-top:130px;padding:94px 0 110px;border-top:1px solid rgba(255,255,255,.2);border-bottom:1px solid rgba(255,255,255,.2)}
+.bas .actions{display:flex;gap:20px;align-items:flex-start}
+.bas .btn{height:48px;font-size:17px;padding:0 30px}
+.pages h3{font:700 24px/1 var(--ui);margin-bottom:22px;letter-spacing:-.02em}
+.pages a{display:block;color:#fff;font:400 17px/1 var(--ui);margin-bottom:20px;letter-spacing:-.02em}
+.pages a:hover{color:var(--or2)}
+
+/* 08 · Pied */
+#pied{position:relative;padding:60px 0 120px}
+#pied .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;width:min(1280px,100% - 40px)}
+#pied .marque{margin:0;color:#D9D9D9}
+#pied .marque small{color:#8A8A8A}
+#pied .rond{box-shadow:0 0 0 4px #111,0 0 0 5px #333}
+#pied .droite{font:400 14px/1.6 var(--ui);color:#8E939A;text-align:right}
+#pied::after{content:"";position:absolute;left:0;right:0;bottom:44px;height:26px;background:linear-gradient(90deg,#6E6248,#E8D5A8 50%,#6E6248);filter:blur(5px);opacity:.75}
+
+/* Téléphone */
+@media (max-width:1000px){
+  .nav{height:68px;padding:0 12px 0 22px}
+  .nav ul{display:none}
+  .burger{display:inline-grid;place-items:center}
+  .nav .btn{height:44px;font-size:15px;padding:0 18px}
+  .hero{padding:140px 0 70px}
+  .hero .wrap{grid-template-columns:1fr;text-align:center}
+  .hero .scene{order:-1;height:420px}
+  .hero p{margin-inline:auto}
+  .hero .actions{justify-content:center}
+  .chiffres{font-size:11px}
+  .chiffres.c1{column-gap:20px;left:0}
+  .grille{grid-template-columns:1fr;gap:28px}
+  .etapes{grid-template-columns:1fr}
+  .etape:nth-child(even){translate:none}
+  .qui .wrap{grid-template-columns:1fr;gap:50px}
+  .cadre-photo{height:400px;max-width:400px;width:100%;margin:0 auto}
+  .cartes-nb{grid-template-columns:1fr 1fr}
+  .prix{padding-top:110px;margin-bottom:0}
+  .prix::after{display:none}
+  .prix .wrap{grid-template-columns:1fr;gap:34px}
+  .devis{margin-bottom:0}
+  .prix{padding-bottom:70px}
+  .relance{padding-top:140px}
+  .bas{flex-direction:column}
+}
+@media (max-width:560px){
+  body{font-size:16px}
+  .nav .btn{display:none}
+  .pastille{height:48px;font-size:17px;padding:0 26px}
+  .projet{padding:24px 24px 22px}
+  .cartes-nb{grid-template-columns:1fr}
+  .nb .img{height:260px}
+  .devis{padding:64px 24px 60px}
+  .devis h2{font-size:34px}
+  .devis .montant{font-size:52px}
+  .bas .actions{flex-direction:column}
+  #pied .wrap{flex-direction:column;text-align:center}
+  #pied .droite{text-align:center}
+}
+```

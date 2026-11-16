@@ -101,16 +101,16 @@ Construis une page bleu nuit `#09081D` éclairée par des néons orange, violets
 
 ## 2. Les sections, dans l'ordre
 
-01. #hero · « Réveillez votre authenticité et donnez au marché entier l'envie de votre présence. »
-02. #avant-apres · « Des posts ignorés à la référence du marché »
-03. #promesse · « Un petit aperçu de ce qui vous attend dans la communauté »
-04. #temoignages · « Bienvenue dans l'ère de l'authenticité »
-05. #etapes · « Les 4 étapes de votre transformation »
-06. #bonus · « Les réseaux du futur »
-07. #offre · « Le prix de la communauté va DOUBLER ! »
-08. #garantie · « Garantie de 8 jours »
-09. #qui · « Hana Diop »
-10. #faq · « Encore un doute ? Une question ? »
+01. #hero · Le hero : Dire qui, quoi, pour qui en une phrase, puis faire cliquer.
+02. #avant-apres · La douleur : Le visiteur se reconnaît : « c'est moi ».
+03. #promesse · Le contenu : Rendre l'offre concrète, morceau par morceau.
+04. #temoignages · La preuve : Faire parler les autres : « ça a marché pour des gens comme moi ». Le geste : avis floutés révélés au survol.
+05. #etapes · Le contenu : Rendre l'offre concrète, morceau par morceau.
+06. #bonus · Les bonus : Faire basculer l'indécis : « si j'entre maintenant, j'ai plus ».
+07. #offre · L'offre : Convertir : le prix, ce qu'il contient, le bouton.
+08. #garantie · La garantie : Retirer le risque : « si ça ne vous va pas, je vous rembourse ».
+09. #qui · Qui est derrière : Un humain derrière l'offre, et un lieu réel.
+10. #faq · La FAQ : Lever les dernières objections.
 
 ## 3. Les animations
 

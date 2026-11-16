@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Template X · Braise de cinéma · Prompts des images · Yedidia Ruben - Digital Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/flottant.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0E0E0D;color:#E9E5DE;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 24px;background:rgba(14,14,13,.9);backdrop-filter:blur(10px);border-bottom:1px solid #262624;font-size:14px}
+header .titre{color:#A9A298;white-space:nowrap} header .titre b{color:#E9E5DE;font-weight:500}
+.onglets{display:flex;gap:2px;padding:4px;border:1px solid #2C2A27;border-radius:999px}
+.onglets a{height:32px;padding:0 14px;display:inline-flex;align-items:center;border-radius:999px;color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s,background .25s}
+.onglets a:hover{color:#fff}
+.onglets a[aria-current]{background:#E9E5DE;color:#141312}
+.retour{color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s} .retour:hover{color:#D9B48A}
+main{padding:40px 20px 0}
+.credit{width:min(1200px,100%);margin:0 auto 22px;font-size:14px;line-height:1.6;color:#A9A298}
+.credit b{color:#E9E5DE;font-weight:500} .credit a{color:#D9B48A;border-bottom:1px solid rgba(217,180,138,.4)}
+main img{display:block;width:min(1200px,100%);margin-inline:auto;border-radius:10px;box-shadow:0 30px 80px -40px #000}
+main img.tel{width:min(390px,100%)}
+.etiquette{width:min(1200px,100%);margin:48px auto 14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A847C}
+.outils{width:min(980px,100%);margin:0 auto 16px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.outils p{font-size:14px;color:#A9A298;line-height:1.6;max-width:560px}
+.outils div{display:flex;gap:8px}
+.outils button,.outils a{font:inherit;font-size:13px;height:38px;padding:0 16px;border-radius:999px;border:1px solid #3A3733;background:none;color:#E9E5DE;cursor:pointer;display:inline-flex;align-items:center;transition:border-color .25s}
+.outils button{background:#D9B48A;border-color:#D9B48A;color:#141312;font-weight:500}
+.outils a:hover{border-color:#D9B48A}
+pre{width:min(980px,100%);margin:0 auto;padding:28px;background:#151514;border:1px solid #262624;border-radius:12px;overflow:auto;max-height:72vh;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#D8D2C8;white-space:pre-wrap;word-break:break-word}
+footer{text-align:center;padding:48px 20px 56px;font-size:13px;color:#8A847C;line-height:1.6}
+footer strong{display:block;color:#E9E5DE;font-weight:500;font-size:15px}
+@media (max-width:1180px){.onglets a{padding:0 10px}}
+@media (max-width:980px){header{justify-content:center;padding:14px 16px} .onglets,.retour{display:none} header .titre{white-space:normal;text-align:center}}
+/* ancien : sous 980 px, onglets en bande qui défilait de côté ; retirée le 16/11/2026, le bouton flottant porte la navigation */
+</style>
+</head>
+<body>
+<header>
+  <span class="titre">Template X · <b>Braise de cinéma</b></span>
+  <nav class="onglets" aria-label="Autour du template"><a href="./">La page</a><a href="avec-images.html">Avec images</a><a href="source.html">Source</a><a href="apercu.html">Notre version</a><a href="design.html">DESIGN.md</a><a href="prompt.html">Prompt</a><a href="prompts.html" aria-current=page>Prompts images</a></nav>
+  <a class="retour" href="/">Tous les templates</a>
+</header>
+<main class="pr"><style>
+.pr{width:min(1120px,100%);margin:0 auto}
+.pr-intro{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.pr-intro p{max-width:620px;font-size:15px;line-height:1.6;color:#A9A298}
+.pr-intro a{font-size:13px;height:40px;padding:0 16px;border-radius:999px;border:1px solid #3A3733;display:inline-flex;align-items:center;transition:border-color .25s}
+.pr-intro a:hover{border-color:#D9B48A}
+.pr-perso{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;padding:26px;border:1px solid #262624;border-radius:16px;background:#151514;margin-bottom:22px}
+.pr-perso h2{font-weight:400;font-size:26px;letter-spacing:-.02em}
+.pr-perso h2 small{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#958E84;margin-bottom:8px}
+.pr-perso p{font-size:14px;line-height:1.6;color:#B4ADA3;margin-top:10px}
+.pr-perso p b{color:#E9E5DE;font-weight:500}
+.pr-pal{display:flex;flex-wrap:wrap;gap:10px;align-content:flex-start}
+.pr-pal span{display:inline-flex;align-items:center;gap:8px;font:12px/1 ui-monospace,Consolas,monospace;color:#B4ADA3;padding:6px 10px 6px 6px;border:1px solid #2C2A27;border-radius:999px}
+.pr-pal i{width:20px;height:20px;border-radius:50%;border:1px solid rgba(255,255,255,.15)}
+.pr-img{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);gap:28px;padding:28px 0;border-top:1px solid #262624}
+.pr-rendu{margin:0;align-self:start;position:sticky;top:72px}
+.pr-cadre{position:relative;width:100%;max-height:70vh;border-radius:12px;overflow:hidden;background:repeating-linear-gradient(135deg,#171716 0 14px,#1B1A19 14px 28px);border:1px solid #2C2A27;display:grid;place-items:center}
+.pr-cadre img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:0;box-shadow:none}
+.pr-cadre span{font-size:13px;color:#8A847C;text-align:center;padding:0 16px}
+.pr-rendu figcaption{font-size:12px;color:#8A847C;margin-top:10px}
+.pr-txt h3{font-weight:500;font-size:20px;letter-spacing:-.01em;overflow-wrap:anywhere}
+.pr-tags{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 16px}
+.pr-tags span{font-size:11.5px;padding:4px 10px;border-radius:999px;border:1px solid #33302C;color:#B4ADA3}
+.pr-txt dl{display:grid;grid-template-columns:130px minmax(0,1fr);gap:8px 16px;font-size:14px;line-height:1.55}
+.pr-txt dt{color:#958E84;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding-top:2px}
+.pr-txt dd{color:#D8D2C8;overflow-wrap:anywhere}
+.pr-txt dd i{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:-1px;margin-right:4px;border:1px solid rgba(255,255,255,.2)}
+.pr-prompt{margin-top:18px;padding:16px 18px;border-radius:12px;background:#151514;border:1px solid #262624}
+.pr-prompt div{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#958E84}
+.pr-prompt button{font:inherit;font-size:12px;letter-spacing:0;text-transform:none;height:34px;padding:0 14px;border-radius:999px;border:0;background:#D9B48A;color:#141312;cursor:pointer}
+.pr-prompt p{font-size:14px;line-height:1.6;color:#E2DCD3;overflow-wrap:anywhere}
+.pr-ref{font-size:12.5px;color:#8A847C;margin-top:12px;overflow-wrap:anywhere}
+@media (max-width:860px){.pr-perso,.pr-img{grid-template-columns:1fr}.pr-rendu{position:static;max-width:420px}.pr-txt dl{grid-template-columns:1fr;gap:2px}.pr-txt dd{margin-bottom:8px}}
+</style>
+<div class="pr-intro"><p>Les 8 images de la version « avec images » : pour chacune, la commande donnée au générateur (en JSON structuré), ses composants un par un, et le rendu obtenu. Un seul personnage revient d'une image à l'autre.</p><a href="images/commandes.json" download>Télécharger commandes.json</a></div>
+<section class="pr-perso"><div><h2><small>Le personnage</small>Kevin Ondo</h2><p><b>Genre</b> : homme</p><p><b>Âge</b> : 28</p><p><b>Ville</b> : Brazzaville</p><p><b>Physique</b> : peau brun foncé, mini-dreads courts, mince, attitude décontractée</p><p><b>Signature</b> : casque audio autour du cou, sweat à capuche</p><p><b>Métier</b> : gestionnaire de publicité payante, fondateur de l&#x27;agence Mayombe Médias</p><p><b>Tenue</b> : sweat à capuche noir #0C0C0C ou orange brûlé #D4592F, casque audio noir mat</p><p><b>Règle</b> : même visage, même coiffure, même signature sur chaque image où il apparaît</p></div><div class="pr-pal" aria-label="Palette du DESIGN.md"><span><i style="background:#000000"></i>fond #000000</span><span><i style="background:#070707"></i>nuit #070707</span><span><i style="background:#0C0C0C"></i>carte #0C0C0C</span><span><i style="background:#FF4C01"></i>orange #FF4C01</span><span><i style="background:#F85707"></i>orange_bouton #F85707</span><span><i style="background:#B03702"></i>orange_brule #B03702</span><span><i style="background:#7F341D"></i>braise #7F341D</span><span><i style="background:#D4592F"></i>fond_portrait #D4592F</span></div></section>
+
+<article class="pr-img" id="X-hero">
+  <figure class="pr-rendu"><div class="pr-cadre" style="aspect-ratio:3/4"><span>Image à générer<br>3:4</span>
+    <img src="images/X-hero.jpg" alt="Rendu de l'image X-hero" loading="lazy" onerror="this.remove()"></div>
+    <figcaption>Le rendu · <code>images/X-hero.jpg</code></figcaption></figure>
+  <div class="pr-txt"><h3>X-hero</h3>
+    <div class="pr-tags"><span>Section #hero</span><span>Format 3:4</span><span>Avec Kevin Ondo</span></div>
+    <dl><dt>Sujet</dt><dd>portrait de cinéma du fondateur d&#x27;une agence de publicité</dd><dt>Personnage</dt><dd>Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche</dd><dt>Action</dt><dd>assis dans un fauteuil en cuir, regard grave vers la gauche hors cadre, épaules légèrement tournées</dd><dt>Cadrage</dt><dd>plan taille, sujet à droite, espace négatif sombre à gauche pour le texte</dd><dt>Objectif</dt><dd>85 mm, f/1.8</dd><dt>Lumière</dt><dd>clair-obscur, lampe de bureau chaude derrière lui, contre-jour orangé sur les épaules, visage à moitié dans l&#x27;ombre</dd><dt>Décor</dt><dd>bureau sombre à Brazzaville, bibliothèque floue en arrière-plan, lampe ambrée</dd><dt>Palette</dt><dd><i style="background:#000000"></i>#000000 <i style="background:#7F341D"></i>#7F341D <i style="background:#FF4C01"></i>#FF4C01</dd><dt>Ambiance</dt><dd>film noir, sérieux, maîtrise</dd><dt>Texte dans l&#x27;image</dt><dd>aucun</dd><dt>Interdits</dt><dd>texte, logo ou filigrane · mains ou doigts déformés · copie de l&#x27;image Behance · sourire forcé · lumière plate de studio</dd></dl>
+    <div class="pr-prompt"><div>La consigne en une phrase<button type="button" data-copier>Copier</button></div><p>Photo au format 3:4 : portrait de cinéma du fondateur d&#x27;une agence de publicité, avec Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche ; assis dans un fauteuil en cuir, regard grave vers la gauche hors cadre, épaules légèrement tournées ; cadrage plan taille, sujet à droite, espace négatif sombre à gauche pour le texte ; objectif 85 mm, f/1.8 ; lumière : clair-obscur, lampe de bureau chaude derrière lui, contre-jour orangé sur les épaules, visage à moitié dans l&#x27;ombre ; décor : bureau sombre à Brazzaville, bibliothèque floue en arrière-plan, lampe ambrée ; couleurs dominantes #000000, #7F341D, #FF4C01 ; ambiance film noir, sérieux, maîtrise ; sans aucun texte ni logo.</p></div>
+    <p class="pr-ref">Image de référence : inspi/behance/236475491/01.png : haut de page, portrait de droite</p>
+  </div>
+</article>
+<article class="pr-img" id="X-probleme">
+  <figure class="pr-rendu"><div class="pr-cadre" style="aspect-ratio:1/1"><span>Image à générer<br>1:1</span>
+    <img src="images/X-probleme.jpg" alt="Rendu de l'image X-probleme" loading="lazy" onerror="this.remove()"></div>
+    <figcaption>Le rendu · <code>images/X-probleme.jpg</code></figcaption></figure>
+  <div class="pr-txt"><h3>X-probleme</h3>
+    <div class="pr-tags"><span>Section #probleme</span><span>Format 1:1</span><span>Sans personnage</span></div>
+    <dl><dt>Sujet</dt><dd>silhouette d&#x27;un patron en costume vu de dos, seul au milieu d&#x27;un long couloir boisé</dd><dt>Personnage</dt><dd>aucun</dd><dt>Action</dt><dd>il marche lentement, une mallette ouverte d&#x27;où tombent des billets qui jonchent le sol</dd><dt>Cadrage</dt><dd>plan large symétrique, sujet au centre, couloir en point de fuite</dd><dt>Objectif</dt><dd>35 mm, f/2.8</dd><dt>Lumière</dt><dd>une seule lumière au bout du couloir, sol qui brille, tout le reste dans le noir</dd><dt>Décor</dt><dd>couloir à boiseries sombres et portes fermées</dd><dt>Palette</dt><dd><i style="background:#000000"></i>#000000 <i style="background:#3A1B0C"></i>#3A1B0C <i style="background:#B03702"></i>#B03702</dd><dt>Ambiance</dt><dd>perte, gâchis silencieux</dd><dt>Texte dans l&#x27;image</dt><dd>aucun</dd><dt>Interdits</dt><dd>texte, logo ou filigrane · mains ou doigts déformés · copie de l&#x27;image Behance · visage visible · billets lisibles</dd></dl>
+    <div class="pr-prompt"><div>La consigne en une phrase<button type="button" data-copier>Copier</button></div><p>Photo au format 1:1 : silhouette d&#x27;un patron en costume vu de dos, seul au milieu d&#x27;un long couloir boisé ; il marche lentement, une mallette ouverte d&#x27;où tombent des billets qui jonchent le sol ; cadrage plan large symétrique, sujet au centre, couloir en point de fuite ; objectif 35 mm, f/2.8 ; lumière : une seule lumière au bout du couloir, sol qui brille, tout le reste dans le noir ; décor : couloir à boiseries sombres et portes fermées ; couleurs dominantes #000000, #3A1B0C, #B03702 ; ambiance perte, gâchis silencieux ; sans aucun texte ni logo.</p></div>
+    <p class="pr-ref">Image de référence : inspi/behance/236475491/01.png : section « O problema », photo de gauche</p>
+  </div>
+</article>
+<article class="pr-img" id="X-decision">
+  <figure class="pr-rendu"><div class="pr-cadre" style="aspect-ratio:4/3"><span>Image à générer<br>4:3</span>
+    <img src="images/X-decision.jpg" alt="Rendu de l'image X-decision" loading="lazy" onerror="this.remove()"></div>
+    <figcaption>Le rendu · <code>images/X-decision.jpg</code></figcaption></figure>
+  <div class="pr-txt"><h3>X-decision</h3>
+    <div class="pr-tags"><span>Section #decision</span><span>Format 4:3</span><span>Avec Kevin Ondo</span></div>
+    <dl><dt>Sujet</dt><dd>deux chemins : le fondateur confiant au premier plan et un commerçant inquiet derrière lui</dd><dt>Personnage</dt><dd>Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche</dd><dt>Action</dt><dd>Kevin regarde au loin, serein, le menton relevé ; derrière, un commerçant de 40 ans en chemise noire se tient la tête d&#x27;une main, les yeux baissés</dd><dt>Cadrage</dt><dd>plan poitrine, Kevin à gauche au premier plan, le commerçant à droite en retrait</dd><dt>Objectif</dt><dd>50 mm, f/2</dd><dt>Lumière</dt><dd>lumière latérale chaude venant de la gauche, fond qui tombe dans le noir</dd><dt>Décor</dt><dd>fond noir, fenêtre lointaine floue</dd><dt>Palette</dt><dd><i style="background:#000000"></i>#000000 <i style="background:#0C0C0C"></i>#0C0C0C <i style="background:#7F341D"></i>#7F341D</dd><dt>Ambiance</dt><dd>contraste entre assurance et frustration</dd><dt>Texte dans l&#x27;image</dt><dd>aucun</dd><dt>Interdits</dt><dd>texte, logo ou filigrane · mains ou doigts déformés · copie de l&#x27;image Behance · les deux hommes ont le même visage</dd></dl>
+    <div class="pr-prompt"><div>La consigne en une phrase<button type="button" data-copier>Copier</button></div><p>Photo au format 4:3 : deux chemins : le fondateur confiant au premier plan et un commerçant inquiet derrière lui, avec Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche ; Kevin regarde au loin, serein, le menton relevé ; derrière, un commerçant de 40 ans en chemise noire se tient la tête d&#x27;une main, les yeux baissés ; cadrage plan poitrine, Kevin à gauche au premier plan, le commerçant à droite en retrait ; objectif 50 mm, f/2 ; lumière : lumière latérale chaude venant de la gauche, fond qui tombe dans le noir ; décor : fond noir, fenêtre lointaine floue ; couleurs dominantes #000000, #0C0C0C, #7F341D ; ambiance contraste entre assurance et frustration ; sans aucun texte ni logo.</p></div>
+    <p class="pr-ref">Image de référence : inspi/behance/236475491/01.png : section « a decisão é simples », les deux hommes au centre</p>
+  </div>
+</article>
+<article class="pr-img" id="X-portrait">
+  <figure class="pr-rendu"><div class="pr-cadre" style="aspect-ratio:3/4"><span>Image à générer<br>3:4</span>
+    <img src="images/X-portrait.jpg" alt="Rendu de l'image X-portrait" loading="lazy" onerror="this.remove()"></div>
+    <figcaption>Le rendu · <code>images/X-portrait.jpg</code></figcaption></figure>
+  <div class="pr-txt"><h3>X-portrait</h3>
+    <div class="pr-tags"><span>Section #qui</span><span>Format 3:4</span><span>Avec Kevin Ondo</span></div>
+    <dl><dt>Sujet</dt><dd>portrait éditorial du fondateur sur fond orange uni</dd><dt>Personnage</dt><dd>Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche</dd><dt>Action</dt><dd>assis, coude posé sur une table rouge orangé, main au menton, regard droit vers l&#x27;objectif, sérieux et accessible</dd><dt>Cadrage</dt><dd>plan taille, sujet centré, un peu d&#x27;air au-dessus de la tête</dd><dt>Objectif</dt><dd>85 mm, f/4</dd><dt>Lumière</dt><dd>lumière de studio douce et frontale, légère ombre portée sur le fond</dd><dt>Décor</dt><dd>fond de studio orange brûlé uni, table rouge orangé</dd><dt>Palette</dt><dd><i style="background:#D4592F"></i>#D4592F <i style="background:#B03702"></i>#B03702 <i style="background:#0C0C0C"></i>#0C0C0C</dd><dt>Ambiance</dt><dd>confiance, franchise</dd><dt>Texte dans l&#x27;image</dt><dd>aucun</dd><dt>Interdits</dt><dd>texte, logo ou filigrane · mains ou doigts déformés · copie de l&#x27;image Behance · fond texturé ou décor chargé</dd></dl>
+    <div class="pr-prompt"><div>La consigne en une phrase<button type="button" data-copier>Copier</button></div><p>Photo au format 3:4 : portrait éditorial du fondateur sur fond orange uni, avec Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche ; assis, coude posé sur une table rouge orangé, main au menton, regard droit vers l&#x27;objectif, sérieux et accessible ; cadrage plan taille, sujet centré, un peu d&#x27;air au-dessus de la tête ; objectif 85 mm, f/4 ; lumière : lumière de studio douce et frontale, légère ombre portée sur le fond ; décor : fond de studio orange brûlé uni, table rouge orangé ; couleurs dominantes #D4592F, #B03702, #0C0C0C ; ambiance confiance, franchise ; sans aucun texte ni logo.</p></div>
+    <p class="pr-ref">Image de référence : inspi/behance/236475491/01.png : section « Quem lidera », photo sur fond orange</p>
+  </div>
+</article>
+<article class="pr-img" id="X-temoin-1">
+  <figure class="pr-rendu"><div class="pr-cadre" style="aspect-ratio:1/1"><span>Image à générer<br>1:1</span>
+    <img src="images/X-temoin-1.jpg" alt="Rendu de l'image X-temoin-1" loading="lazy" onerror="this.remove()"></div>
+    <figcaption>Le rendu · <code>images/X-temoin-1.jpg</code></figcaption></figure>
+  <div class="pr-txt"><h3>X-temoin-1</h3>
+    <div class="pr-tags"><span>Section #temoignages</span><span>Format 1:1</span><span>Sans personnage</span></div>
+    <dl><dt>Sujet</dt><dd>portrait d&#x27;Aminata Koné, femme de 35 ans, gérante d&#x27;une boutique de cosmétiques à Abidjan</dd><dt>Personnage</dt><dd>aucun</dd><dt>Action</dt><dd>sourire franc, regard caméra</dd><dt>Cadrage</dt><dd>gros plan visage et épaules, centré</dd><dt>Objectif</dt><dd>85 mm, f/2.8</dd><dt>Lumière</dt><dd>lumière douce et chaude venant de la gauche, fond sombre</dd><dt>Décor</dt><dd>fond uni anthracite</dd><dt>Palette</dt><dd><i style="background:#0C0C0C"></i>#0C0C0C <i style="background:#7F341D"></i>#7F341D</dd><dt>Ambiance</dt><dd>satisfaction crédible</dd><dt>Texte dans l&#x27;image</dt><dd>aucun</dd><dt>Interdits</dt><dd>texte, logo ou filigrane · mains ou doigts déformés · copie de l&#x27;image Behance</dd></dl>
+    <div class="pr-prompt"><div>La consigne en une phrase<button type="button" data-copier>Copier</button></div><p>Photo au format 1:1 : portrait d&#x27;Aminata Koné, femme de 35 ans, gérante d&#x27;une boutique de cosmétiques à Abidjan ; sourire franc, regard caméra ; cadrage gros plan visage et épaules, centré ; objectif 85 mm, f/2.8 ; lumière : lumière douce et chaude venant de la gauche, fond sombre ; décor : fond uni anthracite ; couleurs dominantes #0C0C0C, #7F341D ; ambiance satisfaction crédible ; sans aucun texte ni logo.</p></div>
+    <p class="pr-ref">Image de référence : inspi/behance/236475491/01.png : carrousel « Depoimentos », vignettes des avis</p>
+  </div>
+</article>
+<article class="pr-img" id="X-temoin-2">
+  <figure class="pr-rendu"><div class="pr-cadre" style="aspect-ratio:1/1"><span>Image à générer<br>1:1</span>
+    <img src="images/X-temoin-2.jpg" alt="Rendu de l'image X-temoin-2" loading="lazy" onerror="this.remove()"></div>
+    <figcaption>Le rendu · <code>images/X-temoin-2.jpg</code></figcaption></figure>
+  <div class="pr-txt"><h3>X-temoin-2</h3>
+    <div class="pr-tags"><span>Section #temoignages</span><span>Format 1:1</span><span>Sans personnage</span></div>
+    <dl><dt>Sujet</dt><dd>portrait de Merveille Nzaba, homme de 30 ans, fondateur d&#x27;une marque de jus naturels à Pointe-Noire</dd><dt>Personnage</dt><dd>aucun</dd><dt>Action</dt><dd>léger sourire, regard caméra, tee-shirt noir</dd><dt>Cadrage</dt><dd>gros plan visage et épaules, centré</dd><dt>Objectif</dt><dd>85 mm, f/2.8</dd><dt>Lumière</dt><dd>lumière douce et chaude venant de la gauche, fond sombre</dd><dt>Décor</dt><dd>fond uni anthracite</dd><dt>Palette</dt><dd><i style="background:#0C0C0C"></i>#0C0C0C <i style="background:#7F341D"></i>#7F341D</dd><dt>Ambiance</dt><dd>satisfaction crédible</dd><dt>Texte dans l&#x27;image</dt><dd>aucun</dd><dt>Interdits</dt><dd>texte, logo ou filigrane · mains ou doigts déformés · copie de l&#x27;image Behance</dd></dl>
+    <div class="pr-prompt"><div>La consigne en une phrase<button type="button" data-copier>Copier</button></div><p>Photo au format 1:1 : portrait de Merveille Nzaba, homme de 30 ans, fondateur d&#x27;une marque de jus naturels à Pointe-Noire ; léger sourire, regard caméra, tee-shirt noir ; cadrage gros plan visage et épaules, centré ; objectif 85 mm, f/2.8 ; lumière : lumière douce et chaude venant de la gauche, fond sombre ; décor : fond uni anthracite ; couleurs dominantes #0C0C0C, #7F341D ; ambiance satisfaction crédible ; sans aucun texte ni logo.</p></div>
+    <p class="pr-ref">Image de référence : inspi/behance/236475491/01.png : carrousel « Depoimentos », vignettes des avis</p>
+  </div>
+</article>
+<article class="pr-img" id="X-temoin-3">
+  <figure class="pr-rendu"><div class="pr-cadre" style="aspect-ratio:1/1"><span>Image à générer<br>1:1</span>
+    <img src="images/X-temoin-3.jpg" alt="Rendu de l'image X-temoin-3" loading="lazy" onerror="this.remove()"></div>
+    <figcaption>Le rendu · <code>images/X-temoin-3.jpg</code></figcaption></figure>
+  <div class="pr-txt"><h3>X-temoin-3</h3>
+    <div class="pr-tags"><span>Section #temoignages</span><span>Format 1:1</span><span>Sans personnage</span></div>
+    <dl><dt>Sujet</dt><dd>portrait de Fatou Diop, femme de 42 ans, directrice d&#x27;une école de formation à Dakar</dd><dt>Personnage</dt><dd>aucun</dd><dt>Action</dt><dd>sourire posé, regard caméra, foulard sobre</dd><dt>Cadrage</dt><dd>gros plan visage et épaules, centré</dd><dt>Objectif</dt><dd>85 mm, f/2.8</dd><dt>Lumière</dt><dd>lumière douce et chaude venant de la gauche, fond sombre</dd><dt>Décor</dt><dd>fond uni anthracite</dd><dt>Palette</dt><dd><i style="background:#0C0C0C"></i>#0C0C0C <i style="background:#7F341D"></i>#7F341D</dd><dt>Ambiance</dt><dd>satisfaction crédible</dd><dt>Texte dans l&#x27;image</dt><dd>aucun</dd><dt>Interdits</dt><dd>texte, logo ou filigrane · mains ou doigts déformés · copie de l&#x27;image Behance</dd></dl>
+    <div class="pr-prompt"><div>La consigne en une phrase<button type="button" data-copier>Copier</button></div><p>Photo au format 1:1 : portrait de Fatou Diop, femme de 42 ans, directrice d&#x27;une école de formation à Dakar ; sourire posé, regard caméra, foulard sobre ; cadrage gros plan visage et épaules, centré ; objectif 85 mm, f/2.8 ; lumière : lumière douce et chaude venant de la gauche, fond sombre ; décor : fond uni anthracite ; couleurs dominantes #0C0C0C, #7F341D ; ambiance satisfaction crédible ; sans aucun texte ni logo.</p></div>
+    <p class="pr-ref">Image de référence : inspi/behance/236475491/01.png : carrousel « Depoimentos », vignettes des avis</p>
+  </div>
+</article>
+<article class="pr-img" id="X-faq">
+  <figure class="pr-rendu"><div class="pr-cadre" style="aspect-ratio:4/3"><span>Image à générer<br>4:3</span>
+    <img src="images/X-faq.jpg" alt="Rendu de l'image X-faq" loading="lazy" onerror="this.remove()"></div>
+    <figcaption>Le rendu · <code>images/X-faq.jpg</code></figcaption></figure>
+  <div class="pr-txt"><h3>X-faq</h3>
+    <div class="pr-tags"><span>Section #faq</span><span>Format 4:3</span><span>Avec Kevin Ondo</span></div>
+    <dl><dt>Sujet</dt><dd>le fondateur au travail, de nuit</dd><dt>Personnage</dt><dd>Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche</dd><dt>Action</dt><dd>il répond à un message sur son téléphone, l&#x27;ordinateur portable ouvert affiche un tableau de bord flou, petit sourire</dd><dt>Cadrage</dt><dd>plan taille de trois quarts, sujet à gauche, écran à droite</dd><dt>Objectif</dt><dd>35 mm, f/2</dd><dt>Lumière</dt><dd>lumière de l&#x27;écran sur le visage, lampe orangée en fond</dd><dt>Décor</dt><dd>bureau sombre, tasse, carnet, fenêtre de nuit floue</dd><dt>Palette</dt><dd><i style="background:#000000"></i>#000000 <i style="background:#FF4C01"></i>#FF4C01 <i style="background:#0C0C0C"></i>#0C0C0C</dd><dt>Ambiance</dt><dd>disponible, sérieux, proche</dd><dt>Texte dans l&#x27;image</dt><dd>aucun</dd><dt>Interdits</dt><dd>texte, logo ou filigrane · mains ou doigts déformés · copie de l&#x27;image Behance · écran lisible avec chiffres nets</dd></dl>
+    <div class="pr-prompt"><div>La consigne en une phrase<button type="button" data-copier>Copier</button></div><p>Photo au format 4:3 : le fondateur au travail, de nuit, avec Kevin Ondo, homme de 28 ans, peau brun foncé, mini-dreads courts, mince, attitude décontractée, casque audio autour du cou, sweat à capuche ; il répond à un message sur son téléphone, l&#x27;ordinateur portable ouvert affiche un tableau de bord flou, petit sourire ; cadrage plan taille de trois quarts, sujet à gauche, écran à droite ; objectif 35 mm, f/2 ; lumière : lumière de l&#x27;écran sur le visage, lampe orangée en fond ; décor : bureau sombre, tasse, carnet, fenêtre de nuit floue ; couleurs dominantes #000000, #FF4C01, #0C0C0C ; ambiance disponible, sérieux, proche ; sans aucun texte ni logo.</p></div>
+    
+  </div>
+</article>
+</main>
+<script>
+document.querySelectorAll('[data-copier]').forEach(b=>b.onclick=async()=>{await navigator.clipboard.writeText(b.closest('.pr-prompt').querySelector('p').textContent);b.textContent='Copié';setTimeout(()=>b.textContent='Copier',1800)});
+</script>
+<footer>Réalisé par<strong>Yedidia Ruben - Digital Strategist</strong></footer>
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template X<b>Braise de cinéma</b></span><nav aria-label="Autour du template X"><ul><li><a href="./">Template</a></li><li><a href="avec-images.html">Template avec images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html">Design<small>DESIGN.md</small></a></li><li><a href="prompt.html">Prompt de la page<small>kit</small></a></li><li><a href="prompts.html" aria-current=page>Prompts des images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template X : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">X</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+
+</body>
+</html>

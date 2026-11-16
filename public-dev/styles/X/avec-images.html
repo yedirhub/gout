@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Template Style X, braise de cinéma : page d'une agence de publicité payante, noir profond, orange brûlé, lumière de film, tableau comparatif et notifications de paiement.">
+<title>Avec images · Style X · Braise de cinéma · template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,700;1,800&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/anim.css">
+<style>
+:root{
+  --noir:#000000; --nuit:#070707; --carte:#0C0C0C; --carte2:#101010; --rangee:#0D0F12; --filet:#1E1E1E; --filet2:#2A2A2A;
+  --orange:#FF4C01; --orange2:#F85707; --brule:#B03702; --braise:#7F341D; --cuivre:#88381F;
+  --blanc:#FFFFFF; --texte:#D6D6D6; --doux:#A3A3A3; --gris:#8A8A8A;
+  --courbe:cubic-bezier(.16,1,.3,1);
+  --police:'Inter Tight',system-ui,sans-serif; --script:'Caveat','Inter Tight',cursive;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--police);font-size:15px;line-height:1.6;color:var(--texte);background:var(--noir);-webkit-font-smoothing:antialiased;overflow-x:clip}
+svg{display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--police);color:var(--blanc);line-height:1.15;letter-spacing:-.01em;font-weight:300}
+h2 em,h1 em{font-style:italic;font-weight:800}
+b,strong{font-weight:700;color:var(--blanc)}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto;position:relative;z-index:1}
+section{position:relative}
+.centre{text-align:center}
+
+/* Le surtitre : capitales italiques très espacées, orange */
+.kicker{display:block;font:italic 300 12px/1 var(--police);letter-spacing:.55em;text-transform:uppercase;color:var(--orange);margin-bottom:16px}
+
+/* Bouton : bloc orange aux coins 6 px, flèche dans un petit carré */
+.btn{display:inline-flex;align-items:center;gap:14px;min-height:48px;padding:0 22px 0 26px;border-radius:6px;background:linear-gradient(180deg,#FF5A12,var(--orange));color:#fff;
+  font:700 13px/1.2 var(--police);text-transform:uppercase;letter-spacing:.02em;box-shadow:0 0 0 1px rgba(255,120,60,.35) inset,0 10px 30px rgba(255,76,1,.28);transition:box-shadow .4s var(--courbe),filter .4s}
+.btn:hover{filter:brightness(1.08);box-shadow:0 0 0 1px rgba(255,160,110,.5) inset,0 14px 40px rgba(255,76,1,.45)}
+.btn .fl{width:18px;height:18px;border-radius:3px;background:rgba(255,255,255,.22);display:grid;place-items:center;flex:none}
+.btn .fl svg{width:10px;height:10px}
+.phrase{margin-top:14px;font:italic 400 12px/1.4 var(--police);color:var(--doux)}
+
+/* Emplacements d'image : fond braise, filet fin, format au centre */
+.emplacement{position:relative;overflow:hidden;display:grid;place-items:center;
+  background:radial-gradient(70% 60% at 50% 40%,#1E1009,#0B0806 75%);box-shadow:inset 0 0 0 1px rgba(255,76,1,.18)}
+.emplacement::after{content:attr(data-format);font:italic 300 11px/1 var(--police);letter-spacing:.4em;color:rgba(255,140,90,.55);padding:6px 4px 6px 10px;border:1px solid rgba(255,76,1,.22);border-radius:3px}
+
+/* 01 · Hero : le portrait dans la pénombre, la lueur orange en haut à gauche */
+.hero{min-height:720px;padding:0 0 70px;background:radial-gradient(40% 55% at 0% 0%,rgba(127,52,29,.85),transparent 70%),var(--noir);overflow:hidden;border-bottom:1px solid var(--filet)}
+.nav{position:relative;z-index:5;width:min(1080px,100% - 40px);margin:14px auto 0;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 16px 10px 18px;border:1px solid rgba(255,255,255,.12);border-radius:8px;background:rgba(10,10,10,.45);backdrop-filter:blur(10px)}
+.logo{display:flex;align-items:center;gap:12px;font:300 20px/1 var(--police);color:#fff;letter-spacing:-.02em}
+.logo i{width:30px;height:20px;border-radius:5px;background:var(--orange);display:block}
+.nav ul{display:flex;align-items:center;gap:28px;list-style:none;font-size:13px;color:#E5E5E5}
+.nav ul a:hover{color:var(--orange)}
+.nav .contact{display:inline-flex;align-items:center;min-height:30px;padding:0 14px;border:1px solid rgba(255,255,255,.25);border-radius:4px;background:#1A1A1A}
+.hero .scene{position:absolute;z-index:0;right:max(0px,calc(50% - 640px));top:0;bottom:0;width:min(640px,58%)}
+.hero .scene .emplacement{position:absolute;inset:0;width:100%;height:100%;background:radial-gradient(45% 40% at 60% 38%,#3A1B0C,#140A05 70%,#050302);box-shadow:none}
+.hero .scene::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:2;background:linear-gradient(90deg,var(--noir),rgba(0,0,0,.2) 35%,transparent 60%),linear-gradient(0deg,var(--noir),transparent 30%)}
+.hero .txt{position:relative;z-index:3;max-width:470px;padding-top:110px}
+.hero h1{font-size:clamp(34px,4vw,48px);text-transform:uppercase;line-height:1.08;margin-bottom:22px;font-weight:300}
+.hero h1 b{font-weight:800;letter-spacing:.01em}
+.hero p.lead{font-size:16px;color:#ECECEC;line-height:1.45;margin-bottom:22px}
+.chiffres{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+.chiffres span{display:inline-flex;align-items:center;gap:6px;min-height:26px;padding:0 10px;border:1px solid var(--filet2);border-radius:4px;background:rgba(20,20,20,.7);font:600 12px/1.2 var(--police);color:#fff}
+.chiffres span i{font-style:normal;font-weight:500;color:var(--orange)}
+.clients{display:flex;align-items:center;gap:12px;margin-top:22px;font-size:12px;line-height:1.3;color:#E5E5E5}
+.bulles{display:flex}
+.bulles i{width:34px;height:34px;border-radius:50%;border:2px solid #fff;margin-left:-10px;display:grid;place-items:center;font:700 11px/1 var(--police);font-style:normal;color:#fff}
+.bulles i:first-child{margin-left:0}
+.clients b{color:var(--orange);display:block}
+.notif{position:absolute;z-index:4;display:flex;align-items:center;gap:12px;width:210px;padding:9px 12px;border:1px solid rgba(255,255,255,.12);border-radius:6px;background:rgba(14,14,14,.82);backdrop-filter:blur(8px);font-size:10.5px;line-height:1.3;color:#fff;box-shadow:0 18px 40px rgba(0,0,0,.5);animation:flotte 6s ease-in-out infinite}
+.notif .ico{width:28px;height:28px;border-radius:5px;background:var(--orange);display:grid;place-items:center;flex:none}
+.notif .ico svg{width:15px;height:15px;color:#fff}
+.notif small{display:flex;justify-content:space-between;gap:8px;font-size:9px;color:var(--doux);margin-top:2px}
+.notif.n1{right:max(20px,calc(50% - 560px));top:250px}
+.notif.n2{left:calc(50% - 120px);bottom:70px;animation-delay:-3s}
+@keyframes flotte{50%{translate:0 -8px}}
+.descendre{position:absolute;left:50%;bottom:-1px;translate:-50% 0;z-index:5;width:56px;height:20px;background:var(--noir);clip-path:polygon(0 100%,50% 0,100% 100%);display:grid;place-items:end center;color:#fff}
+.descendre svg{width:12px;height:12px;margin-bottom:2px}
+
+/* 02 · Le problème : photo cadrée à gauche, texte à droite */
+.probleme{background:var(--nuit);padding:60px 0 90px}
+.probleme .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.probleme .emplacement{width:100%;aspect-ratio:1/1;max-width:440px;border-radius:14px}
+.probleme h2{font-size:clamp(26px,2.6vw,32px);line-height:1.3;margin-bottom:22px}
+.probleme p{font-size:14px;color:#E0E0E0;margin-bottom:16px;max-width:420px}
+.probleme .btn{margin-top:8px}
+
+/* 03 · Les piliers : hall sombre en fond, 4 cartes à pastille orange */
+.piliers{padding:100px 0 70px;background:radial-gradient(50% 60% at 50% 50%,rgba(40,24,14,.55),transparent 75%),
+  repeating-linear-gradient(90deg,transparent 0 9%,rgba(255,255,255,.025) 9% 10%,transparent 10% 20%),linear-gradient(180deg,var(--nuit),#030303 60%,var(--nuit));overflow:hidden}
+.piliers h2{font-size:clamp(26px,2.6vw,32px);line-height:1.3}
+.piliers .sous{font-size:14px;color:#E5E5E5;max-width:520px;margin:18px auto 0}
+.cartes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:38px 0 34px}
+.pilier{position:relative;padding:44px 22px 26px;border-top:1px solid rgba(255,76,1,.5);background:linear-gradient(180deg,rgba(18,18,18,.92),rgba(8,8,8,.6));border-radius:2px 2px 6px 6px;text-align:center}
+.pilier .ico{position:absolute;left:50%;top:0;translate:-50% -1px;width:44px;height:38px;border-radius:0 0 5px 5px;background:var(--orange);display:grid;place-items:center;color:#fff}
+.pilier .ico svg{width:20px;height:20px}
+.pilier h3{font-size:17px;font-weight:600;margin:12px 0 12px}
+.pilier p{font-size:12.5px;line-height:1.5;color:#C9C9C9}
+
+/* 04 · Comparaison : tableau à deux têtes, braise et orange vif */
+.comparaison{padding:90px 0 80px;background:radial-gradient(35% 45% at 100% 0%,rgba(136,56,31,.75),transparent 70%),radial-gradient(30% 40% at 0% 100%,rgba(136,56,31,.55),transparent 70%),var(--noir);overflow:hidden;border-top:1px solid var(--filet)}
+.comparaison h2{font-size:clamp(28px,2.8vw,34px);line-height:1.3}
+.comparaison .sous{font-size:14px;color:#ECECEC;max-width:540px;margin:16px auto 0}
+.tableau{margin:44px auto 0;max-width:1000px;border:1px solid var(--filet2);border-radius:6px;overflow:hidden;background:rgba(10,10,10,.85)}
+.tableau .tete,.tableau .ligne-t{display:grid;grid-template-columns:1fr 1fr}
+.tableau .tete div{display:grid;place-items:center;min-height:52px;padding:8px 16px;font:600 12px/1.3 var(--police);text-transform:uppercase;color:#fff;text-align:center}
+.tableau .tete div:first-child{background:var(--brule)}
+.tableau .tete div:last-child{background:var(--orange)}
+.ligne-t{border-top:1px solid var(--filet)}
+.ligne-t div{display:grid;place-items:center;padding:12px 22px;min-height:52px;text-align:center;font-size:12.5px;line-height:1.45}
+.ligne-t div:first-child{color:var(--gris);border-right:1px solid var(--filet)}
+.ligne-t div:last-child{color:#F2F2F2}
+
+/* 05 · La décision : deux chemins numérotés de part et d'autre */
+.decision{padding:70px 0 80px;background:radial-gradient(35% 50% at 0% 20%,rgba(136,56,31,.55),transparent 70%),var(--noir);overflow:hidden}
+.decision h2{font-size:clamp(26px,2.6vw,32px);line-height:1.3}
+.duel{display:grid;grid-template-columns:1fr 1.5fr 1fr;align-items:center;gap:0;margin:20px 0 0}
+.duel .emplacement{width:100%;aspect-ratio:4/3;background:radial-gradient(60% 60% at 50% 45%,#3A1B0C,#0A0603 80%);box-shadow:none;-webkit-mask-image:linear-gradient(0deg,transparent,#000 25%);mask-image:linear-gradient(0deg,transparent,#000 25%)}
+.chemin{position:relative;z-index:2;padding:30px 18px 20px;border:1px solid var(--filet2);border-radius:6px;background:rgba(12,12,12,.85);font-size:13.5px;line-height:1.45;color:#fff}
+.chemin .num{position:absolute;top:-1px;width:30px;height:32px;background:var(--orange);border:2px solid #FF8A50;display:grid;place-items:center;font:500 22px/1 var(--police);color:#fff}
+.chemin.c1{text-align:right;margin-right:-30px}
+.chemin.c1 .num{right:12px}
+.chemin.c2{margin-left:-30px}
+.chemin.c2 .num{left:12px}
+.decision .btn{margin-top:18px}
+
+/* 06 · Qui : panneau scindé, photo sur orange à gauche */
+.qui{padding:40px 0 90px;background:var(--noir)}
+.qui .panneau{display:grid;grid-template-columns:1fr 1.05fr;border:1px solid var(--filet2);border-radius:10px;overflow:hidden;background:var(--carte)}
+.qui .photo{position:relative;background:linear-gradient(180deg,#E2582A,#C9431B)}
+.qui .photo .emplacement{width:100%;height:100%;min-height:100%;aspect-ratio:3/4;background:linear-gradient(180deg,#E3592B,#B83A15);box-shadow:none}
+.qui .photo .emplacement::after{color:rgba(255,255,255,.85);border-color:rgba(255,255,255,.45)}
+.qui .txt{padding:46px 36px 40px}
+.qui h2{font-size:clamp(24px,2.4vw,28px);text-transform:uppercase;line-height:1.2;margin-bottom:18px}
+.qui h2 b{font-weight:800}
+.qui p{font-size:12.5px;line-height:1.5;color:#E0E0E0;margin-bottom:12px}
+.qui p.intro{font-size:14px;color:#fff}
+.qui .btn{margin-top:8px}
+
+/* 07 · Témoignages : carrousel aux bords qui s'effacent */
+.temoignages{padding:70px 0 80px;background:var(--carte2);border-top:1px solid var(--filet);overflow:hidden}
+.temoignages h2{font-size:clamp(26px,2.6vw,32px);line-height:1.3}
+.temoignages .sous{font-size:14px;color:#ECECEC;margin-top:16px}
+.carrousel{position:relative;margin:36px auto 34px;max-width:1080px}
+.piste{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 20px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent);mask-image:linear-gradient(90deg,transparent,#000 14%,#000 86%,transparent)}
+.piste::-webkit-scrollbar{display:none}
+.avis{flex:0 0 230px;scroll-snap-align:center;padding:16px 14px 18px;border:1px solid var(--filet2);border-radius:6px;background:linear-gradient(180deg,#151515,#0C0C0C);text-align:left;font-size:11.5px;line-height:1.45;color:#D0D0D0}
+.avis .qui-a{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.avis .emplacement{width:36px;flex:none;aspect-ratio:1/1;border-radius:4px}
+.avis .emplacement::after{display:none}
+.avis .etoiles{color:var(--orange);font-size:9px;letter-spacing:.15em}
+.avis b{display:block;font-size:11.5px}
+.avis small{display:block;font-size:10px;color:var(--gris)}
+.fleche{position:absolute;top:50%;translate:0 -50%;z-index:3;width:44px;height:44px;display:grid;place-items:center;border:0;background:none;cursor:pointer}
+.fleche span{width:20px;height:20px;border-radius:50%;background:var(--orange);display:grid;place-items:center;color:#fff}
+.fleche svg{width:10px;height:10px}
+.fleche.g{left:calc(50% - 392px)}
+.fleche.d{right:calc(50% - 392px)}
+
+/* 08 · FAQ : titre à gauche, rangées à bouton orange à droite */
+.faq{padding:100px 0 110px;background:linear-gradient(180deg,var(--noir),#0A0A0A 80%,#121212);border-top:1px solid var(--filet)}
+.faq .wrap{display:grid;grid-template-columns:.75fr 1fr;gap:90px;align-items:start;width:min(1000px,100% - 40px)}
+.faq h2{font-size:clamp(26px,2.6vw,32px);line-height:1.25;margin-bottom:18px;font-weight:400}
+.faq .gauche p{font-size:15px;color:#ECECEC;line-height:1.4;margin-bottom:26px}
+.faq .gauche .emplacement{width:100%;max-width:300px;aspect-ratio:4/3;border-radius:8px;margin-top:34px}
+.faq details{border:1px solid var(--filet2);border-radius:6px;background:var(--rangee);margin-bottom:12px;overflow:hidden}
+.faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:52px;padding-left:16px;cursor:pointer;font:600 14px/1.35 var(--police);color:#fff}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary .plus{align-self:stretch;width:46px;flex:none;background:var(--orange);display:grid;place-items:center;color:#fff}
+.faq summary .plus svg{width:14px;height:14px;transition:rotate .3s var(--courbe)}
+.faq details[open] summary .plus svg{rotate:180deg}
+.faq details p{padding:0 62px 18px 16px;font-size:13.5px;line-height:1.55;color:#CFCFCF}
+
+/* 09 · Pied */
+#pied{background:var(--noir);border-top:1px solid var(--filet);font-size:12px;color:#CFCFCF}
+#pied .cols{display:grid;grid-template-columns:1.4fr .9fr 1fr 1.1fr;gap:30px;padding:56px 0 40px}
+#pied .script{font:700 34px/.8 var(--script);color:#fff}
+#pied .script small{display:block;font-size:22px;margin-left:4px}
+#pied .presente{margin-top:16px;max-width:230px;line-height:1.55}
+#pied .reseaux{display:flex;gap:8px;margin-top:16px}
+#pied .reseaux a{width:44px;height:44px;display:grid;place-items:center}
+#pied .reseaux span{width:30px;height:30px;border-radius:50%;background:#1C1C1C;display:grid;place-items:center;color:#fff}
+#pied .reseaux svg{width:13px;height:13px}
+#pied h4{font:600 14px/1 var(--police);color:#fff;margin-bottom:16px}
+#pied ul{list-style:none;display:grid;gap:7px}
+#pied ul a:hover{color:var(--orange)}
+#pied .contact li{display:flex;align-items:center;gap:8px}
+#pied .contact svg{width:14px;height:14px;flex:none}
+#pied .bas{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:24px 0 34px;border-top:1px solid var(--filet);color:var(--gris);font-size:11.5px}
+#pied .droite{display:flex;gap:30px;text-align:right}
+
+@media (max-width:1000px){
+  .nav ul li:not(:last-child){display:none}
+  .cartes{grid-template-columns:repeat(2,1fr);gap:16px 12px}
+  .faq .wrap{gap:50px}
+  #pied .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  .hero{min-height:0;padding-bottom:60px;text-align:center}
+  .hero .scene{position:relative;right:auto;width:100%;height:auto;aspect-ratio:3/4;max-height:520px;margin-top:-62px}
+  .hero .scene .emplacement{aspect-ratio:auto}
+  .hero .scene::after{background:linear-gradient(0deg,var(--noir),transparent 35%),linear-gradient(180deg,rgba(0,0,0,.6),transparent 20%)}
+  .hero .txt{padding-top:0;margin:-40px auto 0;max-width:520px}
+  .chiffres,.clients{justify-content:center}
+  .notif.n1{right:20px;top:120px}
+  .notif.n2{left:20px;top:330px;bottom:auto}
+  .probleme .wrap{grid-template-columns:1fr;gap:34px}
+  .probleme .emplacement{max-width:none;aspect-ratio:4/3}
+  .duel{grid-template-columns:1fr 1fr;gap:12px}
+  .duel .emplacement{grid-column:1/-1;grid-row:1;max-width:520px;margin:0 auto}
+  .chemin.c1,.chemin.c2{margin:0;text-align:center;padding-top:44px}
+  .chemin.c1 .num,.chemin.c2 .num{left:50%;right:auto;translate:-50% 0}
+  .qui .panneau{grid-template-columns:1fr}
+  .qui .photo .emplacement{aspect-ratio:4/3;height:auto}
+  .faq .wrap{grid-template-columns:1fr;gap:30px;text-align:center}
+  .faq .gauche .emplacement{margin-inline:auto}
+  .faq details{text-align:left}
+  .fleche.g{left:4px}.fleche.d{right:4px}
+  .piste{padding:0 calc(50% - 120px)}
+  .avis{flex-basis:240px}
+}
+@media (max-width:560px){
+  .kicker{letter-spacing:.32em}
+  .hero h1{font-size:32px}
+  .hero .scene{aspect-ratio:4/5}
+  .notif{width:190px}
+  .notif.n2{display:none}
+  .btn{min-height:48px;font-size:12.5px;padding:0 16px 0 20px}
+  .cartes{grid-template-columns:1fr;gap:26px}
+  .tableau .ligne-t div{padding:12px 10px;font-size:11.5px}
+  .tableau .tete div{font-size:11px;padding:8px 10px}
+  .qui .txt{padding:34px 22px}
+  #pied .cols{grid-template-columns:1fr}
+  #pied .bas{flex-direction:column;text-align:center}
+  #pied .droite{justify-content:center;text-align:center}
+}
+</style>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/portfolio.css">
+<link rel="stylesheet" href="../../commun/flottant.css">
+</head>
+<body>
+<div data-progression style="background:var(--orange)"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="fleche" viewBox="0 0 12 12"><path d="M3 3h6v6M9 3 3 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="chevron" viewBox="0 0 16 16"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="gauche" viewBox="0 0 12 12"><path d="M7.5 3 4.5 6l3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="droite" viewBox="0 0 12 12"><path d="m4.5 3 3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="flamme" viewBox="0 0 24 24"><path d="M12 3c1 3.5 5 5.5 5 10a5 5 0 0 1-10 0c0-2.4 1.3-3.8 2.5-5 .2 1.6 1 2.6 2 3 0-2.8-.8-5.3.5-8Z" fill="currentColor"/></symbol>
+  <symbol id="oeil" viewBox="0 0 24 24"><path d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="eclair" viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="courbe" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8M15 7h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="main" viewBox="0 0 24 24"><path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.8A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m9 11 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="insta" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  <symbol id="lin" viewBox="0 0 24 24"><path d="M5 9h3v10H5zM6.5 4a1.7 1.7 0 1 1 0 3.4 1.7 1.7 0 0 1 0-3.4ZM10 9h3v1.5c.6-1 1.8-1.8 3.5-1.8 2.6 0 3.5 1.7 3.5 4.5V19h-3v-5.2c0-1.4-.4-2.3-1.7-2.3-1.4 0-2.3 1-2.3 2.6V19h-3z" fill="currentColor"/></symbol>
+  <symbol id="fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.3V10H7v4h3v7h4v-7h3l.5-4H14V8.6c0-.4.2-.6.6-.6Z" fill="currentColor"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="tel" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="lieu" viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+</svg>
+
+<section class="hero" id="hero">
+  <nav class="nav" aria-label="Navigation principale">
+    <a class="logo" href="#hero" aria-label="Mayombe Médias, accueil"><i></i>Mayombe</a>
+    <ul>
+      <li><a href="#piliers">Piliers</a></li>
+      <li><a href="#qui">À propos</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a class="contact" href="https://wa.me/22500000000?text=Bonjour%20Kevin%2C%20je%20veux%20vendre%20plus%20avec%20la%20publicit%C3%A9." target="_blank" rel="noopener">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="scene" data-rv>
+    <div class="emplacement" data-img="X-hero" data-format="3:4" data-alt="Kevin Ondo, casque au cou, assis dans un bureau sombre éclairé par une lampe"><img src="images/X-hero.jpg" alt="Kevin Ondo, casque au cou, assis dans un bureau sombre éclairé par une lampe" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  </div>
+  <div class="notif n1" aria-hidden="true"><span class="ico"><svg><use href="#flamme"/></svg></span><div>Vous avez reçu un paiement<small><span>150 000 FCFA · Bravo !</span><span>19:30</span></small></div></div>
+  <div class="notif n2" aria-hidden="true"><span class="ico"><svg><use href="#flamme"/></svg></span><div>Vous avez reçu un paiement<small><span>85 000 FCFA · Bravo !</span><span>19:42</span></small></div></div>
+  <div class="wrap">
+    <div class="txt">
+      <span class="kicker" data-rv>Gestion de publicité payante</span>
+      <h1 data-lignes>Vendez plus avec<br><b>la publicité payante</b></h1>
+      <p class="lead" data-rv>Placez votre entreprise devant les bonnes personnes, avec des méthodes testées qui rapportent de vrais clients.</p>
+      <div class="chiffres" data-rv>
+        <span><i>+ 100</i> lancements réussis</span>
+        <span><i>+ 450 M</i> FCFA générés pour nos clients</span>
+        <span><i>× 6</i> en moyenne sur chaque franc investi</span>
+      </div>
+      <a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Kevin%2C%20je%20veux%20vendre%20plus%20avec%20la%20publicit%C3%A9." target="_blank" rel="noopener" data-rv data-aimant>Je veux vendre plus <span class="fl"><svg><use href="#fleche"/></svg></span></a>
+      <div class="clients" data-rv>
+        <div class="bulles" aria-hidden="true"><i style="background:#7F341D">AK</i><i style="background:#3B3B3B">MN</i><i style="background:#B03702">FD</i><i style="background:#262626">JB</i></div>
+        <span><b>+ 1 000 clients</b>accompagnés et satisfaits</span>
+      </div>
+    </div>
+  </div>
+  <a class="descendre" href="#probleme" aria-label="Descendre vers la suite"><svg><use href="#chevron"/></svg></a>
+</section>
+
+<section class="probleme" id="probleme">
+  <div class="wrap">
+    <div class="emplacement" data-img="X-probleme" data-format="1:1" data-alt="Silhouette d'un patron seul dans un couloir sombre, des billets tombent de sa mallette"><img src="images/X-probleme.jpg" alt="Silhouette d'un patron seul dans un couloir sombre, des billets tombent de sa mallette" loading="lazy" decoding="async" onerror="this.remove()"></div>
+    <div>
+      <span class="kicker" data-rv>Le problème</span>
+      <h2 data-rv>La publicité sans cap <em>ne mène votre entreprise nulle part.</em></h2>
+      <p data-rv>Chez Mayombe Médias, la publicité prend son sens quand elle s'appuie sur une vision du commerce, une exécution précise, des résultats suivis et un vrai partenariat.</p>
+      <p data-rv>C'est cette façon de faire qui va donner une direction à votre budget et le transformer en croissance réelle.</p>
+      <a class="btn reflet" href="#piliers" data-rv data-aimant>Je veux vendre plus <span class="fl"><svg><use href="#fleche"/></svg></span></a>
+    </div>
+  </div>
+</section>
+
+<section class="piliers centre" id="piliers">
+  <div class="wrap">
+    <span class="kicker" data-rv>Méthode</span>
+    <h2 data-lignes>Les piliers de la méthode<br><em>Mayombe Médias :</em></h2>
+    <p class="sous" data-rv>Chaque campagne suit un chemin testé et validé pour tirer le meilleur de votre budget.</p>
+    <div class="cartes">
+      <div class="pilier" data-rv><span class="ico"><svg><use href="#oeil"/></svg></span><h3>Vision du commerce</h3><p>Avant la moindre annonce, on plonge dans votre activité : votre offre, votre client, votre marché. Une publicité ne marche qu'avec un cap clair.</p></div>
+      <div class="pilier" data-rv><span class="ico"><svg><use href="#eclair"/></svg></span><h3>Exécution précise</h3><p>Rien au hasard : chaque décision part des chiffres, avec des campagnes réglées pour servir l'objectif de votre entreprise.</p></div>
+      <div class="pilier" data-rv><span class="ico"><svg><use href="#courbe"/></svg></span><h3>Résultats</h3><p>Notre engagement porte sur le résultat : vendre plus, gagner des clients, faire grandir votre chiffre pour de vrai.</p></div>
+      <div class="pilier" data-rv><span class="ico"><svg><use href="#main"/></svg></span><h3>Partenariat</h3><p>Plus qu'une agence, nous faisons partie de votre équipe : proches, transparents, et engagés à grandir avec vous.</p></div>
+    </div>
+    <a class="btn reflet" href="#comparaison" data-rv data-aimant>Je veux vendre plus avec la pub <span class="fl"><svg><use href="#fleche"/></svg></span></a>
+    <p class="phrase" data-rv>« Pendant que vous réfléchissez, votre concurrent vend en ligne. »</p>
+  </div>
+</section>
+
+<section class="comparaison centre" id="comparaison">
+  <div class="wrap">
+    <span class="kicker" data-rv>Comparaison</span>
+    <h2 data-lignes>Pourquoi nous sommes <em>différents</em><br>des agences classiques</h2>
+    <p class="sous" data-rv>Voyez l'écart entre ce que vendent les autres agences sous le nom de « publicité » et la façon de faire de Mayombe Médias.</p>
+    <div class="tableau" data-rv role="table" aria-label="Comparaison entre les autres agences et Mayombe Médias">
+      <div class="tete" role="row"><div role="columnheader">Les autres agences de publicité</div><div role="columnheader">Mayombe Médias</div></div>
+      <div class="ligne-t" role="row"><div role="cell">Vous ne comprenez jamais les rapports, ou pire : ils n'arrivent pas.</div><div role="cell">Des rapports simples, en français clair : vous savez ce que vous avez mis, ce qui est revenu et le gain net.</div></div>
+      <div class="ligne-t" role="row"><div role="cell">Le budget part et vous ne savez pas où il est passé.</div><div role="cell">Un point chaque semaine, un bilan chaque mois et un tableau de bord en direct sur chaque franc investi.</div></div>
+      <div class="ligne-t" role="row"><div role="cell">Ils parlent de clics et d'abonnés, sans comprendre votre commerce.</div><div role="cell">On regarde tout : votre tunnel, votre équipe de vente, votre offre. Pas seulement l'annonce.</div></div>
+      <div class="ligne-t" role="row"><div role="cell">Des campagnes génériques qui brûlent le budget sans toucher le bon public.</div><div role="cell">Des campagnes sur mesure, créatives et ciblées pour mettre votre marque devant les bons clients.</div></div>
+      <div class="ligne-t" role="row"><div role="cell">Ils lancent et croisent les doigts, sans suivre ni ajuster.</div><div role="cell">Un suivi chaque jour et des réglages continus jusqu'à trouver ce qui rapporte le plus.</div></div>
+      <div class="ligne-t" role="row"><div role="cell">Ils se limitent à diffuser des annonces, sans s'engager sur le résultat.</div><div role="cell">Un plan d'action clair, un suivi de près et des ajustements à chaque étape pour atteindre vos objectifs avec vous.</div></div>
+      <div class="ligne-t" role="row"><div role="cell">Ils livrent des contacts et laissent votre commercial se débrouiller.</div><div role="cell">Des contacts qualifiés, et votre équipe de vente guidée pour les transformer.</div></div>
+      <div class="ligne-t" role="row"><div role="cell">Ils promettent des miracles rapides et ne se soucient pas de votre entreprise.</div><div role="cell">La vérité : ni magie ni promesse en l'air. Votre argent est traité avec le sérieux qu'il mérite.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="decision centre" id="decision">
+  <div class="wrap">
+    <h2 data-lignes>Maintenant que vous voyez la différence,<br><em>le choix est simple :</em></h2>
+    <div class="duel">
+      <div class="chemin c1" data-rv><span class="num">1</span>Grandir avec une méthode, une stratégie et un vrai cap de croissance avec Mayombe Médias.</div>
+      <div class="emplacement" data-img="X-decision" data-format="4:3" data-alt="Kevin Ondo confiant au premier plan, derrière lui un commerçant la main sur le front"><img src="images/X-decision.jpg" alt="Kevin Ondo confiant au premier plan, derrière lui un commerçant la main sur le front" loading="lazy" decoding="async" onerror="this.remove()"></div>
+      <div class="chemin c2" data-rv><span class="num">2</span>Rester frustré, stressé et sans résultat avec d'autres agences.</div>
+    </div>
+    <a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Kevin%2C%20je%20choisis%20la%20m%C3%A9thode." target="_blank" rel="noopener" data-rv data-aimant>Je veux vendre plus avec la pub <span class="fl"><svg><use href="#fleche"/></svg></span></a>
+  </div>
+</section>
+
+<section class="qui" id="qui">
+  <div class="wrap">
+    <div class="panneau" data-rv>
+      <div class="photo"><div class="emplacement" data-img="X-portrait" data-format="3:4" data-alt="Portrait de Kevin Ondo en sweat à capuche, casque autour du cou, sur fond orange"><img src="images/X-portrait.jpg" alt="Portrait de Kevin Ondo en sweat à capuche, casque autour du cou, sur fond orange" loading="lazy" decoding="async" onerror="this.remove()"></div></div>
+      <div class="txt">
+        <span class="kicker">Qui fait tourner</span>
+        <h2>Qui dirige<br><b>Mayombe Médias ?</b></h2>
+        <p class="intro">Enchanté, je suis Kevin, et je dirige Mayombe Médias depuis Brazzaville.</p>
+        <p>Je suis gestionnaire de publicité payante.</p>
+        <p>Ça peut sembler étrange de commencer par là, mais il le faut.</p>
+        <p>Beaucoup se présentent comme « partenaire stratégique » ou « consultant en ceci, expert en cela » avant d'être de bons gestionnaires de publicité.</p>
+        <p>Avant de me lancer dans ce métier, j'ai passé des années plongé dans l'analyse des chiffres de vente.</p>
+        <p>Ce parcours m'a donné ce qui manque à la plupart : repérer les blocages, séparer ce qui flatte de ce qui rapporte, et décider sans trembler.</p>
+        <p>Ces dernières années, j'ai mis ce regard au service d'entreprises de toute la sous-région, pour que leurs annonces deviennent une croissance réelle. C'est ce même regard qui guide aujourd'hui la méthode Mayombe.</p>
+        <a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Kevin%2C%20je%20veux%20vendre%20plus." target="_blank" rel="noopener" data-aimant>Je veux vendre plus <span class="fl"><svg><use href="#fleche"/></svg></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="temoignages centre" id="temoignages">
+  <div class="wrap">
+    <span class="kicker" data-rv>Témoignages</span>
+    <h2 data-lignes>Des entreprises qui ont <em>multiplié</em><br><em>leurs ventes</em> avec Mayombe</h2>
+    <p class="sous" data-rv>Des résultats réels, mesurés et vérifiables</p>
+  </div>
+  <div class="carrousel" data-rv>
+    <button class="fleche g" type="button" aria-label="Avis précédent"><span><svg><use href="#gauche"/></svg></span></button>
+    <div class="piste" tabindex="0" aria-label="Avis de clients">
+      <article class="avis" aria-hidden="true"><div class="qui-a"><div class="emplacement" style="background:#1A1A1A"></div><div><span class="etoiles">★★★★★</span><b>Grâce Mabiala</b><small>Boutique de mode</small></div></div>« Une méthode claire, des rapports que je comprends enfin. »</article>
+      <article class="avis"><div class="qui-a"><div class="emplacement" data-img="X-temoin-1" data-format="1:1" data-alt="Portrait d'Aminata Koné, gérante d'une boutique de cosmétiques"><img src="images/X-temoin-1.jpg" alt="Portrait d'Aminata Koné, gérante d'une boutique de cosmétiques" loading="lazy" decoding="async" onerror="this.remove()"></div><div><span class="etoiles" aria-label="5 étoiles sur 5">★★★★★</span><b>Aminata Koné</b><small>Cosmétiques, Abidjan</small></div></div>« En 3 mois, mes ventes en ligne ont triplé. Kevin ne gère pas que les annonces : il comprend mon commerce. »</article>
+      <article class="avis"><div class="qui-a"><div class="emplacement" data-img="X-temoin-2" data-format="1:1" data-alt="Portrait de Merveille Nzaba, fondateur d'une marque de jus"><img src="images/X-temoin-2.jpg" alt="Portrait de Merveille Nzaba, fondateur d'une marque de jus" loading="lazy" decoding="async" onerror="this.remove()"></div><div><span class="etoiles" aria-label="5 étoiles sur 5">★★★★★</span><b>Merveille Nzaba</b><small>Jus naturels, Pointe-Noire</small></div></div>« Je sais enfin où va chaque franc. Le tableau de bord en direct a tout changé pour moi. »</article>
+      <article class="avis"><div class="qui-a"><div class="emplacement" data-img="X-temoin-3" data-format="1:1" data-alt="Portrait de Fatou Diop, directrice d'une école de formation"><img src="images/X-temoin-3.jpg" alt="Portrait de Fatou Diop, directrice d'une école de formation" loading="lazy" decoding="async" onerror="this.remove()"></div><div><span class="etoiles" aria-label="5 étoiles sur 5">★★★★★</span><b>Fatou Diop</b><small>École de formation, Dakar</small></div></div>« Nos inscriptions ont doublé dès le 2e mois, et mon équipe sait maintenant relancer chaque contact. »</article>
+      <article class="avis" aria-hidden="true"><div class="qui-a"><div class="emplacement" style="background:#1A1A1A"></div><div><span class="etoiles">★★★★★</span><b>Jordan Bouesso</b><small>Électronique</small></div></div>« Des chiffres honnêtes, chaque semaine. »</article>
+    </div>
+    <button class="fleche d" type="button" aria-label="Avis suivant"><span><svg><use href="#droite"/></svg></span></button>
+  </div>
+  <a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Kevin%2C%20je%20veux%20les%20m%C3%AAmes%20r%C3%A9sultats." target="_blank" rel="noopener" data-rv data-aimant>Je veux vendre plus avec la pub <span class="fl"><svg><use href="#fleche"/></svg></span></a>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="gauche">
+      <span class="kicker" data-rv>Questions</span>
+      <h2 data-lignes>Les questions fréquentes,<br>en toute transparence</h2>
+      <p data-rv>Des gestionnaires de pub, il y en a partout. Des spécialistes qui comprennent votre commerce, non.</p>
+      <a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Kevin%2C%20j%27ai%20une%20question." target="_blank" rel="noopener" data-rv data-aimant>Je veux vendre plus <span class="fl"><svg><use href="#fleche"/></svg></span></a>
+      <div class="emplacement" data-img="X-faq" data-format="4:3" data-alt="Kevin Ondo au bureau, casque au cou, répond à un message devant son ordinateur"><img src="images/X-faq.jpg" alt="Kevin Ondo au bureau, casque au cou, répond à un message devant son ordinateur" loading="lazy" decoding="async" onerror="this.remove()"></div>
+    </div>
+    <div class="droite-faq">
+      <details data-rv><summary>Mon budget est serré. Combien faut-il pour commencer ?<span class="plus"><svg><use href="#chevron"/></svg></span></summary><p>On démarre avec 100 000 FCFA de budget publicitaire par mois. On commence petit, on mesure, puis on augmente seulement ce qui rapporte.</p></details>
+      <details data-rv><summary>En combien de temps je vois des résultats ?<span class="plus"><svg><use href="#chevron"/></svg></span></summary><p>Les premiers contacts arrivent dès la première semaine. Une campagne trouve son rythme en 30 à 45 jours de réglages.</p></details>
+      <details data-rv><summary>Sur quels réseaux faites-vous de la publicité ?<span class="plus"><svg><use href="#chevron"/></svg></span></summary><p>Facebook, Instagram, TikTok et Google, selon l'endroit où se trouvent vos clients.</p></details>
+      <details data-rv><summary>Est-ce que je garde la main sur mes comptes ?<span class="plus"><svg><use href="#chevron"/></svg></span></summary><p>Oui. Les comptes publicitaires sont à votre nom, vous y avez accès à tout moment.</p></details>
+      <details data-rv><summary>Et si ça ne marche pas pour mon activité ?<span class="plus"><svg><use href="#chevron"/></svg></span></summary><p>On fait d'abord un diagnostic gratuit. Si la publicité n'est pas le bon levier pour vous, on vous le dit franchement.</p></details>
+      <details data-rv><summary>Vous travaillez avec des entreprises hors du Congo ?<span class="plus"><svg><use href="#chevron"/></svg></span></summary><p>Oui, avec des commerces de toute l'Afrique francophone. Tout se fait à distance, par WhatsApp et en visio.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer id="pied">
+  <div class="wrap">
+    <div class="cols">
+      <div><div class="script">Mayombe<small>Médias</small></div><p class="presente">On transforme la publicité payante en résultats. Spécialistes des campagnes qui vendent.</p>
+        <div class="reseaux"><a href="#pied" aria-label="Instagram"><span><svg><use href="#insta"/></svg></span></a><a href="#pied" aria-label="LinkedIn"><span><svg><use href="#lin"/></svg></span></a><a href="#pied" aria-label="Facebook"><span><svg><use href="#fb"/></svg></span></a></div></div>
+      <div><h4>Liens rapides</h4><ul><li><a href="#hero">Accueil</a></li><li><a href="#piliers">Nos piliers</a></li><li><a href="#temoignages">Témoignages</a></li><li><a href="#faq">Questions fréquentes</a></li></ul></div>
+      <div><h4>Services</h4><ul><li>Gestion de publicité payante</li><li>Google Ads</li><li>Meta Ads (Facebook, Instagram)</li><li>TikTok Ads</li><li>Analyse et optimisation</li><li>Conseil en stratégie</li></ul></div>
+      <div><h4>Contact</h4><ul class="contact"><li><svg><use href="#mail"/></svg>bonjour@mayombe-medias.cg</li><li><svg><use href="#tel"/></svg><a href="https://wa.me/22500000000?text=Bonjour%20Kevin." target="_blank" rel="noopener">WhatsApp : +225 00 00 00 00</a></li><li><svg><use href="#lieu"/></svg>Brazzaville, Congo</li></ul></div>
+    </div>
+    <div class="bas">
+      <span>© 2026 Mayombe Médias. Tous droits réservés. Template · Style X « Braise de cinéma »</span>
+      <div class="pf-centre"><span class="pf-par">Réalisé par <strong>Yedidia Ruben - Digital Strategist</strong></span></div><div class="droite"><a href="#pied">Politique de confidentialité</a><a href="#pied">Conditions d'utilisation</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.carrousel').forEach(c => {
+  const p = c.querySelector('.piste');
+  p.scrollLeft = (p.scrollWidth - p.clientWidth) / 2;
+  const pas = () => (p.querySelector('.avis').offsetWidth + 12);
+  c.querySelector('.g').addEventListener('click', () => p.scrollBy({left: -pas(), behavior: 'smooth'}));
+  c.querySelector('.d').addEventListener('click', () => p.scrollBy({left: pas(), behavior: 'smooth'}));
+});
+</script>
+<script src="../../commun/anim.js" defer></script>
+
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template X<b>Braise de cinéma</b></span><nav aria-label="Autour du template X"><ul><li><a href="./">Template</a></li><li><a href="avec-images.html" aria-current=page>Template avec images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html">Design<small>DESIGN.md</small></a></li><li><a href="prompt.html">Prompt de la page<small>kit</small></a></li><li><a href="prompts.html">Prompts des images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template X : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">X</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+</body>
+</html>

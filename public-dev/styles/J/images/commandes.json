@@ -1,0 +1,343 @@
+{
+  "template": "J",
+  "personnage": {
+    "nom": "Koffi Mensah",
+    "genre": "homme",
+    "age": 38,
+    "ville": "Lomé",
+    "physique": "peau brun foncé, crâne rasé net, barbe courte bien taillée, carrure moyenne, sourire calme",
+    "signature": "lunettes rondes fines à monture dorée, montre acier",
+    "metier": "graphiste formateur sur Canva, fondateur de l'école en ligne Calque",
+    "tenue": "tee-shirt blanc uni ou veste vert sapin #2E5A2C sur pantalon crème",
+    "regle": "même visage, même coiffure, même signature sur chaque image où il apparaît"
+  },
+  "palette": {
+    "nuit": "#011100",
+    "foret": "#111C0D",
+    "carte": "#1A2818",
+    "sauge": "#57743D",
+    "neon": "#00FF71",
+    "menthe": "#CFE3C8",
+    "perle": "#EFEFEF",
+    "pied": "#283E22"
+  },
+  "images": [
+    {
+      "id": "J-hero",
+      "fichier": "images/J-hero.jpg",
+      "section": "hero",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "portrait de studio du graphiste",
+        "personnage": "Koffi Mensah, homme de 38 ans, peau brun foncé, crâne rasé net, barbe courte bien taillée, lunettes rondes fines à monture dorée, montre acier",
+        "action": "il sourit, le menton posé sur une main, le coude sur un bureau, regard vers l'objectif",
+        "cadrage": "plan taille serré, sujet centré, un peu d'espace au-dessus de la tête",
+        "objectif": "85 mm, f/2",
+        "lumiere": "lumière douce de face, contre-jour vert discret",
+        "decor": "fond vert mousse sombre dégradé, uni",
+        "palette": [
+          "#111C0D",
+          "#57743D",
+          "#FFFFFF"
+        ],
+        "ambiance": "confiante et chaleureuse",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "logo Canva ou marque réelle",
+          "fond chargé"
+        ]
+      },
+      "prompt": "Photo de Koffi Mensah, homme de 38 ans, peau brun foncé, crâne rasé net, barbe courte bien taillée, lunettes rondes fines à monture dorée, montre acier, portrait de studio du graphiste : il sourit, le menton posé sur une main, le coude sur un bureau, regard vers l'objectif, plan taille serré, sujet centré, un peu d'espace au-dessus de la tête, objectif 85 mm, f/2, lumière douce de face, contre-jour vert discret, décor fond vert mousse sombre dégradé, uni, couleurs dominantes #111C0D, #57743D, #FFFFFF, ambiance confiante et chaleureuse, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/249402355/02.png : haut de page, portrait à droite"
+    },
+    {
+      "id": "J-appareils",
+      "fichier": "images/J-appareils.jpg",
+      "section": "programme",
+      "format": "16:9",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "écran d'ordinateur portable vu de face, montrant l'espace élève d'une école en ligne",
+        "personnage": "Koffi Mensah, homme de 38 ans, peau brun foncé, crâne rasé net, barbe courte bien taillée, lunettes rondes fines à monture dorée, montre acier",
+        "action": "à l'écran, une page sombre vert mousse avec la photo du graphiste et une rangée de vignettes de leçons",
+        "cadrage": "écran plein cadre, légère perspective, bords de l'ordinateur visibles",
+        "objectif": "50 mm, f/4",
+        "lumiere": "lumière de bureau douce, reflets discrets",
+        "decor": "bureau sombre, flou",
+        "palette": [
+          "#011100",
+          "#1A2818",
+          "#57743D"
+        ],
+        "ambiance": "premium, technologique",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "logo Canva ou marque réelle",
+          "texte lisible à l'écran"
+        ]
+      },
+      "prompt": "Photo de Koffi Mensah, homme de 38 ans, peau brun foncé, crâne rasé net, barbe courte bien taillée, lunettes rondes fines à monture dorée, montre acier, écran d'ordinateur portable vu de face, montrant l'espace élève d'une école en ligne : à l'écran, une page sombre vert mousse avec la photo du graphiste et une rangée de vignettes de leçons, écran plein cadre, légère perspective, bords de l'ordinateur visibles, objectif 50 mm, f/4, lumière de bureau douce, reflets discrets, décor bureau sombre, flou, couleurs dominantes #011100, #1A2818, #57743D, ambiance premium, technologique, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/249402355/02.png : tranche 2, appareils au-dessus des modules"
+    },
+    {
+      "id": "J-ecran",
+      "fichier": "images/J-ecran.jpg",
+      "section": "pratique",
+      "format": "4:3",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "écran d'ordinateur montrant une grille de 8 vignettes de leçons",
+        "personnage": null,
+        "action": "vignettes verticales sombres et claires alternées, avec photos et grandes lettres décoratives floues",
+        "cadrage": "écran de face, cadrage serré sur la dalle",
+        "objectif": "50 mm, f/5.6",
+        "lumiere": "écran lumineux, pièce sombre",
+        "decor": "aucun, l'écran remplit l'image",
+        "palette": [
+          "#1A2818",
+          "#E4E4E4",
+          "#57743D"
+        ],
+        "ambiance": "ordonnée, studieuse",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "logo Canva ou marque réelle",
+          "texte lisible"
+        ]
+      },
+      "prompt": "Photo écran d'ordinateur montrant une grille de 8 vignettes de leçons : vignettes verticales sombres et claires alternées, avec photos et grandes lettres décoratives floues, écran de face, cadrage serré sur la dalle, objectif 50 mm, f/5.6, écran lumineux, pièce sombre, décor aucun, l'écran remplit l'image, couleurs dominantes #1A2818, #E4E4E4, #57743D, ambiance ordonnée, studieuse, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/249402355/02.png : tranche 3, ordinateur de la carte « cours pratique »"
+    },
+    {
+      "id": "J-eleve-1",
+      "fichier": "images/J-eleve-1.jpg",
+      "section": "eleves",
+      "format": "3:4",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "affiche graphique de mode réalisée par une élève",
+        "personnage": null,
+        "action": "une jeune femme en tailleur noir, composition éditoriale sombre et dorée, grandes formes abstraites",
+        "cadrage": "affiche de face, bords nets, légère ombre",
+        "objectif": "50 mm, f/8",
+        "lumiere": "lumière de studio contrastée",
+        "decor": "fond noir et brun chaud",
+        "palette": [
+          "#111111",
+          "#C59A4A",
+          "#5A2E1E"
+        ],
+        "ambiance": "luxe, audacieuse",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "logo Canva ou marque réelle",
+          "lettres ou slogan lisibles"
+        ]
+      },
+      "prompt": "Photo affiche graphique de mode réalisée par une élève : une jeune femme en tailleur noir, composition éditoriale sombre et dorée, grandes formes abstraites, affiche de face, bords nets, légère ombre, objectif 50 mm, f/8, lumière de studio contrastée, décor fond noir et brun chaud, couleurs dominantes #111111, #C59A4A, #5A2E1E, ambiance luxe, audacieuse, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/249402355/02.png : tranche 4, 1re affiche des élèves"
+    },
+    {
+      "id": "J-eleve-2",
+      "fichier": "images/J-eleve-2.jpg",
+      "section": "eleves",
+      "format": "3:4",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "visuel Instagram aux tons chauds réalisé par un élève pour une coiffeuse d'Abidjan",
+        "personnage": null,
+        "action": "portrait d'une cliente aux cheveux tressés, éléments graphiques fins autour",
+        "cadrage": "visuel vertical de face, net",
+        "objectif": "85 mm, f/2.8",
+        "lumiere": "lumière chaude orangée",
+        "decor": "dégradé brun et cuivre",
+        "palette": [
+          "#3A1E14",
+          "#C0652F",
+          "#F1E3D3"
+        ],
+        "ambiance": "chaleureuse, professionnelle",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "logo Canva ou marque réelle",
+          "lettres lisibles"
+        ]
+      },
+      "prompt": "Photo visuel Instagram aux tons chauds réalisé par un élève pour une coiffeuse d'Abidjan : portrait d'une cliente aux cheveux tressés, éléments graphiques fins autour, visuel vertical de face, net, objectif 85 mm, f/2.8, lumière chaude orangée, décor dégradé brun et cuivre, couleurs dominantes #3A1E14, #C0652F, #F1E3D3, ambiance chaleureuse, professionnelle, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/249402355/02.png : tranche 4, 2e affiche des élèves"
+    },
+    {
+      "id": "J-eleve-3",
+      "fichier": "images/J-eleve-3.jpg",
+      "section": "eleves",
+      "format": "3:4",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "page de portfolio en noir et blanc réalisée par une élève",
+        "personnage": null,
+        "action": "deux portraits professionnels en niveaux de gris, grande lettre décorative floue derrière",
+        "cadrage": "mise en page de face, grande marge blanche",
+        "objectif": "50 mm, f/8",
+        "lumiere": "lumière de studio diffuse",
+        "decor": "fond gris clair",
+        "palette": [
+          "#F2F2F2",
+          "#9A9A9A",
+          "#1E1E1E"
+        ],
+        "ambiance": "élégante, sobre",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "logo Canva ou marque réelle",
+          "lettres lisibles"
+        ]
+      },
+      "prompt": "Photo page de portfolio en noir et blanc réalisée par une élève : deux portraits professionnels en niveaux de gris, grande lettre décorative floue derrière, mise en page de face, grande marge blanche, objectif 50 mm, f/8, lumière de studio diffuse, décor fond gris clair, couleurs dominantes #F2F2F2, #9A9A9A, #1E1E1E, ambiance élégante, sobre, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/249402355/02.png : tranche 4, 3e affiche des élèves"
+    },
+    {
+      "id": "J-cercle",
+      "fichier": "images/J-cercle.jpg",
+      "section": "recommande",
+      "format": "1:1",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "portrait du graphiste en extérieur",
+        "personnage": "Koffi Mensah, homme de 38 ans, peau brun foncé, crâne rasé net, barbe courte bien taillée, lunettes rondes fines à monture dorée, montre acier",
+        "action": "il sourit, la main près de la joue",
+        "cadrage": "gros plan visage et épaules, sujet centré pour un recadrage en cercle",
+        "objectif": "85 mm, f/1.8",
+        "lumiere": "lumière du jour douce",
+        "decor": "rue de Lomé floue, ciel clair",
+        "palette": [
+          "#EFEFEF",
+          "#57743D",
+          "#1A2818"
+        ],
+        "ambiance": "amicale, rassurante",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "logo Canva ou marque réelle"
+        ]
+      },
+      "prompt": "Photo de Koffi Mensah, homme de 38 ans, peau brun foncé, crâne rasé net, barbe courte bien taillée, lunettes rondes fines à monture dorée, montre acier, portrait du graphiste en extérieur : il sourit, la main près de la joue, gros plan visage et épaules, sujet centré pour un recadrage en cercle, objectif 85 mm, f/1.8, lumière du jour douce, décor rue de Lomé floue, ciel clair, couleurs dominantes #EFEFEF, #57743D, #1A2818, ambiance amicale, rassurante, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/249402355/02.png : tranche 4, cercle à droite du diamant"
+    },
+    {
+      "id": "J-affiche",
+      "fichier": "images/J-affiche.jpg",
+      "section": "transformation",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "affiche éditoriale avec le graphiste",
+        "personnage": "Koffi Mensah, homme de 38 ans, peau brun foncé, crâne rasé net, barbe courte bien taillée, lunettes rondes fines à monture dorée, montre acier",
+        "action": "il marche vers l'objectif, une tablette sous le bras, devant de grandes formes blanches abstraites floues",
+        "cadrage": "plan en pied, sujet centré",
+        "objectif": "35 mm, f/4",
+        "lumiere": "lumière de studio douce, ombre portée nette",
+        "decor": "fond gris perle, grandes formes vert sapin",
+        "palette": [
+          "#E4E4E4",
+          "#2E5A2C",
+          "#121A10"
+        ],
+        "ambiance": "magazine, dynamique",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "logo Canva ou marque réelle",
+          "mot lisible"
+        ]
+      },
+      "prompt": "Photo de Koffi Mensah, homme de 38 ans, peau brun foncé, crâne rasé net, barbe courte bien taillée, lunettes rondes fines à monture dorée, montre acier, affiche éditoriale avec le graphiste : il marche vers l'objectif, une tablette sous le bras, devant de grandes formes blanches abstraites floues, plan en pied, sujet centré, objectif 35 mm, f/4, lumière de studio douce, ombre portée nette, décor fond gris perle, grandes formes vert sapin, couleurs dominantes #E4E4E4, #2E5A2C, #121A10, ambiance magazine, dynamique, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/249402355/02.png : tranche 4, affiche « NEXT » au centre"
+    },
+    {
+      "id": "J-mentor",
+      "fichier": "images/J-mentor.jpg",
+      "section": "mentor",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "portrait en pied du graphiste assis",
+        "personnage": "Koffi Mensah, homme de 38 ans, peau brun foncé, crâne rasé net, barbe courte bien taillée, lunettes rondes fines à monture dorée, montre acier",
+        "action": "il est assis de trois quarts sur une chaise blanche design, coudes sur les genoux, regard vers l'objectif",
+        "cadrage": "plan en pied, sujet centré",
+        "objectif": "85 mm, f/4",
+        "lumiere": "lumière de studio douce et homogène",
+        "decor": "fond gris très clair uni",
+        "palette": [
+          "#F1F2EF",
+          "#2E5A2C",
+          "#EDE6D8"
+        ],
+        "ambiance": "posée, inspirante",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "logo Canva ou marque réelle"
+        ]
+      },
+      "prompt": "Photo de Koffi Mensah, homme de 38 ans, peau brun foncé, crâne rasé net, barbe courte bien taillée, lunettes rondes fines à monture dorée, montre acier, portrait en pied du graphiste assis : il est assis de trois quarts sur une chaise blanche design, coudes sur les genoux, regard vers l'objectif, plan en pied, sujet centré, objectif 85 mm, f/4, lumière de studio douce et homogène, décor fond gris très clair uni, couleurs dominantes #F1F2EF, #2E5A2C, #EDE6D8, ambiance posée, inspirante, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/249402355/02.png : tranche 5, mentore assise sur une chaise"
+    },
+    {
+      "id": "J-bonus",
+      "fichier": "images/J-bonus.jpg",
+      "section": "bonus",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "couverture de la classe de maître",
+        "personnage": "Koffi Mensah, homme de 38 ans, peau brun foncé, crâne rasé net, barbe courte bien taillée, lunettes rondes fines à monture dorée, montre acier",
+        "action": "il sourit largement, main sur la joue, une lampe de bureau verte et une plante floues derrière",
+        "cadrage": "plan poitrine, sujet légèrement à gauche, bas de l'image dégradé vers le blanc",
+        "objectif": "85 mm, f/2",
+        "lumiere": "lumière douce de fenêtre",
+        "decor": "bureau clair, mur menthe pâle",
+        "palette": [
+          "#F4F4F2",
+          "#CFE3C8",
+          "#2E5A2C"
+        ],
+        "ambiance": "lumineuse, accueillante",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "logo Canva ou marque réelle"
+        ]
+      },
+      "prompt": "Photo de Koffi Mensah, homme de 38 ans, peau brun foncé, crâne rasé net, barbe courte bien taillée, lunettes rondes fines à monture dorée, montre acier, couverture de la classe de maître : il sourit largement, main sur la joue, une lampe de bureau verte et une plante floues derrière, plan poitrine, sujet légèrement à gauche, bas de l'image dégradé vers le blanc, objectif 85 mm, f/2, lumière douce de fenêtre, décor bureau clair, mur menthe pâle, couleurs dominantes #F4F4F2, #CFE3C8, #2E5A2C, ambiance lumineuse, accueillante, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/249402355/02.png : tranche 6, carte centrale des bonus"
+    }
+  ]
+}

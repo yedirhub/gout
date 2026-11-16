@@ -1,0 +1,279 @@
+{
+  "template": "K",
+  "personnage": {
+    "nom": "Awa Sangaré",
+    "genre": "femme",
+    "age": 31,
+    "ville": "Bamako",
+    "physique": "peau brun moyen, tresses fines sans nœud relevées en chignon haut, visage ovale, regard direct",
+    "signature": "petites créoles dorées, carnet noir à élastique",
+    "metier": "coach en organisation personnelle et en productivité, créatrice de la Méthode Axe",
+    "tenue": "chemise noire #0D0C0F, fine touche menthe #01F6B3 (bracelet ou stylo)",
+    "regle": "même visage, même coiffure, même signature sur chaque image où elle apparaît"
+  },
+  "palette": {
+    "anthracite": "#0D0C0F",
+    "carte": "#1C1C1C",
+    "carte_haut": "#333333",
+    "menthe": "#11F7CE",
+    "menthe_vive": "#01F6B3",
+    "bouton_clair": "#83FBDE",
+    "piste": "#1E312F",
+    "or": "#FCDB49"
+  },
+  "images": [
+    {
+      "id": "K-hero",
+      "fichier": "images/K-hero.jpg",
+      "section": "hero",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "portrait de la coach",
+        "personnage": "Awa Sangaré, femme de 31 ans, peau brun moyen, tresses fines sans nœud relevées en chignon haut, visage ovale, regard direct, petites créoles dorées, carnet noir à élastique",
+        "action": "regard direct et sérieux vers l'objectif, épaules de trois quarts, chemise noire",
+        "cadrage": "plan poitrine, sujet centré, bas de l'image qui se fond dans le noir",
+        "objectif": "85 mm, f/1.8",
+        "lumiere": "lumière latérale douce, reflets menthe sur la joue",
+        "decor": "fond sombre avec lignes verticales lumineuses floues turquoise",
+        "palette": [
+          "#040907",
+          "#0E3A33",
+          "#11F7CE"
+        ],
+        "ambiance": "déterminée, technologique",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visage d'homme du Behance",
+          "fond clair"
+        ]
+      },
+      "prompt": "Photo de Awa Sangaré, femme de 31 ans, peau brun moyen, tresses fines sans nœud relevées en chignon haut, visage ovale, regard direct, petites créoles dorées, carnet noir à élastique, portrait de la coach : regard direct et sérieux vers l'objectif, épaules de trois quarts, chemise noire, plan poitrine, sujet centré, bas de l'image qui se fond dans le noir, objectif 85 mm, f/1.8, lumière latérale douce, reflets menthe sur la joue, décor fond sombre avec lignes verticales lumineuses floues turquoise, couleurs dominantes #040907, #0E3A33, #11F7CE, ambiance déterminée, technologique, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/211996631/01.png : haut de page, portrait à droite"
+    },
+    {
+      "id": "K-video",
+      "fichier": "images/K-video.jpg",
+      "section": "constance",
+      "format": "16:9",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "vignette de leçon vidéo",
+        "personnage": "Awa Sangaré, femme de 31 ans, peau brun moyen, tresses fines sans nœud relevées en chignon haut, visage ovale, regard direct, petites créoles dorées, carnet noir à élastique",
+        "action": "elle parle face caméra, une main ouverte, son carnet noir posé devant elle",
+        "cadrage": "plan taille, sujet à droite, grand espace négatif sombre à gauche",
+        "objectif": "50 mm, f/2",
+        "lumiere": "lumière de studio douce, contre-jour turquoise",
+        "decor": "fond sombre aux reflets menthe flous",
+        "palette": [
+          "#0D0C0F",
+          "#0E3A33",
+          "#01F6B3"
+        ],
+        "ambiance": "pédagogique, calme",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visage d'homme du Behance",
+          "bouton de lecture dessiné"
+        ]
+      },
+      "prompt": "Photo de Awa Sangaré, femme de 31 ans, peau brun moyen, tresses fines sans nœud relevées en chignon haut, visage ovale, regard direct, petites créoles dorées, carnet noir à élastique, vignette de leçon vidéo : elle parle face caméra, une main ouverte, son carnet noir posé devant elle, plan taille, sujet à droite, grand espace négatif sombre à gauche, objectif 50 mm, f/2, lumière de studio douce, contre-jour turquoise, décor fond sombre aux reflets menthe flous, couleurs dominantes #0D0C0F, #0E3A33, #01F6B3, ambiance pédagogique, calme, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/211996631/01.png : tranche 3, ordinateur « Aula 01 »"
+    },
+    {
+      "id": "K-module-1",
+      "fichier": "images/K-module-1.jpg",
+      "section": "structure",
+      "format": "9:16",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "mur de notes adhésives et planning de la semaine",
+        "personnage": null,
+        "action": "notes alignées en colonnes, quelques-unes cochées",
+        "cadrage": "cadrage vertical serré sur le mur",
+        "objectif": "35 mm, f/4",
+        "lumiere": "lumière froide d'écran, teinte turquoise",
+        "decor": "bureau sombre",
+        "palette": [
+          "#0E3A33",
+          "#1C1C1C",
+          "#F4E58A"
+        ],
+        "ambiance": "ordonnée",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visage d'homme du Behance",
+          "écriture lisible"
+        ]
+      },
+      "prompt": "Photo mur de notes adhésives et planning de la semaine : notes alignées en colonnes, quelques-unes cochées, cadrage vertical serré sur le mur, objectif 35 mm, f/4, lumière froide d'écran, teinte turquoise, décor bureau sombre, couleurs dominantes #0E3A33, #1C1C1C, #F4E58A, ambiance ordonnée, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/211996631/01.png : tranche 4, 1re affiche de l'éventail"
+    },
+    {
+      "id": "K-module-2",
+      "fichier": "images/K-module-2.jpg",
+      "section": "structure",
+      "format": "9:16",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "la coach concentrée devant un écran",
+        "personnage": "Awa Sangaré, femme de 31 ans, peau brun moyen, tresses fines sans nœud relevées en chignon haut, visage ovale, regard direct, petites créoles dorées, carnet noir à élastique",
+        "action": "elle lit des données à l'écran, reflets de lignes de chiffres sur le visage",
+        "cadrage": "plan rapproché vertical, sujet de profil, à gauche",
+        "objectif": "85 mm, f/2",
+        "lumiere": "lumière d'écran turquoise",
+        "decor": "pièce sombre",
+        "palette": [
+          "#0D0C0F",
+          "#11F7CE",
+          "#1E312F"
+        ],
+        "ambiance": "focalisée, tech",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visage d'homme du Behance",
+          "chiffres lisibles"
+        ]
+      },
+      "prompt": "Photo de Awa Sangaré, femme de 31 ans, peau brun moyen, tresses fines sans nœud relevées en chignon haut, visage ovale, regard direct, petites créoles dorées, carnet noir à élastique, la coach concentrée devant un écran : elle lit des données à l'écran, reflets de lignes de chiffres sur le visage, plan rapproché vertical, sujet de profil, à gauche, objectif 85 mm, f/2, lumière d'écran turquoise, décor pièce sombre, couleurs dominantes #0D0C0F, #11F7CE, #1E312F, ambiance focalisée, tech, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/211996631/01.png : tranche 4, 2e affiche de l'éventail"
+    },
+    {
+      "id": "K-module-3",
+      "fichier": "images/K-module-3.jpg",
+      "section": "structure",
+      "format": "9:16",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "galets sombres en équilibre les uns sur les autres",
+        "personnage": null,
+        "action": "cinq galets lisses empilés, en suspension légère",
+        "cadrage": "objet centré, vertical, beaucoup d'air au-dessus",
+        "objectif": "100 mm macro, f/5.6",
+        "lumiere": "lumière douce de studio, fond dégradé",
+        "decor": "fond turquoise dégradé vers le bleu",
+        "palette": [
+          "#3FB7B0",
+          "#1C2B2A",
+          "#0D0C0F"
+        ],
+        "ambiance": "zen, équilibrée",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visage d'homme du Behance"
+        ]
+      },
+      "prompt": "Photo galets sombres en équilibre les uns sur les autres : cinq galets lisses empilés, en suspension légère, objet centré, vertical, beaucoup d'air au-dessus, objectif 100 mm macro, f/5.6, lumière douce de studio, fond dégradé, décor fond turquoise dégradé vers le bleu, couleurs dominantes #3FB7B0, #1C2B2A, #0D0C0F, ambiance zen, équilibrée, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/211996631/01.png : tranche 4, affiche centrale de l'éventail"
+    },
+    {
+      "id": "K-module-4",
+      "fichier": "images/K-module-4.jpg",
+      "section": "structure",
+      "format": "9:16",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "la coach qui court au lever du soleil",
+        "personnage": "Awa Sangaré, femme de 31 ans, peau brun moyen, tresses fines sans nœud relevées en chignon haut, visage ovale, regard direct, petites créoles dorées, carnet noir à élastique",
+        "action": "elle court en tenue de sport, carnet noir à la main, sourire",
+        "cadrage": "plan taille vertical, sujet centré",
+        "objectif": "70 mm, f/2.8",
+        "lumiere": "lumière dorée du matin, arrière-plan flou",
+        "decor": "bord du fleuve Niger à Bamako, arbres flous",
+        "palette": [
+          "#0E3A33",
+          "#E8D8B0",
+          "#1C1C1C"
+        ],
+        "ambiance": "énergique, positive",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visage d'homme du Behance"
+        ]
+      },
+      "prompt": "Photo de Awa Sangaré, femme de 31 ans, peau brun moyen, tresses fines sans nœud relevées en chignon haut, visage ovale, regard direct, petites créoles dorées, carnet noir à élastique, la coach qui court au lever du soleil : elle court en tenue de sport, carnet noir à la main, sourire, plan taille vertical, sujet centré, objectif 70 mm, f/2.8, lumière dorée du matin, arrière-plan flou, décor bord du fleuve Niger à Bamako, arbres flous, couleurs dominantes #0E3A33, #E8D8B0, #1C1C1C, ambiance énergique, positive, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/211996631/01.png : tranche 4, 4e affiche de l'éventail"
+    },
+    {
+      "id": "K-module-5",
+      "fichier": "images/K-module-5.jpg",
+      "section": "structure",
+      "format": "9:16",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "sablier sur un bureau sombre",
+        "personnage": null,
+        "action": "le sable coule, une main floue à côté",
+        "cadrage": "objet centré, vertical",
+        "objectif": "100 mm macro, f/4",
+        "lumiere": "lumière menthe rasante",
+        "decor": "bureau noir mat",
+        "palette": [
+          "#0D0C0F",
+          "#11F7CE",
+          "#C9CACD"
+        ],
+        "ambiance": "patiente, disciplinée",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visage d'homme du Behance"
+        ]
+      },
+      "prompt": "Photo sablier sur un bureau sombre : le sable coule, une main floue à côté, objet centré, vertical, objectif 100 mm macro, f/4, lumière menthe rasante, décor bureau noir mat, couleurs dominantes #0D0C0F, #11F7CE, #C9CACD, ambiance patiente, disciplinée, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/211996631/01.png : tranche 4, 5e affiche de l'éventail"
+    },
+    {
+      "id": "K-mentor",
+      "fichier": "images/K-mentor.jpg",
+      "section": "mentor",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "portrait noir et blanc de la mentore",
+        "personnage": "Awa Sangaré, femme de 31 ans, peau brun moyen, tresses fines sans nœud relevées en chignon haut, visage ovale, regard direct, petites créoles dorées, carnet noir à élastique",
+        "action": "regard direct, léger sourire, épaules de trois quarts, tee-shirt noir",
+        "cadrage": "plan poitrine, sujet centré, bords qui se fondent dans le noir",
+        "objectif": "85 mm, f/2",
+        "lumiere": "lumière latérale contrastée, noir et blanc",
+        "decor": "fond noir uni",
+        "palette": [
+          "#0D0C0F",
+          "#8D8D8D",
+          "#FAFAFA"
+        ],
+        "ambiance": "sereine, experte",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visage d'homme du Behance",
+          "couleur"
+        ]
+      },
+      "prompt": "Photo de Awa Sangaré, femme de 31 ans, peau brun moyen, tresses fines sans nœud relevées en chignon haut, visage ovale, regard direct, petites créoles dorées, carnet noir à élastique, portrait noir et blanc de la mentore : regard direct, léger sourire, épaules de trois quarts, tee-shirt noir, plan poitrine, sujet centré, bords qui se fondent dans le noir, objectif 85 mm, f/2, lumière latérale contrastée, noir et blanc, décor fond noir uni, couleurs dominantes #0D0C0F, #8D8D8D, #FAFAFA, ambiance sereine, experte, aucun texte ni logo dans l'image.",
+      "reference": "inspi/behance/211996631/01.png : tranche 5, portrait du mentor"
+    }
+  ]
+}

@@ -1,0 +1,313 @@
+{
+ "template": "M",
+ "personnage": {
+  "nom": "Rokia Touré",
+  "genre": "femme",
+  "age": 41,
+  "ville": "Dakar",
+  "physique": "peau brun foncé, visage rond, foulard noué haut sur la tête, port de tête droit",
+  "signature": "lunettes œil-de-chat, foulard noué haut",
+  "metier": "experte en miles aériens et en cartes de voyage, formatrice",
+  "tenue": "chemise en jean bleu, foulard bleu nuit #0D1423 à motif cyan #4FDAFE, lunettes œil-de-chat noires",
+  "regle": "même visage, même coiffure, même signature sur chaque image où il apparaît"
+ },
+ "palette": {
+  "nuit": "#0D1423",
+  "carte": "#141D30",
+  "cyan": "#4FDAFE",
+  "cyan_vif": "#0DACF4",
+  "cyan_pale": "#8BE4FF",
+  "rouge": "#F0606A",
+  "or": "#FFD02B"
+ },
+ "images": [
+  {
+   "id": "M-hero",
+   "fichier": "images/M-hero.jpg",
+   "section": "hero",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "une experte en voyages dans un salon d'aéroport de nuit",
+    "personnage": "Rokia Touré, femme sénégalaise de 41 ans, peau brun foncé, visage rond, foulard bleu nuit noué haut sur la tête, port de tête droit, lunettes œil-de-chat",
+    "action": "sourit largement face caméra, épaules légèrement de trois quarts, chemise en jean",
+    "cadrage": "plan poitrine, sujet centré, haut de la tête près du bord, espace sombre autour",
+    "objectif": "85 mm, f/2",
+    "lumiere": "néons bleus au plafond, lumière clé douce, contre-jour cyan",
+    "decor": "salle d'embarquement floue, baies vitrées la nuit",
+    "palette": [
+     "#0D1423",
+     "#0DACF4",
+     "#4FDAFE"
+    ],
+    "ambiance": "confiante et chaleureuse",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "logo de compagnie aérienne ou de banque réelle"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 3:4 : une experte en voyages dans un salon d'aéroport de nuit, Rokia Touré, femme sénégalaise de 41 ans, peau brun foncé, visage rond, foulard bleu nuit noué haut sur la tête, port de tête droit, lunettes œil-de-chat, sourit largement face caméra, épaules légèrement de trois quarts, chemise en jean ; cadrage plan poitrine, sujet centré, haut de la tête près du bord, espace sombre autour, objectif 85 mm, f/2 ; lumière néons bleus au plafond, lumière clé douce, contre-jour cyan ; décor salle d'embarquement floue, baies vitrées la nuit ; couleurs dominantes #0D1423, #0DACF4, #4FDAFE ; ambiance confiante et chaleureuse ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/210639047/01.jpg : portrait du hero (haut de page)"
+  },
+  {
+   "id": "M-module-intro",
+   "fichier": "images/M-module-intro.jpg",
+   "section": "contenus",
+   "format": "9:16",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "une voyageuse dans un hall d'aéroport",
+    "personnage": "Rokia Touré, femme sénégalaise de 41 ans, peau brun foncé, visage rond, foulard bleu nuit noué haut sur la tête, port de tête droit, lunettes œil-de-chat",
+    "action": "tient son passeport et sa carte d'embarquement, regarde l'objectif",
+    "cadrage": "plan taille vertical, visage dans le tiers haut, bas sombre pour le titre",
+    "objectif": "50 mm, f/2",
+    "lumiere": "lumière froide des écrans, reflets cyan",
+    "decor": "hall d'aéroport flou",
+    "palette": [
+     "#0D1423",
+     "#0DACF4",
+     "#4FDAFE"
+    ],
+    "ambiance": "le début du voyage",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "logo de compagnie aérienne ou de banque réelle"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 9:16 : une voyageuse dans un hall d'aéroport, Rokia Touré, femme sénégalaise de 41 ans, peau brun foncé, visage rond, foulard bleu nuit noué haut sur la tête, port de tête droit, lunettes œil-de-chat, tient son passeport et sa carte d'embarquement, regarde l'objectif ; cadrage plan taille vertical, visage dans le tiers haut, bas sombre pour le titre, objectif 50 mm, f/2 ; lumière lumière froide des écrans, reflets cyan ; décor hall d'aéroport flou ; couleurs dominantes #0D1423, #0DACF4, #4FDAFE ; ambiance le début du voyage ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/210639047/01.jpg : carrousel des modules, carte 1"
+  },
+  {
+   "id": "M-module-voyages",
+   "fichier": "images/M-module-voyages.jpg",
+   "section": "contenus",
+   "format": "9:16",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "une voyageuse vue de dos, sac à l'épaule, devant la piste",
+    "personnage": "Rokia Touré, femme sénégalaise de 41 ans, peau brun foncé, visage rond, foulard bleu nuit noué haut sur la tête, port de tête droit, lunettes œil-de-chat",
+    "action": "regarde un avion décoller, foulard noué haut bien visible",
+    "cadrage": "plein pied vertical de dos, avion dans le tiers haut, bas sombre",
+    "objectif": "35 mm, f/4",
+    "lumiere": "crépuscule bleu, ciel dégradé",
+    "decor": "piste, montagnes au loin",
+    "palette": [
+     "#0D1423",
+     "#173A63",
+     "#E8D4B0"
+    ],
+    "ambiance": "liberté, départ",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "logo de compagnie aérienne ou de banque réelle"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 9:16 : une voyageuse vue de dos, sac à l'épaule, devant la piste, Rokia Touré, femme sénégalaise de 41 ans, peau brun foncé, visage rond, foulard bleu nuit noué haut sur la tête, port de tête droit, lunettes œil-de-chat, regarde un avion décoller, foulard noué haut bien visible ; cadrage plein pied vertical de dos, avion dans le tiers haut, bas sombre, objectif 35 mm, f/4 ; lumière crépuscule bleu, ciel dégradé ; décor piste, montagnes au loin ; couleurs dominantes #0D1423, #173A63, #E8D4B0 ; ambiance liberté, départ ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/210639047/01.jpg : carrousel des modules, carte « Viagens econômicas »"
+  },
+  {
+   "id": "M-module-fidelite",
+   "fichier": "images/M-module-fidelite.jpg",
+   "section": "contenus",
+   "format": "9:16",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "une main qui tend une carte de fidélité dorée",
+    "personnage": null,
+    "action": "la carte est tenue entre le pouce et l'index",
+    "cadrage": "gros plan vertical, carte au centre haut, bas sombre",
+    "objectif": "100 mm macro, f/2.8",
+    "lumiere": "lumière bleue latérale, reflet chaud sur la carte",
+    "decor": "fond bleu nuit flou",
+    "palette": [
+     "#0D1423",
+     "#4FDAFE",
+     "#D9B45A"
+    ],
+    "ambiance": "privilège",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "logo de compagnie aérienne ou de banque réelle"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 9:16 : une main qui tend une carte de fidélité dorée, la carte est tenue entre le pouce et l'index ; cadrage gros plan vertical, carte au centre haut, bas sombre, objectif 100 mm macro, f/2.8 ; lumière lumière bleue latérale, reflet chaud sur la carte ; décor fond bleu nuit flou ; couleurs dominantes #0D1423, #4FDAFE, #D9B45A ; ambiance privilège ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/210639047/01.jpg : carrousel des modules, carte « Programas de fidelidade »"
+  },
+  {
+   "id": "M-module-cartes",
+   "fichier": "images/M-module-cartes.jpg",
+   "section": "contenus",
+   "format": "9:16",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "une carte de crédit bleue posée en biais",
+    "personnage": null,
+    "action": "la carte flotte légèrement inclinée",
+    "cadrage": "gros plan vertical, carte au tiers haut, bas sombre",
+    "objectif": "100 mm macro, f/2.8",
+    "lumiere": "reflets cyan sur le plastique, fond sombre",
+    "decor": "surface sombre brillante",
+    "palette": [
+     "#0D1423",
+     "#0DACF4",
+     "#4FDAFE"
+    ],
+    "ambiance": "technologie, sécurité",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "logo de compagnie aérienne ou de banque réelle"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 9:16 : une carte de crédit bleue posée en biais, la carte flotte légèrement inclinée ; cadrage gros plan vertical, carte au tiers haut, bas sombre, objectif 100 mm macro, f/2.8 ; lumière reflets cyan sur le plastique, fond sombre ; décor surface sombre brillante ; couleurs dominantes #0D1423, #0DACF4, #4FDAFE ; ambiance technologie, sécurité ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/210639047/01.jpg : carrousel des modules, carte « Cartões de crédito »"
+  },
+  {
+   "id": "M-module-salons",
+   "fichier": "images/M-module-salons.jpg",
+   "section": "contenus",
+   "format": "9:16",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "un salon privé d'aéroport",
+    "personnage": null,
+    "action": "fauteuils clairs vides, tables basses",
+    "cadrage": "plan large vertical, plafond lumineux en haut, bas sombre",
+    "objectif": "24 mm, f/4",
+    "lumiere": "lumière chaude d'intérieur, baies vitrées bleues",
+    "decor": "salon moderne, bois clair, plantes",
+    "palette": [
+     "#0D1423",
+     "#E8D4B0",
+     "#4FDAFE"
+    ],
+    "ambiance": "confort calme",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "logo de compagnie aérienne ou de banque réelle"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 9:16 : un salon privé d'aéroport, fauteuils clairs vides, tables basses ; cadrage plan large vertical, plafond lumineux en haut, bas sombre, objectif 24 mm, f/4 ; lumière lumière chaude d'intérieur, baies vitrées bleues ; décor salon moderne, bois clair, plantes ; couleurs dominantes #0D1423, #E8D4B0, #4FDAFE ; ambiance confort calme ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/210639047/01.jpg : carrousel des modules, carte « Salas VIP »"
+  },
+  {
+   "id": "M-module-revente",
+   "fichier": "images/M-module-revente.jpg",
+   "section": "contenus",
+   "format": "9:16",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "une experte assise à une table de café",
+    "personnage": "Rokia Touré, femme sénégalaise de 41 ans, peau brun foncé, visage rond, foulard bleu nuit noué haut sur la tête, port de tête droit, lunettes œil-de-chat",
+    "action": "consulte son téléphone avec un sourire satisfait",
+    "cadrage": "plan taille vertical, visage dans le tiers haut, bas sombre",
+    "objectif": "50 mm, f/2",
+    "lumiere": "lumière de soirée, néons bleus en fond",
+    "decor": "café de Dakar la nuit, flou",
+    "palette": [
+     "#0D1423",
+     "#0DACF4",
+     "#4FDAFE"
+    ],
+    "ambiance": "satisfaction discrète",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "logo de compagnie aérienne ou de banque réelle"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 9:16 : une experte assise à une table de café, Rokia Touré, femme sénégalaise de 41 ans, peau brun foncé, visage rond, foulard bleu nuit noué haut sur la tête, port de tête droit, lunettes œil-de-chat, consulte son téléphone avec un sourire satisfait ; cadrage plan taille vertical, visage dans le tiers haut, bas sombre, objectif 50 mm, f/2 ; lumière lumière de soirée, néons bleus en fond ; décor café de Dakar la nuit, flou ; couleurs dominantes #0D1423, #0DACF4, #4FDAFE ; ambiance satisfaction discrète ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/210639047/01.jpg : carrousel des modules (thème revente, ajouté)"
+  },
+  {
+   "id": "M-bonus",
+   "fichier": "images/M-bonus.jpg",
+   "section": "bonus",
+   "format": "16:9",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "une experte en appel vidéo devant un montage de monuments du monde",
+    "personnage": "Rokia Touré, femme sénégalaise de 41 ans, peau brun foncé, visage rond, foulard bleu nuit noué haut sur la tête, port de tête droit, lunettes œil-de-chat",
+    "action": "sourit et tient une carte d'embarquement, regard caméra",
+    "cadrage": "plan poitrine, sujet au centre, monuments flous de part et d'autre",
+    "objectif": "35 mm, f/2.8",
+    "lumiere": "lumière de jour douce, ciel bleu",
+    "decor": "monuments du monde en arrière-plan flou, un avion dans le ciel",
+    "palette": [
+     "#4FDAFE",
+     "#0DACF4",
+     "#E8D4B0"
+    ],
+    "ambiance": "envie de partir, convivialité",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "logo de compagnie aérienne ou de banque réelle"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 16:9 : une experte en appel vidéo devant un montage de monuments du monde, Rokia Touré, femme sénégalaise de 41 ans, peau brun foncé, visage rond, foulard bleu nuit noué haut sur la tête, port de tête droit, lunettes œil-de-chat, sourit et tient une carte d'embarquement, regard caméra ; cadrage plan poitrine, sujet au centre, monuments flous de part et d'autre, objectif 35 mm, f/2.8 ; lumière lumière de jour douce, ciel bleu ; décor monuments du monde en arrière-plan flou, un avion dans le ciel ; couleurs dominantes #4FDAFE, #0DACF4, #E8D4B0 ; ambiance envie de partir, convivialité ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/210639047/01.jpg : bonus « Comunidade exclusiva », l'écran d'appel vidéo"
+  },
+  {
+   "id": "M-portrait",
+   "fichier": "images/M-portrait.jpg",
+   "section": "experte",
+   "format": "1:1",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "portrait de l'experte devant une ville la nuit",
+    "personnage": "Rokia Touré, femme sénégalaise de 41 ans, peau brun foncé, visage rond, foulard bleu nuit noué haut sur la tête, port de tête droit, lunettes œil-de-chat",
+    "action": "sourire chaleureux, bras croisés",
+    "cadrage": "plan poitrine, sujet centré, tête près du bord haut, ville floue derrière",
+    "objectif": "85 mm, f/2",
+    "lumiere": "contre-jour bleu, lumière clé douce",
+    "decor": "skyline de Dakar la nuit en bleu",
+    "palette": [
+     "#0D1423",
+     "#0DACF4",
+     "#4FDAFE"
+    ],
+    "ambiance": "autorité bienveillante",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "logo de compagnie aérienne ou de banque réelle"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 1:1 : portrait de l'experte devant une ville la nuit, Rokia Touré, femme sénégalaise de 41 ans, peau brun foncé, visage rond, foulard bleu nuit noué haut sur la tête, port de tête droit, lunettes œil-de-chat, sourire chaleureux, bras croisés ; cadrage plan poitrine, sujet centré, tête près du bord haut, ville floue derrière, objectif 85 mm, f/2 ; lumière contre-jour bleu, lumière clé douce ; décor skyline de Dakar la nuit en bleu ; couleurs dominantes #0D1423, #0DACF4, #4FDAFE ; ambiance autorité bienveillante ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/210639047/01.jpg : section « Rafael Gomes » (portrait central)"
+  }
+ ]
+}

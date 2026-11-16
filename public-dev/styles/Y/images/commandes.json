@@ -1,0 +1,400 @@
+{
+  "template": "Y",
+  "personnage": {
+    "nom": "Laurent Essomba",
+    "genre": "homme",
+    "age": 52,
+    "ville": "Yaoundé",
+    "physique": "peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant",
+    "signature": "tenue de bloc, montre classique à bracelet cuir",
+    "metier": "chirurgien plasticien, spécialiste du sein, du ventre et de la liposuccion",
+    "tenue": "tenue de bloc bleu nuit #16272F, ou blouse blanche sur chemise claire, montre à bracelet cuir brun",
+    "regle": "même visage, même coiffure, même signature sur chaque image où il apparaît"
+  },
+  "palette": {
+    "abysse": "#020D11",
+    "nuit": "#09161C",
+    "ardoise": "#16272F",
+    "perle": "#F5F6F8",
+    "blanc": "#FFFFFF",
+    "champagne_clair": "#EEE1CF",
+    "champagne": "#BDA37E",
+    "or_texte": "#DDC49D"
+  },
+  "images": [
+    {
+      "id": "Y-hero",
+      "fichier": "images/Y-hero.jpg",
+      "section": "hero",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "portrait du chirurgien à son bureau",
+        "personnage": "le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir",
+        "action": "assis dans un fauteuil de cuir noir, coudes sur le bureau, mains jointes devant le menton, regard droit et bienveillant",
+        "cadrage": "plan taille, sujet à droite, espace négatif sombre à gauche pour le texte",
+        "objectif": "85 mm, f/2",
+        "lumiere": "lumière chaude et douce venant de la gauche, fond qui tombe dans le bleu nuit",
+        "decor": "cabinet sombre, bibliothèque floue, coin d'ordinateur portable au premier plan",
+        "palette": [
+          "#020D11",
+          "#16272F",
+          "#DDC49D"
+        ],
+        "ambiance": "autorité calme, confiance",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "blouse tachée",
+          "instruments chirurgicaux visibles"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : portrait du chirurgien à son bureau, avec le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir ; assis dans un fauteuil de cuir noir, coudes sur le bureau, mains jointes devant le menton, regard droit et bienveillant ; cadrage plan taille, sujet à droite, espace négatif sombre à gauche pour le texte ; objectif 85 mm, f/2 ; lumière : lumière chaude et douce venant de la gauche, fond qui tombe dans le bleu nuit ; décor : cabinet sombre, bibliothèque floue, coin d'ordinateur portable au premier plan ; couleurs dominantes #020D11, #16272F, #DDC49D ; ambiance autorité calme, confiance ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/254909225/01.png : haut de page, portrait de droite"
+    },
+    {
+      "id": "Y-miroir",
+      "fichier": "images/Y-miroir.jpg",
+      "section": "envie",
+      "format": "3:4",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "une femme camerounaise de 35 ans, de dos, en peignoir clair, qui regarde son reflet dans un miroir",
+        "personnage": null,
+        "action": "elle se touche doucement le visage, pensive",
+        "cadrage": "plan poitrine, reflet au centre, épaule floue au premier plan",
+        "objectif": "50 mm, f/2",
+        "lumiere": "lumière naturelle de fenêtre, douce",
+        "decor": "chambre claire, murs blancs",
+        "palette": [
+          "#F5F6F8",
+          "#EEE1CF",
+          "#BDA37E"
+        ],
+        "ambiance": "intime, hésitation",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "nudité",
+          "corps retouché irréaliste"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : une femme camerounaise de 35 ans, de dos, en peignoir clair, qui regarde son reflet dans un miroir ; elle se touche doucement le visage, pensive ; cadrage plan poitrine, reflet au centre, épaule floue au premier plan ; objectif 50 mm, f/2 ; lumière : lumière naturelle de fenêtre, douce ; décor : chambre claire, murs blancs ; couleurs dominantes #F5F6F8, #EEE1CF, #BDA37E ; ambiance intime, hésitation ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/254909225/01.png : section « A vontade e os medos », photo penchée de gauche"
+    },
+    {
+      "id": "Y-patiente",
+      "fichier": "images/Y-patiente.jpg",
+      "section": "envie",
+      "format": "1:1",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "une femme camerounaise de 38 ans, souriante, main dans les cheveux, chemise blanche",
+        "personnage": null,
+        "action": "elle regarde vers la fenêtre en souriant, détendue",
+        "cadrage": "plan poitrine, sujet légèrement à gauche",
+        "objectif": "85 mm, f/2",
+        "lumiere": "lumière naturelle chaude de fin d'après-midi",
+        "decor": "intérieur clair et chaleureux, rideau léger",
+        "palette": [
+          "#F5F6F8",
+          "#EEE1CF",
+          "#BDA37E"
+        ],
+        "ambiance": "confiance retrouvée",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "décolleté marqué"
+        ]
+      },
+      "prompt": "Photo au format 1:1 : une femme camerounaise de 38 ans, souriante, main dans les cheveux, chemise blanche ; elle regarde vers la fenêtre en souriant, détendue ; cadrage plan poitrine, sujet légèrement à gauche ; objectif 85 mm, f/2 ; lumière : lumière naturelle chaude de fin d'après-midi ; décor : intérieur clair et chaleureux, rideau léger ; couleurs dominantes #F5F6F8, #EEE1CF, #BDA37E ; ambiance confiance retrouvée ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/254909225/01.png : section « A vontade e os medos », photo penchée de droite"
+    },
+    {
+      "id": "Y-consultation",
+      "fichier": "images/Y-consultation.jpg",
+      "section": "conversation",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "le chirurgien dans son cabinet, prêt à écouter",
+        "personnage": "le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir",
+        "action": "assis, avant-bras posés sur le bureau, mains croisées, la montre bien visible, regard vers l'objectif",
+        "cadrage": "plan taille, sujet centré",
+        "objectif": "50 mm, f/2.8",
+        "lumiere": "lumière du jour douce, fenêtre à gauche",
+        "decor": "cabinet clair, étagères de livres à droite, mur crème",
+        "palette": [
+          "#F5F6F8",
+          "#16272F",
+          "#BDA37E"
+        ],
+        "ambiance": "accueil, écoute",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : le chirurgien dans son cabinet, prêt à écouter, avec le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir ; assis, avant-bras posés sur le bureau, mains croisées, la montre bien visible, regard vers l'objectif ; cadrage plan taille, sujet centré ; objectif 50 mm, f/2.8 ; lumière : lumière du jour douce, fenêtre à gauche ; décor : cabinet clair, étagères de livres à droite, mur crème ; couleurs dominantes #F5F6F8, #16272F, #BDA37E ; ambiance accueil, écoute ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/254909225/01.png : section « Antes de qualquer cirurgia », portrait de gauche"
+    },
+    {
+      "id": "Y-radio-sein",
+      "fichier": "images/Y-radio-sein.jpg",
+      "section": "interventions",
+      "format": "3:4",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "radiographie artistique d'un buste féminin de trois quarts : cage thoracique, clavicules et tissu du sein en transparence lumineuse",
+        "personnage": null,
+        "action": "image fixe, corps immobile, aucune personne reconnaissable",
+        "cadrage": "cadré serré, sujet centré, bords qui se fondent dans le noir",
+        "objectif": "rendu numérique de radiographie, netteté maximale",
+        "lumiere": "lueur blanche et bleutée interne, fond noir profond",
+        "decor": "fond noir uni",
+        "palette": [
+          "#000000",
+          "#E8EEF0",
+          "#16272F"
+        ],
+        "ambiance": "médical, précis, élégant",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visage",
+          "organes sanglants",
+          "couleurs vives"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : radiographie artistique d'un buste féminin de trois quarts : cage thoracique, clavicules et tissu du sein en transparence lumineuse ; image fixe, corps immobile, aucune personne reconnaissable ; cadrage cadré serré, sujet centré, bords qui se fondent dans le noir ; objectif rendu numérique de radiographie, netteté maximale ; lumière : lueur blanche et bleutée interne, fond noir profond ; décor : fond noir uni ; couleurs dominantes #000000, #E8EEF0, #16272F ; ambiance médical, précis, élégant ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/254909225/01.png : section « O que o Dr. Chehade opera », image de droite"
+    },
+    {
+      "id": "Y-radio-ventre",
+      "fichier": "images/Y-radio-ventre.jpg",
+      "section": "aussi",
+      "format": "3:4",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "radiographie artistique d'un abdomen : muscles abdominaux et côtes en transparence lumineuse",
+        "personnage": null,
+        "action": "image fixe, corps immobile, aucune personne reconnaissable",
+        "cadrage": "cadré serré, sujet centré, bords qui se fondent dans le noir",
+        "objectif": "rendu numérique de radiographie, netteté maximale",
+        "lumiere": "lueur blanche et bleutée interne, fond noir profond",
+        "decor": "fond noir uni",
+        "palette": [
+          "#000000",
+          "#E8EEF0",
+          "#16272F"
+        ],
+        "ambiance": "médical, précis, élégant",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visage",
+          "organes sanglants",
+          "couleurs vives"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : radiographie artistique d'un abdomen : muscles abdominaux et côtes en transparence lumineuse ; image fixe, corps immobile, aucune personne reconnaissable ; cadrage cadré serré, sujet centré, bords qui se fondent dans le noir ; objectif rendu numérique de radiographie, netteté maximale ; lumière : lueur blanche et bleutée interne, fond noir profond ; décor : fond noir uni ; couleurs dominantes #000000, #E8EEF0, #16272F ; ambiance médical, précis, élégant ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/254909225/01.png : section « Abdômen », image de gauche"
+    },
+    {
+      "id": "Y-radio-silhouette",
+      "fichier": "images/Y-radio-silhouette.jpg",
+      "section": "aussi",
+      "format": "3:4",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "radiographie artistique d'une taille et de hanches féminines, de profil, contour lumineux",
+        "personnage": null,
+        "action": "image fixe, corps immobile, aucune personne reconnaissable",
+        "cadrage": "cadré serré, sujet centré, bords qui se fondent dans le noir",
+        "objectif": "rendu numérique de radiographie, netteté maximale",
+        "lumiere": "lueur blanche et bleutée interne, fond noir profond",
+        "decor": "fond noir uni",
+        "palette": [
+          "#000000",
+          "#E8EEF0",
+          "#16272F"
+        ],
+        "ambiance": "médical, précis, élégant",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visage",
+          "organes sanglants",
+          "couleurs vives"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : radiographie artistique d'une taille et de hanches féminines, de profil, contour lumineux ; image fixe, corps immobile, aucune personne reconnaissable ; cadrage cadré serré, sujet centré, bords qui se fondent dans le noir ; objectif rendu numérique de radiographie, netteté maximale ; lumière : lueur blanche et bleutée interne, fond noir profond ; décor : fond noir uni ; couleurs dominantes #000000, #E8EEF0, #16272F ; ambiance médical, précis, élégant ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/254909225/01.png : section « Contorno corporal », image de droite"
+    },
+    {
+      "id": "Y-apropos-1",
+      "fichier": "images/Y-apropos-1.jpg",
+      "section": "apropos",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "le chirurgien debout dans son cabinet devant ses diplômes encadrés",
+        "personnage": "le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir",
+        "action": "debout, en blouse blanche sur sa tenue de bloc, mains le long du corps, léger sourire",
+        "cadrage": "plan américain, sujet centré",
+        "objectif": "50 mm, f/2.8",
+        "lumiere": "lumière du jour douce",
+        "decor": "mur de diplômes encadrés, bois clair",
+        "palette": [
+          "#F5F6F8",
+          "#16272F",
+          "#BDA37E"
+        ],
+        "ambiance": "parcours, sérieux",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : le chirurgien debout dans son cabinet devant ses diplômes encadrés, avec le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir ; debout, en blouse blanche sur sa tenue de bloc, mains le long du corps, léger sourire ; cadrage plan américain, sujet centré ; objectif 50 mm, f/2.8 ; lumière : lumière du jour douce ; décor : mur de diplômes encadrés, bois clair ; couleurs dominantes #F5F6F8, #16272F, #BDA37E ; ambiance parcours, sérieux ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/254909225/01.png : section « Sobre o doutor », photo en haut à gauche"
+    },
+    {
+      "id": "Y-apropos-2",
+      "fichier": "images/Y-apropos-2.jpg",
+      "section": "apropos",
+      "format": "4:3",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "le chirurgien souriant à son bureau",
+        "personnage": "le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir",
+        "action": "assis, coudes sur la table, grand sourire franc",
+        "cadrage": "plan taille, sujet légèrement à gauche",
+        "objectif": "35 mm, f/2.8",
+        "lumiere": "lumière naturelle chaude",
+        "decor": "bureau en bois, bibliothèque et cadres en fond",
+        "palette": [
+          "#F5F6F8",
+          "#EEE1CF",
+          "#16272F"
+        ],
+        "ambiance": "chaleur, proximité",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 4:3 : le chirurgien souriant à son bureau, avec le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir ; assis, coudes sur la table, grand sourire franc ; cadrage plan taille, sujet légèrement à gauche ; objectif 35 mm, f/2.8 ; lumière : lumière naturelle chaude ; décor : bureau en bois, bibliothèque et cadres en fond ; couleurs dominantes #F5F6F8, #EEE1CF, #16272F ; ambiance chaleur, proximité ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/254909225/01.png : section « Sobre o doutor », photo en haut à droite"
+    },
+    {
+      "id": "Y-apropos-3",
+      "fichier": "images/Y-apropos-3.jpg",
+      "section": "apropos",
+      "format": "4:3",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "le chirurgien en tenue de bloc, mains jointes",
+        "personnage": "le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir",
+        "action": "assis dans un fauteuil de cuir, mains jointes, regard grave et doux vers l'objectif",
+        "cadrage": "plan taille, sujet centré",
+        "objectif": "85 mm, f/2",
+        "lumiere": "lumière chaude latérale, fond sombre",
+        "decor": "bureau sombre, lampe",
+        "palette": [
+          "#020D11",
+          "#16272F",
+          "#DDC49D"
+        ],
+        "ambiance": "autorité calme",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 4:3 : le chirurgien en tenue de bloc, mains jointes, avec le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir ; assis dans un fauteuil de cuir, mains jointes, regard grave et doux vers l'objectif ; cadrage plan taille, sujet centré ; objectif 85 mm, f/2 ; lumière : lumière chaude latérale, fond sombre ; décor : bureau sombre, lampe ; couleurs dominantes #020D11, #16272F, #DDC49D ; ambiance autorité calme ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/254909225/01.png : section « Sobre o doutor », photo en bas à gauche"
+    },
+    {
+      "id": "Y-apropos-4",
+      "fichier": "images/Y-apropos-4.jpg",
+      "section": "apropos",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "le chirurgien qui prend des notes pendant une consultation",
+        "personnage": "le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir",
+        "action": "assis, stylo en main, il écrit dans un dossier en regardant la patiente hors cadre",
+        "cadrage": "plan taille de trois quarts, sujet à droite",
+        "objectif": "50 mm, f/2.8",
+        "lumiere": "lumière du jour douce",
+        "decor": "cabinet clair, bureau blanc",
+        "palette": [
+          "#F5F6F8",
+          "#16272F",
+          "#BDA37E"
+        ],
+        "ambiance": "attention, méthode",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : le chirurgien qui prend des notes pendant une consultation, avec le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir ; assis, stylo en main, il écrit dans un dossier en regardant la patiente hors cadre ; cadrage plan taille de trois quarts, sujet à droite ; objectif 50 mm, f/2.8 ; lumière : lumière du jour douce ; décor : cabinet clair, bureau blanc ; couleurs dominantes #F5F6F8, #16272F, #BDA37E ; ambiance attention, méthode ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/254909225/01.png : section « Sobre o doutor », photo en bas à droite"
+    },
+    {
+      "id": "Y-rdv",
+      "fichier": "images/Y-rdv.jpg",
+      "section": "rdv",
+      "format": "4:3",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "le chirurgien à son bureau, prêt à recevoir",
+        "personnage": "le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir",
+        "action": "assis, mains jointes posées sur le bureau, regard droit, sourire rassurant",
+        "cadrage": "plan taille, sujet légèrement à droite, espace à gauche",
+        "objectif": "85 mm, f/2",
+        "lumiere": "lumière chaude d'une lampe, fond qui tombe dans le bleu nuit",
+        "decor": "cabinet sombre, ordinateur portable ouvert à gauche, bibliothèque floue",
+        "palette": [
+          "#020D11",
+          "#16272F",
+          "#DDC49D"
+        ],
+        "ambiance": "accueil, sérénité",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 4:3 : le chirurgien à son bureau, prêt à recevoir, avec le Dr Laurent Essomba, homme de 52 ans, peau brun foncé, crâne rasé, barbe grise courte, mains soignées, sourire rassurant, en tenue de bloc bleu nuit, montre classique à bracelet cuir ; assis, mains jointes posées sur le bureau, regard droit, sourire rassurant ; cadrage plan taille, sujet légèrement à droite, espace à gauche ; objectif 85 mm, f/2 ; lumière : lumière chaude d'une lampe, fond qui tombe dans le bleu nuit ; décor : cabinet sombre, ordinateur portable ouvert à gauche, bibliothèque floue ; couleurs dominantes #020D11, #16272F, #DDC49D ; ambiance accueil, sérénité ; sans aucun texte ni logo.",
+      "reference": "inspi/behance/254909225/01.png : section « Agende sua avaliação », portrait de gauche"
+    }
+  ]
+}

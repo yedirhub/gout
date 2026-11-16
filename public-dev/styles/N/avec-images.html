@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Template Style N, braise de salle : page de capture d'un coach sportif, noir profond, dégradé jaune vers orange, onglets des 3 cours gratuits.">
+<title>Avec images · Style N · Braise de salle · template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/anim.css">
+<style>
+:root{
+  --noir:#141414; --nuit:#181614; --carte:#1E1E1E; --carte2:#1B1B1B; --filet:#2E2E2E; --gris:#484848;
+  --jaune:#FFD055; --or:#FFE36F; --peche:#FFB27A; --orange:#FB8F44; --orange2:#FEA055; --dore:#ECBB73; --vert:#57E000;
+  --blanc:#F5F2EE; --texte:#C9C4BE; --doux:#9A948E;
+  --degrade:linear-gradient(90deg,#FFD055,#FF9E53);
+  --courbe:cubic-bezier(.16,1,.3,1);
+  --police:'Bai Jamjuree',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--police);font-size:15px;line-height:1.55;color:var(--texte);background:var(--noir);-webkit-font-smoothing:antialiased;overflow-x:clip}
+svg{display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--police);color:var(--blanc);line-height:1.15;letter-spacing:-.01em;font-weight:500}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto;position:relative;z-index:1}
+section{position:relative}
+.j{color:var(--jaune)} .p{color:var(--peche)} .o{color:var(--orange2)}
+
+/* Fond : fines colonnes verticales comme dans une salle */
+.colonnes{background:var(--noir) repeating-linear-gradient(90deg,transparent 0 calc(16.66% - 1px),rgba(255,255,255,.035) calc(16.66% - 1px) 16.66%)}
+
+/* Emplacements d'image */
+.emplacement{position:relative;overflow:hidden;width:100%;background:radial-gradient(80% 70% at 70% 30%,rgba(255,158,83,.22),transparent 70%),linear-gradient(160deg,#2A2420,#161412);border:1px solid rgba(236,187,115,.35)}
+.emplacement[data-format="16:9"]{aspect-ratio:16/9}.emplacement[data-format="4:3"]{aspect-ratio:4/3}.emplacement[data-format="1:1"]{aspect-ratio:1/1}.emplacement[data-format="3:4"]{aspect-ratio:3/4}.emplacement[data-format="9:16"]{aspect-ratio:9/16}
+.emplacement::after{content:attr(data-format);position:absolute;left:50%;top:50%;translate:-50% -50%;padding:4px 10px;border-radius:6px;border:1px solid rgba(255,208,85,.4);font:500 11px/1 var(--police);letter-spacing:.08em;color:var(--dore);background:rgba(20,20,20,.6)}
+.emplacement:has(img)::after{display:none}
+
+/* Bouton : dégradé jaune vers orange, halo chaud */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:46px;padding:0 22px;border-radius:6px;background:var(--degrade);color:#1A1208;
+  font:600 13px/1.2 var(--police);text-transform:uppercase;letter-spacing:.01em;box-shadow:0 0 0 1px rgba(255,208,85,.3),0 8px 30px rgba(255,158,83,.35);transition:box-shadow .4s var(--courbe),filter .4s}
+.btn:hover{box-shadow:0 0 0 1px rgba(255,208,85,.5),0 10px 44px rgba(255,158,83,.6);filter:brightness(1.06)}
+.btn svg{width:18px;height:18px}
+.btn.grand{min-height:54px;padding:0 26px;font-size:16px}
+
+/* 01 · Hero */
+.hero{background:radial-gradient(70% 90% at 72% 40%,#5A3218 0%,#2A1A10 40%,var(--nuit) 70%);overflow:hidden;border-bottom:2px solid transparent;border-image:linear-gradient(90deg,transparent,var(--dore) 20%,var(--dore) 80%,transparent) 1}
+.hero .wrap{display:grid;grid-template-columns:1fr 1.05fr;align-items:end;min-height:560px}
+.hero .txt{padding:80px 0 90px;position:relative;z-index:2}
+.logo{display:flex;align-items:center;gap:10px;font:500 40px/1 var(--police);color:var(--blanc);letter-spacing:-.02em}
+.logo .ic{width:46px;height:46px;border-radius:8px;background:var(--degrade);display:grid;place-items:center;color:#2A1708}
+.logo .ic svg{width:34px;height:34px}
+.logo b{font-weight:500;color:var(--orange2)}
+.hero h1{font-size:clamp(30px,2.9vw,42px);margin:30px 0 22px;max-width:460px}
+.hero p{font-size:15px;color:var(--blanc);max-width:420px;margin-bottom:30px}
+.hero .photo{position:relative;margin-right:-6%}
+.hero .photo .emplacement{border:0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 28%);mask-image:linear-gradient(90deg,transparent,#000 28%)}
+.hero .lueur{position:absolute;right:8%;top:10%;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(255,158,83,.35),transparent 65%);filter:blur(10px);pointer-events:none}
+
+/* 02 · Ce qui rend unique : 3 cartes, celle du milieu relevée */
+.unique{padding:90px 0 60px;overflow:hidden}
+.unique h2,.programme h2{text-align:center;font-size:clamp(26px,2.5vw,34px)}
+.cartes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:860px;margin:60px auto 0;align-items:start}
+.carte{position:relative;padding:44px 40px 46px;border-radius:14px 14px 36px 14px;background:linear-gradient(180deg,#232323,var(--carte));border:1px solid var(--filet);box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.carte:nth-child(2){margin-top:-18px;padding-bottom:70px;border-radius:14px 14px 14px 36px}
+.carte .ic{width:56px;height:56px;border-radius:10px;background:var(--orange2);display:grid;place-items:center;color:#fff}
+.carte .ic svg{width:30px;height:30px}
+.carte h3{font-size:19px;margin:40px 0 20px}
+.carte h3 span{color:var(--jaune)}
+.carte p{font-size:13px;line-height:1.5;color:var(--texte)}
+.carte::after{content:"";position:absolute;left:40px;bottom:0;width:44px;height:4px;border-radius:2px 2px 0 0;background:var(--orange2)}
+.carte:nth-child(2)::after{width:100px}
+.descendre{width:46px;height:62px;margin:90px auto 0;border-radius:24px;border:1px solid rgba(236,187,115,.55);display:grid;place-items:center;color:var(--blanc);animation:flotte 2.4s var(--courbe) infinite}
+.descendre svg{width:16px;height:30px}
+@keyframes flotte{50%{translate:0 8px}}
+
+/* 03 · Programme : onglets des 3 cours */
+.programme{padding:40px 0 100px;border-bottom:2px solid transparent;border-image:linear-gradient(90deg,transparent,var(--dore) 20%,var(--dore) 80%,transparent) 1;background:radial-gradient(30% 40% at 0% 60%,rgba(255,158,83,.12),transparent),radial-gradient(30% 40% at 100% 60%,rgba(255,158,83,.12),transparent)}
+.cours{display:grid;grid-template-columns:210px 210px 1fr;gap:22px;max-width:860px;margin:60px auto 0;align-items:stretch}
+.onglets{display:grid;gap:12px;align-content:start}
+.onglet{display:flex;align-items:center;gap:10px;height:88px;padding:0 22px;border-radius:12px 22px 12px 12px;border:1px solid var(--filet);background:var(--carte2);font:500 15px/1 var(--police);color:var(--blanc);cursor:pointer;text-align:left;white-space:nowrap;transition:background .35s,color .35s}
+.onglet::before{content:"";width:4px;height:4px;border-radius:50%;background:currentColor;opacity:.7}
+.onglet span{color:var(--orange2)}
+.onglet[aria-selected="true"]{background:var(--orange);border-color:var(--orange);color:#1A1208}
+.onglet[aria-selected="true"] span{color:#1A1208}
+.onglet:hover:not([aria-selected="true"]){background:#262626}
+.panneau{display:contents}
+.panneau[hidden]{display:none}
+.video{position:relative;border-radius:12px 34px 12px 12px;overflow:hidden;border:1px solid rgba(236,187,115,.6)}
+.video .emplacement{height:100%;border:0}
+.video .lecture{position:absolute;left:50%;top:50%;translate:-50% -50%;width:62px;height:62px;border-radius:50%;background:#fff;display:grid;place-items:center;color:#141414;box-shadow:0 0 0 10px rgba(255,255,255,.18);z-index:2}
+.video .lecture svg{width:22px;height:22px;margin-left:4px}
+.detail{padding:46px 34px 50px;border-radius:12px 34px 12px 12px;border:1px solid var(--filet);background:var(--carte2);position:relative;display:flex;flex-direction:column;justify-content:center}
+.detail .tag{align-self:flex-start;height:28px;padding:0 10px;display:grid;place-items:center;border-radius:4px;border:1px solid var(--orange2);font:500 11px/1 var(--police);color:var(--texte)}
+.detail h3{font-size:22px;margin:30px 0 16px}
+.detail h3 span{color:var(--orange2)}
+.detail p{font-size:13px}
+.detail::after{content:"";position:absolute;left:34px;bottom:0;width:80px;height:4px;border-radius:2px 2px 0 0;background:var(--orange2)}
+
+/* 04 · Pourquoi participer */
+.pourquoi{padding:0 0 60px}
+.pq{display:grid;grid-template-columns:.75fr 1fr;gap:26px;max-width:860px;margin:0 auto}
+.pq>*{border-radius:10px;border:1px solid var(--filet);background:var(--carte)}
+.pq .titre{padding:50px 54px}
+.pq h2{font:600 clamp(28px,2.6vw,36px)/1.2 var(--police);text-transform:uppercase;letter-spacing:.01em}
+.pq h2 span{color:var(--orange2)}
+.pq .titre .btn{margin-top:30px;width:84px;padding:0}
+.pq .titre .btn svg{width:34px}
+.pq ul{list-style:none;padding:40px 46px;display:grid;gap:22px}
+.pq li{display:flex;gap:18px;font-size:13.5px;line-height:1.45;color:var(--blanc)}
+.pq li i{flex:none;width:22px;height:22px;border-radius:4px;background:var(--vert);display:grid;place-items:center;color:#fff;margin-top:2px}
+.pq li i svg{width:14px;height:14px}
+.pq li u{color:var(--peche);text-underline-offset:3px}
+
+/* Bandeau qui défile */
+.defile{overflow:hidden;border-top:1px solid #222;border-bottom:1px solid #1C1C1C;padding:14px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.defile div{display:flex;gap:28px;width:max-content;animation:file 36s linear infinite;font:600 26px/1 var(--police);text-transform:uppercase;letter-spacing:.02em;color:var(--gris);white-space:nowrap}
+@keyframes file{to{transform:translateX(-50%)}}
+
+/* 05 · Le coach : dates géantes, 3 photos en éventail */
+.coach{padding:90px 0 100px;overflow:hidden}
+.coach .wrap{display:grid;grid-template-columns:1.15fr 1fr;gap:60px;align-items:center;max-width:960px}
+.pile{position:relative;height:520px}
+.dates{position:absolute;left:0;top:50%;translate:0 -50%;display:grid;gap:0;font:600 clamp(56px,6vw,84px)/1.05 var(--police);letter-spacing:-.02em}
+.dates span:nth-child(1){color:var(--blanc)} .dates span:nth-child(2){color:var(--or)} .dates span:nth-child(3){color:var(--orange2)}
+.pile .ph{position:absolute;border-radius:8px;overflow:hidden;border:1px solid rgba(236,187,115,.55);box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.pile .ph .emplacement{border:0}
+.pile .ph.a{left:15%;top:8%;width:36%;z-index:1}
+.pile .ph.c{left:62%;top:20%;width:30%;z-index:1}
+.pile .ph.b{left:30%;top:0;width:52%;z-index:2}
+.coach h2{font-size:clamp(30px,2.8vw,40px)}
+.coach h2 span{color:var(--peche)}
+.coach p{font-size:14px;margin-top:22px;color:var(--texte);max-width:400px}
+.coach .btn{margin-top:36px}
+
+/* 06 · Pied jaune */
+#pied{background:var(--jaune);background:linear-gradient(90deg,#FFCA76,#FFD055);color:#3A2A10;font-size:13px}
+#pied .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:84px;padding:20px 0}
+#pied .droite{display:flex;align-items:center;gap:10px;text-align:right}
+#pied .droite a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:600}
+#pied .droite svg{width:20px;height:20px}
+
+@media (max-width:1100px){
+  .hero .photo{margin-right:-20px}
+}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;min-height:0}
+  .hero .txt{padding:60px 0 10px;text-align:center}
+  .hero .logo{justify-content:center}
+  .hero h1,.hero p{margin-inline:auto}
+  .hero .photo{margin:0 auto;width:min(520px,100% + 40px)}
+  .hero .photo .emplacement{position:relative;width:100%;-webkit-mask-image:linear-gradient(180deg,transparent,#000 22%);mask-image:linear-gradient(180deg,transparent,#000 22%)}
+  .cartes{grid-template-columns:1fr;max-width:440px;gap:20px}
+  .carte:nth-child(2){margin-top:0}
+  .cours{grid-template-columns:1fr 1fr;max-width:560px}
+  .onglets{grid-column:1/-1;grid-template-columns:repeat(3,1fr)}
+  .onglet{height:60px;padding:0 12px;font-size:14px;justify-content:center}
+  .onglet::before{display:none}
+  .pq{grid-template-columns:1fr;max-width:560px}
+  .pq .titre{padding:40px 30px}
+  .pq ul{padding:30px}
+  .coach .wrap{grid-template-columns:1fr;gap:40px;text-align:center}
+  .coach p{margin-inline:auto}
+  .pile{height:460px;max-width:520px;width:100%;margin:0 auto}
+}
+@media (max-width:560px){
+  .hero h1{font-size:28px}
+  .cours{grid-template-columns:1fr}
+  .onglets{grid-template-columns:1fr}
+  .onglet{height:52px;justify-content:flex-start;padding:0 18px}
+  .video .emplacement{aspect-ratio:4/3}
+  .detail{padding:36px 26px 44px}
+  .descendre{margin-top:60px}
+  .defile div{font-size:20px}
+  .pile{height:380px}
+  .dates{font-size:50px}
+  .pile .ph.b{left:28%;width:58%}
+  #pied .wrap{flex-direction:column;text-align:center;gap:6px}
+  #pied .droite{text-align:center}
+}
+@media (prefers-reduced-motion:reduce){.defile div,.descendre{animation:none}}
+</style>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/portfolio.css">
+<link rel="stylesheet" href="../../commun/flottant.css">
+</head>
+<body>
+<div data-progression style="background:var(--degrade)"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="haltere" viewBox="0 0 34 34"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="10" width="5" height="14" rx="2"/><rect x="8" y="7" width="5" height="20" rx="2"/><rect x="21" y="7" width="5" height="20" rx="2"/><rect x="26" y="10" width="5" height="14" rx="2"/><path d="M13 17 H21"/></g></symbol>
+  <symbol id="fleche" viewBox="0 0 24 24"><path d="M4 12 H20 M14 6 L20 12 L14 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="atome" viewBox="0 0 30 30"><g fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="15" cy="15" rx="12" ry="5"/><ellipse cx="15" cy="15" rx="12" ry="5" transform="rotate(60 15 15)"/><ellipse cx="15" cy="15" rx="12" ry="5" transform="rotate(120 15 15)"/><circle cx="15" cy="15" r="1.8" fill="currentColor"/></g></symbol>
+  <symbol id="kettle" viewBox="0 0 30 30"><path d="M10 11 C10 5 20 5 20 11 M7 14 C7 11 23 11 23 14 L24 22 C24 26 6 26 6 22 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="15" cy="18" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="pomme" viewBox="0 0 30 30"><path d="M15 9 C11 6 5 8 5 15 C5 22 10 27 15 25 C20 27 25 22 25 15 C25 8 19 6 15 9 Z M15 9 C15 6 17 4 19 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></symbol>
+  <symbol id="bas" viewBox="0 0 16 30"><path d="M8 2 V27 M2 21 L8 27 L14 21" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="lire" viewBox="0 0 22 22"><path d="M5 3 L19 11 L5 19 Z" fill="currentColor"/></symbol>
+  <symbol id="coche" viewBox="0 0 14 14"><path d="M3 7.5 L6 10 L11 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="whatsapp" viewBox="0 0 24 24"><path d="M12 3 A9 9 0 0 0 4.3 16.6 L3 21 L7.5 19.8 A9 9 0 1 0 12 3 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.5 C9 12 12 15 15.5 15 L16.2 13.6 L14.4 12.8 L13.6 13.6 C12.2 13 11 11.8 10.4 10.4 L11.2 9.6 L10.4 7.8 Z" fill="currentColor"/></symbol>
+</svg>
+
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="txt">
+      <div class="logo" data-rv><span class="ic"><svg><use href="#haltere"/></svg></span><span>IB<b>30</b></span></div>
+      <h1 data-rv>Le <span class="j">plan complet</span> pour <span class="p">optimiser</span> vos séances et <span class="o">décupler</span> vos résultats</h1>
+      <p data-rv>Rejoignez les <span class="j">3 cours gratuits d'IB30</span> et découvrez les techniques qui marchent vraiment pour <span class="j">transformer votre corps</span> sans perdre de temps.</p>
+      <a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Isma%C3%ABl%2C%20je%20veux%20m%27inscrire%20aux%203%20cours%20gratuits%20IB30." target="_blank" rel="noopener" data-rv data-aimant>Je m'inscris <svg aria-hidden="true"><use href="#fleche"/></svg></a>
+    </div>
+    <div class="photo">
+      <span class="lueur" aria-hidden="true"></span>
+      <div class="emplacement" data-img="N-hero" data-format="1:1" data-alt="Ismaël Bamba, coach sportif, regard face caméra dans une salle de sport éclairée en orange"><img src="images/N-hero.jpg" alt="Ismaël Bamba, coach sportif, regard face caméra dans une salle de sport éclairée en orange" loading="lazy" decoding="async" onerror="this.remove()"></div>
+    </div>
+  </div>
+</section>
+
+<section class="unique colonnes" id="unique">
+  <div class="wrap">
+    <h2 data-rv>Qu'est-ce qui rend <span class="o">IB30 unique&nbsp;?</span></h2>
+    <div class="cartes">
+      <div class="carte" data-rv><span class="ic" aria-hidden="true"><svg><use href="#atome"/></svg></span><h3>Une méthode fondée <span>sur la science</span></h3><p>Des stratégies éprouvées et appuyées par la recherche pour construire du muscle sans tâtonner.</p></div>
+      <div class="carte" data-rv style="--d:120ms"><span class="ic" aria-hidden="true"><svg><use href="#kettle"/></svg></span><h3>Des techniques d'entraînement <span>avancées</span></h3><p>Les exercices et les protocoles qui font progresser plus vite, sans passer plus d'heures à la salle.</p></div>
+      <div class="carte" data-rv style="--d:240ms"><span class="ic" aria-hidden="true"><svg><use href="#pomme"/></svg></span><h3>Une alimentation <span>intelligente</span></h3><p>Apprenez à manger et à vous compléter avec ce qu'on trouve ici, sans gaspiller votre argent.</p></div>
+    </div>
+    <a class="descendre" href="#programme" aria-label="Voir le programme des cours"><svg><use href="#bas"/></svg></a>
+  </div>
+</section>
+
+<section class="programme" id="programme">
+  <div class="wrap">
+    <h2 data-rv>Tout ce que vous allez <span class="j">apprendre</span> pendant <span class="o">l'événement</span></h2>
+    <div class="cours" data-rv>
+      <div class="onglets" role="tablist" aria-label="Les 3 cours">
+        <button class="onglet" role="tab" id="t1" aria-controls="c1" aria-selected="true">COURS 01 <span>/ 26-01</span></button>
+        <button class="onglet" role="tab" id="t2" aria-controls="c2" aria-selected="false">COURS 02 <span>/ 27-01</span></button>
+        <button class="onglet" role="tab" id="t3" aria-controls="c3" aria-selected="false">COURS 03 <span>/ 28-01</span></button>
+      </div>
+      <div class="panneau" role="tabpanel" id="c1" aria-labelledby="t1">
+        <div class="video"><div class="emplacement" data-img="N-cours-1" data-format="3:4" data-alt="Séance de cordes ondulatoires dans une salle de sport, lumière orange"><img src="images/N-cours-1.jpg" alt="Séance de cordes ondulatoires dans une salle de sport, lumière orange" loading="lazy" decoding="async" onerror="this.remove()"></div><span class="lecture" aria-hidden="true"><svg><use href="#lire"/></svg></span></div>
+        <div class="detail"><span class="tag">COURS 01</span><h3>Les piliers de <span>la prise de muscle</span></h3><p>Les bases que toute transformation physique réussie respecte, expliquées simplement.</p></div>
+      </div>
+      <div class="panneau" role="tabpanel" id="c2" aria-labelledby="t2" hidden>
+        <div class="video"><div class="emplacement" data-img="N-cours-2" data-format="3:4" data-alt="Assiette de repas de sportif préparée avec des produits du marché"><img src="images/N-cours-2.jpg" alt="Assiette de repas de sportif préparée avec des produits du marché" loading="lazy" decoding="async" onerror="this.remove()"></div><span class="lecture" aria-hidden="true"><svg><use href="#lire"/></svg></span></div>
+        <div class="detail"><span class="tag">COURS 02</span><h3>Manger pour <span>progresser</span></h3><p>Construire ses repas avec ce qu'on trouve au marché, sans compléments hors de prix.</p></div>
+      </div>
+      <div class="panneau" role="tabpanel" id="c3" aria-labelledby="t3" hidden>
+        <div class="video"><div class="emplacement" data-img="N-cours-3" data-format="3:4" data-alt="Ismaël Bamba corrige la posture d'un élève au développé couché"><img src="images/N-cours-3.jpg" alt="Ismaël Bamba corrige la posture d'un élève au développé couché" loading="lazy" decoding="async" onerror="this.remove()"></div><span class="lecture" aria-hidden="true"><svg><use href="#lire"/></svg></span></div>
+        <div class="detail"><span class="tag">COURS 03</span><h3>Le plan des <span>30 jours</span></h3><p>Votre programme semaine par semaine, prêt à suivre dès le lendemain du cours.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pourquoi colonnes" id="pourquoi">
+  <div class="wrap">
+    <div class="pq">
+      <div class="titre" data-rv>
+        <h2>Pourquoi vous devez rejoindre <span>IB30&nbsp;?</span></h2>
+        <a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Isma%C3%ABl%2C%20je%20rejoins%20IB30." target="_blank" rel="noopener" aria-label="Rejoindre IB30 sur WhatsApp" data-aimant><svg><use href="#fleche"/></svg></a>
+      </div>
+      <ul data-rv style="--d:120ms">
+        <li><i aria-hidden="true"><svg><use href="#coche"/></svg></i><span><u>Une vraie transformation&nbsp;:</u> des résultats visibles et durables en moins de temps.</span></li>
+        <li><i aria-hidden="true"><svg><use href="#coche"/></svg></i><span><u>Un savoir de terrain&nbsp;:</u> apprenez avec un coach qui vit ce qu'il enseigne.</span></li>
+        <li><i aria-hidden="true"><svg><use href="#coche"/></svg></i><span><u>Du temps et des efforts gagnés&nbsp;:</u> évitez les erreurs qui freinent votre progression.</span></li>
+        <li><i aria-hidden="true"><svg><use href="#coche"/></svg></i><span><u>Une méthode éprouvée&nbsp;:</u> des techniques validées par des athlètes confirmés.</span></li>
+        <li><i aria-hidden="true"><svg><use href="#coche"/></svg></i><span><u>Un accès gratuit&nbsp;:</u> trois cours offerts qui peuvent changer votre trajectoire.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="defile" aria-hidden="true"><div>
+  <span>Énergie</span><span>-</span><span>Santé</span><span>-</span><span>Performance</span><span>-</span><span>Endurance</span><span>-</span><span>Prise de muscle</span><span>-</span><span>Force</span><span>-</span>
+  <span>Énergie</span><span>-</span><span>Santé</span><span>-</span><span>Performance</span><span>-</span><span>Endurance</span><span>-</span><span>Prise de muscle</span><span>-</span><span>Force</span><span>-</span>
+</div></div>
+
+<section class="coach" id="coach">
+  <div class="wrap">
+    <div class="pile" data-rv>
+      <div class="dates" aria-label="Les 26, 27 et 28 janvier"><span>26</span><span>27</span><span>28</span></div>
+      <div class="ph a" data-parallaxe="0.03"><div class="emplacement" data-img="N-salle-1" data-format="9:16" data-alt="Rangée d'haltères dans une salle de sport aux lumières chaudes"><img src="images/N-salle-1.jpg" alt="Rangée d'haltères dans une salle de sport aux lumières chaudes" loading="lazy" decoding="async" onerror="this.remove()"></div></div>
+      <div class="ph c" data-parallaxe="-0.03"><div class="emplacement" data-img="N-salle-2" data-format="9:16" data-alt="Main qui serre la barre d'un appareil de musculation"><img src="images/N-salle-2.jpg" alt="Main qui serre la barre d'un appareil de musculation" loading="lazy" decoding="async" onerror="this.remove()"></div></div>
+      <div class="ph b"><div class="emplacement" data-img="N-coach" data-format="3:4" data-alt="Portrait d'Ismaël Bamba à la salle, une barre chargée au premier plan"><img src="images/N-coach.jpg" alt="Portrait d'Ismaël Bamba à la salle, une barre chargée au premier plan" loading="lazy" decoding="async" onerror="this.remove()"></div></div>
+    </div>
+    <div>
+      <h2 data-rv>Ismaël <span>Bamba</span></h2>
+      <p data-rv>Plus de 10 ans de musculation, dont 7 à coacher à Abidjan&nbsp;: Ismaël a aidé des centaines de personnes à changer de corps, et d'assurance.</p>
+      <p data-rv>Il a créé IB30 pour transmettre en 30 jours ce qu'il a mis des années à apprendre, dans un format simple qui vous évite les erreurs habituelles.</p>
+      <a class="btn grand reflet" href="https://wa.me/22500000000?text=Bonjour%20Isma%C3%ABl%2C%20je%20rel%C3%A8ve%20le%20d%C3%A9fi%20IB30." target="_blank" rel="noopener" data-rv data-aimant>Je relève le défi <svg aria-hidden="true"><use href="#fleche"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<footer id="pied">
+  <div class="wrap">
+    <span>Tous droits réservés · IB30 · Abidjan 2026<br>Template · Style N «&nbsp;Braise de salle&nbsp;»</span>
+    <div class="pf-centre"><span class="pf-par">Réalisé par <strong>Yedidia Ruben - Digital Strategist</strong></span></div><div class="droite"><a href="https://wa.me/22500000000?text=Bonjour%20IB30%2C%20j%27ai%20une%20question." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#whatsapp"/></svg>+225 00 00 00 00</a></div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.onglet').forEach(function(o){
+  o.addEventListener('click',function(){
+    document.querySelectorAll('.onglet').forEach(function(x){x.setAttribute('aria-selected',x===o?'true':'false');document.getElementById(x.getAttribute('aria-controls')).hidden=x!==o;});
+  });
+});
+</script>
+<script src="../../commun/anim.js" defer></script>
+
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template N<b>Braise de salle</b></span><nav aria-label="Autour du template N"><ul><li><a href="./">Template</a></li><li><a href="avec-images.html" aria-current=page>Template avec images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html">Design<small>DESIGN.md</small></a></li><li><a href="prompt.html">Prompt de la page<small>kit</small></a></li><li><a href="prompts.html">Prompts des images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template N : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">N</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+{
+ "template": "V",
+ "personnage": {
+  "nom": "Ousmane Kanté",
+  "genre": "homme",
+  "age": 32,
+  "ville": "Conakry",
+  "physique": "peau très foncée, twists courts, mâchoire carrée, regard intense",
+  "signature": "chaîne fine dorée, chemise en satin",
+  "metier": "formateur en publicité en ligne et vente sur WhatsApp, fondateur de Kanté Ads Académie",
+  "tenue": "chemise en satin noir #111111 ou blazer graphite #1F1F1F, chaîne fine dorée, montre dorée",
+  "regle": "même visage, même coiffure, même signature sur chaque image où il apparaît"
+ },
+ "palette": {
+  "noir": "#111111",
+  "graphite": "#1F1F1F",
+  "or": "#D99C63",
+  "or_clair": "#F9C58C",
+  "degrade_debut": "#FFB862",
+  "degrade_fin": "#F1D4B8",
+  "beige": "#EEE9E3",
+  "blanc": "#EFEFEF"
+ },
+ "images": [
+  {
+   "id": "V-hero",
+   "fichier": "images/V-hero.jpg",
+   "section": "hero",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "portrait de studio du fondateur",
+    "personnage": "Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin",
+    "action": "mains jointes devant la poitrine, regard droit vers l'objectif, air sûr de lui",
+    "cadrage": "plan taille, sujet centré légèrement à droite, haut du crâne proche du bord",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière dorée latérale douce, fond qui tombe dans le noir",
+    "decor": "studio sombre, fond noir avec de vagues cadres de photos fantômes",
+    "palette": [
+     "#111111",
+     "#1F1F1F",
+     "#D99C63",
+     "#F1D4B8"
+    ],
+    "ambiance": "luxe sobre, confiance",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : portrait de studio du fondateur, avec Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin, mains jointes devant la poitrine, regard droit vers l'objectif, air sûr de lui ; plan taille, sujet centré légèrement à droite, haut du crâne proche du bord ; objectif 85 mm, f/2 ; lumière dorée latérale douce, fond qui tombe dans le noir ; décor : studio sombre, fond noir avec de vagues cadres de photos fantômes ; palette noir, graphite et or ; ambiance luxe sobre, confiance ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/209134873/05.png : haut de page, portrait à droite"
+  },
+  {
+   "id": "V-video",
+   "fichier": "images/V-video.jpg",
+   "section": "video",
+   "format": "16:9",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "image d'accroche de la vidéo de présentation",
+    "personnage": "Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin",
+    "action": "assis à un bureau sombre, une main levée en geste d'explication, regard caméra",
+    "cadrage": "plan poitrine, sujet dans le tiers droit, grand espace sombre à gauche pour le titre",
+    "objectif": "50 mm, f/2,8",
+    "lumiere": "lampe chaude hors champ à droite, reflets dorés",
+    "decor": "bureau en bois foncé, intérieur sombre et feutré",
+    "palette": [
+     "#111111",
+     "#1F1F1F",
+     "#D99C63",
+     "#F1D4B8"
+    ],
+    "ambiance": "intime, sérieux",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 16:9 : image d'accroche de la vidéo de présentation, avec Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin, assis à un bureau sombre, une main levée en geste d'explication, regard caméra ; plan poitrine, sujet dans le tiers droit, grand espace sombre à gauche pour le titre ; objectif 50 mm, f/2,8 ; lampe chaude hors champ à droite, reflets dorés ; décor : bureau en bois foncé, intérieur sombre et feutré ; palette noir, graphite et or ; ambiance intime, sérieux ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/209134873/05.png : bloc vidéo « Assista ao vídeo »"
+  },
+  {
+   "id": "V-mockup",
+   "fichier": "images/V-mockup.jpg",
+   "section": "douleur",
+   "format": "4:3",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "mise en scène des supports de la formation",
+    "personnage": "Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin",
+    "action": "Ousmane Kanté visible sur l'écran d'un ordinateur et sur deux affiches verticales",
+    "cadrage": "plan d'ensemble de trois quarts, ordinateur au centre, tablette devant, deux affiches derrière",
+    "objectif": "35 mm, f/5,6",
+    "lumiere": "lumière de studio douce, halo doré derrière",
+    "decor": "fond noir, un grand anneau gris clair en arrière-plan",
+    "palette": [
+     "#111111",
+     "#1F1F1F",
+     "#D99C63",
+     "#F1D4B8"
+    ],
+    "ambiance": "produit numérique haut de gamme",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 4:3 : mise en scène des supports de la formation, avec Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin, Ousmane Kanté visible sur l'écran d'un ordinateur et sur deux affiches verticales ; plan d'ensemble de trois quarts, ordinateur au centre, tablette devant, deux affiches derrière ; objectif 35 mm, f/5,6 ; lumière de studio douce, halo doré derrière ; décor : fond noir, un grand anneau gris clair en arrière-plan ; palette noir, graphite et or ; ambiance produit numérique haut de gamme ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/209134873/05.png : composition d'appareils à gauche de la section des excuses"
+  },
+  {
+   "id": "V-module-1",
+   "fichier": "images/V-module-1.jpg",
+   "section": "modules",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "affiche du module Directs",
+    "personnage": "Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin",
+    "action": "tient un micro, bouche entrouverte, en train de parler",
+    "cadrage": "plan taille, sujet centré, bas de l'image sombre pour le titre",
+    "objectif": "70 mm, f/2,2",
+    "lumiere": "lumière de scène dorée en contre-jour",
+    "decor": "plateau sombre avec un écran flou",
+    "palette": [
+     "#111111",
+     "#1F1F1F",
+     "#D99C63",
+     "#F1D4B8"
+    ],
+    "ambiance": "énergie maîtrisée",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : affiche du module Directs, avec Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin, tient un micro, bouche entrouverte, en train de parler ; plan taille, sujet centré, bas de l'image sombre pour le titre ; objectif 70 mm, f/2,2 ; lumière de scène dorée en contre-jour ; décor : plateau sombre avec un écran flou ; palette noir, graphite et or ; ambiance énergie maîtrisée ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/209134873/05.png : carrousel d'affiches, 1re affiche"
+  },
+  {
+   "id": "V-module-2",
+   "fichier": "images/V-module-2.jpg",
+   "section": "modules",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "affiche du module Pubs",
+    "personnage": "Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin",
+    "action": "de trois quarts, main sur le revers de la chemise",
+    "cadrage": "plan taille, bas de l'image sombre",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière dorée latérale",
+    "decor": "fond graphite uni",
+    "palette": [
+     "#111111",
+     "#1F1F1F",
+     "#D99C63",
+     "#F1D4B8"
+    ],
+    "ambiance": "élégance",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : affiche du module Pubs, avec Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin, de trois quarts, main sur le revers de la chemise ; plan taille, bas de l'image sombre ; objectif 85 mm, f/2 ; lumière dorée latérale ; décor : fond graphite uni ; palette noir, graphite et or ; ambiance élégance ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/209134873/05.png : carrousel d'affiches, 2e affiche"
+  },
+  {
+   "id": "V-module-3",
+   "fichier": "images/V-module-3.jpg",
+   "section": "modules",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "affiche du module Automatiser",
+    "personnage": "Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin",
+    "action": "assis devant un ordinateur portable, tableau de bord flou à l'écran, regard caméra",
+    "cadrage": "plan taille, bas de l'image sombre",
+    "objectif": "50 mm, f/2,8",
+    "lumiere": "lumière d'écran froide et lampe dorée",
+    "decor": "bureau sombre",
+    "palette": [
+     "#111111",
+     "#1F1F1F",
+     "#D99C63",
+     "#F1D4B8"
+    ],
+    "ambiance": "efficacité",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : affiche du module Automatiser, avec Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin, assis devant un ordinateur portable, tableau de bord flou à l'écran, regard caméra ; plan taille, bas de l'image sombre ; objectif 50 mm, f/2,8 ; lumière d'écran froide et lampe dorée ; décor : bureau sombre ; palette noir, graphite et or ; ambiance efficacité ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/209134873/05.png : carrousel d'affiches, 3e affiche"
+  },
+  {
+   "id": "V-module-4",
+   "fichier": "images/V-module-4.jpg",
+   "section": "modules",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "affiche du module TikTok",
+    "personnage": "Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin",
+    "action": "tient un téléphone à la main, sourire discret",
+    "cadrage": "plan taille, bas de l'image sombre",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière dorée douce",
+    "decor": "fond noir avec un léger halo",
+    "palette": [
+     "#111111",
+     "#1F1F1F",
+     "#D99C63",
+     "#F1D4B8"
+    ],
+    "ambiance": "complicité",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : affiche du module TikTok, avec Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin, tient un téléphone à la main, sourire discret ; plan taille, bas de l'image sombre ; objectif 85 mm, f/2 ; lumière dorée douce ; décor : fond noir avec un léger halo ; palette noir, graphite et or ; ambiance complicité ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/209134873/05.png : carrousel d'affiches, 4e affiche"
+  },
+  {
+   "id": "V-module-5",
+   "fichier": "images/V-module-5.jpg",
+   "section": "modules",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "affiche du module Instagram",
+    "personnage": "Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin",
+    "action": "bras croisés, menton levé",
+    "cadrage": "plan taille, bas de l'image sombre",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière dorée de côté, ombre profonde",
+    "decor": "fond graphite",
+    "palette": [
+     "#111111",
+     "#1F1F1F",
+     "#D99C63",
+     "#F1D4B8"
+    ],
+    "ambiance": "assurance",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : affiche du module Instagram, avec Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin, bras croisés, menton levé ; plan taille, bas de l'image sombre ; objectif 85 mm, f/2 ; lumière dorée de côté, ombre profonde ; décor : fond graphite ; palette noir, graphite et or ; ambiance assurance ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/209134873/05.png : carrousel d'affiches, 5e affiche"
+  },
+  {
+   "id": "V-module-6",
+   "fichier": "images/V-module-6.jpg",
+   "section": "modules",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "affiche du module Parler avec assurance",
+    "personnage": "Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin",
+    "action": "sur une petite scène, micro à la main, geste ouvert",
+    "cadrage": "plan taille, public flou derrière, bas de l'image sombre",
+    "objectif": "70 mm, f/2,2",
+    "lumiere": "projecteur chaud et lumières bleutées floues",
+    "decor": "salle de conférence sombre",
+    "palette": [
+     "#111111",
+     "#1F1F1F",
+     "#D99C63",
+     "#F1D4B8"
+    ],
+    "ambiance": "prise de parole",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : affiche du module Parler avec assurance, avec Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin, sur une petite scène, micro à la main, geste ouvert ; plan taille, public flou derrière, bas de l'image sombre ; objectif 70 mm, f/2,2 ; projecteur chaud et lumières bleutées floues ; décor : salle de conférence sombre ; palette noir, graphite et or ; ambiance prise de parole ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/209134873/05.png : carrousel d'affiches, 6e affiche"
+  },
+  {
+   "id": "V-bonus",
+   "fichier": "images/V-bonus.jpg",
+   "section": "garanties",
+   "format": "4:3",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "ordinateur portable en appel vidéo",
+    "personnage": "Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin",
+    "action": "Ousmane Kanté visible à l'écran de l'ordinateur, en appel vidéo, souriant",
+    "cadrage": "plan de trois quarts, ordinateur posé sur un bloc de béton, écran à droite",
+    "objectif": "50 mm, f/4",
+    "lumiere": "lumière froide de fenêtre et reflets doux",
+    "decor": "bloc de béton gris foncé, fond graphite",
+    "palette": [
+     "#111111",
+     "#1F1F1F",
+     "#D99C63",
+     "#F1D4B8"
+    ],
+    "ambiance": "accompagnement proche",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 4:3 : ordinateur portable en appel vidéo, avec Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin, Ousmane Kanté visible à l'écran de l'ordinateur, en appel vidéo, souriant ; plan de trois quarts, ordinateur posé sur un bloc de béton, écran à droite ; objectif 50 mm, f/4 ; lumière froide de fenêtre et reflets doux ; décor : bloc de béton gris foncé, fond graphite ; palette noir, graphite et or ; ambiance accompagnement proche ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/209134873/05.png : carte bonus, ordinateur sur bloc de béton"
+  },
+  {
+   "id": "V-portrait",
+   "fichier": "images/V-portrait.jpg",
+   "section": "qui",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "portrait de présentation du fondateur",
+    "personnage": "Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin",
+    "action": "une main posée sur la poitrine, regard calme vers l'objectif",
+    "cadrage": "plan taille, sujet centré, épaules dans le cadre",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière dorée douce à gauche, fond qui tombe dans le noir",
+    "decor": "studio gris anthracite",
+    "palette": [
+     "#111111",
+     "#1F1F1F",
+     "#D99C63",
+     "#F1D4B8"
+    ],
+    "ambiance": "confiance, proximité",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : portrait de présentation du fondateur, avec Ousmane Kanté, homme de 32 ans, peau très foncée, twists courts, mâchoire carrée, regard intense, chaîne fine dorée, chemise en satin, une main posée sur la poitrine, regard calme vers l'objectif ; plan taille, sujet centré, épaules dans le cadre ; objectif 85 mm, f/2 ; lumière dorée douce à gauche, fond qui tombe dans le noir ; décor : studio gris anthracite ; palette noir, graphite et or ; ambiance confiance, proximité ; aucun texte ni logo dans l'image.",
+   "reference": "inspi/behance/209134873/05.png : carte « Prazer, eu sou », portrait à gauche"
+  }
+ ]
+}

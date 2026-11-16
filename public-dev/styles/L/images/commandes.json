@@ -1,0 +1,345 @@
+{
+ "template": "L",
+ "personnage": {
+  "nom": "Yannick Ekambi",
+  "genre": "homme",
+  "age": 34,
+  "ville": "Douala",
+  "physique": "peau brun foncé, cheveux courts en dégradé avec une raie tracée, moustache fine, grand sourire",
+  "signature": "veste bomber, chaîne fine argentée",
+  "metier": "coach et directeur commercial, formateur d'équipes de vente",
+  "tenue": "veste bomber noire nuit #0B051B à liseré jaune fluo #C6EA0B sur t-shirt blanc, chaîne fine argentée",
+  "regle": "même visage, même coiffure, même signature sur chaque image où il apparaît"
+ },
+ "palette": {
+  "nuit": "#0B051B",
+  "nuit_2": "#0D0722",
+  "carte": "#190F30",
+  "violet": "#220E54",
+  "jaune": "#C6EA0B",
+  "ruban": "#D2F201",
+  "blanc": "#FAF6FF",
+  "rouge": "#FF4953"
+ },
+ "images": [
+  {
+   "id": "L-hero",
+   "fichier": "images/L-hero.jpg",
+   "section": "hero",
+   "format": "16:9",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "un coach commercial dans un open space de nuit",
+    "personnage": "Yannick Ekambi, homme camerounais de 34 ans, peau brun foncé, cheveux courts en dégradé avec une raie tracée, moustache fine, grand sourire, veste bomber noire à liseré jaune fluo, chaîne fine argentée",
+    "action": "sourit face caméra, bras croisés, assuré",
+    "cadrage": "plan taille, sujet sur le tiers droit, grand espace sombre à gauche pour le texte",
+    "objectif": "50 mm, f/1.8",
+    "lumiere": "néons froids violets en fond, lumière clé douce à droite, léger contre-jour jaune",
+    "decor": "bureaux flous la nuit, écrans allumés, bokeh violet",
+    "palette": [
+     "#0B051B",
+     "#220E54",
+     "#C6EA0B"
+    ],
+    "ambiance": "énergie calme d'un leader de vente",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lumière plate de banque d'images"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 16:9 : un coach commercial dans un open space de nuit, Yannick Ekambi, homme camerounais de 34 ans, peau brun foncé, cheveux courts en dégradé avec une raie tracée, moustache fine, grand sourire, veste bomber noire à liseré jaune fluo, chaîne fine argentée, sourit face caméra, bras croisés, assuré ; cadrage plan taille, sujet sur le tiers droit, grand espace sombre à gauche pour le texte, objectif 50 mm, f/1.8 ; lumière néons froids violets en fond, lumière clé douce à droite, léger contre-jour jaune ; décor bureaux flous la nuit, écrans allumés, bokeh violet ; couleurs dominantes #0B051B, #220E54, #C6EA0B ; ambiance énergie calme d'un leader de vente ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/211920099/01.png : la vignette vidéo du hero (haut de page)"
+  },
+  {
+   "id": "L-module-abord",
+   "fichier": "images/L-module-abord.jpg",
+   "section": "modules",
+   "format": "9:16",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "un coach commercial au téléphone avec un client",
+    "personnage": "Yannick Ekambi, homme camerounais de 34 ans, peau brun foncé, cheveux courts en dégradé avec une raie tracée, moustache fine, grand sourire, veste bomber noire à liseré jaune fluo, chaîne fine argentée",
+    "action": "parle au téléphone en souriant, un casque sur une oreille",
+    "cadrage": "plan poitrine vertical, visage dans le tiers haut, bas de l'image sombre pour le titre",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière d'écran froide sur le visage, fond violet sombre",
+    "decor": "bureau de nuit flou",
+    "palette": [
+     "#0B051B",
+     "#220E54",
+     "#3B1E85"
+    ],
+    "ambiance": "concentré et chaleureux",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lumière plate de banque d'images"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 9:16 : un coach commercial au téléphone avec un client, Yannick Ekambi, homme camerounais de 34 ans, peau brun foncé, cheveux courts en dégradé avec une raie tracée, moustache fine, grand sourire, veste bomber noire à liseré jaune fluo, chaîne fine argentée, parle au téléphone en souriant, un casque sur une oreille ; cadrage plan poitrine vertical, visage dans le tiers haut, bas de l'image sombre pour le titre, objectif 85 mm, f/2 ; lumière lumière d'écran froide sur le visage, fond violet sombre ; décor bureau de nuit flou ; couleurs dominantes #0B051B, #220E54, #3B1E85 ; ambiance concentré et chaleureux ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/211920099/01.png : module 03 de la grille des modules"
+  },
+  {
+   "id": "L-module-signature",
+   "fichier": "images/L-module-signature.jpg",
+   "section": "modules",
+   "format": "9:16",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "une poignée de main après une signature",
+    "personnage": "Yannick Ekambi, homme camerounais de 34 ans, peau brun foncé, cheveux courts en dégradé avec une raie tracée, moustache fine, grand sourire, veste bomber noire à liseré jaune fluo, chaîne fine argentée",
+    "action": "serre la main d'un client en costume, on voit surtout les mains et les avant-bras, son visage souriant de profil en haut",
+    "cadrage": "gros plan vertical sur les mains au centre, bas sombre",
+    "objectif": "85 mm, f/2.2",
+    "lumiere": "lumière chaude latérale, reflets violets",
+    "decor": "table de réunion sombre, documents flous",
+    "palette": [
+     "#0B051B",
+     "#220E54",
+     "#C6EA0B"
+    ],
+    "ambiance": "accord conclu, confiance",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lumière plate de banque d'images"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 9:16 : une poignée de main après une signature, Yannick Ekambi, homme camerounais de 34 ans, peau brun foncé, cheveux courts en dégradé avec une raie tracée, moustache fine, grand sourire, veste bomber noire à liseré jaune fluo, chaîne fine argentée, serre la main d'un client en costume, on voit surtout les mains et les avant-bras, son visage souriant de profil en haut ; cadrage gros plan vertical sur les mains au centre, bas sombre, objectif 85 mm, f/2.2 ; lumière lumière chaude latérale, reflets violets ; décor table de réunion sombre, documents flous ; couleurs dominantes #0B051B, #220E54, #C6EA0B ; ambiance accord conclu, confiance ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/211920099/01.png : module 04 de la grille des modules"
+  },
+  {
+   "id": "L-module-objections",
+   "fichier": "images/L-module-objections.jpg",
+   "section": "modules",
+   "format": "9:16",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "une main qui retient une rangée de dominos en bois avant leur chute",
+    "personnage": null,
+    "action": "la main stoppe le domino qui tombe",
+    "cadrage": "gros plan vertical, main dans le tiers haut, bas sombre",
+    "objectif": "100 mm macro, f/2.8",
+    "lumiere": "lumière latérale chaude, fond violet nuit",
+    "decor": "table sombre, dominos clairs",
+    "palette": [
+     "#0B051B",
+     "#220E54",
+     "#D9B48A"
+    ],
+    "ambiance": "maîtrise et sang-froid",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lumière plate de banque d'images"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 9:16 : une main qui retient une rangée de dominos en bois avant leur chute, la main stoppe le domino qui tombe ; cadrage gros plan vertical, main dans le tiers haut, bas sombre, objectif 100 mm macro, f/2.8 ; lumière lumière latérale chaude, fond violet nuit ; décor table sombre, dominos clairs ; couleurs dominantes #0B051B, #220E54, #D9B48A ; ambiance maîtrise et sang-froid ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/211920099/01.png : module 06 de la grille des modules"
+  },
+  {
+   "id": "L-module-reglages",
+   "fichier": "images/L-module-reglages.jpg",
+   "section": "modules",
+   "format": "9:16",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "des doigts qui tournent un gros bouton de réglage métallique",
+    "personnage": null,
+    "action": "le pouce et l'index tournent le bouton",
+    "cadrage": "gros plan vertical, bouton au centre haut, bas sombre",
+    "objectif": "100 mm macro, f/2.8",
+    "lumiere": "lumière froide en contre-jour, reflets violets sur le métal",
+    "decor": "console sombre",
+    "palette": [
+     "#0B051B",
+     "#3B1E85",
+     "#C9C3E6"
+    ],
+    "ambiance": "précision, réglage fin",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lumière plate de banque d'images"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 9:16 : des doigts qui tournent un gros bouton de réglage métallique, le pouce et l'index tournent le bouton ; cadrage gros plan vertical, bouton au centre haut, bas sombre, objectif 100 mm macro, f/2.8 ; lumière lumière froide en contre-jour, reflets violets sur le métal ; décor console sombre ; couleurs dominantes #0B051B, #3B1E85, #C9C3E6 ; ambiance précision, réglage fin ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/211920099/01.png : module 07 de la grille des modules"
+  },
+  {
+   "id": "L-masterclass",
+   "fichier": "images/L-masterclass.jpg",
+   "section": "bonus",
+   "format": "16:9",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "un formateur qui anime une masterclass en direct depuis son bureau",
+    "personnage": "Yannick Ekambi, homme camerounais de 34 ans, peau brun foncé, cheveux courts en dégradé avec une raie tracée, moustache fine, grand sourire, veste bomber noire à liseré jaune fluo, chaîne fine argentée",
+    "action": "parle en regardant son ordinateur portable, une main ouverte qui explique",
+    "cadrage": "plan taille, sujet au centre gauche, fenêtre lumineuse derrière",
+    "objectif": "35 mm, f/2",
+    "lumiere": "lumière chaude de fin de journée par la fenêtre, contre-jour orangé doux",
+    "decor": "bureau en bois, étagères floues, Douala par la fenêtre",
+    "palette": [
+     "#0B051B",
+     "#C6EA0B",
+     "#B5431C"
+    ],
+    "ambiance": "chaleureux, en pleine explication",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lumière plate de banque d'images"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 16:9 : un formateur qui anime une masterclass en direct depuis son bureau, Yannick Ekambi, homme camerounais de 34 ans, peau brun foncé, cheveux courts en dégradé avec une raie tracée, moustache fine, grand sourire, veste bomber noire à liseré jaune fluo, chaîne fine argentée, parle en regardant son ordinateur portable, une main ouverte qui explique ; cadrage plan taille, sujet au centre gauche, fenêtre lumineuse derrière, objectif 35 mm, f/2 ; lumière lumière chaude de fin de journée par la fenêtre, contre-jour orangé doux ; décor bureau en bois, étagères floues, Douala par la fenêtre ; couleurs dominantes #0B051B, #C6EA0B, #B5431C ; ambiance chaleureux, en pleine explication ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/211920099/01.png : bonus 1, l'écran de visio"
+  },
+  {
+   "id": "L-temoin-1",
+   "fichier": "images/L-temoin-1.jpg",
+   "section": "histoires",
+   "format": "3:4",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "portrait d'une cheffe d'équipe commerciale camerounaise d'environ 30 ans, cheveux tressés relevés, chemise orange",
+    "personnage": null,
+    "action": "sourit franchement face caméra",
+    "cadrage": "portrait buste, centré, un peu d'air au-dessus de la tête",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière douce de studio, fond gris clair uni",
+    "decor": "fond de studio gris clair",
+    "palette": [
+     "#E8E4EE",
+     "#E07A2E"
+    ],
+    "ambiance": "sympathique, fière",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lumière plate de banque d'images",
+     "personnage principal Yannick"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 3:4 : portrait d'une cheffe d'équipe commerciale camerounaise d'environ 30 ans, cheveux tressés relevés, chemise orange, sourit franchement face caméra ; cadrage portrait buste, centré, un peu d'air au-dessus de la tête, objectif 85 mm, f/2 ; lumière lumière douce de studio, fond gris clair uni ; décor fond de studio gris clair ; couleurs dominantes #E8E4EE, #E07A2E ; ambiance sympathique, fière ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/211920099/01.png : histoires d'élèves, carte 1"
+  },
+  {
+   "id": "L-temoin-2",
+   "fichier": "images/L-temoin-2.jpg",
+   "section": "histoires",
+   "format": "3:4",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "portrait d'un vendeur sénégalais d'environ 35 ans, barbe courte, chemise bleu clair",
+    "personnage": null,
+    "action": "sourit, regard franc",
+    "cadrage": "portrait buste, centré",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière douce de studio, fond gris clair uni",
+    "decor": "fond de studio gris clair",
+    "palette": [
+     "#E8E4EE",
+     "#8FB3D9"
+    ],
+    "ambiance": "confiant",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lumière plate de banque d'images",
+     "personnage principal Yannick"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 3:4 : portrait d'un vendeur sénégalais d'environ 35 ans, barbe courte, chemise bleu clair, sourit, regard franc ; cadrage portrait buste, centré, objectif 85 mm, f/2 ; lumière lumière douce de studio, fond gris clair uni ; décor fond de studio gris clair ; couleurs dominantes #E8E4EE, #8FB3D9 ; ambiance confiant ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/211920099/01.png : histoires d'élèves, carte 2"
+  },
+  {
+   "id": "L-temoin-3",
+   "fichier": "images/L-temoin-3.jpg",
+   "section": "histoires",
+   "format": "3:4",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "portrait d'une directrice commerciale burkinabè d'environ 40 ans, cheveux longs lissés, tailleur bleu nuit",
+    "personnage": null,
+    "action": "bras croisés, sourire assuré",
+    "cadrage": "portrait buste, centré",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière douce de studio, fond blanc cassé",
+    "decor": "fond de studio blanc cassé",
+    "palette": [
+     "#F2F0F5",
+     "#1E2E6A"
+    ],
+    "ambiance": "autorité bienveillante",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lumière plate de banque d'images",
+     "personnage principal Yannick"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 3:4 : portrait d'une directrice commerciale burkinabè d'environ 40 ans, cheveux longs lissés, tailleur bleu nuit, bras croisés, sourire assuré ; cadrage portrait buste, centré, objectif 85 mm, f/2 ; lumière lumière douce de studio, fond blanc cassé ; décor fond de studio blanc cassé ; couleurs dominantes #F2F0F5, #1E2E6A ; ambiance autorité bienveillante ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/211920099/01.png : histoires d'élèves, carte 3"
+  },
+  {
+   "id": "L-portrait",
+   "fichier": "images/L-portrait.jpg",
+   "section": "formateur",
+   "format": "1:1",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "portrait du formateur sur fond jaune fluo uni",
+    "personnage": "Yannick Ekambi, homme camerounais de 34 ans, peau brun foncé, cheveux courts en dégradé avec une raie tracée, moustache fine, grand sourire, veste bomber noire à liseré jaune fluo, chaîne fine argentée",
+    "action": "sourit largement, bras croisés",
+    "cadrage": "plan poitrine, sujet centré, tête près du bord haut",
+    "objectif": "85 mm, f/2.8",
+    "lumiere": "lumière de studio franche et douce, légère ombre portée",
+    "decor": "fond uni jaune fluo #C6EA0B, rien d'autre",
+    "palette": [
+     "#C6EA0B",
+     "#0B051B"
+    ],
+    "ambiance": "ouvert, sûr de lui",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lumière plate de banque d'images"
+    ]
+   },
+   "prompt": "Photographie réaliste, format 1:1 : portrait du formateur sur fond jaune fluo uni, Yannick Ekambi, homme camerounais de 34 ans, peau brun foncé, cheveux courts en dégradé avec une raie tracée, moustache fine, grand sourire, veste bomber noire à liseré jaune fluo, chaîne fine argentée, sourit largement, bras croisés ; cadrage plan poitrine, sujet centré, tête près du bord haut, objectif 85 mm, f/2.8 ; lumière lumière de studio franche et douce, légère ombre portée ; décor fond uni jaune fluo #C6EA0B, rien d'autre ; couleurs dominantes #C6EA0B, #0B051B ; ambiance ouvert, sûr de lui ; aucun texte, aucun logo.",
+   "reference": "inspi/behance/211920099/01.png : section formateur (portrait sur carré jaune)"
+  }
+ ]
+}

@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Template Style V, noir et or : page de vente d'un mentorat en publicité en ligne, fond noir, cartes graphite, boutons dorés lumineux, mosaïques de photos.">
+<title>Style V · Mosaïque dorée · template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/anim.css">
+<style>
+:root{
+  --noir:#111111; --gris:#1F1F1F; --filet:#2C2C2C; --filet2:#3A3A3A;
+  --blanc:#EFEFEF; --beige:#EEE9E3; --doux:#B4B4B4; --sourd:#8E8E8E;
+  --or:#D99C63; --or-c:#F9C58C; --or-f:#9A6430; --d1:#FFB862; --d2:#F1D4B8;
+  --courbe:cubic-bezier(.16,1,.3,1);
+  --sans:'Inter',system-ui,sans-serif; --serif:'Cormorant Garamond',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-size:15px;line-height:1.55;color:var(--blanc);background:var(--noir);-webkit-font-smoothing:antialiased;overflow-x:clip}
+svg{display:block}
+a{color:inherit;text-decoration:none}
+b,strong{font-weight:700;color:#fff}
+.or{color:var(--or)}
+.wrap{width:min(1040px,100% - 40px);margin-inline:auto;position:relative;z-index:1}
+section{position:relative}
+.centre{text-align:center}
+h1,h2,h3{font-weight:600;line-height:1.2;letter-spacing:-.02em;color:#fff}
+h2{font-size:clamp(24px,2.6vw,34px)}
+
+/* Logo : monogramme doré dans une arche + nom en capitales fines */
+.logo{display:inline-flex;align-items:center;gap:10px;color:var(--or-c)}
+.logo svg{width:38px;height:56px}
+.logo .nom{font:400 22px/0.95 var(--serif);letter-spacing:.04em;text-transform:uppercase}
+.logo .nom small{display:block;font:500 7.5px/1 var(--sans);letter-spacing:.55em;margin-top:6px;color:var(--d2)}
+
+/* Bouton : pilule dégradée or pâle, halo lumineux */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:12px 40px;border-radius:32px;
+  background:linear-gradient(90deg,var(--d1),var(--d2));color:#141414;font:700 12.5px/1.25 var(--sans);text-transform:uppercase;letter-spacing:-.01em;text-align:center;
+  box-shadow:0 0 0 1px rgba(255,214,170,.35),0 8px 30px rgba(255,184,98,.32);transition:box-shadow .4s var(--courbe),filter .4s}
+.btn:hover{box-shadow:0 0 0 1px rgba(255,214,170,.6),0 10px 44px rgba(255,184,98,.55);filter:brightness(1.04)}
+.paie{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:12px;font:600 8.5px/1 var(--sans);letter-spacing:.06em;color:#9A9A9A;text-transform:uppercase}
+.paie span{padding:4px 6px;border:1px solid #333;border-radius:3px}
+.cta{display:flex;flex-direction:column;align-items:center;margin-top:44px}
+.cta.gauche{align-items:flex-start}
+.cta.gauche .paie{justify-content:flex-start}
+
+/* Emplacement d'image : vide, il reste propre (graphite, filet doré, format au centre) */
+.emplacement{position:relative;overflow:hidden;width:100%;background:radial-gradient(90% 70% at 50% 35%,#2A2520,#161514 70%);border:1px solid rgba(217,156,99,.22)}
+.emplacement::after{content:attr(data-format);position:absolute;left:50%;top:50%;translate:-50% -50%;padding:5px 12px;border:1px solid rgba(217,156,99,.4);border-radius:20px;
+  font:500 11px/1 var(--sans);letter-spacing:.14em;color:rgba(239,239,239,.55);background:rgba(17,17,17,.5)}
+.emplacement:has(>img)::after{display:none}
+[data-format="16:9"]{aspect-ratio:16/9} [data-format="4:3"]{aspect-ratio:4/3} [data-format="1:1"]{aspect-ratio:1}
+[data-format="3:4"]{aspect-ratio:3/4} [data-format="9:16"]{aspect-ratio:9/16}
+
+/* Fond en mosaïque : tuiles de photos fantômes, très sombres */
+.mosaique{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.mosaique i{position:absolute;border-radius:6px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.01));border:1px solid rgba(255,255,255,.035)}
+
+/* 01 · Hero */
+.hero{padding:70px 0 90px;overflow:hidden;background:radial-gradient(50% 70% at 72% 40%,#2A2622,transparent 70%),var(--noir)}
+.hero .grille{display:grid;grid-template-columns:1fr 1.02fr;gap:40px;align-items:center}
+.hero .kicker{font:800 clamp(19px,1.9vw,24px)/1.2 var(--sans);color:var(--or);text-transform:uppercase;letter-spacing:-.01em;margin:30px 0 18px}
+.hero .lead{font-weight:400;font-size:clamp(17px,1.6vw,20px);line-height:1.4;color:var(--blanc);max-width:34ch}
+.hero .lead em{font-style:normal;font-weight:700;color:var(--or)}
+.hero .petit{font-size:12.5px;line-height:1.5;color:var(--doux);max-width:52ch;margin-top:16px}
+.hero .photo{position:relative;max-width:460px;justify-self:end;width:100%}
+.hero .photo .emplacement{border-radius:4px;border:0;-webkit-mask:linear-gradient(180deg,#000 70%,transparent);mask:linear-gradient(180deg,#000 70%,transparent)}
+.hero .mosaique i:nth-child(1){left:56%;top:12%;width:150px;height:200px}
+.hero .mosaique i:nth-child(2){left:78%;top:8%;width:160px;height:220px}
+.hero .mosaique i:nth-child(3){left:82%;top:52%;width:150px;height:200px}
+.hero .mosaique i:nth-child(4){left:62%;top:60%;width:140px;height:180px}
+
+/* 02 · Vidéo */
+.video{padding:30px 0 70px;border-bottom:1px solid #262626;overflow:hidden}
+.video h2{font-weight:400;font-size:clamp(20px,2vw,26px);line-height:1.3;max-width:24em;margin:0 auto 30px}
+.video h2 b{font-weight:700}
+.lecteur{position:relative;width:min(560px,100%);margin:0 auto;border-radius:6px;overflow:hidden;box-shadow:0 30px 60px rgba(0,0,0,.6)}
+.lecteur .emplacement{border-radius:6px}
+.lecteur .emplacement::after{left:auto;top:auto;right:12px;bottom:12px;translate:none}
+.lecteur .sur{position:absolute;inset:0;display:flex;align-items:center;padding-left:8%;background:linear-gradient(90deg,rgba(17,17,17,.82) 25%,transparent 62%);pointer-events:none}
+.lecteur .sur p{font:600 clamp(24px,3.6vw,38px)/1.02 var(--sans);text-transform:uppercase;letter-spacing:-.02em}
+.lecteur .sur p span{display:block;color:var(--or)}
+.lecteur button{position:absolute;left:50%;top:50%;translate:-50% -50%;width:64px;height:64px;border-radius:50%;border:1px solid rgba(249,197,140,.6);background:rgba(17,17,17,.55);color:var(--or-c);cursor:pointer;display:grid;place-items:center;transition:scale .4s var(--courbe)}
+.lecteur button:hover{scale:1.08}
+.lecteur button svg{width:22px;height:22px;margin-left:4px}
+.video .mosaique i:nth-child(1){left:-40px;top:20%;width:180px;height:260px}
+.video .mosaique i:nth-child(2){right:-40px;top:22%;width:190px;height:260px}
+
+/* 03 · Douleur */
+.douleur{padding:90px 0 60px;overflow:hidden}
+.douleur .grille{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.scene{position:relative}
+.scene .emplacement{border-radius:8px}
+.scene .anneau{position:absolute;left:-6%;top:12%;width:112%;height:76%;border:10px solid rgba(255,255,255,.06);border-radius:50%;transform:rotate(-22deg);pointer-events:none}
+.douleur h2{font-weight:400;font-size:clamp(19px,1.8vw,22px);line-height:1.35}
+.douleur h2 b{font-weight:700}
+.douleur .petit{font-size:13.5px;color:var(--doux);margin:22px 0 22px}
+.excuse{display:flex;align-items:center;gap:22px;padding:14px 22px;background:var(--gris);border-radius:5px;margin-top:10px;font-size:13.5px;line-height:1.35;color:#D6D6D6}
+.excuse .ic{flex:none;width:38px;height:38px;border-radius:6px;background:var(--noir);display:grid;place-items:center;color:var(--or-c)}
+.excuse .ic svg{width:20px;height:20px}
+
+/* 04 · Différenciation : 5 cartes à objet qui déborde */
+.methode{padding:40px 0 70px}
+.methode h2{font-weight:400;font-size:clamp(19px,2vw,24px);line-height:1.35;max-width:26em;margin:0 auto 70px}
+.methode h2 b{font-weight:700}
+.cartes5{display:flex;flex-wrap:wrap;justify-content:center;gap:56px 20px;max-width:640px;margin:0 auto}
+.c5{position:relative;width:calc((100% - 40px)/3);min-width:180px;background:var(--gris);border-radius:8px;padding:110px 20px 22px;text-align:left}
+.c5 h3{font-size:13px;line-height:1.3;margin-bottom:10px}
+.c5 p{font-size:11.5px;line-height:1.5;color:var(--doux)}
+.c5 .objet{position:absolute;left:50%;top:-32px;translate:-50% 0;width:150px;height:126px}
+/* objets en CSS : tableau de bord, téléphones, ordinateur */
+.tab{position:absolute;inset:14px 0 20px;background:#F4F4F4;border-radius:6px;transform:rotate(-14deg) skewX(10deg);box-shadow:0 18px 30px rgba(0,0,0,.5)}
+.tab::before{content:"";position:absolute;left:12%;right:30%;top:22%;height:6px;border-radius:3px;background:#C9C9C9;box-shadow:0 14px 0 #DDD,0 28px 0 #DDD}
+.tab::after{content:"Vente validée";position:absolute;right:-14px;bottom:10px;padding:5px 8px;border-radius:5px;background:#fff;font:600 8px/1 var(--sans);color:#1B7F3B;box-shadow:0 6px 14px rgba(0,0,0,.35)}
+.tel{position:absolute;width:52px;height:104px;border-radius:10px;background:#1A1A1A;border:3px solid #3A3A3A;box-shadow:0 14px 24px rgba(0,0,0,.5)}
+.tel::before{content:"";position:absolute;inset:8px 5px;border-radius:4px;background:linear-gradient(180deg,#E9F5EC 0 30%,#fff 30%);}
+.tel::after{content:"";position:absolute;left:10px;right:10px;top:42px;height:5px;border-radius:3px;background:#25A35A;box-shadow:0 12px 0 #C7C7C7,0 24px 0 #C7C7C7}
+.ordi{position:absolute;left:12px;right:12px;top:10px;height:72px;border-radius:6px 6px 0 0;background:linear-gradient(135deg,#2A2622,#151515);border:3px solid #444}
+.ordi::before{content:"";position:absolute;left:50%;top:50%;translate:-50% -50%;width:20px;height:20px;border-radius:50%;border:1px solid var(--or-c);box-shadow:0 0 18px rgba(249,197,140,.5)}
+.ordi::after{content:"";position:absolute;left:-16px;right:-16px;bottom:-12px;height:9px;border-radius:0 0 8px 8px;background:#BDBDBD}
+
+/* 05 · Pour qui */
+.pour{padding:56px 0 80px;background:var(--gris)}
+.pour h2{margin-bottom:56px}
+.grille6{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.c6{position:relative;border:1px solid var(--filet2);border-radius:6px;padding:46px 30px 40px;font-size:14px;line-height:1.45;color:#DADADA;min-height:180px}
+.c6::before{content:"";position:absolute;left:30px;top:-1px;width:48px;height:4px;border-radius:0 0 2px 2px;background:linear-gradient(90deg,var(--d1),var(--d2))}
+.c6 .coche{width:42px;height:42px;border-radius:50%;border:1px solid #4A4A4A;display:grid;place-items:center;color:var(--or-c);margin-bottom:22px}
+.c6 .coche svg{width:18px;height:18px}
+
+/* 06 · Contenu : carrousel d'affiches */
+.contenu{padding:60px 0 40px;overflow:hidden}
+.contenu h2{font-size:clamp(26px,2.8vw,36px);line-height:1.18}
+.contenu .sous{margin-top:10px;font-size:15px}
+.rail{display:flex;justify-content:safe center;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:44px 20px 10px;scroll-padding-inline:20px}
+.rail::-webkit-scrollbar{display:none}
+.affiche{position:relative;flex:none;width:200px;scroll-snap-align:start;border-radius:6px;overflow:hidden;background:#161616}
+.affiche .emplacement{border:0;border-radius:6px 6px 0 0;-webkit-mask:linear-gradient(180deg,#000 62%,transparent 98%);mask:linear-gradient(180deg,#000 62%,transparent 98%)}
+.affiche .titre{position:relative;margin-top:-58px;padding:0 10px 14px;text-align:center}
+.affiche .titre small{display:block;font:500 9px/1.3 var(--sans);text-transform:uppercase;letter-spacing:.08em;color:var(--blanc)}
+.affiche .titre strong{display:block;font:400 25px/1 var(--serif);text-transform:uppercase;color:var(--or-c);margin-top:3px;letter-spacing:.01em}
+.affiche .titre svg{width:16px;height:24px;margin:10px auto 0;color:var(--or-c);opacity:.8}
+.points{display:flex;gap:6px;justify-content:center;margin-top:18px}
+.points button{width:24px;height:24px;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+.points button::before{content:"";width:7px;height:7px;border-radius:50%;border:1px solid #777;transition:background .3s}
+.points button[aria-current="true"]::before{background:var(--or);border-color:var(--or)}
+
+/* 07 · Preuve : captures de messages d'élèves */
+.preuve{padding:70px 0 40px;overflow:hidden}
+.preuve h2{font-weight:400;font-size:clamp(22px,2.6vw,31px);line-height:1.3;max-width:24em;margin:0 auto}
+.preuve h2 b{font-weight:700;color:#fff} .preuve h2 .or{font-weight:700}
+.capture{flex:none;width:170px;scroll-snap-align:start;background:#fff;border-radius:6px;padding:10px;color:#222;font-size:10px;line-height:1.45;box-shadow:0 0 0 5px #9ED19A}
+.capture .haut{padding:10px;border-radius:5px;background:#2FB98D;color:#fff;margin-bottom:8px}
+.capture .haut small{display:block;font-size:8.5px;opacity:.85}
+.capture .haut b{display:block;font-size:17px;color:#fff;margin-top:8px}
+.capture.clair .haut{background:#F3F3F3;color:#222}
+.capture.clair .haut b{color:#111}
+.capture mark{background:#FFE7A6;color:#222;padding:0 2px}
+.capture .bulle{background:#F1F1F1;border-radius:6px;padding:7px;margin-top:6px}
+.capture .reac{display:inline-block;margin-top:6px;padding:2px 7px;border-radius:9px;background:#2C6BED;color:#fff;font-size:8.5px;font-weight:700}
+.preuve .rail{padding-top:50px;padding-bottom:16px}
+
+/* 08 · Offre */
+.offre{padding:60px 0 80px;overflow:hidden;background:repeating-linear-gradient(60deg,transparent 0 140px,rgba(255,255,255,.018) 140px 141px),var(--noir)}
+.offre h2{font-size:clamp(23px,2.7vw,30px);line-height:1.25;max-width:20em;margin:0 auto}
+.offre .chapeau{max-width:36em;margin:16px auto 50px;font-size:15px;color:#DADADA}
+.offre .chapeau b.or{color:var(--or)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;max-width:700px;margin:0 auto}
+.liste{background:var(--gris);border:1px solid var(--filet);border-radius:8px;padding:50px 30px 30px;text-align:center}
+.liste h3{font:800 clamp(24px,2.6vw,29px)/1.15 var(--sans);text-transform:uppercase;letter-spacing:-.01em}
+.liste h3 span{color:var(--or)}
+.liste .intro{margin:20px 0 14px;font-size:15px;color:#E0E0E0}
+.liste ul{list-style:none;text-align:left}
+.liste li{display:flex;gap:22px;align-items:center;padding:14px 0;border-bottom:1px solid #4A4A4A;font-size:13px;line-height:1.4;color:#E4E4E4}
+.liste li svg{flex:none;width:16px;height:16px;color:var(--or-c)}
+.liste .gagne{padding-top:26px;font-weight:700;font-size:13px}
+.prix{background:var(--beige);border-radius:8px;padding:56px 26px 36px;text-align:center;color:#333}
+.prix .de{font-size:17px;color:#444} .prix .de s{color:#444}
+.prix .par{font-size:19px;margin-top:20px;text-transform:uppercase;color:#222}
+.prix .gros{display:block;font:800 clamp(44px,5.2vw,58px)/1.05 var(--sans);letter-spacing:-.03em;color:var(--or-f);margin:6px 0 8px}
+.prix .vue{font-size:17px;color:#333} .prix .vue b{color:#111}
+.prix .btn{width:100%;margin-top:24px;padding-inline:16px}
+.prix .jour{font-style:italic;font-size:13px;color:#4A4A4A;margin-top:18px}
+.prix .paie{color:#555} .prix .paie span{border-color:#C9C3BB}
+
+/* 09 · Garantie et bonus */
+.garantie{padding:10px 0 80px}
+.deux{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:700px;margin:0 auto}
+.info{position:relative;background:var(--gris);border:1px solid var(--filet);border-radius:8px;padding:56px 32px 30px}
+.info::before{content:"";position:absolute;left:32px;top:-1px;width:48px;height:4px;background:linear-gradient(90deg,var(--d1),var(--d2))}
+.info .ic{position:absolute;left:32px;top:-20px;width:42px;height:42px;border-radius:50%;border:1px solid #4A4A4A;background:var(--gris);display:grid;place-items:center;color:#fff}
+.info .ic svg{width:19px;height:19px}
+.info h3{font-size:clamp(20px,2vw,24px);color:var(--or);margin-bottom:12px;line-height:1.2}
+.info p{font-size:13.5px;color:#DADADA}
+.bonus{display:grid;grid-template-columns:1fr 1fr;max-width:700px;margin:12px auto 0;background:var(--gris);border:1px solid var(--filet);border-radius:8px;overflow:hidden}
+.bonus .ecran{position:relative;padding:36px 0 0 0;background:linear-gradient(160deg,#2B2B2B,#1A1A1A)}
+.bonus .ecran .emplacement{border-radius:0 8px 0 0;border-left:0;border-bottom:0}
+.bonus .txt{padding:22px 36px 30px}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 26px;border:1px solid #444;border-radius:16px;font:600 10px/1 var(--sans);text-transform:uppercase;letter-spacing:.06em}
+.badge svg{width:12px;height:12px;color:var(--or-c)}
+.bonus h3{font:800 clamp(21px,2.1vw,24px)/1.15 var(--sans);text-transform:uppercase;color:var(--or);margin:16px 0 14px}
+.bonus p{font-size:12.5px;color:#DADADA;margin-bottom:12px}
+.bonus .cta{margin-top:20px}
+.bonus .btn{width:100%;padding-inline:16px}
+
+/* 10 · Qui */
+.qui{padding:0 0 50px}
+.carte-qui{display:grid;grid-template-columns:.86fr 1.14fr;background:#141414;border:1px solid var(--filet);border-radius:8px;overflow:hidden;max-width:1000px;margin:0 auto}
+.carte-qui .emplacement{border:0;border-radius:0}
+.carte-qui .photo{position:relative;min-height:560px}
+.carte-qui .photo .emplacement{position:absolute;inset:0;aspect-ratio:auto}
+.carte-qui .txt{padding:60px 66px}
+.carte-qui h2{font-size:clamp(28px,3vw,36px);color:var(--or);margin-bottom:16px}
+.carte-qui p{font-size:14px;line-height:1.6;color:#E2E2E2;margin-bottom:16px}
+
+/* 11 · FAQ */
+.faq{background:var(--beige);color:#1A1A1A;padding:56px 0 70px}
+.faq .fleche{position:absolute;left:50%;top:0;translate:-50% -50%;width:22px;height:22px;border-radius:50%;background:var(--beige);border:1px solid #BDB6AD;display:grid;place-items:center;color:#444}
+.faq .fleche svg{width:10px;height:10px}
+.faq h2{color:#111;font-size:clamp(28px,3vw,34px);line-height:1.08;margin-bottom:34px}
+.faq .liste-q{max-width:520px;margin:0 auto;text-align:left}
+.faq details{border-bottom:1.5px solid #9B958D}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;min-height:50px;padding:6px 10px;font-size:13px;color:#2A2A2A}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:18px;font-weight:300;color:#444;transition:rotate .3s}
+.faq details[open] summary::after{rotate:45deg}
+.faq details p{padding:0 10px 16px;font-size:13px;color:#3D3D3D}
+
+/* 12 · Pied */
+#pied{padding:40px 0 30px;text-align:center;color:#D0D0D0;font-size:12px}
+#pied .ligne-p{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;max-width:860px;margin:26px auto 0;padding:24px 70px;border-block:1px solid #3A3A3A;text-align:left}
+#pied .reseaux{display:flex;gap:6px}
+#pied .reseaux a{width:44px;height:44px;display:grid;place-items:center;color:#fff}
+#pied .reseaux svg{width:19px;height:19px}
+#pied .haut{justify-self:end;display:inline-flex;align-items:center;gap:10px;min-height:44px;font-size:13px}
+#pied .haut span{width:20px;height:20px;border-radius:50%;background:#fff;color:#111;display:grid;place-items:center}
+#pied .haut svg{width:10px;height:10px}
+#pied .legal{margin-top:18px;line-height:1.6}
+#pied .droite{margin-top:14px;color:#9A9A9A}
+
+/* Responsive */
+@media (max-width:980px){
+  .carte-qui .txt{padding:44px 36px}
+  .cartes5{max-width:100%}
+}
+@media (max-width:820px){
+  .hero{padding-top:44px}
+  .hero .grille,.douleur .grille{grid-template-columns:1fr}
+  .hero .photo{justify-self:center;max-width:380px}
+  .douleur .grille{gap:40px}
+  .scene{max-width:480px;margin:0 auto;width:100%}
+  .grille6{grid-template-columns:1fr 1fr}
+  .c5{width:calc((100% - 20px)/2)}
+  .duo{grid-template-columns:1fr}
+  .deux{grid-template-columns:1fr;gap:34px}
+  .bonus{margin-top:34px}
+  .bonus{grid-template-columns:1fr}
+  .carte-qui{grid-template-columns:1fr}
+  .carte-qui .photo{min-height:0;aspect-ratio:16/10}
+  #pied .ligne-p{grid-template-columns:1fr;justify-items:center;text-align:center;padding:20px}
+  #pied .haut{justify-self:center}
+}
+@media (max-width:560px){
+  .grille6{grid-template-columns:1fr}
+  .c5{width:100%;min-width:0}
+  .btn{width:100%;padding-inline:22px}
+  .cta.gauche{align-items:stretch}
+  .liste,.prix{padding-inline:20px}
+  .info{padding:50px 22px 26px}
+  .bonus .txt{padding:22px 20px 28px}
+  .carte-qui .txt{padding:34px 22px}
+  .lecteur .sur p{font-size:22px}
+  .lecteur button{width:52px;height:52px}
+  .carte-qui .photo{aspect-ratio:3/4}
+}
+</style>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/portfolio.css">
+<link rel="stylesheet" href="../../commun/flottant.css">
+</head>
+<body>
+<div data-progression style="background:linear-gradient(90deg,var(--d1),var(--d2))"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mono" viewBox="0 0 40 60"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 58V20a16 16 0 0 1 32 0v38"/><path d="M8 58V21a12 12 0 0 1 24 0v37"/><path d="M14 44V24h8a5 5 0 0 1 0 10h-8M22 34l7 10"/></g></symbol>
+  <symbol id="coche" viewBox="0 0 24 24"><path d="M4 12.5l5 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="lecture" viewBox="0 0 24 24"><path d="M6 3.5v17l14-8.5z" fill="currentColor"/></symbol>
+  <symbol id="haut" viewBox="0 0 12 12"><path d="M6 10V2M2.5 5.5L6 2l3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="bas" viewBox="0 0 12 12"><path d="M6 2v8M2.5 6.5L6 10l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></symbol>
+  <symbol id="arobase" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4"/><path d="M16 12v1.5a2.5 2.5 0 0 0 5 0V12a9 9 0 1 0-3.5 7.1"/></g></symbol>
+  <symbol id="argent" viewBox="0 0 24 24"><path d="M12 2v20M17 6.5c-1-1.5-2.7-2-5-2-3 0-4.5 1.6-4.5 3.5 0 4.5 10 2.5 10 7.5 0 2-1.8 3.5-5 3.5-2.6 0-4.3-.8-5.3-2.4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="mobile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3" stroke-linecap="round"/></g></symbol>
+  <symbol id="horloge" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></g></symbol>
+  <symbol id="whatsapp" viewBox="0 0 24 24"><path d="M12 2.5a9.5 9.5 0 0 0-8.2 14.3L2.5 21.5l4.8-1.3A9.5 9.5 0 1 0 12 2.5zm0 1.7a7.8 7.8 0 1 1-4 14.5l-.3-.2-2.8.8.8-2.7-.2-.3A7.8 7.8 0 0 1 12 4.2zm-3.3 3.9c-.2 0-.5 0-.7.3-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3l-2-1c-.3-.1-.5-.1-.6.1l-.9 1.1c-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.5-.5-.5-.7-.5z" fill="currentColor"/></symbol>
+  <symbol id="mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6l8.5 7 8.5-7"/></g></symbol>
+  <symbol id="cadeau" viewBox="0 0 24 24"><path d="M3 8h18v4H3zM5 12h14v9H5zM12 8v13M12 8C10 4 6.5 4 6.5 6S9 8 12 8c3 0 5.5 0 5.5-2S14 4 12 8z" fill="currentColor"/></symbol>
+  <symbol id="youtube" viewBox="0 0 24 24"><path d="M22 8.2a3 3 0 0 0-2.1-2.1C18 5.6 12 5.6 12 5.6s-6 0-7.9.5A3 3 0 0 0 2 8.2 31 31 0 0 0 1.6 12 31 31 0 0 0 2 15.8a3 3 0 0 0 2.1 2.1c1.9.5 7.9.5 7.9.5s6 0 7.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .4-3.8 31 31 0 0 0-.4-3.8zM10 15.2V8.8l5.2 3.2z" fill="currentColor"/></symbol>
+  <symbol id="insta" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".6" fill="currentColor"/></g></symbol>
+</svg>
+
+<section class="hero" id="hero">
+  <div class="mosaique" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  <div class="wrap grille">
+    <div>
+      <a class="logo" href="#hero" aria-label="Kanté Ads Académie, retour en haut" data-rv><svg><use href="#mono"/></svg><span class="nom">Kanté<br>Ads<small>Académie</small></span></a>
+      <p class="kicker" data-rv>N'accepte rien de moins que le sommet !</p>
+      <h1 class="lead" data-rv>Apprends, pas à pas et sur le terrain, à <b>PARTIR DE ZÉRO</b> pour vendre en ligne à <b>GRANDE ÉCHELLE</b>, de façon <b>SÛRE</b>, sans montrer ton visage, en reprenant des campagnes qui rapportent <em>plus de 1 000 000 FCFA par mois</em> à mes élèves.</h1>
+      <p class="petit" data-rv>Pour la première fois, tu as accès aux structures déjà testées qui te font vendre chaque jour et travailler d'où tu veux, sans patron et sans horaires imposés.</p>
+      <div class="cta gauche" data-rv>
+        <a class="btn reflet" href="#offre" data-aimant>Je veux mon accès</a>
+        <div class="paie" aria-label="Paiements acceptés : Wave, Orange Money, MTN MoMo, Visa, Mastercard"><span>Wave</span><span>Orange Money</span><span>MoMo</span><span>Visa</span><span>Mastercard</span></div>
+      </div>
+    </div>
+    <div class="photo" data-rv>
+      <div class="emplacement" data-img="V-hero" data-format="3:4" data-alt="Ousmane Kanté, mains jointes, chemise en satin noir et chaîne dorée, sur fond sombre"></div>
+    </div>
+  </div>
+</section>
+
+<section class="video centre" id="video">
+  <div class="mosaique" aria-hidden="true"><i></i><i></i></div>
+  <div class="wrap">
+    <h2 data-rv>Tu rêves de <b>vivre du digital</b>, mais tu as l'impression de ne pas avoir le temps de commencer ?</h2>
+    <div class="lecteur" data-rv>
+      <div class="emplacement" data-img="V-video" data-format="16:9" data-alt="Ousmane Kanté assis à un bureau sombre, regard caméra, lumière dorée"></div>
+      <div class="sur" aria-hidden="true"><p><span>Regarde</span>la vidéo</p></div>
+      <button type="button" aria-label="Lancer la vidéo de présentation"><svg><use href="#lecture"/></svg></button>
+    </div>
+    <div class="cta" data-rv>
+      <a class="btn reflet" href="#offre" data-aimant>Je veux commencer maintenant</a>
+      <div class="paie" aria-hidden="true"><span>Wave</span><span>Orange Money</span><span>MoMo</span><span>Visa</span><span>Mastercard</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="douleur" id="douleur">
+  <div class="wrap grille">
+    <div class="scene" data-rv>
+      <span class="anneau" aria-hidden="true"></span>
+      <div class="emplacement" data-img="V-mockup" data-format="4:3" data-alt="Ordinateur, tablette et affiches de la formation, Ousmane Kanté à l'écran"></div>
+    </div>
+    <div>
+      <h2 data-rv>Tu n'as plus besoin de <b>travailler 40 ans</b> pour avoir la maison ou la voiture de tes rêves. Tu n'as pas à choisir entre ton travail et ta famille. Pour avoir la <b>liberté</b> dont tu rêves, il te suffit d'être sur Internet.</h2>
+      <p class="petit" data-rv>Gagner sa vie en ligne est déjà une réalité pour des milliers d'Africains, mais beaucoup restent sur place. Et tous ont les mêmes excuses :</p>
+      <div class="excuse" data-rv><span class="ic"><svg><use href="#arobase"/></svg></span><span>Ils pensent qu'il faut <b>des milliers d'abonnés</b> pour avoir des résultats</span></div>
+      <div class="excuse" data-rv><span class="ic"><svg><use href="#argent"/></svg></span><span>Ils croient que la seule façon de vendre est d'<b>investir beaucoup d'argent</b></span></div>
+      <div class="excuse" data-rv><span class="ic"><svg><use href="#mobile"/></svg></span><span>Ils pensent que leur <b>téléphone actuel</b> ne suffit pas pour commencer</span></div>
+      <div class="excuse" data-rv><span class="ic"><svg><use href="#horloge"/></svg></span><span>Ils se disent qu'ils n'ont <b>pas assez de temps</b> pour travailler en ligne</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="methode centre" id="methode">
+  <div class="wrap">
+    <h2 data-rv>Mais je vais te montrer que rien de tout ça n'est vrai, et que tu peux <b>commencer à encaisser dès aujourd'hui</b>, même en partant de zéro.</h2>
+    <div class="cartes5">
+      <article class="c5" data-rv><div class="objet" aria-hidden="true"><span class="tab"></span></div><h3>Vends chaque jour sur les grands réseaux</h3><p>Des campagnes testées pour vendre même avec peu d'abonnés, sans te montrer sur les réseaux.</p></article>
+      <article class="c5" data-rv><div class="objet" aria-hidden="true"><span class="tel" style="left:34px;top:10px;rotate:-8deg"></span><span class="tel" style="left:70px;top:0;rotate:6deg"></span></div><h3>Machine à vendre sur WhatsApp</h3><p>Attire des clients jusqu'à ta discussion et réponds à leurs doutes un par un, jusqu'au paiement.</p></article>
+      <article class="c5" data-rv><div class="objet" aria-hidden="true"><span class="ordi"></span></div><h3>Des méthodes testées à 100 %</h3><p>Les meilleures stratégies du moment, reprises des grands annonceurs et adaptées au marché africain.</p></article>
+      <article class="c5" data-rv><div class="objet" aria-hidden="true"><span class="ordi" style="left:20px;right:30px"></span><span class="tel" style="left:96px;top:24px;width:42px;height:84px"></span></div><h3>Commence avec peu de temps</h3><p>Une à deux heures par jour suffisent pour tes premières ventes et tes premiers résultats.</p></article>
+      <article class="c5" data-rv><div class="objet" aria-hidden="true"><span class="tel" style="left:20px;top:18px"></span><span class="ordi" style="left:56px;right:6px;top:18px"></span></div><h3>Suivi et accompagnement</h3><p>Suivi personnel sur WhatsApp, deux appels en direct par jour avec mon équipe d'annonceurs.</p></article>
+    </div>
+    <div class="cta" data-rv>
+      <a class="btn reflet" href="#offre" data-aimant>Je veux des résultats sans me montrer</a>
+      <div class="paie" aria-hidden="true"><span>Wave</span><span>Orange Money</span><span>MoMo</span><span>Visa</span><span>Mastercard</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="pour centre" id="pour-qui">
+  <div class="wrap">
+    <h2 data-rv>Pour qui est ce mentorat ?</h2>
+    <div class="grille6" style="text-align:left">
+      <div class="c6" data-rv><span class="coche"><svg><use href="#coche"/></svg></span><b>Tu ne connais rien au marketing digital</b> et tu veux une façon sûre, simple et rapide de gagner ta vie en ligne.</div>
+      <div class="c6" data-rv><span class="coche"><svg><use href="#coche"/></svg></span><b>Tu veux de gros résultats</b> sans t'exposer sur Internet.</div>
+      <div class="c6" data-rv><span class="coche"><svg><use href="#coche"/></svg></span><b>Tu veux mener le digital à côté d'une autre activité</b> et accéder à des structures déjà prêtes.</div>
+      <div class="c6" data-rv><span class="coche"><svg><use href="#coche"/></svg></span>Tu veux quitter ton emploi et <b>te concentrer sur ce qui rapporte</b> à court et à long terme.</div>
+      <div class="c6" data-rv><span class="coche"><svg><use href="#coche"/></svg></span>Tu as déjà acheté une formation, mais <b>tu t'es perdu en route sans résultat.</b></div>
+      <div class="c6" data-rv><span class="coche"><svg><use href="#coche"/></svg></span><b>Tu veux un suivi personnel</b> pour vendre dès le premier jour.</div>
+    </div>
+    <div class="cta" data-rv>
+      <a class="btn reflet" href="#offre" data-aimant>Je veux rejoindre le mentorat</a>
+      <div class="paie" aria-hidden="true"><span>Wave</span><span>Orange Money</span><span>MoMo</span><span>Visa</span><span>Mastercard</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="contenu centre" id="modules">
+  <div class="wrap">
+    <h2 data-lignes>Sois le bienvenu<br>au <span class="or">Mentorat Kanté Ads</span></h2>
+    <p class="sous" data-rv>Voici ce que tu vas <b>apprendre avec moi</b> !</p>
+  </div>
+  <div class="rail" id="rail-modules" aria-label="Les modules du mentorat" tabindex="0">
+    <div class="affiche"><div class="emplacement" data-img="V-module-1" data-format="3:4" data-alt="Ousmane Kanté en veste sombre, micro à la main, devant un écran"></div><div class="titre"><small>Accès aux</small><strong>Directs</strong><svg aria-hidden="true"><use href="#mono"/></svg></div></div>
+    <div class="affiche"><div class="emplacement" data-img="V-module-2" data-format="3:4" data-alt="Ousmane Kanté de trois quarts, chaîne dorée visible, fond graphite"></div><div class="titre"><strong>Pubs</strong><small>avec ta propre structure</small><svg aria-hidden="true"><use href="#mono"/></svg></div></div>
+    <div class="affiche"><div class="emplacement" data-img="V-module-3" data-format="3:4" data-alt="Ousmane Kanté devant un tableau de bord sur ordinateur"></div><div class="titre"><strong>Automatiser</strong><small>ton activité</small><svg aria-hidden="true"><use href="#mono"/></svg></div></div>
+    <div class="affiche"><div class="emplacement" data-img="V-module-4" data-format="3:4" data-alt="Ousmane Kanté tenant un téléphone, sourire discret"></div><div class="titre"><small>Comment TikTok est devenu</small><strong>Ma source</strong><small>de clients gratuits</small><svg aria-hidden="true"><use href="#mono"/></svg></div></div>
+    <div class="affiche"><div class="emplacement" data-img="V-module-5" data-format="3:4" data-alt="Ousmane Kanté bras croisés, chemise en satin, lumière dorée de côté"></div><div class="titre"><small>Affilié VIP</small><strong>Instagram</strong><small>à plein régime</small><svg aria-hidden="true"><use href="#mono"/></svg></div></div>
+    <div class="affiche"><div class="emplacement" data-img="V-module-6" data-format="3:4" data-alt="Ousmane Kanté sur scène, micro à la main, public flou"></div><div class="titre"><strong>Parler</strong><small>avec assurance</small><svg aria-hidden="true"><use href="#mono"/></svg></div></div>
+  </div>
+  <div class="points" data-rail="rail-modules" aria-label="Faire défiler les modules"></div>
+</section>
+
+<section class="preuve centre" id="preuves">
+  <div class="wrap">
+    <h2 data-rv>Regarde ce que certains élèves de Kanté Ads <span class="or">ont obtenu en très peu de temps</span> en appliquant <b>la méthode pas à pas</b> du mentorat :</h2>
+  </div>
+  <div class="rail" id="rail-preuves" aria-label="Messages d'élèves" tabindex="0">
+    <div class="capture"><div class="haut"><small>Recettes · 15 derniers jours</small><b>812 400 FCFA</b></div><p>Un petit doute que le défi des 30 jours marche ? <mark>Moi j'ai fait 800 000 en 15 jours</mark>, bien au-delà de ce que j'attendais.</p><span class="reac">44 ♥</span></div>
+    <div class="capture clair"><div class="haut"><small>Ventes</small><b>5 223 100 FCFA</b></div><p>Aucun doute, entrer chez Kanté Ads est ma meilleure décision. <mark>Tout vendre en organique, sans pub payée</mark>, juste avec WhatsApp. Un rêve !</p></div>
+    <div class="capture clair"><div class="haut"><small>Tableau de bord</small><b>122 140 FCFA</b></div><p>Samedi dernier, je suis allé au marché faire les courses. Une heure plus tard, la vente était tombée.</p><div class="bulle">Pour quelqu'un qui partait de rien, c'est déjà une victoire.</div></div>
+    <div class="capture clair"><div class="haut"><small>7 derniers jours</small><b>930 837 FCFA</b></div><p><mark>Plus de 900 000 en 7 jours.</mark> On m'avait dit que c'était impossible sans gros budget.</p><div class="bulle">Merci coach, je ne lâche plus.</div></div>
+    <div class="capture clair"><div class="haut"><small>Ce mois-ci</small><b>1 500 000 FCFA</b></div><p>C'était mon dernier mois. <mark>1,5 million en 30 jours</mark>, avec un bébé à la maison et des dettes au départ.</p></div>
+    <div class="capture"><div class="haut"><small>22:20 · notification</small><b>Vente validée</b></div><p>Cet écran, c'était un rêve. <mark>Moins d'un mois de mentorat</mark> et déjà les ventes en organique.</p><span class="reac">36 ♥</span></div>
+  </div>
+  <div class="points" data-rail="rail-preuves" aria-label="Faire défiler les messages"></div>
+</section>
+
+<section class="offre centre" id="offre">
+  <div class="wrap">
+    <h2 data-rv>Normalement, tout ça coûterait 500 000 FCFA. Mais en réservant ta place maintenant, tu as accès à une <span class="or">offre spéciale...</span></h2>
+    <p class="chapeau" data-rv><b class="or">Kanté Ads</b> réunit <b class="or">TOUTES</b> les structures cachées qu'utilisent les plus gros annonceurs du marché pour gagner chaque mois des millions.</p>
+    <div class="duo">
+      <div class="liste" data-rv>
+        <h3><span>Inscris-toi</span><br><span>maintenant</span> et assure&#8209;toi :</h3>
+        <p class="intro">Le mentorat le plus complet du marché digital, avec :</p>
+        <ul>
+          <li><svg aria-hidden="true"><use href="#coche"/></svg>Plus de 100 leçons, du débutant à l'avancé</li>
+          <li><svg aria-hidden="true"><use href="#coche"/></svg>Des stratégies testées pour encaisser chaque jour</li>
+          <li><svg aria-hidden="true"><use href="#coche"/></svg>Des structures PRÊTES à copier, coller et lancer</li>
+          <li><svg aria-hidden="true"><use href="#coche"/></svg>Un suivi personnel sur WhatsApp</li>
+        </ul>
+        <p class="gagne">Et en plus :</p>
+        <ul><li><svg aria-hidden="true"><use href="#coche"/></svg><span><b>2 APPELS PAR JOUR</b> avec les meilleurs annonceurs de mon équipe.</span></li></ul>
+      </div>
+      <div class="prix" data-rv>
+        <p class="de">Au lieu de <s>500 000 FCFA</s></p>
+        <p class="par">Seulement 12 x</p>
+        <span class="gros"><span data-compte="25000">25 000</span> F</span>
+        <p class="vue">ou <b>250 000 FCFA</b> en une fois</p>
+        <a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Ousmane%2C%20je%20veux%20m%27inscrire%20au%20Mentorat%20Kant%C3%A9%20Ads." target="_blank" rel="noopener" data-aimant>Oui, je m'inscris maintenant</a>
+        <p class="jour">*Moins de 900 FCFA par jour</p>
+        <div class="paie" aria-hidden="true"><span>Wave</span><span>Orange Money</span><span>MoMo</span><span>Visa</span><span>Mastercard</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="garantie" id="garanties">
+  <div class="wrap">
+    <div class="deux">
+      <div class="info" data-rv><span class="ic"><svg><use href="#whatsapp"/></svg></span><h3>Suivi personnel sur WhatsApp</h3><p>Je t'apporte tout le soutien et le suivi dont tu as besoin, en tête à tête, pour <b>ACCÉLÉRER</b> et <b>MULTIPLIER</b> tes résultats.</p></div>
+      <div class="info" data-rv><span class="ic"><svg><use href="#mail"/></svg></span><h3>Accès immédiat</h3><p>Ton accès à la formation part directement sur ton e-mail et ton WhatsApp, dès la confirmation du paiement.</p></div>
+    </div>
+    <div class="bonus" data-rv>
+      <div class="ecran"><div class="emplacement" data-img="V-bonus" data-format="4:3" data-alt="Ordinateur portable posé sur un bloc de béton, Ousmane Kanté en appel vidéo à l'écran"></div></div>
+      <div class="txt">
+        <span class="badge"><svg aria-hidden="true"><use href="#cadeau"/></svg>Bonus</span>
+        <h3>Suivi personnel<br>+ appels</h3>
+        <p>Tu ne seras pas laissé seul avec des leçons enregistrées.</p>
+        <p>En réservant ta place, tu as accès à mon suivi personnel et à 2 appels par jour avec les meilleurs annonceurs de mon équipe.</p>
+        <p>Pour lever chacun de tes doutes quand tu veux et atteindre tes résultats le plus vite possible !</p>
+        <div class="cta">
+          <a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%20Ousmane%2C%20je%20veux%20m%27inscrire%20au%20Mentorat%20Kant%C3%A9%20Ads." target="_blank" rel="noopener" data-aimant>Oui, je m'inscris maintenant</a>
+          <div class="paie" aria-hidden="true"><span>Wave</span><span>Orange Money</span><span>MoMo</span><span>Visa</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="qui" id="qui">
+  <div class="wrap">
+    <div class="carte-qui" data-rv>
+      <div class="photo"><div class="emplacement" data-img="V-portrait" data-format="3:4" data-alt="Portrait d'Ousmane Kanté, main sur la poitrine, chaîne fine dorée, chemise en satin"></div></div>
+      <div class="txt">
+        <h2>Enchanté, je suis Ousmane !</h2>
+        <p>Pendant deux ans, ma vie a tourné autour des concours et des cours du soir à Conakry.</p>
+        <p>Un jour, j'en ai eu assez de regarder d'autres gens changer de vie grâce à Internet, et j'ai décidé d'essayer.</p>
+        <p>Je voulais juste un revenu en plus. En moins de 8 mois, j'ai dépassé mon premier million de francs en travaillant seulement sur le marché digital. J'ai compris qu'il ne fallait pas de diplôme pour vivre confortablement.</p>
+        <p>Aujourd'hui, devenu spécialiste de la vente en ligne, après avoir aidé des milliers de personnes à changer de vie avec ma méthode, je te montre tout ce qu'il faut pour partir de zéro, comme moi et mes élèves.</p>
+        <p>Crois-moi : il n'y a aucune différence entre toi et moi. N'importe qui peut appliquer ce que je vais t'apprendre.</p>
+        <div class="cta gauche"><a class="btn reflet" href="#offre" data-aimant>Rejoindre le mentorat</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq centre" id="faq">
+  <span class="fleche" aria-hidden="true"><svg><use href="#bas"/></svg></span>
+  <div class="wrap">
+    <h2 data-lignes>Questions<br>fréquentes</h2>
+    <div class="liste-q">
+      <details><summary>En combien de temps j'ai accès à la formation ?</summary><p>Tout de suite : ton accès part sur ton e-mail et ton WhatsApp dès que le paiement est confirmé.</p></details>
+      <details><summary>Quels sont les moyens de paiement ?</summary><p>Wave, Orange Money, MTN MoMo et carte bancaire (Visa, Mastercard), en une fois ou en 12 mois.</p></details>
+      <details><summary>Comment marche le suivi personnel sur WhatsApp ?</summary><p>Tu poses tes questions quand tu veux ; mon équipe et moi répondons, et deux appels en direct ont lieu chaque jour.</p></details>
+      <details><summary>Je n'y connais rien en marketing digital, c'est pour moi ?</summary><p>Oui. La formation part de zéro, étape par étape, avec des modèles à reprendre tels quels.</p></details>
+      <details><summary>Dois-je me montrer pour vendre ?</summary><p>Non. Toute la méthode est pensée pour vendre sans montrer ton visage.</p></details>
+      <details><summary>Dois-je acheter du stock pour vendre ?</summary><p>Non. Tu commences avec des produits en affiliation, sans stock ni boutique.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer id="pied">
+  <div class="wrap">
+    <span class="logo"><svg aria-hidden="true"><use href="#mono"/></svg><span class="nom">Kanté<br>Ads<small>Académie</small></span></span>
+    <div class="ligne-p">
+      <span>Kanté Ads Académie · 2026<br>Tous droits réservés</span>
+      <div class="reseaux">
+        <a href="https://wa.me/22500000000?text=Bonjour%20Kant%C3%A9%20Ads%2C%20j%27ai%20une%20question." target="_blank" rel="noopener" aria-label="WhatsApp"><svg><use href="#whatsapp"/></svg></a>
+        <a href="#pied" aria-label="YouTube"><svg><use href="#youtube"/></svg></a>
+        <a href="#pied" aria-label="Instagram"><svg><use href="#insta"/></svg></a>
+      </div>
+      <a class="haut" href="#hero"><span><svg><use href="#haut"/></svg></span>Retour en haut</a>
+    </div>
+    <p class="legal">E-mail : contact@kanteads.example<br>KANTÉ ADS DIGITAL SARL · Abidjan, Côte d'Ivoire<br>Template · Style V « Mosaïque dorée »</p>
+    <div class="pf-centre"><span class="pf-par">Réalisé par <strong>Yedidia Ruben - Digital Strategist</strong></span></div><div class="droite">Suivez-nous : @kanteads</div>
+  </div>
+</footer>
+
+<script>
+/* Points des carrousels : un point par carte visible, cliquable, suit le glissé */
+document.querySelectorAll('.points[data-rail]').forEach(p => {
+  const rail = document.getElementById(p.dataset.rail), cartes = [...rail.children];
+  cartes.forEach((c, i) => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Aller à la carte ' + (i + 1));
+    b.onclick = () => rail.scrollTo({left: c.offsetLeft - rail.offsetLeft - 20, behavior: 'smooth'}); p.append(b); });
+  const maj = () => { const i = Math.round(rail.scrollLeft / ((cartes[1].offsetLeft - cartes[0].offsetLeft) || 1));
+    [...p.children].forEach((b, k) => b.setAttribute('aria-current', k === Math.min(i, cartes.length - 1))); };
+  rail.addEventListener('scroll', maj, {passive: true}); maj();
+});
+</script>
+<script src="../../commun/anim.js" defer></script>
+
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template V<b>Mosaïque dorée</b></span><nav aria-label="Autour du template V"><ul><li><a href="./" aria-current=page>Template</a></li><li><a href="avec-images.html">Template avec images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html">Design<small>DESIGN.md</small></a></li><li><a href="prompt.html">Prompt de la page<small>kit</small></a></li><li><a href="prompts.html">Prompts des images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template V : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">V</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+</body>
+</html>

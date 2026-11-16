@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Template Style R, violet atelier : page d'inscription à un atelier en ligne de design, blanc et violet, photos pleine largeur, sections sombres et cartes de lots.">
+<title>Avec images · Style R · Violet atelier · template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/anim.css">
+<style>
+:root{
+  --violet:#7360D3; --violet-p:#7A67D6; --violet-f:#5F49B9; --lilas:#AFB3F2; --brume:#CED1F7; --nacre:#E4E6FB; --ciel:#EFF2FA;
+  --rose:#FF3175; --rose-btn:#E01A60; --rose-p:#FF9CC6; --menthe:#A6F5DD;
+  --nuit:#0F0F11; --nuit2:#1C1B20; --ardoise:#5D5E66; --gris:#A3A3AD; --encre:#121214; --texte:#3D3D45; --blanc:#FFFFFF;
+  --courbe:cubic-bezier(.16,1,.3,1);
+  --f:'Red Hat Display',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);font-size:15px;line-height:1.6;color:var(--texte);background:var(--blanc);-webkit-font-smoothing:antialiased;overflow-x:clip}
+svg{display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--f);color:var(--encre);line-height:1.12;letter-spacing:-.02em;font-weight:800}
+h2{font-size:clamp(30px,3.2vw,46px)}
+b,strong{font-weight:700;color:inherit}
+.wrap{width:min(1040px,100% - 40px);margin-inline:auto;position:relative;z-index:1}
+section{position:relative}
+.sombre{background:var(--nuit);color:#C9C9D2}
+.sombre h2,.sombre h3{color:#fff}
+
+/* Emplacement d'image : vide, il fait propre (dégradé de la palette, filet, format au centre) */
+.emplacement{position:relative;overflow:hidden;width:100%;background:linear-gradient(135deg,var(--nacre),var(--brume));border:1px solid rgba(95,73,185,.25)}
+.emplacement[data-format="16:9"]{aspect-ratio:16/9}
+.emplacement[data-format="4:3"]{aspect-ratio:4/3}
+.emplacement[data-format="1:1"]{aspect-ratio:1/1}
+.emplacement[data-format="3:4"]{aspect-ratio:3/4}
+.emplacement[data-format="9:16"]{aspect-ratio:9/16}
+.emplacement::after{content:attr(data-format);position:absolute;left:50%;top:50%;translate:-50% -50%;padding:6px 14px;border:1px solid currentColor;border-radius:20px;font:600 12px/1 var(--f);letter-spacing:.14em;color:var(--violet-f);opacity:.75}
+.emplacement:has(img)::after{display:none}
+.sombre .emplacement,.emplacement.nuit{background:radial-gradient(80% 90% at 60% 30%,#2B2550,#16151D);border-color:rgba(175,179,242,.18)}
+.sombre .emplacement::after,.emplacement.nuit::after{color:var(--lilas)}
+
+/* Pastille de rubrique : capitales espacées, filet arrondi */
+.chip{display:inline-flex;align-items:center;height:26px;padding:0 14px;border-radius:14px;border:1px solid currentColor;font:600 10.5px/1 var(--f);letter-spacing:.2em;text-transform:uppercase}
+.kicker{font:600 11px/1 var(--f);letter-spacing:.2em;text-transform:uppercase;color:var(--encre);display:flex;align-items:center;gap:8px}
+.kicker::before{content:"";width:5px;height:5px;background:var(--violet-p)}
+
+/* Bouton billet : violet, talon blanc avec un ticket */
+.billet{display:inline-flex;align-items:stretch;min-height:52px;border-radius:4px;overflow:hidden;background:var(--violet-f);color:#fff;font:700 13px/1.2 var(--f);letter-spacing:.04em;text-transform:uppercase;box-shadow:0 14px 30px rgba(95,73,185,.35);transition:background .3s,box-shadow .4s var(--courbe)}
+.billet span{display:flex;align-items:center;padding:0 30px}
+.billet i{display:grid;place-items:center;width:56px;background:#fff;color:var(--encre)}
+.billet i svg{width:26px;height:26px}
+.billet:hover{background:#4E3AA3;box-shadow:0 18px 38px rgba(95,73,185,.5)}
+/* Bouton rose à ombre décalée */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 26px;border-radius:5px;background:var(--rose-btn);color:#fff;font:700 13px/1.2 var(--f);letter-spacing:.04em;text-transform:uppercase;box-shadow:-8px 8px 0 #1E1E24;transition:box-shadow .3s var(--courbe),translate .3s var(--courbe)}
+.btn:hover{box-shadow:-3px 3px 0 #1E1E24}
+.btn.gris{background:#5D5E66}
+
+/* 01 · Hero : photo pleine largeur, titre en bas à gauche, infos à droite */
+.hero{background:var(--nuit);color:#fff;overflow:hidden}
+.hero .emplacement{border:0}
+.hero .voile{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,14,.55),rgba(10,10,14,.05) 45%,rgba(10,10,14,.5)),linear-gradient(0deg,rgba(10,10,14,.75),transparent 55%);pointer-events:none}
+.hero .haut{position:absolute;top:0;left:0;right:0;z-index:2}
+.hero .haut .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:28px}
+.logo{display:inline-flex;align-items:center;gap:0;height:36px}
+.logo .k{width:36px;height:36px;border-radius:50%;background:var(--violet-p);display:grid;place-items:center;font:800 18px/1 var(--f);color:#fff;position:relative;z-index:1}
+.logo .n{height:30px;display:grid;place-items:center;margin-left:-8px;padding:0 16px 0 18px;border-radius:16px;background:#fff;font:700 14px/1 var(--f);color:var(--violet-f)}
+.orga{display:flex;align-items:center;gap:8px;font:700 15px/1 var(--f);color:#fff}
+.orga svg{width:20px;height:20px}
+.hero .bas{position:absolute;left:0;right:0;bottom:7%;z-index:2}
+.hero .bas .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:end}
+.hero h1{font-size:clamp(28px,2.6vw,42px);color:#fff}
+.infos .ligne-i{display:flex;gap:26px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.35);font-size:13px;color:#fff}
+.infos .ligne-i span{display:flex;align-items:center;gap:8px}
+.infos .ligne-i svg{width:16px;height:16px}
+.infos p{margin:16px 0 22px;font-size:15px;line-height:1.6;color:#E6E6EE;max-width:440px}
+
+/* 02 · Pourquoi participer : photo à gauche, aplat violet à droite */
+.pourquoi{display:grid;grid-template-columns:1fr 1fr;background:var(--violet)}
+.pourquoi .emplacement{border:0}
+.pourquoi{align-items:center}
+.pourquoi .txt{padding:110px 9% 110px 11%;color:#fff}
+.pourquoi h2{color:#fff;font-size:clamp(32px,3.4vw,50px);margin-bottom:40px}
+.pourquoi ul{list-style:none;max-width:440px}
+.pourquoi li{padding:18px 0;border-bottom:1px solid rgba(255,255,255,.45);font-size:15.5px;line-height:1.5}
+.pourquoi li:last-child{border-bottom:0}
+
+/* 03 · Pourquoi investir dans le design : texte à gauche, mockups à droite */
+.design{padding:130px 0 90px;overflow:hidden}
+.design::before{content:"";position:absolute;right:-10%;top:0;width:70%;height:80%;background:radial-gradient(closest-side,rgba(95,73,185,.35),transparent);pointer-events:none}
+.design .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}
+.design .chip{color:#D9D9E2;margin-bottom:16px}
+.design h2{padding-bottom:28px;border-bottom:1px solid #4A4A55;margin-bottom:28px}
+.design .lead{font:700 18px/1.55 var(--f);color:#fff;margin-bottom:22px}
+.design p{font-size:14.5px}
+.design p+p{margin-top:14px}
+.collage{position:relative;padding:40px 50px 60px}
+.collage .emplacement{border-radius:2px;box-shadow:0 30px 60px rgba(0,0,0,.5)}
+.sticker{position:absolute;display:grid;place-items:center;text-align:center;box-shadow:0 14px 28px rgba(0,0,0,.4)}
+.sticker.s1{left:10px;top:60px;width:110px;height:110px;background:#F5D33B;border:4px solid #fff;font:800 17px/1 var(--f);color:#111;rotate:-4deg}
+.sticker.s2{right:10px;top:0;width:86px;height:86px;border-radius:4px;background:#F1E7DD;font:800 13px/1.05 var(--f);color:#3A2416}
+.sticker.s3{left:28%;bottom:0;width:200px;height:110px;background:#151C5E;color:#A6E36A;font:800 30px/1 var(--f)}
+
+/* 04 · Combien le marché investit : tableau à filets */
+.marche{padding:40px 0 130px}
+.marche .tete{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:end;margin-bottom:40px}
+.marche .citation{font-style:italic;font-size:16px;color:#E3E3EA;max-width:320px;justify-self:end}
+.tableau{display:grid;grid-template-columns:1fr 1fr;border:1px solid #5A5A64}
+.tableau .col{display:grid}
+.tableau .col div{display:grid;place-items:center;min-height:80px;padding:12px 20px;border-bottom:1px solid #5A5A64;text-align:center;font-size:16px;color:#fff}
+.tableau .col div:last-child{border-bottom:0}
+.tableau .col div:first-child{background:var(--violet)}
+.tableau .note{border-left:1px solid #5A5A64;padding:40px 70px;font-size:14px;line-height:1.6;display:flex;flex-direction:column;justify-content:center}
+.tableau .note p+p{margin-top:14px}
+
+/* 05 · Secrets de l'atelier : fond ciel, carte à filet */
+.secrets{background:var(--ciel);padding:110px 0}
+.secrets .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center}
+.secrets h2{margin:16px 0 0;padding-bottom:20px;border-bottom:1px solid var(--encre);max-width:360px}
+.carte-filet{padding:30px 34px;border:1px solid var(--violet-f);border-radius:6px;background:var(--ciel);font-size:14.5px;color:var(--texte)}
+.carte-filet .chip{color:var(--encre);margin-bottom:18px}
+.carte-filet b{color:var(--encre)}
+.carte-filet p+p{margin-top:16px}
+
+/* 06 · Quand et comment : photo pleine largeur, panneau à droite */
+.quand{background:var(--nuit);color:#fff;overflow:hidden}
+.quand .emplacement{border:0}
+.quand .voile{position:absolute;inset:0;background:linear-gradient(90deg,transparent 30%,rgba(10,10,14,.8) 62%);pointer-events:none}
+.quand .contenu{position:absolute;inset:0;z-index:2;display:flex;align-items:center}
+.quand .contenu .wrap{display:flex;justify-content:flex-end}
+.quand .boite{width:min(460px,46%)}
+.quand h2{color:#fff;font-size:clamp(30px,3vw,46px)}
+.quand .sous{margin-top:12px;font:700 16px/1.4 var(--f)}
+.quand .sous+p{font-size:14px;color:#C9C9D2;margin-top:4px}
+.pilules{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 30px}
+.pilules span{display:inline-flex;align-items:center;gap:8px;height:32px;padding:0 16px;border-radius:17px;border:1px solid rgba(255,255,255,.6);font-size:13px}
+.pilules svg{width:15px;height:15px}
+.liste-verre{list-style:none;padding:22px 26px;background:rgba(60,60,70,.55);backdrop-filter:blur(8px);font-size:14px}
+.liste-verre li{display:flex;gap:12px;padding:7px 0}
+.liste-verre li::before{content:"";width:5px;height:5px;margin-top:9px;flex:none;background:var(--lilas)}
+
+/* 07 · Combien ça coûte : liste + deux lots */
+.prix{padding:130px 0 100px}
+.prix .chip{color:var(--encre)}
+.prix h2{margin:12px 0 44px}
+.prix .grille{display:grid;grid-template-columns:.9fr 1fr 1fr;gap:16px;align-items:start}
+.puces{list-style:none;font-size:14px;color:var(--texte)}
+.puces li{display:flex;gap:10px;padding:5px 0}
+.puces li::before{content:"";width:5px;height:5px;margin-top:9px;flex:none;background:var(--violet-p)}
+.lot{border:1px solid #2A2A30;border-radius:3px;overflow:hidden;background:#fff}
+.lot .tete{display:flex;gap:10px;padding:14px 18px;border-bottom:1px solid #2A2A30}
+.lot .tag{height:24px;display:grid;place-items:center;padding:0 12px;border-radius:12px;font:700 10px/1 var(--f);letter-spacing:.12em;text-transform:uppercase}
+.lot .tag.plein{background:var(--encre);color:#fff}
+.lot .tag.vide{border:1px solid var(--encre);color:var(--encre)}
+.lot .corps{padding:26px 18px 22px}
+.lot .montant{font:800 clamp(30px,2.8vw,40px)/1 var(--f);letter-spacing:-.02em;color:var(--encre)}
+.lot .montant small{font-size:.5em;font-weight:700}
+.lot .btn{margin:24px 0 24px 8px}
+.jauge{display:flex;align-items:center;gap:10px;font-size:12.5px}
+.jauge svg{width:22px;height:22px;flex:none}
+.lot.ouvert{background:var(--violet);border-color:var(--violet);color:#fff}
+.lot.ouvert .tete{background:var(--brume);border-color:var(--brume)}
+.lot.ouvert .tag.plein{background:#fff;color:var(--violet-f)}
+.lot.ouvert .tag.vide{border-color:#fff;color:#5F49B9;background:transparent}
+.lot.ouvert .montant{color:#fff}
+
+/* 08 · Pourquoi si peu cher : carte à filet, image partagée */
+.peu{padding:30px 0 60px}
+.carte-cadre{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;padding:30px 30px 30px 20px;border:1px solid #8E8E98;border-radius:4px}
+.points{display:flex;margin-bottom:22px}
+.points i{width:30px;height:30px;border-radius:50%;display:grid;place-items:center}
+.points i::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--encre)}
+.points i:first-child{background:var(--menthe)}
+.points i:last-child{background:var(--lilas);margin-left:-8px}
+.points i:last-child::after{background:var(--violet-f)}
+.peu h2{margin-bottom:24px}
+.peu p{font-size:14.5px}
+.peu p+p{margin-top:16px}
+.peu b{color:var(--encre)}
+.duo{display:grid;grid-template-columns:1fr 1fr;border-radius:10px;overflow:hidden}
+.duo .emplacement{border:0}
+.duo .forme{display:grid;place-items:center;position:relative;overflow:hidden}
+.duo .forme.a{background:var(--lilas)}
+.duo .forme.b{background:var(--menthe)}
+.duo .forme.a::before{content:"";width:72%;aspect-ratio:2/1;border-radius:200px 200px 0 0;background:#111;align-self:end}
+.duo .forme.b::before{content:"";position:absolute;inset:0;background:conic-gradient(from 160deg at 30% 0,transparent 0 10deg,#111 10deg 22deg,transparent 22deg 34deg,#fff 34deg 46deg,transparent 46deg)}
+.duo .cote{grid-row:span 2}
+
+/* 09 · Les avantages : courbe vectorielle et texte */
+.avantages{padding:40px 0 120px}
+.avantages .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.courbe{color:var(--violet-p);max-width:300px}
+.courbe svg{width:100%;height:auto}
+.avantages .chip{color:var(--encre);margin-bottom:18px}
+.avantages p{font-size:14.5px}
+.avantages p+p{margin-top:12px}
+.avantages b{color:var(--encre)}
+
+/* 10 · Le formateur : carte sombre, curseur et étiquette, tampon qui tourne */
+.formateur{padding:110px 0 70px;overflow:hidden}
+.formateur::before{content:"";position:absolute;left:10%;top:0;width:80%;height:700px;background:radial-gradient(closest-side,rgba(95,73,185,.32),transparent);pointer-events:none}
+.formateur h2{display:flex;align-items:center;gap:16px;padding-bottom:20px;border-bottom:1px solid #4A4A55;max-width:500px;margin-bottom:40px}
+.formateur h2::before{content:"";width:10px;height:10px;background:var(--violet-p);flex:none}
+.profil{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;border-radius:10px;background:linear-gradient(90deg,#08080A 40%,#1A1820);overflow:visible}
+.profil .txt{padding:40px 30px 40px 26px;font-size:14px}
+.profil .txt p+p{margin-top:16px}
+.profil .txt b{color:#fff}
+.curseur{position:relative;margin:0 0 24px 18px}
+.curseur svg{width:22px;height:22px;color:var(--violet-p);margin-left:-18px}
+.etiquette{display:inline-block;padding:6px 14px;background:var(--violet-f);font:800 18px/1.2 var(--f);color:#fff}
+.profil .ph{position:relative;border-radius:0 10px 10px 0;overflow:hidden}
+.profil .ph .emplacement{border:0}
+.profil .ph::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#08080A,transparent 30%);pointer-events:none}
+.tampon{position:absolute;right:-30px;top:-46px;z-index:3;width:110px;height:110px;border-radius:50%;background:#fff;color:#111;box-shadow:0 0 0 4px #0F0F11,0 0 0 5px #fff}
+.tampon svg.tour{width:100%;height:100%;animation:tourne 16s linear infinite}
+.tampon text{font:800 10.5px var(--f);letter-spacing:.24em;fill:currentColor}
+.tampon b{position:absolute;inset:0;margin:auto;width:46px;height:46px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;font:800 24px/1 var(--f)}
+@keyframes tourne{to{rotate:360deg}}
+
+/* 11 · Réalisations : mosaïque */
+.realisations{padding:30px 0 120px}
+.mosaique{display:grid;grid-template-columns:1fr 1fr 2fr;grid-template-rows:auto auto;gap:12px}
+.mosaique>*{border-radius:10px;overflow:hidden}
+.tuile-logo{grid-column:span 2;display:grid;place-items:center;aspect-ratio:2.25/1;background:var(--violet);font:700 clamp(28px,3vw,42px)/1 var(--f);color:#fff;letter-spacing:-.02em}
+.tuile-logo span{display:flex;align-items:center;gap:12px}
+.tuile-logo svg{width:44px;height:44px}
+.tuile-p{display:grid;place-items:center;aspect-ratio:1;background:#0B0A1E}
+.tuile-p svg{width:56%;color:#B4A954}
+.mosaique .grand{grid-column:3;grid-row:1/3}
+.mosaique .grand{align-self:center}
+
+/* 12 · Invités spéciaux : silhouettes mystère */
+.invites{padding:0 0 130px}
+.invites .grille{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.invite{position:relative;aspect-ratio:3/4.4;padding:20px;border-radius:6px;border:1px solid #3A3A44;background:linear-gradient(180deg,#2A2A31,#121216 75%);box-shadow:inset 0 0 0 4px #1A1A1F;overflow:hidden}
+.invite .chip{color:#C9C9D2;font-size:9.5px}
+.invite .tete-m{position:absolute;left:50%;top:22%;translate:-50% 0;width:44%;aspect-ratio:1;border-radius:50%;background:linear-gradient(180deg,#6A6A74,#3A3A42)}
+.invite .corps-m{position:absolute;left:50%;top:56%;translate:-50% 0;width:120%;aspect-ratio:1.4;border-radius:50% 50% 0 0;background:linear-gradient(180deg,#45454E,#16161A 60%)}
+.invite .nom{position:absolute;left:20px;right:20px;bottom:56px;z-index:1;padding-bottom:12px;border-bottom:1px solid #55555F;font:800 16px/1 var(--f);color:#fff}
+.invite small{position:absolute;left:20px;bottom:28px;z-index:1;font-size:12px;color:#B5B5C0}
+
+/* 13 · Certificat : tablette dessinée en CSS */
+.certificat{padding:20px 0 140px;overflow:hidden}
+.certificat::before{content:"";position:absolute;right:0;top:-100px;width:60%;height:600px;background:radial-gradient(closest-side,rgba(95,73,185,.35),transparent);pointer-events:none}
+.certificat .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+.certificat .chip{color:#D9D9E2;margin-bottom:14px}
+.certificat h2{margin-bottom:22px}
+.certificat p{font-size:15px}
+.certificat b{color:#fff}
+.tablette{position:relative;padding:12px;border-radius:22px;background:#2B2B30;border:2px solid #8B8B94;box-shadow:0 40px 80px rgba(0,0,0,.6)}
+.ecran{display:grid;grid-template-columns:1.3fr 1fr;gap:20px;padding:30px 26px;border-radius:12px;background:linear-gradient(135deg,#ECEDFB,#D9DBF6);color:#2A2A33;min-height:280px}
+.ecran .mini{display:inline-flex;align-items:center;gap:6px;font:700 10px/1 var(--f);color:var(--violet-f)}
+.ecran .mini i{width:16px;height:16px;border-radius:50%;background:var(--violet-p)}
+.ecran h3{margin:16px 0 14px;font-size:clamp(22px,2.2vw,30px);color:var(--violet-f)}
+.ecran h3::after{content:"";display:inline-block;width:.45em;height:.45em;margin-left:8px;border-radius:50%;background:var(--violet-p)}
+.ecran .p1{font-size:10px;color:#55555F}
+.ecran .nomc{font:800 13px/1 var(--f);margin:6px 0 10px;color:#2A2A33}
+.ecran .p2{font-size:10.5px;line-height:1.5;color:#2A2A33}
+.ecran .sig{margin-top:30px;width:60%;border-top:1px solid #2A2A33;padding-top:6px;font:700 8px/1 var(--f)}
+.ecran .deco{color:var(--violet-p)}
+.ecran .deco svg{width:100%;height:100%}
+.stylet{position:absolute;left:12%;right:12%;bottom:-40px;height:12px;border-radius:6px;background:linear-gradient(180deg,#fff,#CFCFD6);box-shadow:0 8px 16px rgba(0,0,0,.4)}
+.stylet::before{content:"";position:absolute;left:-22px;top:3px;border:6px solid transparent;border-right:22px solid #E8E8EE;border-left:0}
+
+/* 14 · Récapitulatif : cases cochées */
+.recap{padding:20px 0 130px}
+.recap .kicker{color:#C9C9D2;margin-bottom:12px}
+.recap h2{font-size:clamp(26px,2.4vw,34px);margin-bottom:36px}
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.cases ul{list-style:none;display:grid;gap:12px}
+.cases li{display:flex;align-items:center;gap:16px;min-height:52px;padding:10px 18px;border:1px solid #3E3E48;border-radius:4px;font-size:14px;color:#E3E3EA}
+.cases li i{width:22px;height:22px;border-radius:4px;background:#4964D8;display:grid;place-items:center;flex:none}
+.cases li i svg{width:14px;height:14px;color:#fff}
+
+/* 15 · Pour qui : trois rangées photo + texte */
+.pour-qui{padding:0 0 130px}
+.pour-qui h2{margin-bottom:34px}
+.rangee{display:grid;grid-template-columns:300px 1fr;gap:0;margin-bottom:22px;border-radius:2px;background:linear-gradient(90deg,#141418,#18171F);overflow:hidden}
+.rangee .emplacement{border:0}
+.rangee .txt{padding:26px 34px;font-size:14px}
+.rangee h3{font-size:22px;margin-bottom:16px}
+.rangee p+p{margin-top:14px}
+.rangee b{color:#fff}
+
+/* 16 · FAQ : accordéon sur fond sombre, portrait à droite */
+.faq{background:#0B0B0D;overflow:hidden}
+.faq .cadre{display:grid;grid-template-columns:1fr minmax(0,620px);align-items:center;max-width:1600px;margin-inline:auto}
+.faq .gauche{padding:90px 50px 90px max(20px,calc((100vw - 1040px) / 2))}
+.faq h2{font-size:clamp(34px,3.4vw,52px);margin-bottom:26px}
+.faq details{border-bottom:1px solid #3A3A44}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:64px;padding:12px 0;font:700 16px/1.4 var(--f);color:#fff}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;border:6px solid transparent;border-left:8px solid #fff;border-right:0;transition:rotate .3s var(--courbe)}
+.faq details[open] summary::after{rotate:90deg}
+.faq details p{padding:0 0 20px;font-size:14px;color:#C9C9D2}
+.faq .droite-ph{position:relative;align-self:center}
+.faq .droite-ph .emplacement{border:0}
+.faq .droite-ph::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#0B0B0D,transparent 35%);pointer-events:none}
+
+/* 17 · Pied : nom géant en contour, barre basse */
+#pied{background:var(--nuit);color:#C9C9D2;overflow:hidden}
+#pied .geant{position:relative;text-align:center;font:800 clamp(80px,17vw,280px)/.9 var(--f);letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1px rgba(175,179,242,.35);padding-top:60px;white-space:nowrap;background:radial-gradient(50% 80% at 50% 100%,rgba(95,73,185,.3),transparent);overflow:hidden}
+#pied .barre{background:var(--nuit2)}
+#pied .barre .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:110px;padding:20px 0;font-size:12.5px}
+#pied .marques{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+#pied .marques .logo{height:28px}
+#pied .marques .logo .k{width:28px;height:28px;font-size:14px}
+#pied .marques .logo .n{height:24px;font-size:12px}
+#pied .droite{display:flex;align-items:center;gap:22px;flex-wrap:wrap;text-align:right}
+#pied .droite a{text-decoration:underline;text-underline-offset:3px;min-height:44px;display:inline-flex;align-items:center}
+
+@media (max-width:1080px){
+  .hero .bas .wrap{gap:30px}
+  .tableau .note{padding:30px}
+  .prix .grille{grid-template-columns:1fr 1fr}
+  .prix .puces{grid-column:span 2;columns:2;margin-bottom:10px}
+}
+@media (max-width:820px){
+  .hero .haut .wrap{padding-top:16px}
+  .hero .bas,.quand .contenu{position:relative;inset:auto;bottom:auto;padding:30px 0 50px;background:var(--nuit)}
+  .hero .bas .wrap{grid-template-columns:1fr;gap:26px}
+  .hero .voile{bottom:auto;height:calc(100vw * 9 / 16)}
+  .pourquoi .txt{padding:50px 24px}
+  .design{padding:80px 0 60px}
+  .design .wrap,.secrets .wrap,.avantages .wrap,.certificat .wrap{grid-template-columns:1fr;gap:40px}
+  .collage{padding:30px 20px 60px}
+  .sticker.s1{width:80px;height:80px;font-size:13px}
+  .sticker.s3{width:150px;height:84px;font-size:22px}
+  .marche .tete{grid-template-columns:1fr}
+  .marche .citation{justify-self:start}
+  .tableau{grid-template-columns:1fr}
+  .tableau .note{border-left:0;border-top:1px solid #5A5A64;padding:26px 20px}
+  .secrets{padding:80px 0}
+  .quand .voile{display:none}
+  .quand .contenu .wrap{display:block}
+  .quand .boite{width:auto}
+  .prix{padding:80px 0}
+  .prix .grille{grid-template-columns:1fr}
+  .prix .puces{grid-column:auto;columns:1}
+  .carte-cadre{grid-template-columns:1fr;padding:24px 18px}
+  .courbe{max-width:220px}
+  .profil{grid-template-columns:1fr}
+  .profil .ph{border-radius:10px 10px 0 0;order:-1}
+  .profil .ph::before{background:linear-gradient(0deg,#08080A,transparent 40%)}
+  .tampon{right:10px;top:-40px;width:90px;height:90px}
+  .tampon b{width:38px;height:38px;font-size:20px}
+  .mosaique{grid-template-columns:1fr 1fr}
+  .mosaique .grand{grid-column:span 2;grid-row:auto}
+  .invites .grille{grid-template-columns:1fr;max-width:340px;margin-inline:auto}
+  .invite{aspect-ratio:4/3.4}
+  .invite .tete-m{top:18%;width:30%}
+  .invite .corps-m{top:50%;width:90%}
+  .cases{grid-template-columns:1fr}
+  .rangee{grid-template-columns:220px 1fr}
+  .rangee .txt{padding:22px 20px}
+  .faq .cadre{grid-template-columns:1fr}
+  .faq .gauche{padding:70px 20px 60px}
+  .faq .droite-ph{order:-1;width:min(100%,460px);justify-self:center}
+  .faq .droite-ph::before{background:linear-gradient(0deg,#0B0B0D,transparent 35%)}
+  #pied .barre .wrap{flex-direction:column;align-items:flex-start}
+  #pied .droite{text-align:left}
+}
+@media (max-width:600px){
+  .pourquoi{grid-template-columns:1fr}
+  .pourquoi .txt{padding:60px 20px}
+  .rangee{grid-template-columns:1fr}
+}
+@media (max-width:480px){
+  .infos .ligne-i{flex-wrap:wrap;gap:10px 20px}
+  .billet span{padding:0 18px}
+  .orga{font-size:13px}
+  .lot .btn{margin-left:8px}
+}
+@media (prefers-reduced-motion:reduce){.tampon svg.tour{animation:none}}
+</style>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/portfolio.css">
+<link rel="stylesheet" href="../../commun/flottant.css">
+</head>
+<body>
+<div data-progression style="background:var(--violet-p)"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ticket" viewBox="0 0 24 24"><path d="M3 7 H21 V10 A2 2 0 0 0 21 14 V17 H3 V14 A2 2 0 0 0 3 10 Z M9 7 V17" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-dasharray="0"/></symbol>
+  <symbol id="agenda" viewBox="0 0 16 16"><rect x="2" y="3" width="12" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M2 7 H14 M5 1.5 V4 M11 1.5 V4" stroke="currentColor" stroke-width="1.3"/></symbol>
+  <symbol id="horloge" viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.3"/><path d="M8 2 A6 6 0 0 1 8 14 Z" fill="currentColor"/></symbol>
+  <symbol id="lampe" viewBox="0 0 20 20"><path d="M10 2 L5 12 H15 Z M7 16 H13 M8 18 H12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="coche" viewBox="0 0 14 14"><path d="M3 7.5 L6 10 L11 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="fleche-c" viewBox="0 0 24 24"><path d="M4 2 L20 12 L4 22 Z" fill="currentColor"/></symbol>
+  <symbol id="maison" viewBox="0 0 44 44"><path d="M8 40 V18 L22 6 L36 18 V40 M16 40 V26 H28 V40" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></symbol>
+</svg>
+
+<section class="hero sombre" id="hero">
+  <div class="emplacement nuit" data-img="R-hero" data-format="16:9" data-alt="Thierry Kalala souriant à son bureau de studio, lunettes noires, sweat noir, tasse à la main"><img src="images/R-hero.jpg" alt="Thierry Kalala souriant à son bureau de studio, lunettes noires, sweat noir, tasse à la main" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="voile" aria-hidden="true"></div>
+  <div class="haut"><div class="wrap">
+    <a class="logo" href="#hero" aria-label="Labo Marque, accueil"><span class="k">K</span><span class="n">Labo Marque</span></a>
+    <span class="orga"><svg><use href="#lampe"/></svg>Kin Créative</span>
+  </div></div>
+  <div class="bas"><div class="wrap">
+    <h1 data-lignes>2 jours en immersion<br>pour créer votre premier<br>projet à 6 millions FCFA</h1>
+    <div class="infos" data-rv>
+      <div class="ligne-i"><span><svg><use href="#agenda"/></svg>14 et 15/03 sur Zoom</span><span>Places presque épuisées</span></div>
+      <p>J'ouvre les portes de mon studio : on construit ensemble un projet plus stratégique et plus abouti, avec une méthode qui vous donne de la régularité et de l'assurance.</p>
+      <a class="billet reflet" href="#prix" data-aimant><span>Rejoindre la liste d'attente</span><i><svg><use href="#ticket"/></svg></i></a>
+    </div>
+  </div></div>
+</section>
+
+<section class="pourquoi" id="pourquoi">
+  <div class="ph"><div class="emplacement" data-img="R-nuancier" data-format="1:1" data-alt="Thierry Kalala tenant un nuancier de couleurs ouvert devant son menton, lampe de bureau derrière"><img src="images/R-nuancier.jpg" alt="Thierry Kalala tenant un nuancier de couleurs ouvert devant son menton, lampe de bureau derrière" loading="lazy" decoding="async" onerror="this.remove()"></div></div>
+  <div class="txt">
+    <h2 data-lignes>Pourquoi<br>participer ?</h2>
+    <ul>
+      <li data-rv>Pour apprendre, en pratique, à mener un projet à 6 millions et passer un cap comme designer.</li>
+      <li data-rv>Pour améliorer votre technique, la qualité de votre portfolio, votre assurance, et donc votre valeur et votre reconnaissance.</li>
+      <li data-rv>Pour apprendre à facturer plus aux mêmes clients.</li>
+      <li data-rv>Pour ne plus jamais parler de panne d'inspiration.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="design sombre" id="design">
+  <div class="wrap">
+    <div>
+      <span class="chip" data-rv>Design</span>
+      <h2 data-lignes>Pourquoi investir<br>dans le design ?</h2>
+      <p class="lead" data-rv>Vous savez pourquoi les plus grands studios du monde font de l'identité visuelle ?</p>
+      <p data-rv>Parce qu'une marque bien née attire les nouveaux clients comme un aimant. Si le client a aimé la marque, pourquoi ne vous confierait-il pas la suite ?</p>
+      <p data-rv>Le travail commence par l'identité. C'est elle qui <b>ouvre la porte.</b></p>
+    </div>
+    <div class="collage" data-rv>
+      <div class="emplacement" data-img="R-affiche" data-format="4:3" data-alt="Façade d'immeuble à Kinshasa habillée de grandes affiches d'une marque jaune et blanche"><img src="images/R-affiche.jpg" alt="Façade d'immeuble à Kinshasa habillée de grandes affiches d'une marque jaune et blanche" loading="lazy" decoding="async" onerror="this.remove()"></div>
+      <span class="sticker s1" aria-hidden="true">C'est<br>à moi !</span>
+      <span class="sticker s2" aria-hidden="true">BOUC<br>DU FLEUVE</span>
+      <span class="sticker s3" aria-hidden="true">Mbote!</span>
+    </div>
+  </div>
+</section>
+
+<section class="marche sombre" id="marche">
+  <div class="wrap">
+    <div class="tete">
+      <h2 data-lignes>Combien le marché<br>investit dans le design ?</h2>
+      <p class="citation" data-rv>« Les marques les plus précieuses du monde investissent lourdement dans le design. »</p>
+    </div>
+    <div class="tableau" data-rv>
+      <div class="col">
+        <div>Pour garder une longueur d'avance.</div>
+        <div>100 FCFA de retour pour chaque franc investi.</div>
+        <div>Un investissement régulier, une croissance qui s'emballe.</div>
+        <div>Un retour moyen de 5 pour 1.</div>
+      </div>
+      <div class="note">
+        <p>Une étude de McKinsey &amp; Company a montré que les entreprises qui placent le design au cœur de leurs projets font mieux, financièrement, que leurs concurrentes.</p>
+        <p>La même étude montre que les produits jugés « supérieurs » par leur design gagnent plus de parts de marché et de meilleures marges.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secrets" id="secrets">
+  <div class="wrap">
+    <div>
+      <span class="kicker" data-rv>À découvrir ici</span>
+      <h2 data-lignes>Les secrets<br>de mon studio.</h2>
+    </div>
+    <div class="carte-filet" data-rv>
+      <span class="chip">Très confidentiel</span>
+      <p>En 9 ans de studio, j'ai rassemblé des leçons et des idées qui vont <b>accélérer votre méthode</b>.</p>
+      <p>Un seul client m'a rapporté <b>40 000 000 FCFA</b> en <b>3 mois</b> : je vous montre quoi, comment et pourquoi, pour que vous appliquiez la même chose et <b>montiez votre panier moyen</b> par client.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quand sombre" id="quand">
+  <div class="emplacement nuit" data-img="R-tablette" data-format="16:9" data-alt="Thierry Kalala en veste en jean, assis dans un fauteuil, concentré sur une tablette, pièce sombre"><img src="images/R-tablette.jpg" alt="Thierry Kalala en veste en jean, assis dans un fauteuil, concentré sur une tablette, pièce sombre" loading="lazy" decoding="async" onerror="this.remove()"></div>
+  <div class="voile" aria-hidden="true"></div>
+  <div class="contenu"><div class="wrap"><div class="boite">
+    <h2 data-lignes>Quand et comment ?</h2>
+    <p class="sous" data-rv>Un événement en direct, à un canapé de chez vous.</p>
+    <p data-rv>Nous passerons un week-end ensemble, sur Zoom.</p>
+    <div class="pilules" data-rv><span><svg><use href="#horloge"/></svg>de 9 h 30 à 17 h 30</span><span><svg><use href="#agenda"/></svg>les 14 et 15/03</span></div>
+    <ul class="liste-verre" data-rv>
+      <li>Apprenez les fondamentaux et maîtrisez les techniques</li>
+      <li>Passez à la pratique</li>
+      <li>Échangez avec les autres participants</li>
+      <li>Recevez les retours des formateurs</li>
+      <li>Consolidez vos acquis en reprenant votre propre travail</li>
+    </ul>
+  </div></div></div>
+</section>
+
+<section class="prix" id="prix">
+  <div class="wrap">
+    <span class="chip" data-rv>Événement exclusif</span>
+    <h2 data-rv>Combien ça coûte ?</h2>
+    <div class="grille">
+      <ul class="puces" data-rv>
+        <li>2 jours d'atelier en ligne</li><li>Les fondamentaux d'une identité visuelle</li><li>La création en pratique</li><li>Créer sans attendre l'inspiration</li><li>Comment j'ai facturé 40 millions à un client</li><li>Des fichiers pour vous entraîner avec moi</li><li>Exercices et échanges</li><li>Comment gagner plus avec le design</li><li>Des interventions d'invités spéciaux</li>
+      </ul>
+      <div class="lot ouvert" data-rv>
+        <div class="tete"><span class="tag plein">Labo</span><span class="tag vide">Lot 1</span></div>
+        <div class="corps">
+          <div class="montant">9 900 <small>FCFA</small></div>
+          <a class="btn" href="https://wa.me/22500000000?text=Bonjour%2C%20je%20veux%20m%27inscrire%20au%20Labo%20Marque%20(lot%201)." target="_blank" rel="noopener" data-aimant>Je m'inscris</a>
+          <div class="jauge"><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="2.4"/><circle cx="11" cy="11" r="9" fill="none" stroke="#fff" stroke-width="2.4" stroke-dasharray="25.4 56.5" transform="rotate(-90 11 11)"/></svg>45 % des places prises</div>
+        </div>
+      </div>
+      <div class="lot" data-rv>
+        <div class="tete"><span class="tag plein">Labo</span><span class="tag vide">Lot 2</span></div>
+        <div class="corps">
+          <div class="montant">?? <small>FCFA</small></div>
+          <a class="btn gris" href="https://wa.me/22500000000?text=Bonjour%2C%20pr%C3%A9venez-moi%20pour%20le%20lot%202%20du%20Labo%20Marque." target="_blank" rel="noopener">Me prévenir</a>
+          <div class="jauge"><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="9" fill="none" stroke="#121214" stroke-width="2.4"/></svg>0 % des places prises</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="peu" id="pas-cher">
+  <div class="wrap">
+    <div class="carte-cadre" data-rv>
+      <div>
+        <div class="points" aria-hidden="true"><i></i><i></i></div>
+        <h2>Pourquoi<br>si peu cher ?</h2>
+        <p>Cet événement est pensé et organisé par <b>Kin Créative</b>.</p>
+        <p>Sa mission : ouvrir le bon contenu à tout le milieu créatif. Voilà pourquoi ses événements restent accessibles, parfois <b>gratuits</b>, mais toujours denses et précis.</p>
+        <p>Kin Créative offre aussi des bourses aux jeunes en situation fragile, avec des écoles partenaires de <b>Kinshasa</b>.</p>
+      </div>
+      <div class="duo">
+        <div class="cote"><div class="emplacement" data-img="R-portrait" data-format="9:16" data-alt="Portrait de Thierry Kalala, lunettes noires, sweat noir, fond de studio gris"><img src="images/R-portrait.jpg" alt="Portrait de Thierry Kalala, lunettes noires, sweat noir, fond de studio gris" loading="lazy" decoding="async" onerror="this.remove()"></div></div>
+        <div class="forme a" aria-hidden="true"></div>
+        <div class="forme b" aria-hidden="true"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="avantages" id="avantages">
+  <div class="wrap">
+    <div class="courbe" aria-hidden="true" data-rv>
+      <svg viewBox="0 0 300 200"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M20 20 H260"/><path d="M110 200 V110 A40 40 0 0 1 190 110 V200"/><path d="M20 20 V60 M260 20 V200"/></g><g fill="currentColor"><circle cx="60" cy="20" r="9"/><circle cx="260" cy="20" r="9"/><circle cx="60" cy="190" r="9"/><circle cx="200" cy="190" r="9"/></g><g fill="#E4E6FB" stroke="currentColor" stroke-width="2"><rect x="12" y="52" width="16" height="16"/><rect x="142" y="12" width="16" height="16"/><rect x="102" y="182" width="16" height="16"/><rect x="252" y="182" width="16" height="16"/></g></svg>
+    </div>
+    <div>
+      <span class="chip" data-rv>Plusieurs avantages</span>
+      <p data-rv>En plus, l'abonnement à notre plateforme commence à 15 000 FCFA par mois, avec de nouveaux cours chaque mois : déjà plus de <b>35 heures de contenu créatif</b>, avec des professionnels reconnus et des cours filmés avec soin.</p>
+      <p data-rv>Le Labo Marque est une des initiatives de ce projet. Y participer, c'est aussi soutenir celles et ceux qui en profitent. Et ce n'est pas tout : nous pourrons orienter de nouveaux élèves vers ma formation complète en identité visuelle.</p>
+    </div>
+  </div>
+</section>
+
+<section class="formateur sombre" id="formateur">
+  <div class="wrap">
+    <h2 data-rv>Votre formateur</h2>
+    <div class="profil" data-rv>
+      <div class="txt">
+        <div class="curseur"><svg><use href="#fleche-c"/></svg><span class="etiquette">Thierry Kalala</span></div>
+        <p>En plus de créer des identités visuelles pour mes clients, j'aime partager mon expérience sur les réseaux. Il manquait un cours d'identité visuelle complet et approfondi : j'ai créé le Labo Marque.</p>
+        <p>J'ai aussi mon studio de design à Kinshasa, primé en 2019 par un <b>prix panafricain du design</b>, puis en 2022 par la <b>Biennale du design de Dakar</b>.</p>
+      </div>
+      <div class="ph"><div class="emplacement nuit" data-img="R-formateur" data-format="4:3" data-alt="Thierry Kalala assis, main au menton, veste en jean, regard vers l'objectif, studio sombre"><img src="images/R-formateur.jpg" alt="Thierry Kalala assis, main au menton, veste en jean, regard vers l'objectif, studio sombre" loading="lazy" decoding="async" onerror="this.remove()"></div></div>
+      <div class="tampon" aria-hidden="true"><svg class="tour" viewBox="0 0 110 110"><defs><path id="rondR" d="M55 55 m-40 0 a40 40 0 1 1 80 0 a40 40 0 1 1 -80 0"/></defs><text><textPath href="#rondR">IMMERSION · LABO MARQUE · </textPath></text></svg><b>K</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="realisations sombre" id="realisations">
+  <div class="wrap">
+    <div class="mosaique">
+      <div class="tuile-logo" data-rv><span><svg><use href="#maison"/></svg>Cité Lisanga</span></div>
+      <div class="grand" data-rv><div class="emplacement" data-img="R-projet-1" data-format="1:1" data-alt="Livret d'identité visuelle rouge posé sur un feuillage vert sombre"><img src="images/R-projet-1.jpg" alt="Livret d'identité visuelle rouge posé sur un feuillage vert sombre" loading="lazy" decoding="async" onerror="this.remove()"></div></div>
+      <div class="tuile-p" data-rv><svg viewBox="0 0 100 80" aria-hidden="true"><g fill="currentColor"><rect x="0" y="0" width="56" height="10"/><rect x="0" y="18" width="56" height="10"/><rect x="0" y="36" width="56" height="10"/><rect x="0" y="54" width="56" height="10"/><rect x="0" y="70" width="36" height="10"/><path d="M50 0 H62 A32 32 0 0 1 62 64 H50 Z"/></g></svg></div>
+      <div data-rv><div class="emplacement" data-img="R-projet-2" data-format="1:1" data-alt="Affiche de marque rose et noire avec un visage graphique coloré"><img src="images/R-projet-2.jpg" alt="Affiche de marque rose et noire avec un visage graphique coloré" loading="lazy" decoding="async" onerror="this.remove()"></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="invites sombre" id="invites">
+  <div class="wrap">
+    <div class="grille">
+      <div class="invite" data-rv><span class="chip">Invité spécial</span><span class="tete-m" aria-hidden="true"></span><span class="corps-m" aria-hidden="true"></span><span class="nom">Qui suis-je ?</span><small>Laissez parler votre imagination</small></div>
+      <div class="invite" data-rv><span class="chip">Invitée spéciale</span><span class="tete-m" aria-hidden="true"></span><span class="corps-m" aria-hidden="true"></span><span class="nom">Qui suis-je ?</span><small>Laissez parler votre imagination</small></div>
+      <div class="invite" data-rv><span class="chip">Invité spécial</span><span class="tete-m" aria-hidden="true"></span><span class="corps-m" aria-hidden="true"></span><span class="nom">Qui suis-je ?</span><small>Laissez parler votre imagination</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="certificat sombre" id="certificat">
+  <div class="wrap">
+    <div>
+      <span class="chip" data-rv>Votre certificat</span>
+      <h2 data-lignes>Vous recevez<br>un certificat ?</h2>
+      <p data-rv><b>Oui.</b> À la fin de l'événement, chacun reçoit le lien d'un court test. Une fois rempli, le certificat de réussite arrive par e-mail.</p>
+    </div>
+    <div class="tablette" data-rv aria-label="Aperçu du certificat sur une tablette" role="img">
+      <div class="ecran">
+        <div>
+          <span class="mini"><i></i>Labo Marque</span>
+          <h3>Certificat</h3>
+          <p class="p1">Nous certifions que :</p>
+          <p class="nomc">NOM</p>
+          <p class="p2">a participé à l'atelier d'identité visuelle des 14 et 15 mars 2027.</p>
+          <p class="sig">Thierry Kalala</p>
+        </div>
+        <div class="deco" aria-hidden="true"><svg viewBox="0 0 120 160"><g fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 20 H80 V70 H40 V120 H90"/><circle cx="80" cy="45" r="10"/><circle cx="60" cy="110" r="16"/><path d="M104 10 V150"/></g><g fill="currentColor"><circle cx="20" cy="20" r="5"/><circle cx="90" cy="120" r="4"/><circle cx="90" cy="90" r="4"/><circle cx="90" cy="100" r="4"/></g></svg></div>
+      </div>
+      <span class="stylet" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+<section class="recap sombre" id="programme">
+  <div class="wrap">
+    <span class="kicker" data-rv>Vous aurez tout ceci</span>
+    <h2 data-rv>Le résumé de ce que vous recevez :</h2>
+    <div class="cases">
+      <ul>
+        <li data-rv><i><svg><use href="#coche"/></svg></i>2 jours d'atelier sur Zoom</li>
+        <li data-rv><i><svg><use href="#coche"/></svg></i>Les fondamentaux d'une bonne identité visuelle</li>
+        <li data-rv><i><svg><use href="#coche"/></svg></i>La construction d'une identité à 6 millions, en pratique, du brief à la livraison</li>
+        <li data-rv><i><svg><use href="#coche"/></svg></i>Créer sans attendre l'inspiration</li>
+        <li data-rv><i><svg><use href="#coche"/></svg></i>Les stratégies et livrables qui m'ont fait facturer 40 millions à un seul client</li>
+      </ul>
+      <ul>
+        <li data-rv><i><svg><use href="#coche"/></svg></i>Les fondamentaux du bon design</li>
+        <li data-rv><i><svg><use href="#coche"/></svg></i>Des fichiers pour s'entraîner et créer ensemble</li>
+        <li data-rv><i><svg><use href="#coche"/></svg></i>Exercices, échanges, bonne humeur</li>
+        <li data-rv><i><svg><use href="#coche"/></svg></i>10 façons de gagner plus avec le design (modèles d'affaires)</li>
+        <li data-rv><i><svg><use href="#coche"/></svg></i>Inspiration et orientation</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pour-qui sombre" id="pour-qui">
+  <div class="wrap">
+    <h2 data-rv>Pour qui est cet atelier ?</h2>
+    <div class="rangee" data-rv>
+      <div class="emplacement" data-img="R-profil-1" data-format="4:3" data-alt="Jeune homme casque audio au cou, assis dans sa chambre devant un vieil ordinateur"><img src="images/R-profil-1.jpg" alt="Jeune homme casque audio au cou, assis dans sa chambre devant un vieil ordinateur" loading="lazy" decoding="async" onerror="this.remove()"></div>
+      <div class="txt"><h3>En reconversion</h3><p>Vous pensez devenir designer ? L'atelier vous aide à décider en regardant aujourd'hui, demain et l'avenir. Avec des chiffres sur le marché, vous prendrez <b>la meilleure décision</b> pour votre carrière.</p><p>Nous étudierons des cas réels et vivrons un projet complet, du premier échange à la livraison.</p></div>
+    </div>
+    <div class="rangee" data-rv>
+      <div class="emplacement" data-img="R-profil-2" data-format="4:3" data-alt="Jeune femme en sweat jaune, main au menton, devant des néons colorés"><img src="images/R-profil-2.jpg" alt="Jeune femme en sweat jaune, main au menton, devant des néons colorés" loading="lazy" decoding="async" onerror="this.remove()"></div>
+      <div class="txt"><h3>Designer débutant</h3><p>Vous utilisez Canva, vous faites des petites missions ou vous êtes simplement passionné ? L'atelier vous aide à <b>comprendre comment fonctionne le design</b> qui a de la valeur, celui pour lequel le marché paie.</p><p>Vous verrez comment le design sert à attirer, retenir, relier, convaincre et fidéliser.</p></div>
+    </div>
+    <div class="rangee" data-rv>
+      <div class="emplacement" data-img="R-profil-3" data-format="4:3" data-alt="Designer confirmé souriant, mains jointes, dans un bureau sombre"><img src="images/R-profil-3.jpg" alt="Designer confirmé souriant, mains jointes, dans un bureau sombre" loading="lazy" decoding="async" onerror="this.remove()"></div>
+      <div class="txt"><h3>Designer confirmé</h3><p>Vous avez déjà vu passer de gros projets sans savoir comment ils ont été construits. Ici, vous accédez à un projet réel qui vaut <b>au moins 6 000 000 FCFA</b>.</p><p>Je vous montre la marque avant, ses problèmes, ses objectifs et tout le chemin créatif jusqu'à la solution.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq sombre" id="faq">
+  <div class="cadre">
+    <div class="gauche">
+      <h2 data-rv>FAQ</h2>
+      <details open data-rv><summary>Y a-t-il une rediffusion ?</summary><p>Oui. Vous pouvez acheter les enregistrements et tous les supports, à consulter quand vous voulez, au moment de l'inscription.</p></details>
+      <details data-rv><summary>Je suis déjà élève de la formation, dois-je payer ?</summary><p>Non : votre accès est inclus. Écrivez-nous sur WhatsApp pour recevoir le lien.</p></details>
+      <details data-rv><summary>Je suis déjà élève, dois-je participer ?</summary><p>Oui, si vous voulez voir un projet réel de bout en bout : c'est un contenu inédit.</p></details>
+      <details data-rv><summary>Qu'est-ce que je vais apprendre ?</summary><p>La méthode complète d'une identité visuelle, du brief à la livraison, et la façon de la vendre.</p></details>
+      <details data-rv><summary>Y a-t-il un certificat ?</summary><p>Oui, après un court test en ligne, envoyé par e-mail.</p></details>
+      <details data-rv><summary>Comment savoir si c'est pour moi ?</summary><p>Si vous voulez vivre du design d'identité, à n'importe quel niveau, c'est pour vous.</p></details>
+      <details data-rv><summary>Allez-vous vendre quelque chose pendant l'atelier ?</summary><p>Je présenterai ma formation complète à la fin, sans obligation.</p></details>
+      <details data-rv><summary>Je ne suis pas créatif, est-ce utile ?</summary><p>Oui : la créativité vient d'une méthode, c'est justement ce que l'on travaille.</p></details>
+    </div>
+    <div class="droite-ph"><div class="emplacement nuit" data-img="R-faq" data-format="3:4" data-alt="Thierry Kalala ajustant ses lunettes noires sous une lampe de bureau, tasse posée devant lui"><img src="images/R-faq.jpg" alt="Thierry Kalala ajustant ses lunettes noires sous une lampe de bureau, tasse posée devant lui" loading="lazy" decoding="async" onerror="this.remove()"></div></div>
+  </div>
+</section>
+
+<footer id="pied">
+  <div class="geant" aria-hidden="true">LABO</div>
+  <div class="barre"><div class="wrap">
+    <div class="marques">
+      <span class="logo" aria-label="Labo Marque"><span class="k">K</span><span class="n">Labo Marque</span></span>
+      <span class="orga"><svg><use href="#lampe"/></svg>Kin Créative</span>
+      <span>© 2026 Labo Marque · Kinshasa</span>
+    </div>
+    <div class="pf-centre"><span class="pf-par">Réalisé par <strong>Yedidia Ruben - Digital Strategist</strong></span></div><div class="droite"><a href="https://wa.me/22500000000?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20le%20Labo%20Marque." target="_blank" rel="noopener">WhatsApp</a><a href="#pied">Confidentialité</a><a href="#pied">Cookies</a></div>
+  </div></div>
+</footer>
+
+<script src="../../commun/anim.js" defer></script>
+
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template R<b>Violet atelier</b></span><nav aria-label="Autour du template R"><ul><li><a href="./">Template</a></li><li><a href="avec-images.html" aria-current=page>Template avec images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html">Design<small>DESIGN.md</small></a></li><li><a href="prompt.html">Prompt de la page<small>kit</small></a></li><li><a href="prompts.html">Prompts des images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template R : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">R</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+</body>
+</html>

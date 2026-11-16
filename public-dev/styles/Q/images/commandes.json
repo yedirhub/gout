@@ -1,0 +1,244 @@
+{
+ "template": "Q",
+ "personnage": {
+  "nom": "Grâce Akakpo",
+  "genre": "femme",
+  "age": 27,
+  "ville": "Lomé",
+  "physique": "peau brun moyen, afro volumineux, visage fin, sourire franc avec fossettes",
+  "signature": "lunettes rondes à monture transparente",
+  "metier": "mentore en état d'esprit et loi de l'attraction, formation en ligne",
+  "tenue": "veste en tweed bleu ciel #339EEF sur chemisier blanc, boutons dorés",
+  "regle": "même visage, même coiffure, même signature sur chaque image où il apparaît"
+ },
+ "palette": {
+  "fond": "#FFFFFF",
+  "brume": "#EFF8FE",
+  "ciel": "#339EEF",
+  "nuit": "#06429C",
+  "titre": "#0B47A8",
+  "encre": "#171717"
+ },
+ "images": [
+  {
+   "id": "Q-hero",
+   "fichier": "images/Q-hero.jpg",
+   "section": "hero",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "d'une mentore en état d'esprit",
+    "personnage": "Grâce Akakpo, femme de 27 ans, peau brun moyen, afro volumineux, visage fin, sourire franc avec fossettes, lunettes rondes à monture transparente",
+    "action": "menton posé sur la main, regard doux vers l'objectif, veste en tweed bleu ciel à boutons dorés sur chemisier blanc",
+    "cadrage": "plan poitrine, sujet centré, bas de l'image qui se fond dans le blanc",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière de studio douce et claire",
+    "decor": "fond blanc pur",
+    "palette": [
+     "#FFFFFF",
+     "#339EEF",
+     "#EFF8FE"
+    ],
+    "ambiance": "lumineuse, bienveillante",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lunettes absentes ou teintées"
+    ]
+   },
+   "prompt": "Photo d'une mentore en état d'esprit, Grâce Akakpo, femme de 27 ans, peau brun moyen, afro volumineux, visage fin, sourire franc avec fossettes, lunettes rondes à monture transparente, menton posé sur la main, regard doux vers l'objectif, veste en tweed bleu ciel à boutons dorés sur chemisier blanc, plan poitrine, sujet centré, bas de l'image qui se fond dans le blanc, objectif 85 mm, f/2, lumière de studio douce et claire, décor : fond blanc pur, couleurs #FFFFFF, #339EEF, #EFF8FE, ambiance lumineuse, bienveillante, sans aucun texte ni logo.",
+   "reference": "inspi/behance/198747963/04.png : hero, portrait à droite (y 30 à 400 en 1000 px)"
+  },
+  {
+   "id": "Q-video",
+   "fichier": "images/Q-video.jpg",
+   "section": "video",
+   "format": "16:9",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "d'une mentore qui parle face caméra",
+    "personnage": "Grâce Akakpo, femme de 27 ans, peau brun moyen, afro volumineux, visage fin, sourire franc avec fossettes, lunettes rondes à monture transparente",
+    "action": "la main en visière sur le front, expression expressive, blazer noir",
+    "cadrage": "plan poitrine, sujet centré, comme une vidéo YouTube",
+    "objectif": "35 mm, f/2,8",
+    "lumiere": "lumière douce de fenêtre",
+    "decor": "mur à lattes de bois clair",
+    "palette": [
+     "#FFFFFF",
+     "#171717",
+     "#D9D9D9"
+    ],
+    "ambiance": "spontanée, sincère",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lunettes absentes ou teintées"
+    ]
+   },
+   "prompt": "Photo d'une mentore qui parle face caméra, Grâce Akakpo, femme de 27 ans, peau brun moyen, afro volumineux, visage fin, sourire franc avec fossettes, lunettes rondes à monture transparente, la main en visière sur le front, expression expressive, blazer noir, plan poitrine, sujet centré, comme une vidéo YouTube, objectif 35 mm, f/2,8, lumière douce de fenêtre, décor : mur à lattes de bois clair, couleurs #FFFFFF, #171717, #D9D9D9, ambiance spontanée, sincère, sans aucun texte ni logo.",
+   "reference": "inspi/behance/198747963/04.png : vignette vidéo (y 510 à 790 en 1000 px)"
+  },
+  {
+   "id": "Q-ecran",
+   "fichier": "images/Q-ecran.jpg",
+   "section": "pourquoi",
+   "format": "16:9",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "d'écran : la page d'accueil claire d'une formation en ligne",
+    "personnage": "Grâce Akakpo, femme de 27 ans, peau brun moyen, afro volumineux, visage fin, sourire franc avec fossettes, lunettes rondes à monture transparente",
+    "action": "le portrait de la mentore à droite de l'écran, bras croisés, veste bleu ciel",
+    "cadrage": "capture plein cadre de l'écran, page blanche et bleue",
+    "objectif": "capture d'écran",
+    "lumiere": "lumière d'écran uniforme",
+    "decor": "page web blanche avec un grand titre noir et bleu à gauche, rendu en blocs flous sans lettres lisibles",
+    "palette": [
+     "#FFFFFF",
+     "#339EEF",
+     "#06429C"
+    ],
+    "ambiance": "nette, professionnelle",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lunettes absentes ou teintées"
+    ]
+   },
+   "prompt": "Photo d'écran : la page d'accueil claire d'une formation en ligne, Grâce Akakpo, femme de 27 ans, peau brun moyen, afro volumineux, visage fin, sourire franc avec fossettes, lunettes rondes à monture transparente, le portrait de la mentore à droite de l'écran, bras croisés, veste bleu ciel, capture plein cadre de l'écran, page blanche et bleue, objectif capture d'écran, lumière d'écran uniforme, décor : page web blanche avec un grand titre noir et bleu à gauche, rendu en blocs flous sans lettres lisibles, couleurs #FFFFFF, #339EEF, #06429C, ambiance nette, professionnelle, sans aucun texte ni logo.",
+   "reference": "inspi/behance/198747963/04.png : écran de l'ordinateur (y 1290 à 1600)"
+  },
+  {
+   "id": "Q-module-1",
+   "fichier": "images/Q-module-1.jpg",
+   "section": "contenus",
+   "format": "1:1",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "de dos d'une femme face à une galaxie",
+    "personnage": "Grâce Akakpo, femme de 27 ans, peau brun moyen, afro volumineux, visage fin, sourire franc avec fossettes, lunettes rondes à monture transparente",
+    "action": "de dos, afro volumineux en silhouette, regarde une galaxie lumineuse",
+    "cadrage": "plan taille de dos, sujet en bas au centre, ciel en haut",
+    "objectif": "35 mm, f/2,8",
+    "lumiere": "contre-jour cosmique doré et bleu",
+    "decor": "ciel étoilé, galaxie spirale",
+    "palette": [
+     "#06429C",
+     "#171717",
+     "#E8A040"
+    ],
+    "ambiance": "contemplative, immense",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lunettes absentes ou teintées"
+    ]
+   },
+   "prompt": "Photo de dos d'une femme face à une galaxie, Grâce Akakpo, femme de 27 ans, peau brun moyen, afro volumineux, visage fin, sourire franc avec fossettes, lunettes rondes à monture transparente, de dos, afro volumineux en silhouette, regarde une galaxie lumineuse, plan taille de dos, sujet en bas au centre, ciel en haut, objectif 35 mm, f/2,8, contre-jour cosmique doré et bleu, décor : ciel étoilé, galaxie spirale, couleurs #06429C, #171717, #E8A040, ambiance contemplative, immense, sans aucun texte ni logo.",
+   "reference": "inspi/behance/198747963/04.png : carte module 02"
+  },
+  {
+   "id": "Q-module-2",
+   "fichier": "images/Q-module-2.jpg",
+   "section": "contenus",
+   "format": "1:1",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "d'une silhouette au bout d'un chemin de lumière",
+    "personnage": null,
+    "action": "marche vers une lumière bleue au loin",
+    "cadrage": "plan large, symétrique, point de fuite au centre",
+    "objectif": "24 mm, f/4",
+    "lumiere": "lumière bleue intense qui descend du ciel",
+    "decor": "route étoilée sous un ciel nocturne",
+    "palette": [
+     "#06429C",
+     "#339EEF",
+     "#FFFFFF"
+    ],
+    "ambiance": "élan, découverte",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance"
+    ]
+   },
+   "prompt": "Photo d'une silhouette au bout d'un chemin de lumière, marche vers une lumière bleue au loin, plan large, symétrique, point de fuite au centre, objectif 24 mm, f/4, lumière bleue intense qui descend du ciel, décor : route étoilée sous un ciel nocturne, couleurs #06429C, #339EEF, #FFFFFF, ambiance élan, découverte, sans aucun texte ni logo.",
+   "reference": "inspi/behance/198747963/04.png : carte module 04"
+  },
+  {
+   "id": "Q-module-3",
+   "fichier": "images/Q-module-3.jpg",
+   "section": "contenus",
+   "format": "1:1",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "de billets de banque pris dans un tissu soyeux",
+    "personnage": null,
+    "action": "billets de francs CFA enroulés dans un drapé satiné",
+    "cadrage": "gros plan, diagonale",
+    "objectif": "100 mm macro, f/4",
+    "lumiere": "lumière irisée violette et bleue",
+    "decor": "drapé satiné violet et bleu",
+    "palette": [
+     "#6B3FD6",
+     "#339EEF",
+     "#171717"
+    ],
+    "ambiance": "abondance, magie",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance"
+    ]
+   },
+   "prompt": "Photo de billets de banque pris dans un tissu soyeux, billets de francs CFA enroulés dans un drapé satiné, gros plan, diagonale, objectif 100 mm macro, f/4, lumière irisée violette et bleue, décor : drapé satiné violet et bleu, couleurs #6B3FD6, #339EEF, #171717, ambiance abondance, magie, sans aucun texte ni logo.",
+   "reference": "inspi/behance/198747963/04.png : carte module 09"
+  },
+  {
+   "id": "Q-mentore",
+   "fichier": "images/Q-mentore.jpg",
+   "section": "mentore",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "de profil d'une mentore en état d'esprit",
+    "personnage": "Grâce Akakpo, femme de 27 ans, peau brun moyen, afro volumineux, visage fin, sourire franc avec fossettes, lunettes rondes à monture transparente",
+    "action": "bras croisés, tourne la tête vers la droite, sourire léger, veste en tweed bleu ciel",
+    "cadrage": "plan taille, sujet de trois quarts, bas fondu dans le blanc",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière de studio douce, reflet clair sur la peau",
+    "decor": "fond blanc pur",
+    "palette": [
+     "#FFFFFF",
+     "#339EEF",
+     "#EFF8FE"
+    ],
+    "ambiance": "assurée, chaleureuse",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lunettes absentes ou teintées"
+    ]
+   },
+   "prompt": "Photo de profil d'une mentore en état d'esprit, Grâce Akakpo, femme de 27 ans, peau brun moyen, afro volumineux, visage fin, sourire franc avec fossettes, lunettes rondes à monture transparente, bras croisés, tourne la tête vers la droite, sourire léger, veste en tweed bleu ciel, plan taille, sujet de trois quarts, bas fondu dans le blanc, objectif 85 mm, f/2, lumière de studio douce, reflet clair sur la peau, décor : fond blanc pur, couleurs #FFFFFF, #339EEF, #EFF8FE, ambiance assurée, chaleureuse, sans aucun texte ni logo.",
+   "reference": "inspi/behance/198747963/04.png : section mentore (y 3290 à 3700)"
+  }
+ ]
+}

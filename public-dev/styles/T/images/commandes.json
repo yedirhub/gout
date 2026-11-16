@@ -1,0 +1,408 @@
+{
+ "template": "T",
+ "personnage": {
+  "nom": "Rodrigue Agbodjan",
+  "genre": "homme",
+  "age": 47,
+  "ville": "Cotonou",
+  "physique": "peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé",
+  "signature": "lunettes demi-cerclées, costume avec pochette",
+  "metier": "avocat d'affaires et formateur d'avocats",
+  "tenue": "costume noir, chemise blanche, cravate rayée sombre, pochette rouge #C02020",
+  "regle": "même visage, même coiffure, même signature sur chaque image où il apparaît"
+ },
+ "palette": {
+  "noir": "#000000",
+  "carte": "#0B0B0B",
+  "rouge": "#C02020",
+  "rouge_vif": "#E73535",
+  "rouge_profond": "#5F0403",
+  "vert_bouton": "#00B043",
+  "vert_carte": "#0F2E1F",
+  "rose": "#FEC2C2",
+  "gris_texte": "#A29C9E",
+  "blanc": "#FFFFFF"
+ },
+ "images": [
+  {
+   "id": "T-hero",
+   "fichier": "images/T-hero.jpg",
+   "section": "hero",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "portrait de l'avocat fondateur",
+    "personnage": "Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette",
+    "action": "regarde l'objectif, calme et sûr de lui",
+    "cadrage": "plan poitrine, sujet centré légèrement à droite",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière latérale dure, ombres profondes, contre-jour rouge discret",
+    "decor": "bureau sombre, tableau de liège avec des fils rouges tendus entre des notes floues",
+    "palette": [
+     "#000000",
+     "#C02020",
+     "#5F0403"
+    ],
+    "ambiance": "tendu, déterminé, enquête de cabinet",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lunettes rondes cerclées complètes",
+     "costume sans pochette"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : portrait de l'avocat fondateur, Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette, regarde l'objectif, calme et sûr de lui, plan poitrine, sujet centré légèrement à droite, objectif 85 mm, f/2, lumière latérale dure, ombres profondes, contre-jour rouge discret, décor : bureau sombre, tableau de liège avec des fils rouges tendus entre des notes floues, couleurs #000000, #C02020, #5F0403, ambiance tendu, déterminé, enquête de cabinet, sans aucun texte ni logo.",
+   "reference": "inspi/behance/254804569/01.jpg : haut de page, portrait à droite"
+  },
+  {
+   "id": "T-ecran",
+   "fichier": "images/T-ecran.jpg",
+   "section": "acces",
+   "format": "4:3",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "ordinateur portable ouvert sur une plateforme de cours sombre à vignettes rouges",
+    "personnage": null,
+    "action": "posé, écran légèrement tourné vers la gauche",
+    "cadrage": "objet en trois quarts, socle au premier plan",
+    "objectif": "50 mm, f/5.6",
+    "lumiere": "lumière de studio douce, reflets nets sur l'aluminium",
+    "decor": "socle en pierre claire granuleuse sur fond blanc",
+    "palette": [
+     "#FFFFFF",
+     "#C02020",
+     "#0B0B0B"
+    ],
+    "ambiance": "produit propre, premium",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre"
+    ]
+   },
+   "prompt": "Photo au format 4:3 : ordinateur portable ouvert sur une plateforme de cours sombre à vignettes rouges, posé, écran légèrement tourné vers la gauche, objet en trois quarts, socle au premier plan, objectif 50 mm, f/5.6, lumière de studio douce, reflets nets sur l'aluminium, décor : socle en pierre claire granuleuse sur fond blanc, couleurs #FFFFFF, #C02020, #0B0B0B, ambiance produit propre, premium, sans aucun texte ni logo.",
+   "reference": "inspi/behance/254804569/01.jpg : panneau blanc sous le hero, ordinateur sur socle"
+  },
+  {
+   "id": "T-plan",
+   "fichier": "images/T-plan.jpg",
+   "section": "methode",
+   "format": "16:9",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "l'avocat dans son bureau, plan d'affaires au mur",
+    "personnage": "Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette",
+    "action": "de face, regard grave",
+    "cadrage": "plan taille, sujet centré, décor chargé autour",
+    "objectif": "35 mm, f/2.8",
+    "lumiere": "lampe de bureau, contraste fort",
+    "decor": "mur couvert de feuilles reliées par des fils, bureau en bois",
+    "palette": [
+     "#000000",
+     "#FFFFFF"
+    ],
+    "ambiance": "noir et blanc, sérieux",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lunettes rondes cerclées complètes",
+     "costume sans pochette"
+    ]
+   },
+   "prompt": "Photo au format 16:9 : l'avocat dans son bureau, plan d'affaires au mur, Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette, de face, regard grave, plan taille, sujet centré, décor chargé autour, objectif 35 mm, f/2.8, lampe de bureau, contraste fort, décor : mur couvert de feuilles reliées par des fils, bureau en bois, couleurs #000000, #FFFFFF, ambiance noir et blanc, sérieux, sans aucun texte ni logo.",
+   "reference": "inspi/behance/254804569/01.jpg : carte « O plano »"
+  },
+  {
+   "id": "T-niches",
+   "fichier": "images/T-niches.jpg",
+   "section": "methode",
+   "format": "16:9",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "l'avocat assis dans un fauteuil de cuir",
+    "personnage": "Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette",
+    "action": "mains jointes, posture d'écoute",
+    "cadrage": "plan large, sujet au centre, vignettage circulaire",
+    "objectif": "50 mm, f/2.8",
+    "lumiere": "spot unique au-dessus, halo autour",
+    "decor": "fauteuil capitonné, fond sombre",
+    "palette": [
+     "#000000",
+     "#FFFFFF"
+    ],
+    "ambiance": "noir et blanc, solennel",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lunettes rondes cerclées complètes",
+     "costume sans pochette"
+    ]
+   },
+   "prompt": "Photo au format 16:9 : l'avocat assis dans un fauteuil de cuir, Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette, mains jointes, posture d'écoute, plan large, sujet au centre, vignettage circulaire, objectif 50 mm, f/2.8, spot unique au-dessus, halo autour, décor : fauteuil capitonné, fond sombre, couleurs #000000, #FFFFFF, ambiance noir et blanc, solennel, sans aucun texte ni logo.",
+   "reference": "inspi/behance/254804569/01.jpg : carte « Os nichos »"
+  },
+  {
+   "id": "T-prospection",
+   "fichier": "images/T-prospection.jpg",
+   "section": "methode",
+   "format": "16:9",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "l'avocat penché sur un dossier",
+    "personnage": "Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette",
+    "action": "lit un document sous la lampe",
+    "cadrage": "plan taille de profil, sujet à droite",
+    "objectif": "50 mm, f/2.8",
+    "lumiere": "lampe de bureau articulée, lumière dure",
+    "decor": "bureau encombré, tableau d'affichage derrière",
+    "palette": [
+     "#000000",
+     "#FFFFFF"
+    ],
+    "ambiance": "noir et blanc, concentré",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lunettes rondes cerclées complètes",
+     "costume sans pochette"
+    ]
+   },
+   "prompt": "Photo au format 16:9 : l'avocat penché sur un dossier, Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette, lit un document sous la lampe, plan taille de profil, sujet à droite, objectif 50 mm, f/2.8, lampe de bureau articulée, lumière dure, décor : bureau encombré, tableau d'affichage derrière, couleurs #000000, #FFFFFF, ambiance noir et blanc, concentré, sans aucun texte ni logo.",
+   "reference": "inspi/behance/254804569/01.jpg : carte « A prospecção »"
+  },
+  {
+   "id": "T-accueil",
+   "fichier": "images/T-accueil.jpg",
+   "section": "methode",
+   "format": "16:9",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "main d'homme à peau brun foncé qui écrit dans un carnet ligné, manche de costume sombre",
+    "personnage": null,
+    "action": "écrit avec un stylo noir",
+    "cadrage": "gros plan en plongée, carnet en diagonale",
+    "objectif": "100 mm macro, f/4",
+    "lumiere": "lumière douce de fenêtre",
+    "decor": "bureau sombre",
+    "palette": [
+     "#000000",
+     "#FFFFFF"
+    ],
+    "ambiance": "noir et blanc, méthodique",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre"
+    ]
+   },
+   "prompt": "Photo au format 16:9 : main d'homme à peau brun foncé qui écrit dans un carnet ligné, manche de costume sombre, écrit avec un stylo noir, gros plan en plongée, carnet en diagonale, objectif 100 mm macro, f/4, lumière douce de fenêtre, décor : bureau sombre, couleurs #000000, #FFFFFF, ambiance noir et blanc, méthodique, sans aucun texte ni logo.",
+   "reference": "inspi/behance/254804569/01.jpg : carte « O atendimento »"
+  },
+  {
+   "id": "T-direct",
+   "fichier": "images/T-direct.jpg",
+   "section": "soutien",
+   "format": "4:3",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "l'avocat en séance vidéo en direct",
+    "personnage": "Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette",
+    "action": "regarde l'écran, à l'écoute, de trois quarts",
+    "cadrage": "plan poitrine, sujet à droite, espace à gauche pour un badge",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière chaude d'écran sur le visage, fond sombre avec une lampe floue",
+    "decor": "bureau du soir, fauteuil, bokeh chaud",
+    "palette": [
+     "#000000",
+     "#5F0403",
+     "#C02020"
+    ],
+    "ambiance": "proche, rassurant",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lunettes rondes cerclées complètes",
+     "costume sans pochette"
+    ]
+   },
+   "prompt": "Photo au format 4:3 : l'avocat en séance vidéo en direct, Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette, regarde l'écran, à l'écoute, de trois quarts, plan poitrine, sujet à droite, espace à gauche pour un badge, objectif 85 mm, f/2, lumière chaude d'écran sur le visage, fond sombre avec une lampe floue, décor : bureau du soir, fauteuil, bokeh chaud, couleurs #000000, #5F0403, #C02020, ambiance proche, rassurant, sans aucun texte ni logo.",
+   "reference": "inspi/behance/254804569/01.jpg : bloc du suivi en direct, photo à droite"
+  },
+  {
+   "id": "T-temoignages",
+   "fichier": "images/T-temoignages.jpg",
+   "section": "resultats",
+   "format": "16:9",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "mosaïque d'avocats et d'avocates d'Afrique de l'Ouest, élèves, qui témoignent face caméra",
+    "personnage": null,
+    "action": "parlent, sourient",
+    "cadrage": "grille de 6 visages en visio, cadrages poitrine",
+    "objectif": "35 mm, f/2.8",
+    "lumiere": "lumière naturelle de bureau",
+    "decor": "cabinets variés, bibliothèques de codes",
+    "palette": [
+     "#FFFFFF",
+     "#C02020"
+    ],
+    "ambiance": "authentique, preuve sociale",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre"
+    ]
+   },
+   "prompt": "Photo au format 16:9 : mosaïque d'avocats et d'avocates d'Afrique de l'Ouest, élèves, qui témoignent face caméra, parlent, sourient, grille de 6 visages en visio, cadrages poitrine, objectif 35 mm, f/2.8, lumière naturelle de bureau, décor : cabinets variés, bibliothèques de codes, couleurs #FFFFFF, #C02020, ambiance authentique, preuve sociale, sans aucun texte ni logo.",
+   "reference": "inspi/behance/254804569/01.jpg : bloc vidéo des résultats"
+  },
+  {
+   "id": "T-bonus-carnet",
+   "fichier": "images/T-bonus-carnet.jpg",
+   "section": "bonus",
+   "format": "3:4",
+   "avec_personnage": false,
+   "consigne": {
+    "sujet": "carnet à spirale fermé, couverture crème tachée",
+    "personnage": null,
+    "action": "posé en biais, des fils rouges tendus par-dessus",
+    "cadrage": "objet en plongée, légère rotation",
+    "objectif": "50 mm, f/5.6",
+    "lumiere": "lumière dure de côté, ombres nettes",
+    "decor": "fond noir mat",
+    "palette": [
+     "#000000",
+     "#C02020",
+     "#FFFFFF"
+    ],
+    "ambiance": "dossier d'enquête",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : carnet à spirale fermé, couverture crème tachée, posé en biais, des fils rouges tendus par-dessus, objet en plongée, légère rotation, objectif 50 mm, f/5.6, lumière dure de côté, ombres nettes, décor : fond noir mat, couleurs #000000, #C02020, #FFFFFF, ambiance dossier d'enquête, sans aucun texte ni logo.",
+   "reference": "inspi/behance/254804569/01.jpg : bonus 1, carnet"
+  },
+  {
+   "id": "T-bonus-mentorat",
+   "fichier": "images/T-bonus-mentorat.jpg",
+   "section": "bonus",
+   "format": "4:3",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "l'avocat derrière un ordinateur portable en mentorat de groupe",
+    "personnage": "Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette",
+    "action": "parle en regardant l'écran",
+    "cadrage": "plan taille, sujet au centre, mosaïque de visages floue derrière",
+    "objectif": "50 mm, f/2",
+    "lumiere": "lumière froide d'écran et douce de face",
+    "decor": "mur d'écrans avec des élèves en visio, flous",
+    "palette": [
+     "#0B0B0B",
+     "#FFFFFF"
+    ],
+    "ambiance": "collectif, vivant",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lunettes rondes cerclées complètes",
+     "costume sans pochette"
+    ]
+   },
+   "prompt": "Photo au format 4:3 : l'avocat derrière un ordinateur portable en mentorat de groupe, Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette, parle en regardant l'écran, plan taille, sujet au centre, mosaïque de visages floue derrière, objectif 50 mm, f/2, lumière froide d'écran et douce de face, décor : mur d'écrans avec des élèves en visio, flous, couleurs #0B0B0B, #FFFFFF, ambiance collectif, vivant, sans aucun texte ni logo.",
+   "reference": "inspi/behance/254804569/01.jpg : bonus 2"
+  },
+  {
+   "id": "T-bonus-conferences",
+   "fichier": "images/T-bonus-conferences.jpg",
+   "section": "bonus",
+   "format": "1:1",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "portrait buste de l'avocat",
+    "personnage": "Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette",
+    "action": "regard caméra, léger sourire",
+    "cadrage": "plan buste, sujet centré, fond assez vide",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière de studio douce, fond noir",
+    "decor": "fond noir uni avec deux silhouettes floues en retrait",
+    "palette": [
+     "#0B0B0B",
+     "#5F0403"
+    ],
+    "ambiance": "prestige, autorité",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lunettes rondes cerclées complètes",
+     "costume sans pochette"
+    ]
+   },
+   "prompt": "Photo au format 1:1 : portrait buste de l'avocat, Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette, regard caméra, léger sourire, plan buste, sujet centré, fond assez vide, objectif 85 mm, f/2, lumière de studio douce, fond noir, décor : fond noir uni avec deux silhouettes floues en retrait, couleurs #0B0B0B, #5F0403, ambiance prestige, autorité, sans aucun texte ni logo.",
+   "reference": "inspi/behance/254804569/01.jpg : bonus 3"
+  },
+  {
+   "id": "T-portrait",
+   "fichier": "images/T-portrait.jpg",
+   "section": "qui",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "portrait de l'avocat assis",
+    "personnage": "Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette",
+    "action": "penché en avant, coudes sur les genoux, mains jointes",
+    "cadrage": "plan américain, sujet centré",
+    "objectif": "85 mm, f/2.8",
+    "lumiere": "lumière de studio latérale, fond gris anthracite",
+    "decor": "tabouret, fond uni",
+    "palette": [
+     "#000000",
+     "#FFFFFF"
+    ],
+    "ambiance": "noir et blanc, confiance",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "lunettes rondes cerclées complètes",
+     "costume sans pochette"
+    ]
+   },
+   "prompt": "Photo au format 3:4 : portrait de l'avocat assis, Rodrigue Agbodjan, homme de 47 ans, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court, air posé, lunettes demi-cerclées, costume avec pochette, penché en avant, coudes sur les genoux, mains jointes, plan américain, sujet centré, objectif 85 mm, f/2.8, lumière de studio latérale, fond gris anthracite, décor : tabouret, fond uni, couleurs #000000, #FFFFFF, ambiance noir et blanc, confiance, sans aucun texte ni logo.",
+   "reference": "inspi/behance/254804569/01.jpg : bloc « Quem está te ensinando isso? »"
+  }
+ ]
+}

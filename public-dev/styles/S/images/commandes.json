@@ -1,0 +1,330 @@
+{
+  "template": "S",
+  "personnage": {
+    "nom": "Salimata Coulibaly",
+    "genre": "femme",
+    "age": 30,
+    "ville": "Ouagadougou",
+    "physique": "peau brun foncé, longues locs fines aux pointes cuivrées, visage allongé",
+    "signature": "anneau fin au nez, veste oversize",
+    "metier": "avocate et mentore en présence en ligne des avocats",
+    "tenue": "veste oversize gris clair ou rose poudré, haut uni, touches vert néon #09F84F dans la lumière",
+    "regle": "même visage, même coiffure, même signature sur chaque image où il apparaît"
+  },
+  "palette": {
+    "nuit": "#181828",
+    "nuit_aube": "#19101C",
+    "aubergine": "#28191E",
+    "violet": "#381EA8",
+    "neon": "#09F84F",
+    "citron": "#C6F808",
+    "vert": "#08CB32",
+    "bleu": "#518DCD",
+    "verre": "#383848"
+  },
+  "images": [
+    {
+      "id": "S-hero",
+      "fichier": "images/S-hero.jpg",
+      "section": "hero",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "une avocate mentore souriante, détourée sur fond sombre",
+        "personnage": "Salimata Coulibaly, femme de 30 ans, peau brun foncé, longues locs fines aux pointes cuivrées, visage allongé, anneau fin au nez, veste oversize",
+        "action": "sourit franchement face à l'objectif, épaules de trois quarts, veste oversize gris clair",
+        "cadrage": "plan poitrine, sujet centré, espace libre au-dessus de la tête",
+        "objectif": "85 mm, f/2",
+        "lumiere": "lumière de studio douce de face, contre-jour vert néon à droite et bleu à gauche",
+        "decor": "fond nuit violette uni, quelques reflets de barres lumineuses verticales",
+        "palette": [
+          "#181828",
+          "#381EA8",
+          "#09F84F"
+        ],
+        "ambiance": "confiante, moderne, lumineuse",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : une avocate mentore souriante, détourée sur fond sombre, Salimata Coulibaly, femme de 30 ans, peau brun foncé, longues locs fines aux pointes cuivrées, visage allongé, anneau fin au nez, veste oversize, sourit franchement face à l'objectif, épaules de trois quarts, veste oversize gris clair ; cadrage plan poitrine, sujet centré, espace libre au-dessus de la tête, objectif 85 mm, f/2, lumière lumière de studio douce de face, contre-jour vert néon à droite et bleu à gauche, décor : fond nuit violette uni, quelques reflets de barres lumineuses verticales, couleurs dominantes #181828, #381EA8, #09F84F, ambiance confiante, moderne, lumineuse, sans aucun texte ni logo.",
+      "reference": "inspi/behance/219309937/02.png : la femme au centre droit"
+    },
+    {
+      "id": "S-alerte",
+      "fichier": "images/S-alerte.jpg",
+      "section": "alerte",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "l'avocate qui tient une tablette",
+        "personnage": "Salimata Coulibaly, femme de 30 ans, peau brun foncé, longues locs fines aux pointes cuivrées, visage allongé, anneau fin au nez, veste oversize",
+        "action": "sourit, tablette contre elle, haut à col noué gris clair sous la veste",
+        "cadrage": "plan taille, sujet centré",
+        "objectif": "50 mm, f/2.8",
+        "lumiere": "lumière douce de face, halo violet derrière",
+        "decor": "décor violet sombre avec des lignes lumineuses bleues",
+        "palette": [
+          "#381EA8",
+          "#1C1530",
+          "#518DCD"
+        ],
+        "ambiance": "alerte bienveillante",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : l'avocate qui tient une tablette, Salimata Coulibaly, femme de 30 ans, peau brun foncé, longues locs fines aux pointes cuivrées, visage allongé, anneau fin au nez, veste oversize, sourit, tablette contre elle, haut à col noué gris clair sous la veste ; cadrage plan taille, sujet centré, objectif 50 mm, f/2.8, lumière lumière douce de face, halo violet derrière, décor : décor violet sombre avec des lignes lumineuses bleues, couleurs dominantes #381EA8, #1C1530, #518DCD, ambiance alerte bienveillante, sans aucun texte ni logo.",
+      "reference": "inspi/behance/219309937/03.png : affiche de droite « Auxílio-acidente »"
+    },
+    {
+      "id": "S-module-1",
+      "fichier": "images/S-module-1.jpg",
+      "section": "modules",
+      "format": "9:16",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "des mains qui tiennent un smartphone d'où sortent des icônes lumineuses",
+        "personnage": null,
+        "action": "gros plan sur les mains et l'écran, icônes violettes en relief",
+        "cadrage": "vue de trois quarts plongeante",
+        "objectif": "50 mm, f/2.8",
+        "lumiere": "néon violet",
+        "decor": "fond sombre violet",
+        "palette": [
+          "#3917A0",
+          "#181828",
+          "#FFFFFF"
+        ],
+        "ambiance": "technologie, découverte",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "visages"
+        ]
+      },
+      "prompt": "Photo au format 9:16 : des mains qui tiennent un smartphone d'où sortent des icônes lumineuses, gros plan sur les mains et l'écran, icônes violettes en relief ; cadrage vue de trois quarts plongeante, objectif 50 mm, f/2.8, lumière néon violet, décor : fond sombre violet, couleurs dominantes #3917A0, #181828, #FFFFFF, ambiance technologie, découverte, sans aucun texte ni logo.",
+      "reference": "inspi/behance/219309937/05.png : 1re affiche « O Mundo Digital »"
+    },
+    {
+      "id": "S-module-2",
+      "fichier": "images/S-module-2.jpg",
+      "section": "modules",
+      "format": "9:16",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "un écran de tableau de bord avec des courbes et colonnes vertes",
+        "personnage": null,
+        "action": "écran de près, légèrement incliné",
+        "cadrage": "gros plan",
+        "objectif": "35 mm, f/4",
+        "lumiere": "lueur verte de l'écran",
+        "decor": "bureau sombre",
+        "palette": [
+          "#05B01F",
+          "#0E0D16",
+          "#C6F808"
+        ],
+        "ambiance": "organisation, maîtrise",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "chiffres ou lettres lisibles"
+        ]
+      },
+      "prompt": "Photo au format 9:16 : un écran de tableau de bord avec des courbes et colonnes vertes, écran de près, légèrement incliné ; cadrage gros plan, objectif 35 mm, f/4, lumière lueur verte de l'écran, décor : bureau sombre, couleurs dominantes #05B01F, #0E0D16, #C6F808, ambiance organisation, maîtrise, sans aucun texte ni logo.",
+      "reference": "inspi/behance/219309937/05.png : 2e affiche « Organização e planejamento »"
+    },
+    {
+      "id": "S-module-3",
+      "fichier": "images/S-module-3.jpg",
+      "section": "modules",
+      "format": "9:16",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "des mains ouvertes sous un globe lumineux bleu et des flèches qui montent",
+        "personnage": null,
+        "action": "mains en coupe, globe holographique au-dessus",
+        "cadrage": "plan rapproché, centré",
+        "objectif": "50 mm, f/2.8",
+        "lumiere": "lumière bleue venue du globe",
+        "decor": "fond sombre bleu nuit",
+        "palette": [
+          "#1E3FA0",
+          "#518DCD",
+          "#0E0D16"
+        ],
+        "ambiance": "croissance, conversion",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 9:16 : des mains ouvertes sous un globe lumineux bleu et des flèches qui montent, mains en coupe, globe holographique au-dessus ; cadrage plan rapproché, centré, objectif 50 mm, f/2.8, lumière lumière bleue venue du globe, décor : fond sombre bleu nuit, couleurs dominantes #1E3FA0, #518DCD, #0E0D16, ambiance croissance, conversion, sans aucun texte ni logo.",
+      "reference": "inspi/behance/219309937/05.png : 3e affiche « Conversão no digital »"
+    },
+    {
+      "id": "S-module-4",
+      "fichier": "images/S-module-4.jpg",
+      "section": "modules",
+      "format": "9:16",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "l'avocate qui anime une séance de travail autour d'une table",
+        "personnage": "Salimata Coulibaly, femme de 30 ans, peau brun foncé, longues locs fines aux pointes cuivrées, visage allongé, anneau fin au nez, veste oversize",
+        "action": "debout, parle à un petit groupe d'avocats assis, geste ouvert",
+        "cadrage": "plan large vertical, sujet au centre",
+        "objectif": "35 mm, f/2.8",
+        "lumiere": "lumière de bureau froide, reflets verts",
+        "decor": "salle de réunion moderne vitrée",
+        "palette": [
+          "#05B01F",
+          "#0E0D16",
+          "#E6E3F0"
+        ],
+        "ambiance": "échange, énergie",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 9:16 : l'avocate qui anime une séance de travail autour d'une table, Salimata Coulibaly, femme de 30 ans, peau brun foncé, longues locs fines aux pointes cuivrées, visage allongé, anneau fin au nez, veste oversize, debout, parle à un petit groupe d'avocats assis, geste ouvert ; cadrage plan large vertical, sujet au centre, objectif 35 mm, f/2.8, lumière lumière de bureau froide, reflets verts, décor : salle de réunion moderne vitrée, couleurs dominantes #05B01F, #0E0D16, #E6E3F0, ambiance échange, énergie, sans aucun texte ni logo.",
+      "reference": "inspi/behance/219309937/05.png : 4e affiche « Hot Seat »"
+    },
+    {
+      "id": "S-bienvenue",
+      "fichier": "images/S-bienvenue.jpg",
+      "section": "bienvenue",
+      "format": "3:4",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "l'avocate qui accueille, mains jointes",
+        "personnage": "Salimata Coulibaly, femme de 30 ans, peau brun foncé, longues locs fines aux pointes cuivrées, visage allongé, anneau fin au nez, veste oversize",
+        "action": "sourire chaleureux, mains jointes devant elle, veste oversize rose poudré sur haut brun, colliers dorés fins",
+        "cadrage": "plan taille, sujet centré",
+        "objectif": "85 mm, f/2",
+        "lumiere": "lumière douce de face, contre-jour bleu et vert",
+        "decor": "décor sombre avec barres lumineuses vertes floues",
+        "palette": [
+          "#C9A08F",
+          "#09F84F",
+          "#518DCD"
+        ],
+        "ambiance": "accueil, confiance",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 3:4 : l'avocate qui accueille, mains jointes, Salimata Coulibaly, femme de 30 ans, peau brun foncé, longues locs fines aux pointes cuivrées, visage allongé, anneau fin au nez, veste oversize, sourire chaleureux, mains jointes devant elle, veste oversize rose poudré sur haut brun, colliers dorés fins ; cadrage plan taille, sujet centré, objectif 85 mm, f/2, lumière lumière douce de face, contre-jour bleu et vert, décor : décor sombre avec barres lumineuses vertes floues, couleurs dominantes #C9A08F, #09F84F, #518DCD, ambiance accueil, confiance, sans aucun texte ni logo.",
+      "reference": "inspi/behance/219309937/04.png : affiche « Boas-vindas + Alinhamento »"
+    },
+    {
+      "id": "S-temoin-1",
+      "fichier": "images/S-temoin-1.jpg",
+      "section": "avis",
+      "format": "1:1",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "portrait d'un avocat burkinabè de 40 ans en costume sombre",
+        "personnage": null,
+        "action": "sourit, regard vers l'objectif",
+        "cadrage": "plan serré visage et épaules",
+        "objectif": "85 mm, f/2",
+        "lumiere": "lumière douce de fenêtre",
+        "decor": "bureau flou",
+        "palette": [
+          "#28191E",
+          "#E6E3F0",
+          "#381EA8"
+        ],
+        "ambiance": "sérieux, satisfait",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 1:1 : portrait d'un avocat burkinabè de 40 ans en costume sombre, sourit, regard vers l'objectif ; cadrage plan serré visage et épaules, objectif 85 mm, f/2, lumière lumière douce de fenêtre, décor : bureau flou, couleurs dominantes #28191E, #E6E3F0, #381EA8, ambiance sérieux, satisfait, sans aucun texte ni logo.",
+      "reference": null
+    },
+    {
+      "id": "S-temoin-2",
+      "fichier": "images/S-temoin-2.jpg",
+      "section": "avis",
+      "format": "1:1",
+      "avec_personnage": false,
+      "consigne": {
+        "sujet": "portrait d'une avocate ivoirienne de 35 ans en tailleur clair",
+        "personnage": null,
+        "action": "sourit, regard vers l'objectif",
+        "cadrage": "plan serré visage et épaules",
+        "objectif": "85 mm, f/2",
+        "lumiere": "lumière douce de fenêtre",
+        "decor": "bureau flou",
+        "palette": [
+          "#E6E3F0",
+          "#28191E",
+          "#09F84F"
+        ],
+        "ambiance": "assurée, chaleureuse",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance"
+        ]
+      },
+      "prompt": "Photo au format 1:1 : portrait d'une avocate ivoirienne de 35 ans en tailleur clair, sourit, regard vers l'objectif ; cadrage plan serré visage et épaules, objectif 85 mm, f/2, lumière lumière douce de fenêtre, décor : bureau flou, couleurs dominantes #E6E3F0, #28191E, #09F84F, ambiance assurée, chaleureuse, sans aucun texte ni logo.",
+      "reference": null
+    },
+    {
+      "id": "S-relance",
+      "fichier": "images/S-relance.jpg",
+      "section": "relance",
+      "format": "16:9",
+      "avec_personnage": true,
+      "consigne": {
+        "sujet": "capture d'un appel en visioconférence animé par l'avocate",
+        "personnage": "Salimata Coulibaly, femme de 30 ans, peau brun foncé, longues locs fines aux pointes cuivrées, visage allongé, anneau fin au nez, veste oversize",
+        "action": "au centre de l'image, parle à la caméra, vignettes floues d'autres participants autour",
+        "cadrage": "plan poitrine, sujet centré",
+        "objectif": "35 mm, f/2.8",
+        "lumiere": "lumière de bureau douce",
+        "decor": "bureau sombre, plante, étagère",
+        "palette": [
+          "#181828",
+          "#381EA8",
+          "#09F84F"
+        ],
+        "ambiance": "programme en ligne vivant",
+        "texte_dans_image": "aucun",
+        "interdits": [
+          "texte, logo ou filigrane",
+          "mains ou doigts déformés",
+          "copie de l'image Behance",
+          "texte d'interface lisible"
+        ]
+      },
+      "prompt": "Photo au format 16:9 : capture d'un appel en visioconférence animé par l'avocate, Salimata Coulibaly, femme de 30 ans, peau brun foncé, longues locs fines aux pointes cuivrées, visage allongé, anneau fin au nez, veste oversize, au centre de l'image, parle à la caméra, vignettes floues d'autres participants autour ; cadrage plan poitrine, sujet centré, objectif 35 mm, f/2.8, lumière lumière de bureau douce, décor : bureau sombre, plante, étagère, couleurs dominantes #181828, #381EA8, #09F84F, ambiance programme en ligne vivant, sans aucun texte ni logo.",
+      "reference": "inspi/behance/219309937/05.png : l'écran de l'ordinateur"
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Template T · Verdict 365 · DESIGN.md · Yedidia Ruben - Digital Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/flottant.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0E0E0D;color:#E9E5DE;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 24px;background:rgba(14,14,13,.9);backdrop-filter:blur(10px);border-bottom:1px solid #262624;font-size:14px}
+header .titre{color:#A9A298;white-space:nowrap} header .titre b{color:#E9E5DE;font-weight:500}
+.onglets{display:flex;gap:2px;padding:4px;border:1px solid #2C2A27;border-radius:999px}
+.onglets a{height:32px;padding:0 14px;display:inline-flex;align-items:center;border-radius:999px;color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s,background .25s}
+.onglets a:hover{color:#fff}
+.onglets a[aria-current]{background:#E9E5DE;color:#141312}
+.retour{color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s} .retour:hover{color:#D9B48A}
+main{padding:40px 20px 0}
+.credit{width:min(1200px,100%);margin:0 auto 22px;font-size:14px;line-height:1.6;color:#A9A298}
+.credit b{color:#E9E5DE;font-weight:500} .credit a{color:#D9B48A;border-bottom:1px solid rgba(217,180,138,.4)}
+main img{display:block;width:min(1200px,100%);margin-inline:auto;border-radius:10px;box-shadow:0 30px 80px -40px #000}
+main img.tel{width:min(390px,100%)}
+.etiquette{width:min(1200px,100%);margin:48px auto 14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A847C}
+.outils{width:min(980px,100%);margin:0 auto 16px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.outils p{font-size:14px;color:#A9A298;line-height:1.6;max-width:560px}
+.outils div{display:flex;gap:8px}
+.outils button,.outils a{font:inherit;font-size:13px;height:38px;padding:0 16px;border-radius:999px;border:1px solid #3A3733;background:none;color:#E9E5DE;cursor:pointer;display:inline-flex;align-items:center;transition:border-color .25s}
+.outils button{background:#D9B48A;border-color:#D9B48A;color:#141312;font-weight:500}
+.outils a:hover{border-color:#D9B48A}
+pre{width:min(980px,100%);margin:0 auto;padding:28px;background:#151514;border:1px solid #262624;border-radius:12px;overflow:auto;max-height:72vh;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#D8D2C8;white-space:pre-wrap;word-break:break-word}
+footer{text-align:center;padding:48px 20px 56px;font-size:13px;color:#8A847C;line-height:1.6}
+footer strong{display:block;color:#E9E5DE;font-weight:500;font-size:15px}
+@media (max-width:1180px){.onglets a{padding:0 10px}}
+@media (max-width:980px){header{justify-content:center;padding:14px 16px} .onglets,.retour{display:none} header .titre{white-space:normal;text-align:center}}
+/* ancien : sous 980 px, onglets en bande qui défilait de côté ; retirée le 16/11/2026, le bouton flottant porte la navigation */
+</style>
+</head>
+<body>
+<header>
+  <span class="titre">Template T · <b>Verdict 365</b></span>
+  <nav class="onglets" aria-label="Autour du template"><a href="./">La page</a><a href="avec-images.html">Avec images</a><a href="source.html">Source</a><a href="apercu.html">Notre version</a><a href="design.html" aria-current=page>DESIGN.md</a><a href="prompt.html">Prompt</a><a href="prompts.html">Prompts images</a></nav>
+  <a class="retour" href="/">Tous les templates</a>
+</header>
+<main>
+<div class="outils"><p>La fiche de style du template : couleurs, polices, tailles, espacements, composants. À donner à une IA avant de coder.</p><div><button type="button" id="copier">Copier</button><a href="DESIGN.md" download>Télécharger</a></div></div>
+<pre id="texte"># DESIGN.md : Style T « Verdict 365 » (d&#x27;après la page « Página de Vendas - Adv Sustentável », Jared Simplicio)
+
+&gt; **Source** : `inspi/behance/254804569/01.jpg` (1920 x 23 833), page de vente d&#x27;une formation pour avocats, Behance 254804569. Relevé le 16/11/2026, découpé en 9 tranches de 1000 x 1600.
+&gt; **Demande de Ruben** : pas de consigne de détail, lot du 16/11/2026.
+
+## 1. Ambiance et intention
+
+- Une formation d&#x27;avocats vendue comme un dossier d&#x27;enquête : fond noir total, fils rouges tendus, portraits en noir et blanc.
+- Le rouge dit l&#x27;urgence et la preuve (chiffres, garanties), le vert ne sert qu&#x27;à l&#x27;action (boutons, cartes « pour toi »).
+- Trois panneaux blancs arrondis coupent la nuit : accès, méthode, résultats, garantie. Chacun porte une grille fine et un coin rose.
+- Des chiffres géants en dégradé portent l&#x27;offre : **365** (garantie), **60** (programme IA), **12** (conférences), **GARANTIE**.
+
+## 2. Palette et rôles
+
+Relevé au pixel avec PIL sur l&#x27;image d&#x27;origine.
+
+- **Noir** `#000000` : fond de page ; **carte** `#0B0B0B` : cartes, FAQ, bonus, tableau.
+- **Rouge** `#C02020` : mots clés des titres, cartes d&#x27;étapes ; **rouge vif** `#E73535` : chiffres, puces, étiquettes mono.
+- **Rouge profond** `#5F0403` et **lueur** `#660E0D` : bas des dégradés, halos en haut des sections sombres.
+- **Bordeaux** `#2D0F0F` : cartes « ce n&#x27;est pas pour toi », duel « Arrête de ».
+- **Vert bouton** `#00B043` : tous les boutons d&#x27;action, texte noir dessus.
+- **Vert carte** `#0F2E1F`, filet `#134F33` : cartes « pour toi » ; **mousse** `#141F0F` : carte « Passe à ».
+- **Rose** `#FEC2C2` : coin haut droit des panneaux blancs.
+- **Gris texte** `#A29C9E` : texte courant sur noir ; **blanc** `#FFFFFF` : titres.
+
+## 3. Typographie
+
+- Non nommée par l&#x27;auteur. Relevé à l&#x27;œil : grotesque serrée, approche négative forte (Inter Display ou proche). La plus proche sur Google Fonts : **Inter Tight**. Les étiquettes en chasse fixe espacée : **JetBrains Mono**.
+
+| Rôle | Police | Taille bureau / téléphone | Graisse | Interligne | Approche |
+|---|---|---|---|---|---|
+| Titre du hero | Inter Tight | 64 / 34 px | 600 | 1,08 | -0,035 em |
+| Titre de section | Inter Tight | 50 / 28 px | 600 | 1,08 | -0,035 em |
+| Chiffre géant | Inter Tight | 210 à 416 px | 700 | 1 | -0,06 em |
+| Texte | Inter Tight | 15 à 18 px | 400 | 1,55 | 0 |
+| Étiquette | JetBrains Mono | 10 à 11 px | 500 | 1 | 0,3 em, capitales |
+| Prix du tableau | JetBrains Mono | 14 px | 500 | 1,4 | 0 |
+| Bouton | Inter Tight | 15 px | 700 | 1,15 | -0,02 em, capitales |
+
+## 4. Composants
+
+- **Bouton** : pilule verte en dégradé, texte noir en capitales, flèche ; halo vert doux. Variante rouge pour le contact du suivi.
+- **Logo** : un A rouge à flèche montante dessiné en SVG, nom sur deux lignes, petit « formation » mono rouge.
+- **Carte à languette** : blanche, filet clair, une languette rouge sur le haut gauche, icône dans un carré filet.
+- **Carte garantie 365** : rouge en dégradé vers le sang, chiffre 365 géant qui s&#x27;efface vers le bas.
+- **Carte d&#x27;étape** : numéro mono, titre blanc ; une sur deux en rouge plein, l&#x27;autre noire à filet bordeaux.
+- **Carte bonus** : noire, texte à gauche, visuel à droite, étiquette mono encadrée « BONUS 1 ».
+- **Tableau de valeur** : lignes alternées, prix mono rouges, ligne total bordeaux.
+- **Accordéon** : filets gris, plus rouge qui tourne à l&#x27;ouverture.
+- **Séparateur** : filet rouge pleine largeur, rond noir à chevron au centre.
+
+## 5. Mise en page
+
+- Colonnes étroites et centrées : 1200 px (hero), 960 px (étapes, bonus), 830 px (tableau, FAQ, garanties).
+- Lignes verticales très fines sur tout le fond noir (une tous les 10 %).
+- Les panneaux blancs prennent toute la largeur, coins de 28 px.
+- Rythme : une section, un bouton vert ; 90 à 130 px entre les sections.
+
+## 6. Profondeur et élévation
+
+- Profondeur par la lumière, pas par l&#x27;ombre : halos rouges en haut des sections, bandes rouges sur les bords du tableau de valeur.
+- Le bouton de la méthode chevauche le bas du panneau blanc.
+- Les chiffres géants passent derrière les arcs et les portraits.
+
+## 7. À faire, à ne pas faire
+
+- Faire : un seul vert, réservé à l&#x27;action.
+- Faire : photos en noir et blanc dans les cartes de méthode et le portrait final.
+- Ne pas faire : de texte rouge foncé `#7A1414` sur noir (contraste 2) ; les numéros d&#x27;étape passent à `#B42626`.
+- Ne pas faire : de texte sous 12 px hors bureau large ; le Behance descend à 9 px, nous non.
+
+## 8. Comportement responsive
+
+- Behance ne montre que le bureau. Le téléphone est notre proposition.
+- Sous 820 px : hero en colonne (photo d&#x27;abord), cartes d&#x27;accès, méthode, duel, bonus, garanties en une colonne ; étapes et ateliers en 2 colonnes, puis 1 sous 480 px.
+- Le 60 géant passe à 190 px, le 365 à 110 px.
+
+## 9. Mouvement
+
+- Moteur commun : `data-rv` partout, `data-lignes` sur les titres, `data-aimant` sur les boutons, `.reflet` sur les deux boutons clés, barre de progression rouge.
+- Propre à T : le plus de l&#x27;accordéon tourne en croix.
+
+## 10. Non mesuré, et choix tranchés seul
+
+- Les polices (§3).
+- La marque « Cabinet Solide », la cohorte 9, les textes, les prix en FCFA (12 x 275 000 F, 3 000 000 F comptant), la garantie de 3 millions par mois.
+- Les logos d&#x27;outils d&#x27;IA du Behance remplacés par des pastilles neutres ; le badge Zoom par une pastille « visio » ; les billets d&#x27;événement dessinés en CSS.
+- La vidéo de témoignages devient un emplacement 16:9.
+- Le téléphone (§8).
+
+## 11. Images
+
+Personnage : **Rodrigue Agbodjan**, 47 ans, Cotonou, peau brun foncé, cheveux poivre et sel très courts, barbe grise taillée court ; signature : lunettes demi-cerclées, costume avec pochette rouge. Il apparaît sur 8 images sur 12.
+
+| id | format | rôle |
+|---|---|---|
+| T-hero | 3:4 | portrait du fondateur, fils rouges derrière |
+| T-ecran | 4:3 | ordinateur sur socle de pierre, panneau d&#x27;accès |
+| T-plan | 16:9 | carte « Le plan », noir et blanc |
+| T-niches | 16:9 | carte « Les niches », noir et blanc |
+| T-prospection | 16:9 | carte « La prospection », noir et blanc |
+| T-accueil | 16:9 | carte « L&#x27;accueil client », main qui écrit |
+| T-direct | 4:3 | séance de suivi en visio |
+| T-temoignages | 16:9 | mosaïque de témoignages d&#x27;élèves |
+| T-bonus-carnet | 3:4 | carnet des 14 niches |
+| T-bonus-mentorat | 4:3 | mentorat de groupe |
+| T-bonus-conferences | 1:1 | portrait buste devant le 12 |
+| T-portrait | 3:4 | portrait final « Qui je suis », noir et blanc |
+
+Les consignes complètes sont dans `images/commandes.json`.
+
+## 12. Consigne pour l&#x27;IA
+
+Construis une page de vente de formation sur fond noir total à fines lignes verticales, titres en Inter Tight 600 très serrés avec un mot clé en rouge `#C02020`, étiquettes en JetBrains Mono espacé rouge vif. Tous les boutons sont des pilules vertes `#00B043` à texte noir en capitales. Coupe la nuit par des panneaux blancs arrondis à grille fine et coin rose. Pose des chiffres géants en dégradé rouge qui s&#x27;efface (365, 60, 12) derrière les blocs clés. Damier de cartes d&#x27;étapes rouges et noires, bonus en cartes noires texte et visuel, tableau de valeur aux prix mono rouges, garanties en cartes blanches à filet rouge.
+</pre>
+</main>
+<script>
+const b=document.getElementById('copier');
+b.onclick=async()=>{await navigator.clipboard.writeText(document.getElementById('texte').textContent);b.textContent='Copié';setTimeout(()=>b.textContent='Copier',1800)};
+</script>
+<footer>Réalisé par<strong>Yedidia Ruben - Digital Strategist</strong></footer>
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template T<b>Verdict 365</b></span><nav aria-label="Autour du template T"><ul><li><a href="./">Template</a></li><li><a href="avec-images.html">Template avec images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html" aria-current=page>Design<small>DESIGN.md</small></a></li><li><a href="prompt.html">Prompt de la page<small>kit</small></a></li><li><a href="prompts.html">Prompts des images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template T : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">T</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+
+</body>
+</html>

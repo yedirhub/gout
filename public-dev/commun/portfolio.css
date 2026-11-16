@@ -18,3 +18,8 @@ footer#pied:not(:has(.wrap)):not(.pied) .pf-centre{margin-top:14px}
   #pied .wrap:has(> .pf-centre),#pied.pied{flex-wrap:wrap}
   #pied .wrap > .pf-centre,#pied.pied > .pf-centre{order:3;flex-basis:100%;margin-top:6px}
 }
+/* 16/11/2026 : les liens du pied sont partis dans le bouton flottant (commun/flottant.css). */
+/* Page « Template avec images » : l'image remplit son emplacement (data-img), le cadre vide reste tant qu'elle n'existe pas. */
+[data-img]>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+/* Le bouton flottant ne cache jamais la dernière ligne du pied, au téléphone. */
+@media (max-width:820px){footer#pied{padding-bottom:84px!important}}

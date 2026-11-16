@@ -394,4 +394,6 @@ b,strong{font-weight:600;color:var(--encre)}
   .pied{flex-direction:column;text-align:center}
   .pied .droite{text-align:center}
 }
+
+/* Checkup banque 16/11/2026 : le décor qui sort de l'écran est coupé par SA section, plus par le body. */ #bascule{overflow-x:clip}
 ```

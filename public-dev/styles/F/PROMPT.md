@@ -99,13 +99,13 @@ Construis une page noire éclairée par une seule lumière dorée. Titres en DM 
 
 ## 2. Les sections, dans l'ordre
 
-01. #hero · « Votre autorité existe déjà, elle n'est juste pas encore vue »
-02. #projets · « Chaque projet est une œuvre unique. »
-03. #methode · « Je livre une méthode construite en 4 étapes. »
-04. #qui · « Je m'appelle Inès Kaboré, j'ai 27 ans, je suis designer et créatrice de la Méthode Lueur. »
-05. #pour-qui · « La Méthode Lueur a été construite pour vous si : »
-06. #prix · « Combien ça coûte ? »
-07. #relance
+01. #hero · Le hero : Dire qui, quoi, pour qui en une phrase, puis faire cliquer. Le geste : une seule lumière dorée sur fond noir.
+02. #projets · La preuve : Faire parler les autres : « ça a marché pour des gens comme moi ».
+03. #methode · Le contenu : Rendre l'offre concrète, morceau par morceau.
+04. #qui · Qui est derrière : Un humain derrière l'offre, et un lieu réel.
+05. #pour-qui · Pour qui : Trier : celui qui n'est pas la cible s'en va, celui qui l'est se sent choisi.
+06. #prix · L'offre : Convertir : le prix, ce qu'il contient, le bouton. Le geste : carte de prix qui déborde, boutons devant et derrière.
+07. #relance · La relance : Redonner le bouton à celui qui s'est décidé en route.
 
 ## 3. Les animations
 

@@ -1,0 +1,250 @@
+{
+ "template": "P",
+ "personnage": {
+  "nom": "Leïla Benali",
+  "genre": "femme",
+  "age": 33,
+  "ville": "Casablanca",
+  "physique": "peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués",
+  "signature": "rouge à lèvres terracotta, bague dorée épaisse, pull col roulé",
+  "metier": "conseillère en image et en style, anime un atelier en ligne de 5 jours",
+  "tenue": "pull col roulé noir ou crème, pantalon large blanc ou noir, bijoux or #D99C44",
+  "regle": "même visage, même coiffure, même signature sur chaque image où il apparaît"
+ },
+ "palette": {
+  "fond": "#000000",
+  "or": "#D99C44",
+  "or_vif": "#F3A240",
+  "brun": "#522700",
+  "bouton": "#D5AC50",
+  "perle": "#EDEDED",
+  "rouge": "#E0585F"
+ },
+ "images": [
+  {
+   "id": "P-hero",
+   "fichier": "images/P-hero.jpg",
+   "section": "hero",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "portrait d'une conseillère en image",
+    "personnage": "Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé",
+    "action": "la main levée près du visage, regard droit vers l'objectif, pull col roulé noir",
+    "cadrage": "plan taille, sujet centré, bas de l'image qui se fond dans le noir",
+    "objectif": "85 mm, f/2",
+    "lumiere": "contre-jour doré chaud derrière la tête, visage éclairé de face en douceur",
+    "decor": "fond noir profond avec un halo or flou derrière elle",
+    "palette": [
+     "#000000",
+     "#D99C44",
+     "#522700"
+    ],
+    "ambiance": "luxueuse, sûre d'elle",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo de portrait d'une conseillère en image, Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé, la main levée près du visage, regard droit vers l'objectif, pull col roulé noir, plan taille, sujet centré, bas de l'image qui se fond dans le noir, objectif 85 mm, f/2, contre-jour doré chaud derrière la tête, visage éclairé de face en douceur, décor : fond noir profond avec un halo or flou derrière elle, couleurs #000000, #D99C44, #522700, ambiance luxueuse, sûre d'elle, sans aucun texte ni logo.",
+   "reference": "inspi/behance/211043431/03.jpg : haut, portrait du hero (y 150 à 470 en 1000 px)"
+  },
+  {
+   "id": "P-jour-1",
+   "fichier": "images/P-jour-1.jpg",
+   "section": "atelier",
+   "format": "4:3",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "une conseillère assise",
+    "personnage": "Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé",
+    "action": "assise dans un fauteuil de cuir brun, tailleur blanc sur pull col roulé crème, sourire posé",
+    "cadrage": "plan large, sujet à gauche, mur clair à droite",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière de jour douce de fenêtre",
+    "decor": "salon clair aux murs blancs, fauteuil cuir",
+    "palette": [
+     "#EDEDED",
+     "#FFFFFF",
+     "#5A3A1E"
+    ],
+    "ambiance": "élégante et calme",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo de une conseillère assise, Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé, assise dans un fauteuil de cuir brun, tailleur blanc sur pull col roulé crème, sourire posé, plan large, sujet à gauche, mur clair à droite, objectif 85 mm, f/2, lumière de jour douce de fenêtre, décor : salon clair aux murs blancs, fauteuil cuir, couleurs #EDEDED, #FFFFFF, #5A3A1E, ambiance élégante et calme, sans aucun texte ni logo.",
+   "reference": "inspi/behance/211043431/03.jpg : carte 1 du carrousel"
+  },
+  {
+   "id": "P-jour-2",
+   "fichier": "images/P-jour-2.jpg",
+   "section": "atelier",
+   "format": "4:3",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "portrait d'une conseillère en image",
+    "personnage": "Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé",
+    "action": "de face, veste blanche ouverte sur pull col roulé noir, colliers dorés, regard direct",
+    "cadrage": "plan poitrine, sujet centré",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière studio douce, légère ombre à gauche",
+    "decor": "fond gris clair uni",
+    "palette": [
+     "#D9D9D6",
+     "#FFFFFF",
+     "#D99C44"
+    ],
+    "ambiance": "affirmée",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo de portrait d'une conseillère en image, Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé, de face, veste blanche ouverte sur pull col roulé noir, colliers dorés, regard direct, plan poitrine, sujet centré, objectif 85 mm, f/2, lumière studio douce, légère ombre à gauche, décor : fond gris clair uni, couleurs #D9D9D6, #FFFFFF, #D99C44, ambiance affirmée, sans aucun texte ni logo.",
+   "reference": "inspi/behance/211043431/03.jpg : carte 2 du carrousel"
+  },
+  {
+   "id": "P-jour-3",
+   "fichier": "images/P-jour-3.jpg",
+   "section": "atelier",
+   "format": "4:3",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "une conseillère en image qui rit",
+    "personnage": "Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé",
+    "action": "rit franchement, tête légèrement inclinée, cheveux ondulés",
+    "cadrage": "gros plan visage et épaules, sujet à droite",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière naturelle de fenêtre, chaude",
+    "decor": "intérieur clair flou",
+    "palette": [
+     "#EDEDED",
+     "#D2A679",
+     "#FFFFFF"
+    ],
+    "ambiance": "chaleureuse",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo de une conseillère en image qui rit, Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé, rit franchement, tête légèrement inclinée, cheveux ondulés, gros plan visage et épaules, sujet à droite, objectif 85 mm, f/2, lumière naturelle de fenêtre, chaude, décor : intérieur clair flou, couleurs #EDEDED, #D2A679, #FFFFFF, ambiance chaleureuse, sans aucun texte ni logo.",
+   "reference": "inspi/behance/211043431/03.jpg : carte 3 du carrousel"
+  },
+  {
+   "id": "P-jour-4",
+   "fichier": "images/P-jour-4.jpg",
+   "section": "atelier",
+   "format": "4:3",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "une conseillère devant un portant de vêtements",
+    "personnage": "Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé",
+    "action": "compose une tenue sur un cintre, pull col roulé crème",
+    "cadrage": "plan taille, sujet à gauche, portant à droite",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière douce de boutique",
+    "decor": "portant de vêtements neutres noir, crème, camel",
+    "palette": [
+     "#F2F2F0",
+     "#C9A47A",
+     "#1A1A1A"
+    ],
+    "ambiance": "concentrée, professionnelle",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo de une conseillère devant un portant de vêtements, Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé, compose une tenue sur un cintre, pull col roulé crème, plan taille, sujet à gauche, portant à droite, objectif 85 mm, f/2, lumière douce de boutique, décor : portant de vêtements neutres noir, crème, camel, couleurs #F2F2F0, #C9A47A, #1A1A1A, ambiance concentrée, professionnelle, sans aucun texte ni logo.",
+   "reference": null
+  },
+  {
+   "id": "P-jour-5",
+   "fichier": "images/P-jour-5.jpg",
+   "section": "atelier",
+   "format": "4:3",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "une conseillère en image debout",
+    "personnage": "Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé",
+    "action": "bras croisés, posture droite et assurée, pull col roulé noir et pantalon large noir",
+    "cadrage": "plan américain, sujet à droite, espace négatif à gauche",
+    "objectif": "50 mm, f/2",
+    "lumiere": "lumière latérale chaude, contrastée",
+    "decor": "bureau sombre aux boiseries, lampe dorée floue",
+    "palette": [
+     "#000000",
+     "#D99C44",
+     "#522700"
+    ],
+    "ambiance": "autorité calme",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo d'une conseillère en image debout, Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé, bras croisés, posture droite et assurée, pull col roulé noir et pantalon large noir, plan américain, sujet à droite, espace négatif à gauche, objectif 50 mm f/2, lumière latérale chaude, contrastée, décor : bureau sombre aux boiseries, lampe dorée floue, couleurs #000000, #D99C44, #522700, ambiance autorité calme, sans aucun texte ni logo.",
+   "reference": null
+  },
+  {
+   "id": "P-mentore",
+   "fichier": "images/P-mentore.jpg",
+   "section": "mentore",
+   "format": "3:4",
+   "avec_personnage": true,
+   "consigne": {
+    "sujet": "une conseillère en image assise",
+    "personnage": "Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé",
+    "action": "assise de trois quarts dans un fauteuil de cuir brun, jambes croisées, pull col roulé crème et pantalon large blanc, main sur l'accoudoir",
+    "cadrage": "plan pied, sujet centré, espace au-dessus",
+    "objectif": "85 mm, f/2",
+    "lumiere": "lumière douce de studio, fond clair",
+    "decor": "fond gris perle uni, une plante verte floue sur le côté",
+    "palette": [
+     "#EDEDED",
+     "#FFFFFF",
+     "#5A3A1E",
+     "#2F4A2C"
+    ],
+    "ambiance": "élégante, accessible",
+    "texte_dans_image": "aucun",
+    "interdits": [
+     "texte, logo ou filigrane",
+     "mains ou doigts déformés",
+     "copie de l'image Behance",
+     "visage différent d'une image à l'autre",
+     "couleurs vives hors palette"
+    ]
+   },
+   "prompt": "Photo de une conseillère en image assise, Leïla Benali, femme de 33 ans, peau mate olive, cheveux noirs ondulés mi-longs, sourcils marqués, rouge à lèvres terracotta, bague dorée épaisse, pull col roulé, assise de trois quarts dans un fauteuil de cuir brun, jambes croisées, pull col roulé crème et pantalon large blanc, main sur l'accoudoir, plan pied, sujet centré, espace au-dessus, objectif 85 mm, f/2, lumière douce de studio, fond clair, décor : fond gris perle uni, une plante verte floue sur le côté, couleurs #EDEDED, #FFFFFF, #5A3A1E, #2F4A2C, ambiance élégante, accessible, sans aucun texte ni logo.",
+   "reference": "inspi/behance/211043431/03.jpg : section mentore (y 1620 à 1990 en 1000 px)"
+  }
+ ]
+}

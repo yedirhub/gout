@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Template Style L, ruban jaune nuit : page de vente d'une formation pour équipes commerciales, nuit violette, jaune fluo, rubans croisés qui défilent.">
+<title>Avec images · Style L · Ruban jaune nuit · template</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Barlow+Condensed:ital,wght@1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/anim.css">
+<style>
+:root{
+  --nuit:#0B051B; --nuit2:#0D0722; --nuit3:#150B2C; --carte:#190F30; --carte2:#160C2F; --violet:#220E54; --violet-c:#3B1E85;
+  --jaune:#C6EA0B; --ruban:#D2F201; --jaune-p:#EAFAA1; --blanc:#FAF6FF; --rouge:#FF4953; --vert:#5BD702;
+  --texte:#D9D4E6; --doux:#A49DB8; --filet:rgba(198,234,11,.22); --filet-v:rgba(170,150,230,.16);
+  --courbe:cubic-bezier(.16,1,.3,1);
+  --titre:'Inter Tight',system-ui,sans-serif; --corps:'Inter',system-ui,sans-serif; --ruban-f:'Barlow Condensed','Inter Tight',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--corps);font-size:15px;line-height:1.6;color:var(--texte);background:var(--nuit);-webkit-font-smoothing:antialiased;overflow-x:clip}
+svg{display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--titre);color:#fff;font-weight:600;letter-spacing:-.025em;line-height:1.15}
+h2{font-size:clamp(26px,2.9vw,40px)}
+h2 em,h1 em,h3 em{font-style:normal;color:var(--jaune)}
+b,strong{color:#fff;font-weight:600}
+.j{color:var(--jaune)}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto;position:relative;z-index:1}
+section{position:relative}
+.centre{text-align:center}
+/* La trame : colonnes verticales très fines, comme sur la source */
+.trame{background-image:linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:calc(100% / 6) 100%}
+/* Filet jaune qui sépare deux sections, plus vif au centre */
+.filet{height:2px;background:linear-gradient(90deg,transparent,var(--jaune) 30%,var(--jaune) 70%,transparent);opacity:.75}
+
+/* Bouton jaune fluo, halo qui brille */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 30px;border-radius:4px;background:linear-gradient(180deg,#DDF65A,var(--jaune) 60%);color:var(--nuit);
+  font:700 15px/1.2 var(--titre);text-transform:uppercase;letter-spacing:.01em;box-shadow:0 0 0 1px rgba(234,250,161,.6) inset,0 0 26px rgba(198,234,11,.45);transition:box-shadow .4s var(--courbe),background .4s}
+.btn:hover{box-shadow:0 0 0 1px #fff inset,0 0 40px rgba(198,234,11,.7)}
+.btn svg{width:16px;height:16px}
+.btn:focus-visible,summary:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.sur{display:block;margin-top:10px;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;text-decoration:underline;text-underline-offset:3px;color:var(--doux)}
+
+/* Le logo : étiquette dans un rond jaune */
+.logo{display:inline-flex;align-items:center;gap:10px;font:800 22px/1 var(--titre);letter-spacing:-.02em;color:var(--jaune)}
+.logo b{color:var(--jaune);font-weight:800}
+.logo i{width:38px;height:38px;border-radius:50%;background:var(--jaune);display:grid;place-items:center;color:var(--nuit);box-shadow:0 0 0 4px rgba(198,234,11,.18),0 0 20px rgba(198,234,11,.4)}
+.logo i svg{width:18px;height:18px}
+
+/* Emplacement d'image : vide, il fait propre (violet profond, filet jaune, format au centre) */
+.emplacement{position:relative;overflow:hidden;width:100%;background:radial-gradient(120% 90% at 70% 20%,#2A1760,#140A2E 70%);border:1px solid var(--filet)}
+.emplacement[data-format="16:9"]{aspect-ratio:16/9}
+.emplacement[data-format="4:3"]{aspect-ratio:4/3}
+.emplacement[data-format="1:1"]{aspect-ratio:1/1}
+.emplacement[data-format="3:4"]{aspect-ratio:3/4}
+.emplacement[data-format="9:16"]{aspect-ratio:9/16}
+.emplacement::after{content:attr(data-format);position:absolute;left:50%;top:50%;translate:-50% -50%;padding:4px 10px;border:1px solid rgba(198,234,11,.3);border-radius:20px;font:600 11px/1 var(--titre);letter-spacing:.14em;color:rgba(234,250,161,.7)}
+.emplacement:has(img)::after{display:none}
+
+/* 01 · Hero */
+.hero{padding:40px 0 70px;overflow:hidden;background:radial-gradient(60% 60% at 15% 35%,rgba(59,30,133,.35),transparent 70%),radial-gradient(50% 60% at 90% 30%,rgba(34,14,84,.6),transparent 70%),linear-gradient(180deg,var(--nuit3),var(--nuit2))}
+.hero .logo{margin-bottom:28px}
+.hero h1{font-size:clamp(30px,3.4vw,46px);max-width:760px;margin:0 auto 30px}
+.video{position:relative;width:min(620px,100%);margin:0 auto;border:1px solid rgba(198,234,11,.55);border-radius:6px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.55),0 0 0 6px rgba(198,234,11,.05)}
+.video .emplacement{border:0}
+.video .voile{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,5,27,.85),rgba(11,5,27,.2) 55%,transparent);pointer-events:none}
+.video .appel{position:absolute;left:7%;top:50%;translate:0 -50%;font:800 clamp(16px,2.3vw,26px)/1.1 var(--titre);text-transform:uppercase;color:#fff;text-align:left}
+.video .appel em{font-style:normal;color:var(--jaune);display:block}
+.lecture{position:absolute;left:50%;top:50%;translate:-50% -50%;width:64px;height:60px;border-radius:8px;background:var(--jaune);display:grid;place-items:center;color:var(--nuit);box-shadow:0 0 0 8px rgba(198,234,11,.18),0 0 30px rgba(198,234,11,.55)}
+.lecture svg{width:22px;height:22px}
+.video .barre{position:absolute;left:0;bottom:0;height:5px;width:12%;background:var(--rouge)}
+.hero .sous{max-width:470px;margin:24px auto 22px;font-size:16px;color:var(--texte)}
+
+/* 02 · Techniques : cartes à onglet jaune */
+.techniques{padding:80px 0 60px;background:var(--nuit2)}
+.techniques h2{margin-bottom:46px}
+.atouts{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;max-width:830px;margin:0 auto;text-align:left}
+.atout{grid-column:span 2;position:relative;padding:44px 30px 30px;border-radius:4px;background:var(--carte);border:1px solid rgba(255,255,255,.05);transition:border-color .4s,translate .4s var(--courbe)}
+.atout:nth-child(-n+2){grid-column:span 3}
+.atout::before{content:"";position:absolute;left:30px;top:0;width:64px;height:5px;background:var(--jaune);box-shadow:0 6px 18px rgba(198,234,11,.5)}
+.atout:hover{border-color:var(--filet);translate:0 -4px}
+.atout .ic{width:32px;height:32px;border-radius:6px;background:rgba(255,255,255,.06);display:grid;place-items:center;color:var(--jaune);margin-bottom:16px}
+.atout .ic svg{width:18px;height:18px}
+.atout h3{font-size:16px;color:var(--jaune);margin-bottom:10px}
+.atout p{font-size:13.5px;line-height:1.5;color:var(--texte)}
+.descente{width:40px;height:62px;margin:60px auto 0;border:1px solid rgba(255,255,255,.4);border-radius:22px;display:grid;place-items:center;color:#fff}
+.descente svg{width:14px;height:30px;animation:descend 2.2s var(--courbe) infinite}
+@keyframes descend{0%,100%{translate:0 -4px}50%{translate:0 6px}}
+
+/* 03 · Les rubans croisés qui défilent */
+.rubans{height:300px;overflow:hidden;background:var(--nuit2)}
+.ruban{position:absolute;left:-10%;width:120%;height:58px;display:flex;align-items:center;overflow:hidden;background:var(--ruban);box-shadow:0 14px 30px rgba(0,0,0,.45)}
+.ruban.r1{top:118px;rotate:4.5deg;z-index:2}
+.ruban.r2{top:124px;rotate:-4deg;background:#B9D60A;filter:brightness(.92)}
+.ruban div{display:flex;width:max-content;animation:file 34s linear infinite;font:700 italic 30px/1 var(--ruban-f);letter-spacing:.03em;text-transform:uppercase;color:var(--nuit);white-space:nowrap}
+.ruban.r2 div{animation-direction:reverse;animation-duration:40s}
+.ruban span{padding-right:22px}
+.ruban span::after{content:"-";padding-left:22px}
+@keyframes file{to{transform:translateX(-50%)}}
+
+/* 04 · Les trois temps */
+.etapes{padding:60px 0 90px;background:var(--nuit2);overflow:hidden}
+.temps{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:start;gap:10px;max-width:860px;margin:0 auto}
+.temps .t{text-align:center}
+.temps .n{font:500 clamp(48px,5.4vw,74px)/1 var(--titre);color:var(--jaune);text-shadow:0 0 30px rgba(198,234,11,.4);letter-spacing:-.02em}
+.temps p{max-width:230px;margin:14px auto 0;font-size:14px;color:var(--texte)}
+.temps .chev{color:var(--jaune);margin-top:34px}
+.temps .chev svg{width:20px;height:26px}
+.ligne-temps{position:relative;max-width:700px;margin:40px auto 0;height:2px;background:linear-gradient(90deg,var(--jaune),rgba(255,255,255,.5))}
+.ligne-temps i{position:absolute;top:50%;width:16px;height:16px;translate:-50% -50%;border-radius:50%;border:4px solid #fff;background:var(--nuit)}
+.ligne-temps i:nth-child(1){left:0}.ligne-temps i:nth-child(2){left:50%}.ligne-temps i:nth-child(3){left:100%}
+
+/* 05 · L'équipe : le téléphone et sa discussion */
+.equipe{padding:70px 0 100px;background:radial-gradient(50% 60% at 30% 50%,rgba(59,30,133,.32),transparent 70%),var(--nuit)}
+.equipe .wrap{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:860px}
+.tel{position:relative;width:min(300px,100%);margin-inline:auto;padding:18px 14px 30px;border-radius:44px 44px 0 0;border:2px solid #3E2F6A;border-bottom:0;background:linear-gradient(180deg,#1C1236,#120A28);box-shadow:0 0 0 6px rgba(62,47,106,.25),0 40px 70px rgba(0,0,0,.5);-webkit-mask-image:linear-gradient(180deg,#000 82%,transparent);mask-image:linear-gradient(180deg,#000 82%,transparent)}
+.tel .encoche{width:56px;height:6px;margin:0 auto 18px;border-radius:4px;background:#3E2F6A}
+.tel .tete{display:flex;align-items:center;gap:10px;padding:0 8px 12px;font:600 13px/1 var(--titre);color:#fff}
+.tel .tete .logo i{width:30px;height:30px}
+.tel .tete .logo i svg{width:14px;height:14px}
+.tel .tete .ics{margin-left:auto;display:flex;gap:10px;color:#fff}
+.tel .tete .ics svg{width:16px;height:16px}
+.tel .jour{text-align:center;font-size:11px;color:var(--doux);margin:4px 0 10px}
+.msg{max-width:84%;margin-bottom:8px;padding:7px 10px;border-radius:8px;font-size:10.5px;line-height:1.4;color:#E6E1F2;background:#2A1E52}
+.msg small{display:block;text-align:right;font-size:8.5px;color:var(--doux);margin-top:2px}
+.msg.moi{margin-left:auto;background:#251C3A}
+.msg .qui{display:block;font-size:9.5px;font-weight:600;color:var(--jaune);margin-bottom:2px}
+.msg .qui.r{color:#FF8A8F}
+.equipe h2{font-size:clamp(26px,2.6vw,34px);margin-bottom:24px}
+.equipe p{font-size:14.5px;margin-bottom:16px}
+.equipe p .j{font-weight:500}
+.equipe .btn{margin-top:14px}
+
+/* 06 · La différence : panneau blanc à encoche */
+.difference{padding:70px 0 90px;background:var(--nuit)}
+.panneau-blanc{position:relative;max-width:860px;margin:0 auto;padding:80px 50px 50px;border-radius:8px;background:var(--blanc);color:#2A2340;text-align:center}
+.panneau-blanc .encoche{position:absolute;left:50%;top:-1px;translate:-50% 0;width:140px;height:40px;background:var(--nuit);clip-path:polygon(0 0,100% 0,62% 100%,38% 100%);display:grid;place-items:start center;color:#fff;padding-top:6px}
+.panneau-blanc .encoche svg{width:24px;height:12px}
+.pastille{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 20px;border-radius:20px;background:var(--nuit);color:#fff;font:600 13px/1 var(--titre);text-transform:uppercase;letter-spacing:.02em}
+.pastille svg{width:14px;height:14px}
+.panneau-blanc h2{color:#140C2A;margin:20px auto 36px;font-size:clamp(24px,2.5vw,32px);max-width:560px}
+.duel{display:grid;grid-template-columns:1fr 1fr;gap:14px;text-align:left}
+.duel li{list-style:none;display:flex;align-items:center;gap:14px;min-height:66px;padding:12px 18px;border-radius:4px;border:1px solid #E3DDF0;background:#fff;font-size:13.5px;line-height:1.4;color:#2A2340;box-shadow:0 6px 16px rgba(20,12,42,.05)}
+.duel li i{width:28px;height:28px;border-radius:4px;flex:none;display:grid;place-items:center;color:#fff}
+.duel li i svg{width:14px;height:14px}
+.duel .non i{background:#E5343E}
+.duel .oui i{background:#3E9E06}
+
+/* 07 · Avis de l'équipe */
+.avis{padding:90px 0 90px;background:radial-gradient(40% 40% at 50% 10%,rgba(59,30,133,.35),transparent 70%),var(--nuit)}
+.avis h2{margin-bottom:46px}
+.cartes-avis{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:left}
+.c-avis{padding:24px 24px 30px;border-radius:4px;border:1px solid rgba(198,234,11,.18);background:linear-gradient(180deg,#120A27,var(--nuit));transition:border-color .4s,box-shadow .4s}
+.c-avis:hover{border-color:rgba(198,234,11,.55);box-shadow:0 0 30px rgba(198,234,11,.12)}
+.c-avis .id{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.av{width:38px;height:38px;border-radius:50%;flex:none;display:grid;place-items:center;font:700 13px/1 var(--titre);color:var(--nuit);background:var(--jaune-p)}
+.c-avis h3{font-size:17px;color:var(--jaune);line-height:1.1}
+.c-avis small{display:block;font-size:11.5px;color:var(--doux)}
+.c-avis p{font-size:14px;line-height:1.5}
+
+/* 08 · Efficacité : l'orbite */
+.efficacite{padding:80px 0;overflow:hidden;border-block:1px solid var(--filet-v);background:radial-gradient(40% 60% at 30% 50%,rgba(34,14,84,.5),transparent 70%),var(--nuit)}
+.efficacite .wrap{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;max-width:900px}
+.orbite{position:relative;width:min(330px,100%);aspect-ratio:1;margin-inline:auto}
+.orbite .anneau{position:absolute;border-radius:50%;border:1px solid rgba(160,130,240,.22)}
+.orbite .a1{inset:0;background:radial-gradient(circle,rgba(59,30,133,.45),rgba(34,14,84,.25) 60%,transparent 72%)}
+.orbite .a2{inset:12%}
+.orbite .a3{inset:27%;background:rgba(34,14,84,.55)}
+.orbite .coeur{position:absolute;inset:38%;border-radius:50%;background:var(--jaune);display:grid;place-items:center;color:var(--nuit);box-shadow:0 0 40px rgba(198,234,11,.45)}
+.orbite .coeur svg{width:42%;height:42%}
+.orbite .tour{position:absolute;inset:0;animation:orbite 40s linear infinite}
+.orbite .tour>*{position:absolute;translate:-50% -50%}
+.orbite .tour>i{width:12px;height:12px;border-radius:50%;background:#fff}
+.orbite .tour>span{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:#fff;animation:orbite 40s linear infinite reverse;box-shadow:0 0 0 4px rgba(255,255,255,.08)}
+.orbite .tour>span svg{width:22px;height:22px}
+@keyframes orbite{to{rotate:360deg}}
+.efficacite h2{font-size:clamp(24px,2.4vw,32px);margin-bottom:30px}
+.coches{list-style:none;display:grid;gap:20px}
+.coches li{display:flex;gap:16px;font-size:13.5px;line-height:1.5}
+.coches li i{width:22px;height:22px;border-radius:3px;flex:none;background:var(--jaune);display:grid;place-items:center;color:var(--nuit);margin-top:2px}
+.coches li i svg{width:13px;height:13px}
+.coches u{color:var(--jaune);font-weight:600;text-decoration-color:var(--jaune);text-underline-offset:3px}
+
+/* 09 · Modules : cartes hautes, photo ou dessin, barre jaune */
+.modules{padding:90px 0 80px;background:var(--nuit)}
+.modules h2{margin-bottom:46px}
+.grille-mod{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:860px;margin:0 auto}
+.mod{position:relative;border-radius:4px;overflow:hidden;border:1px solid rgba(198,234,11,.28);background:#120A27;transition:translate .5s var(--courbe),box-shadow .5s}
+.mod:hover{translate:0 -6px;box-shadow:0 18px 40px rgba(0,0,0,.5),0 0 24px rgba(198,234,11,.18)}
+.mod .emplacement,.mod .illu{border:0}
+.mod .illu{position:relative;aspect-ratio:9/16;overflow:hidden;background:radial-gradient(90% 60% at 50% 35%,#2A1760,#0E0721 75%)}
+.mod .voile{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,5,27,.35),transparent 25%,transparent 45%,rgba(11,5,27,.92) 75%);pointer-events:none}
+.mod .num{position:absolute;left:50%;top:16px;translate:-50% 0;padding:4px 12px;border-radius:14px;border:1px solid rgba(198,234,11,.45);background:rgba(11,5,27,.75);font:600 10px/1 var(--titre);letter-spacing:.06em;color:#fff;white-space:nowrap}
+.mod h3{position:absolute;left:10px;right:10px;bottom:56px;text-align:center;font-size:clamp(16px,1.6vw,20px);line-height:1.08}
+.mod .sig{position:absolute;left:0;right:0;bottom:24px;display:flex;justify-content:center;align-items:center;gap:4px;font:800 9px/1 var(--titre);letter-spacing:.06em;color:#fff}
+.mod .sig b{color:var(--jaune)}
+.mod .sig svg{width:10px;height:10px;color:var(--jaune)}
+.mod::after{content:"";position:absolute;left:28%;right:28%;bottom:0;height:5px;background:var(--jaune);box-shadow:0 -4px 16px rgba(198,234,11,.6)}
+/* Les dessins des modules sans photo */
+.entonnoir{position:absolute;left:50%;top:22%;translate:-50% 0;width:70%;aspect-ratio:1;background:conic-gradient(from 200deg,#FF8A3D,#B5431C,#5A2A7A,#FF8A3D);clip-path:polygon(0 8%,100% 8%,62% 72%,62% 100%,38% 100%,38% 72%);opacity:.9;filter:drop-shadow(0 0 16px rgba(255,138,61,.4))}
+.entonnoir::before{content:"";position:absolute;left:0;right:0;top:0;height:16%;border-radius:50%;background:radial-gradient(#3A1C3A,#FFB27A)}
+.ecrans{position:absolute;inset:18% 6% 40% 14%;rotate:-8deg}
+.ecrans i{position:absolute;width:46%;height:70%;border-radius:4px;background:linear-gradient(180deg,#E8EEF8,#B7C3D8);box-shadow:0 10px 20px rgba(0,0,0,.4)}
+.ecrans i::before{content:"";position:absolute;left:10%;right:10%;top:10%;height:8%;border-radius:2px;background:#5B7BD8;box-shadow:0 14px 0 #C9D3E6,0 26px 0 #C9D3E6,0 38px 0 #8FD3A6}
+.ecrans i:nth-child(1){left:0;top:10%}.ecrans i:nth-child(2){left:30%;top:0;z-index:1}.ecrans i:nth-child(3){left:58%;top:16%}
+.reseau{position:absolute;inset:14% 4% 42%;color:#C9C3E6}
+.puce-ia{position:absolute;left:50%;top:22%;translate:-50% 0;width:62%;aspect-ratio:3/4;rotate:14deg;border-radius:8px;border:2px solid #4D7BFF;background:linear-gradient(160deg,#122A6A,#0B1640);box-shadow:0 0 30px rgba(77,123,255,.45);background-image:linear-gradient(rgba(77,123,255,.35) 1px,transparent 1px),linear-gradient(90deg,rgba(77,123,255,.35) 1px,transparent 1px);background-size:14px 14px}
+
+/* 10 · Bonus : la ligne du temps verticale */
+.bonus{padding:90px 0 80px;border-top:1px solid var(--filet-v);background:radial-gradient(50% 40% at 80% 40%,rgba(34,14,84,.45),transparent 70%),var(--nuit)}
+.bonus h2{margin-bottom:56px}
+.fil{position:relative;max-width:860px;margin:0 auto;padding-left:44px;text-align:left}
+.fil::before{content:"";position:absolute;left:10px;top:12px;bottom:40px;width:2px;background:linear-gradient(180deg,var(--jaune),rgba(198,234,11,.15))}
+.b-item{position:relative;margin-bottom:60px}
+.b-item .etiq{position:relative;font:500 20px/1 var(--titre);color:#fff;margin-bottom:26px}
+.b-item .etiq::before{content:"";position:absolute;left:-44px;top:50%;translate:0 -50%;width:22px;height:22px;border-radius:50%;background:var(--jaune);box-shadow:0 0 0 6px rgba(198,234,11,.25),0 0 18px rgba(198,234,11,.7)}
+.b-item .corps{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.ecran{position:relative;padding:14px;border-radius:8px;border:1px solid rgba(198,234,11,.45);background:#120A27}
+.ecran .cadre{position:relative;border-radius:6px;overflow:hidden}
+.ecran .cadre .emplacement{border:0}
+.direct{position:absolute;right:12px;top:12px;display:flex;align-items:center;gap:6px;padding:5px 10px;border-radius:4px;background:#E5343E;color:#fff;font:700 13px/1 var(--titre);text-transform:uppercase}
+.direct i{width:8px;height:8px;border-radius:50%;background:#fff;animation:clignote 1.4s infinite}
+@keyframes clignote{50%{opacity:.2}}
+.commandes{position:relative;display:flex;justify-content:center;gap:12px;width:max-content;max-width:100%;margin:-30px auto 0;padding:8px 12px;border-radius:10px;background:#1B1430;border:1px solid rgba(255,255,255,.08)}
+.commandes span{width:34px;height:34px;border-radius:50%;background:#2A2240;display:grid;place-items:center;color:#fff}
+.commandes span svg{width:16px;height:16px}
+.commandes span.raccroche{background:#E5343E}
+.dossiers{display:grid;grid-template-columns:auto 1fr;gap:20px;padding:18px;border-radius:6px;background:#1B1430;border:1px solid rgba(255,255,255,.06)}
+.dossiers .apps{display:grid;gap:14px}
+.dossiers .apps span{width:52px;height:52px;border-radius:8px;background:#120A27;border:1px solid rgba(255,255,255,.08);display:grid;place-items:center;color:#fff;font:500 17px/1 var(--titre)}
+.dossiers .apps svg{width:24px;height:28px}
+.dossiers ul{list-style:none;display:grid;padding:6px 18px;border-radius:6px;background:#120A27;border:1px solid rgba(255,255,255,.06)}
+.dossiers li{display:flex;align-items:center;gap:12px;padding:9px 0;font-size:13.5px;color:#fff}
+.dossiers li svg{width:22px;height:18px;color:#F6C445;flex:none}
+.dossiers li em{margin-left:auto;font-style:normal;padding:3px 8px;border-radius:10px;border:1px solid rgba(198,234,11,.5);font:600 8.5px/1 var(--titre);letter-spacing:.06em;text-transform:uppercase;color:var(--jaune-p)}
+.b-item .kicker{display:flex;align-items:center;gap:6px;font:500 11px/1 var(--titre);letter-spacing:.04em;text-transform:uppercase;color:var(--doux);margin-bottom:16px}
+.b-item .kicker svg{width:13px;height:13px;color:#FF8A8F}
+.b-item h3{font-size:clamp(22px,2.2vw,28px);font-weight:500;margin-bottom:22px}
+.b-item p{font-size:13.5px;line-height:1.6;max-width:380px}
+
+/* 11 · Offre : la carte prix au centre */
+.offre{padding:100px 0;border-top:1px solid var(--filet-v);overflow:hidden;background:radial-gradient(35% 50% at 50% 40%,rgba(59,30,133,.35),transparent 70%),radial-gradient(30% 50% at 10% 60%,rgba(255,255,255,.04),transparent),var(--nuit2)}
+.offre .wrap{display:grid;grid-template-columns:1fr auto 1fr;gap:50px;align-items:center;max-width:900px}
+.offre .gauche{text-align:right}
+.offre .gauche::before{content:"";display:inline-block;width:40px;height:5px;background:var(--jaune);box-shadow:0 0 14px rgba(198,234,11,.6);margin-bottom:30px}
+.offre .gauche h2{font-size:clamp(22px,2.2vw,28px);font-weight:500}
+.prix{position:relative;width:300px;padding:72px 28px 26px;border-radius:4px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,#1B1036,#0E0722);text-align:center;box-shadow:0 40px 80px rgba(0,0,0,.5)}
+.prix .medaille{position:absolute;left:50%;top:-32px;translate:-50% 0;width:64px;height:64px;border-radius:50%;background:var(--nuit);border:2px solid var(--jaune);display:grid;place-items:center;color:var(--jaune);box-shadow:0 0 22px rgba(198,234,11,.4)}
+.prix .medaille svg{width:26px;height:26px}
+.prix .nom{font:800 24px/1 var(--titre);letter-spacing:-.02em;color:var(--jaune);margin-bottom:24px}
+.prix .nom b{color:#fff;font-weight:800}
+.prix .avant{font:700 20px/1 var(--titre);color:#fff}
+.prix .avant s{color:#FF6A72;text-decoration-thickness:2px}
+.prix .fois{font:600 14px/1 var(--titre);color:#fff;margin-top:8px;text-transform:uppercase}
+.prix .gros{display:block;font:700 clamp(50px,5vw,66px)/1 var(--titre);letter-spacing:-.04em;color:var(--jaune);text-shadow:0 0 30px rgba(198,234,11,.35);margin:6px 0 2px}
+.prix .gros small{font-size:.4em;letter-spacing:0}
+.prix .comptant{font:600 12.5px/1 var(--titre);text-decoration:underline;text-underline-offset:3px;text-transform:uppercase;color:#fff}
+.moyens{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:18px 0 18px}
+.moyens span{padding:4px 7px;border-radius:3px;background:rgba(255,255,255,.12);font:600 9.5px/1 var(--titre);color:#E6E1F2}
+.prix .btn{width:100%}
+.prix .sur{text-transform:uppercase;font-size:9.5px;text-decoration:none}
+.offre .liste{list-style:none;display:grid;gap:18px}
+.offre .liste li{display:flex;gap:12px;font-size:13.5px;line-height:1.4;color:#fff}
+.offre .liste li svg{width:14px;height:14px;color:var(--jaune);flex:none;margin-top:3px}
+
+/* 12 · Garantie : le sceau festonné */
+.garantie{padding:40px 0 90px;background:var(--nuit2);overflow:hidden}
+.garantie .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center;max-width:860px}
+.sceau{position:relative;width:min(260px,80%);margin-inline:auto;filter:drop-shadow(0 0 40px rgba(198,234,11,.45))}
+.sceau svg.s{width:100%;height:auto;animation:balance 8s ease-in-out infinite}
+@keyframes balance{50%{rotate:6deg}}
+.sceau .txt{position:absolute;inset:0;display:grid;place-content:center;text-align:center;color:var(--nuit)}
+.sceau .etoiles{font-size:15px;letter-spacing:.12em}
+.sceau .sept{font:800 104px/.9 var(--titre);letter-spacing:-.04em}
+.sceau .jours{font:800 13px/1.1 var(--titre);text-transform:uppercase}
+.garantie h2{font-size:clamp(24px,2.4vw,30px);font-weight:500;margin-bottom:22px}
+.garantie p{font-size:14px;margin-bottom:16px;max-width:430px}
+
+/* 13 · Histoires en vidéo */
+.histoires{padding:60px 0 90px;background:var(--nuit2)}
+.histoires .chapo{max-width:420px;margin:14px auto 46px;font-size:14px}
+.cartes-h{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:860px;margin:0 auto;text-align:left}
+.c-h{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:10px;align-items:center;padding:16px;border-radius:6px;border:1px solid rgba(198,234,11,.3);background:linear-gradient(160deg,#1B1036,#0E0722)}
+.c-h .tag{display:inline-block;padding:2px 8px;border-radius:10px;border:1px solid var(--jaune);font:600 8.5px/1.2 var(--titre);letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:12px}
+.c-h h3{font-size:14px;line-height:1.05;text-transform:uppercase;margin-bottom:12px}
+.c-h h3 em{display:block}
+.c-h p{font-size:11.5px;line-height:1.35}
+.c-h .photo{border-radius:6px;overflow:hidden}
+.c-h .photo .emplacement{border:0}
+.c-h .lecture{width:46px;height:46px;border-radius:50%;left:50%;top:50%}
+.c-h .lecture svg{width:16px;height:16px;margin-left:3px}
+
+/* 14 · Le formateur */
+.formateur{padding:100px 0;background:radial-gradient(40% 60% at 25% 50%,rgba(59,30,133,.4),transparent 70%),var(--nuit3);overflow:hidden}
+.formateur .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:860px}
+.cadre-jaune{position:relative;padding:0 0 0;background:var(--jaune);margin-top:60px;box-shadow:0 0 60px rgba(198,234,11,.25)}
+.cadre-jaune .emplacement{margin-top:-60px;width:calc(100% - 0px);border:0;background:linear-gradient(180deg,transparent,rgba(11,5,27,.12)),var(--jaune)}
+.cadre-jaune .emplacement::after{color:rgba(11,5,27,.6);border-color:rgba(11,5,27,.35)}
+.formateur h2{font-size:clamp(28px,3vw,38px);margin-bottom:30px}
+.formateur p{font-size:14px;margin-bottom:16px;max-width:400px}
+.formateur .btn{margin-top:20px}
+
+/* 15 · FAQ */
+.faq{padding:90px 0 110px;background:var(--nuit)}
+.faq .trait{width:60px;height:5px;margin:0 auto 34px;background:var(--jaune);box-shadow:0 6px 18px rgba(198,234,11,.5)}
+.faq h2{margin-bottom:46px}
+.faq .liste{max-width:660px;margin:0 auto;display:grid;gap:14px;text-align:left}
+.faq details{border-radius:4px;background:var(--carte2);border:1px solid rgba(255,255,255,.07);transition:border-color .3s}
+.faq details[open]{border-color:var(--filet)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;min-height:58px;padding:12px 24px;font:500 16px/1.3 var(--titre);color:#fff}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";margin-left:auto;font:300 26px/1 var(--titre);color:var(--jaune);transition:rotate .3s var(--courbe)}
+.faq details[open] summary::after{rotate:45deg}
+.faq details p{padding:0 24px 20px 50px;font-size:14px}
+
+/* 16 · Pied jaune */
+#pied{background:var(--jaune);color:var(--nuit);font-size:13px}
+#pied .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:30px 0;max-width:860px}
+#pied .droite{display:flex;gap:22px}
+#pied .droite a{display:inline-flex;align-items:center;min-height:44px}
+#pied .droite a:hover{text-decoration:underline}
+
+@media (max-width:900px){
+  .atouts{grid-template-columns:1fr 1fr}
+  .atout,.atout:nth-child(-n+2){grid-column:span 1}
+  .atout:last-child{grid-column:span 2}
+  .grille-mod{grid-template-columns:repeat(2,1fr);max-width:460px}
+  .offre .wrap{grid-template-columns:1fr;justify-items:center;gap:40px}
+  .offre .gauche{text-align:center}
+  .cartes-h{grid-template-columns:1fr;max-width:420px}
+}
+@media (max-width:820px){
+  .temps{grid-template-columns:1fr;gap:30px}
+  .temps .chev{margin:0 auto;rotate:90deg}
+  .ligne-temps{display:none}
+  .equipe .wrap,.efficacite .wrap,.garantie .wrap,.formateur .wrap{grid-template-columns:1fr;gap:50px}
+  .equipe .wrap>div:last-child,.efficacite .wrap>div:last-child{text-align:left}
+  .panneau-blanc{padding:70px 20px 30px}
+  .duel{grid-template-columns:1fr}
+  .cartes-avis{grid-template-columns:1fr;max-width:460px;margin-inline:auto}
+  .b-item .corps{grid-template-columns:1fr;gap:30px}
+  .formateur .wrap>div:first-child{max-width:380px;width:100%;margin-inline:auto}
+  .rubans{height:220px}
+  .ruban.r1{top:80px}.ruban.r2{top:86px}
+  .ruban{height:46px}
+  .ruban div{font-size:22px}
+}
+@media (max-width:520px){
+  .atouts{grid-template-columns:1fr}
+  .atout:last-child{grid-column:span 1}
+  .fil{padding-left:34px}
+  .fil::before{left:6px}
+  .b-item .etiq::before{left:-38px;width:18px;height:18px}
+  .dossiers{grid-template-columns:1fr}
+  .dossiers .apps{grid-template-columns:repeat(3,52px)}
+  .grille-mod{gap:12px}
+  .mod h3{font-size:15px;bottom:50px}
+  .mod .num{font-size:9px;padding:4px 8px}
+  .prix{width:100%;max-width:320px}
+  #pied .wrap{flex-direction:column;text-align:center;padding:20px 0}
+  .hero .btn{width:100%}
+}
+@media (prefers-reduced-motion:reduce){.ruban div,.orbite .tour,.orbite .tour>span,.sceau svg.s,.descente svg,.direct i{animation:none}}
+</style>
+<meta name="robots" content="noindex">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/portfolio.css">
+<link rel="stylesheet" href="../../commun/flottant.css">
+</head>
+<body>
+<div data-progression style="background:var(--jaune)"></div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="etiq" viewBox="0 0 24 24"><path d="M3 12.5 V4 H11.5 L21 13.5 L13.5 21 Z" fill="currentColor"/><circle cx="7.5" cy="8.5" r="1.8" fill="#C6EA0B"/></symbol>
+  <symbol id="fleche" viewBox="0 0 16 16"><path d="M2 8 H13 M9 4 L13 8 L9 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="play" viewBox="0 0 20 20"><path d="M5 3 L17 10 L5 17 Z" fill="currentColor"/></symbol>
+  <symbol id="coupe" viewBox="0 0 24 24"><path d="M7 4 H17 V9 A5 5 0 0 1 7 9 Z M7 6 H4 V8 A3 3 0 0 0 7 11 M17 6 H20 V8 A3 3 0 0 1 17 11 M12 14 V18 M8 20 H16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="cible" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="3.5" fill="currentColor"/></symbol>
+  <symbol id="relance" viewBox="0 0 24 24"><path d="M5 18 V12 A6 6 0 0 1 11 6 H19 M15 2 L19 6 L15 10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="camera" viewBox="0 0 24 24"><rect x="3" y="6" width="13" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M16 10.5 L21 7.5 V16.5 L16 13.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="pile" viewBox="0 0 24 24"><path d="M4 8 L12 4 L20 8 L12 12 Z M4 12 L12 16 L20 12 M4 16 L12 20 L20 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="coche" viewBox="0 0 16 16"><path d="M3 8.5 L6.5 12 L13 4.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="croix" viewBox="0 0 16 16"><path d="M4 4 L12 12 M12 4 L4 12" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="bas" viewBox="0 0 14 30"><path d="M7 2 V27 M2 22 L7 27 L12 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="chev" viewBox="0 0 20 26"><path d="M5 3 L15 13 L5 23" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="v" viewBox="0 0 24 12"><path d="M3 2 L12 9 L21 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="tel" viewBox="0 0 24 24"><path d="M6 3 H9 L10.5 8 L8.5 9.5 A11 11 0 0 0 14.5 15.5 L16 13.5 L21 15 V18 A3 3 0 0 1 18 21 A15 15 0 0 1 3 6 A3 3 0 0 1 6 3 Z" fill="currentColor"/></symbol>
+  <symbol id="cam-p" viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2" fill="currentColor"/><path d="M16 10 L22 6.5 V17.5 L16 14 Z" fill="currentColor"/></symbol>
+  <symbol id="doc" viewBox="0 0 24 28"><path d="M3 2 H15 L21 8 V26 H3 Z" fill="currentColor"/><path d="M7 13 H17 M7 17 H17 M7 21 H13" stroke="#fff" stroke-width="1.6"/></symbol>
+  <symbol id="tableur" viewBox="0 0 24 28"><path d="M3 2 H15 L21 8 V26 H3 Z" fill="currentColor"/><path d="M7 12 H17 V22 H7 Z M7 17 H17 M12 12 V22" fill="none" stroke="#fff" stroke-width="1.6"/></symbol>
+  <symbol id="dossier" viewBox="0 0 22 18"><path d="M1 3 A2 2 0 0 1 3 1 H8 L10 3 H19 A2 2 0 0 1 21 5 V15 A2 2 0 0 1 19 17 H3 A2 2 0 0 1 1 15 Z" fill="currentColor"/></symbol>
+  <symbol id="cerveau" viewBox="0 0 16 16"><path d="M8 3 C5 1 2 3 3 6 C1 7 1 11 4 12 C5 15 8 14 8 13 C8 14 11 15 12 12 C15 11 15 7 13 6 C14 3 11 1 8 3 Z" fill="currentColor"/></symbol>
+  <symbol id="engrenage" viewBox="0 0 16 16"><circle cx="8" cy="8" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 1 V3.5 M8 12.5 V15 M1 8 H3.5 M12.5 8 H15 M3 3 L4.8 4.8 M11.2 11.2 L13 13 M3 13 L4.8 11.2 M11.2 4.8 L13 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="micro" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 11 A7 7 0 0 0 19 11 M12 18 V21" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="son" viewBox="0 0 24 24"><path d="M4 9 H8 L13 5 V19 L8 15 H4 Z" fill="currentColor"/><path d="M16 9 A4 4 0 0 1 16 15 M18.5 6.5 A8 8 0 0 1 18.5 17.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="sortir" viewBox="0 0 24 24"><path d="M14 4 H5 V20 H14 M10 12 H21 M17 8 L21 12 L17 16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="bulle" viewBox="0 0 24 24"><path d="M12 3 A9 9 0 0 1 12 21 A9 9 0 0 1 7.5 19.8 L3 21 L4.3 16.8 A9 9 0 0 1 12 3 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 9.5 C9 12 11.5 14.5 14.5 15 L15.5 13.5 L14 12.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="eclat" viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="currentColor"/></symbol>
+  <symbol id="fleches" viewBox="0 0 24 24"><path d="M6 10 L12 5 L18 10 M6 15 L12 20 L18 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="anneau-c" viewBox="0 0 24 24"><path d="M17 8 A6 6 0 1 0 17 16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+</svg>
+
+<section class="hero centre" id="hero">
+  <div class="wrap">
+    <div class="logo" data-rv><i><svg><use href="#etiq"/></svg></i><span>VENDI<b>X</b></span></div>
+    <h1 data-lignes>Faites de votre équipe commerciale<br>une <em>machine à ventes</em> imparable</h1>
+    <div class="video" data-rv>
+      <div class="emplacement" data-img="L-hero" data-format="16:9" data-alt="Yannick Ekambi, coach commercial, sourit bras croisés dans un open space de nuit"><img src="images/L-hero.jpg" alt="Yannick Ekambi, coach commercial, sourit bras croisés dans un open space de nuit" loading="lazy" decoding="async" onerror="this.remove()"></div>
+      <div class="voile"></div>
+      <a class="appel" href="#hero" aria-label="Regarder la vidéo de présentation">Appuyez<br>pour<br><em>regarder</em><em>la vidéo</em></a>
+      <span class="lecture" aria-hidden="true"><svg><use href="#play"/></svg></span>
+      <span class="barre" aria-hidden="true"></span>
+    </div>
+    <p class="sous" data-rv>Découvrez les méthodes qui ont triplé les ventes des équipes les plus solides de Douala et d'Abidjan.</p>
+    <div data-rv>
+      <a class="btn reflet" href="#offre" data-aimant>Je veux vendre plus</a>
+      <span class="sur">Paiement 100 % sécurisé par Mobile Money ou carte</span>
+    </div>
+  </div>
+</section>
+<div class="filet" aria-hidden="true"></div>
+
+<section class="techniques centre trame" id="techniques">
+  <div class="wrap">
+    <h2 data-lignes>Apprenez les <em>techniques</em> et les <em>gestes clés</em><br>qui feront de votre équipe :</h2>
+    <div class="atouts">
+      <div class="atout" data-rv><span class="ic"><svg><use href="#coupe"/></svg></span><h3>Une équipe qui tient ses objectifs</h3><p>Atteindre et dépasser les objectifs du mois, sans courir après la dernière semaine.</p></div>
+      <div class="atout" data-rv><span class="ic"><svg><use href="#eclat"/></svg></span><h3>Des prospects mieux qualifiés</h3><p>Des questions précises pour repérer, dès le premier appel, les clients prêts à acheter.</p></div>
+      <div class="atout" data-rv><span class="ic"><svg><use href="#relance"/></svg></span><h3>Des relances qui concluent</h3><p>Accélérer les signatures avec un suivi après devis, simple et régulier.</p></div>
+      <div class="atout" data-rv><span class="ic"><svg><use href="#camera"/></svg></span><h3>Moins de rendez-vous manqués</h3><p>Des rappels et une confirmation la veille pour que le client vienne.</p></div>
+      <div class="atout" data-rv><span class="ic"><svg><use href="#pile"/></svg></span><h3>Des prévisions de ventes fiables</h3><p>Estimer le chiffre du mois et planifier avec assurance.</p></div>
+    </div>
+    <div class="descente" aria-hidden="true"><svg><use href="#bas"/></svg></div>
+  </div>
+</section>
+
+<section class="rubans" id="rubans" aria-label="Prévisibilité, objectifs, signature, qualification, ventes">
+  <div class="ruban r2" aria-hidden="true"><div>
+    <span>Ventes</span><span>Prévisibilité</span><span>Objectifs</span><span>Signature</span><span>Qualification</span><span>Ventes</span><span>Prévisibilité</span><span>Objectifs</span><span>Signature</span><span>Qualification</span>
+    <span>Ventes</span><span>Prévisibilité</span><span>Objectifs</span><span>Signature</span><span>Qualification</span><span>Ventes</span><span>Prévisibilité</span><span>Objectifs</span><span>Signature</span><span>Qualification</span>
+  </div></div>
+  <div class="ruban r1" aria-hidden="true"><div>
+    <span>Prévisibilité</span><span>Objectifs</span><span>Signature</span><span>Qualification</span><span>Ventes</span><span>Prévisibilité</span><span>Objectifs</span><span>Signature</span><span>Qualification</span><span>Ventes</span>
+    <span>Prévisibilité</span><span>Objectifs</span><span>Signature</span><span>Qualification</span><span>Ventes</span><span>Prévisibilité</span><span>Objectifs</span><span>Signature</span><span>Qualification</span><span>Ventes</span>
+  </div></div>
+</section>
+
+<section class="etapes" id="etapes" aria-label="La méthode en trois temps">
+  <div class="wrap">
+    <div class="temps">
+      <div class="t" data-rv><div class="n">01</div><p>On équipe votre équipe des savoirs essentiels de la vente.</p></div>
+      <div class="chev" aria-hidden="true"><svg><use href="#chev"/></svg></div>
+      <div class="t" data-rv><div class="n">02</div><p>On met en pratique les gestes qui accélèrent la signature.</p></div>
+      <div class="chev" aria-hidden="true"><svg><use href="#chev"/></svg></div>
+      <div class="t" data-rv><div class="n">03</div><p>On analyse les retours pour ajuster sans cesse les opérations.</p></div>
+    </div>
+    <div class="ligne-temps" aria-hidden="true"><i></i><i></i><i></i></div>
+  </div>
+</section>
+
+<section class="equipe" id="equipe">
+  <div class="wrap">
+    <div class="tel" data-rv aria-label="Exemple de discussion de l'équipe commerciale" role="img">
+      <div class="encoche"></div>
+      <div class="tete"><span class="logo"><i><svg><use href="#etiq"/></svg></i></span>Équipe commerciale<span class="ics"><svg><use href="#cam-p"/></svg><svg><use href="#tel"/></svg></span></div>
+      <div class="jour">Aujourd'hui</div>
+      <div class="msg">Je viens de signer avec le client de Bonapriso !<small>14:11</small></div>
+      <div class="msg">1,5 million de FCFA encaissé. On garde le rythme, le mois sera bon.<small>14:11</small></div>
+      <div class="msg moi"><span class="qui">Yannick, coach</span>Bravo ! Encore un pas, l'objectif est presque atteint avant la date.<small>14:15</small></div>
+      <div class="msg moi"><span class="qui r">Aïcha, vendeuse</span>Félicitations, cette signature était énorme !<small>14:21</small></div>
+      <div class="msg moi">On garde le rythme !<small>14:21</small></div>
+      <div class="msg moi"><span class="qui">Serge, vendeur</span>On est imbattables. Aujourd'hui, on fête ça.<small>14:23</small></div>
+    </div>
+    <div>
+      <h2 data-rv>Maîtrisez chaque <em>étape</em> jusqu'à la vente, et visez des <em>résultats</em> hors normes</h2>
+      <p data-rv>Plus qu'une formation et des outils : une <span class="j">carte détaillée pour réussir chaque étape</span>, de la prospection à la signature, avec des <span class="j">méthodes applicables</span> qui donnent de la <span class="j">prévisibilité</span> et une <span class="j">croissance régulière</span>.</p>
+      <p data-rv>Avec cette méthode, votre équipe devient une <span class="j">machine à convertir</span> : plus de goulots, et chaque prospect reçoit la bonne approche au bon moment.</p>
+      <a class="btn reflet" href="#offre" data-rv data-aimant>Je m'inscris <svg><use href="#fleche"/></svg></a>
+    </div>
+  </div>
+</section>
+<div class="filet" aria-hidden="true"></div>
+
+<section class="difference" id="difference">
+  <div class="wrap">
+    <div class="panneau-blanc" data-rv>
+      <span class="encoche" aria-hidden="true"><svg><use href="#v"/></svg></span>
+      <span class="pastille"><svg><use href="#pile"/></svg>La différence</span>
+      <h2>Ce qui sépare les équipes qui réussissent de celles qui restent derrière</h2>
+      <div class="duel">
+        <ul>
+          <li class="non"><i><svg><use href="#croix"/></svg></i>Sans cap clair, les résultats varient et les objectifs ne sont pas tenus.</li>
+          <li class="non"><i><svg><use href="#croix"/></svg></i>Les négociations traînent et le taux de signature reste bas.</li>
+          <li class="non"><i><svg><use href="#croix"/></svg></i>Sans méthode, les vendeurs se perdent, se démotivent et produisent moins.</li>
+        </ul>
+        <ul>
+          <li class="oui"><i><svg><use href="#coche"/></svg></i>Une équipe alignée, des objectifs clairs, des gestes qui donnent des résultats prévisibles.</li>
+          <li class="oui"><i><svg><use href="#coche"/></svg></i>Des techniques précises qui raccourcissent le cycle et augmentent les signatures.</li>
+          <li class="oui"><i><svg><use href="#coche"/></svg></i>Des vendeurs engagés, qui avancent avec confiance et pensent croissance.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="avis centre" id="avis">
+  <div class="wrap">
+    <h2 data-lignes>Ce que disent<br><em>quelques-uns de nos élèves</em></h2>
+    <div class="cartes-avis">
+      <div class="c-avis" data-rv><div class="id"><span class="av" aria-hidden="true">AK</span><div><h3>Aminata Koné</h3><small>Responsable commerciale</small></div></div><p>Avec la méthode Vendix, notre taux de conversion a doublé en trois mois. Des résultats nets.</p></div>
+      <div class="c-avis" data-rv><div class="id"><span class="av" aria-hidden="true">CN</span><div><h3>Christian Ndzié</h3><small>Chef des ventes</small></div></div><p>Mon équipe n'a jamais été aussi motivée. On tient des objectifs qui semblaient impossibles.</p></div>
+      <div class="c-avis" data-rv><div class="id"><span class="av" aria-hidden="true">FD</span><div><h3>Fatou Diallo</h3><small>Cheffe des ventes</small></div></div><p>Vendix a changé notre façon d'aborder le client. Nous avons enfin un processus clair et efficace.</p></div>
+      <div class="c-avis" data-rv><div class="id"><span class="av" aria-hidden="true">RM</span><div><h3>Roland Mbappé</h3><small>Gérant</small></div></div><p>Jamais vu mon équipe aussi organisée. Nos résultats ont progressé de 40 % en moins de six mois.</p></div>
+      <div class="c-avis" data-rv><div class="id"><span class="av" aria-hidden="true">GT</span><div><h3>Grâce Tchoua</h3><small>Cheffe des ventes</small></div></div><p>La clarté des méthodes est ce qui m'a le plus marquée. Très efficace, dès la première semaine.</p></div>
+      <div class="c-avis" data-rv><div class="id"><span class="av" aria-hidden="true">KB</span><div><h3>Kouassi Brou</h3><small>Chargé de comptes</small></div></div><p>Les chiffres parlent seuls : nous avons doublé nos objectifs du trimestre avec cette méthode.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="efficacite trame" id="efficacite">
+  <div class="wrap">
+    <div class="orbite" aria-hidden="true" data-rv>
+      <span class="anneau a1"></span><span class="anneau a2"></span><span class="anneau a3"></span>
+      <div class="tour">
+        <span style="left:27%;top:17%;background:#7B5CF0"><svg><use href="#fleches"/></svg></span>
+        <span style="left:75%;top:28%;background:#2F6BF5"><svg><use href="#anneau-c"/></svg></span>
+        <span style="left:17%;top:70%;background:#14A37F"><svg><use href="#eclat"/></svg></span>
+        <span style="left:65%;top:82%;background:#35C25A"><svg><use href="#bulle"/></svg></span>
+        <i style="left:53%;top:12%"></i><i style="left:12%;top:41%"></i><i style="left:89%;top:58%"></i><i style="left:38%;top:88%"></i>
+      </div>
+      <span class="coeur"><svg><use href="#etiq"/></svg></span>
+    </div>
+    <div>
+      <h2 data-lignes>Gagnez en <em>efficacité</em> en<br><em>simplifiant vos processus</em></h2>
+      <ul class="coches">
+        <li data-rv><i><svg><use href="#coche"/></svg></i><span><u>Supprimez les tâches</u> manuelles et répétitives : l'équipe se concentre sur l'essentiel, vendre.</span></li>
+        <li data-rv><i><svg><use href="#coche"/></svg></i><span><u>Reliez vos outils</u> pour automatiser les étapes clés et gagner du temps.</span></li>
+        <li data-rv><i><svg><use href="#coche"/></svg></i><span><u>Levez les blocages</u> et gardez des processus qui coulent sans effort.</span></li>
+        <li data-rv><i><svg><use href="#coche"/></svg></i><span><u>Suivez la performance</u> en temps réel et ajustez vite pour tenir le rythme.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="modules centre" id="modules">
+  <div class="wrap">
+    <h2 data-lignes>Tout ce que vous allez<br><em>trouver dans Vendix</em></h2>
+    <div class="grille-mod">
+      <article class="mod" data-rv><div class="illu" aria-hidden="true"><span class="entonnoir"></span></div><div class="voile"></div><span class="num">MODULE 01</span><h3>Les bases de la vente</h3><span class="sig"><svg><use href="#etiq"/></svg>VENDI<b>X</b></span></article>
+      <article class="mod" data-rv><div class="illu" aria-hidden="true"><span class="ecrans"><i></i><i></i><i></i></span></div><div class="voile"></div><span class="num">MODULE 02</span><h3>Prospection et qualification</h3><span class="sig"><svg><use href="#etiq"/></svg>VENDI<b>X</b></span></article>
+      <article class="mod" data-rv><div class="emplacement" data-img="L-module-abord" data-format="9:16" data-alt="Yannick Ekambi au téléphone avec un client, sourire, casque sur une oreille"><img src="images/L-module-abord.jpg" alt="Yannick Ekambi au téléphone avec un client, sourire, casque sur une oreille" loading="lazy" decoding="async" onerror="this.remove()"></div><div class="voile"></div><span class="num">MODULE 03</span><h3>L'approche commerciale</h3><span class="sig"><svg><use href="#etiq"/></svg>VENDI<b>X</b></span></article>
+      <article class="mod" data-rv><div class="emplacement" data-img="L-module-signature" data-format="9:16" data-alt="Poignée de main entre Yannick Ekambi et un client après une signature"><img src="images/L-module-signature.jpg" alt="Poignée de main entre Yannick Ekambi et un client après une signature" loading="lazy" decoding="async" onerror="this.remove()"></div><div class="voile"></div><span class="num">MODULE 04</span><h3>Négociation et signature</h3><span class="sig"><svg><use href="#etiq"/></svg>VENDI<b>X</b></span></article>
+      <article class="mod" data-rv><div class="illu" aria-hidden="true"><svg class="reseau" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width=".8" opacity=".6"><path d="M10 30 L45 20 L90 35 M45 20 L30 60 L70 70 L90 35 M30 60 L5 75 M70 70 L95 85"/></g><g fill="#fff"><circle cx="45" cy="20" r="6"/><circle cx="30" cy="60" r="6"/><circle cx="70" cy="70" r="6"/><circle cx="90" cy="35" r="5"/></g></svg></div><div class="voile"></div><span class="num">MODULE 05</span><h3>Le suivi stratégique</h3><span class="sig"><svg><use href="#etiq"/></svg>VENDI<b>X</b></span></article>
+      <article class="mod" data-rv><div class="emplacement" data-img="L-module-objections" data-format="9:16" data-alt="Une main retient une rangée de dominos en bois avant leur chute"><img src="images/L-module-objections.jpg" alt="Une main retient une rangée de dominos en bois avant leur chute" loading="lazy" decoding="async" onerror="this.remove()"></div><div class="voile"></div><span class="num">MODULE 06</span><h3>Traiter les objections</h3><span class="sig"><svg><use href="#etiq"/></svg>VENDI<b>X</b></span></article>
+      <article class="mod" data-rv><div class="emplacement" data-img="L-module-reglages" data-format="9:16" data-alt="Gros plan sur des doigts qui tournent un bouton de réglage métallique"><img src="images/L-module-reglages.jpg" alt="Gros plan sur des doigts qui tournent un bouton de réglage métallique" loading="lazy" decoding="async" onerror="this.remove()"></div><div class="voile"></div><span class="num">MODULE 07</span><h3>Régler la performance</h3><span class="sig"><svg><use href="#etiq"/></svg>VENDI<b>X</b></span></article>
+      <article class="mod" data-rv><div class="illu" aria-hidden="true"><span class="puce-ia"></span></div><div class="voile"></div><span class="num">MODULE 08</span><h3>Croissance et automatisation</h3><span class="sig"><svg><use href="#etiq"/></svg>VENDI<b>X</b></span></article>
+    </div>
+    <p style="margin-top:46px" data-rv><a class="btn reflet" href="#offre" data-aimant>Je m'inscris <svg><use href="#fleche"/></svg></a></p>
+  </div>
+</section>
+
+<section class="bonus centre trame" id="bonus">
+  <div class="wrap">
+    <h2 data-lignes>Ce que vous recevez<br><em>en rejoignant Vendix aujourd'hui</em></h2>
+    <div class="fil">
+      <div class="b-item">
+        <div class="etiq" data-rv>Bonus <span class="j">exclusif</span></div>
+        <div class="corps">
+          <div class="ecran" data-rv>
+            <div class="cadre">
+              <div class="emplacement" data-img="L-masterclass" data-format="16:9" data-alt="Yannick Ekambi anime une masterclass en direct depuis son bureau, ordinateur ouvert"><img src="images/L-masterclass.jpg" alt="Yannick Ekambi anime une masterclass en direct depuis son bureau, ordinateur ouvert" loading="lazy" decoding="async" onerror="this.remove()"></div>
+              <span class="direct"><i></i>En direct</span>
+              <span class="lecture" aria-hidden="true"><svg><use href="#play"/></svg></span>
+            </div>
+            <div class="commandes" aria-hidden="true"><span><svg><use href="#camera"/></svg></span><span><svg><use href="#micro"/></svg></span><span><svg><use href="#son"/></svg></span><span><svg><use href="#sortir"/></svg></span><span class="raccroche"><svg><use href="#tel"/></svg></span></div>
+          </div>
+          <div data-rv>
+            <div class="kicker"><svg><use href="#cerveau"/></svg>Savoir</div>
+            <h3>Masterclass de <em>signature</em> des ventes</h3>
+            <p>Animée en direct par Yannick Ekambi, directeur commercial : les techniques avancées pour conclure les négociations difficiles et faire monter votre taux de conversion.</p>
+          </div>
+        </div>
+      </div>
+      <div class="b-item">
+        <div class="etiq" data-rv>Bonus <span class="j">02</span></div>
+        <div class="corps">
+          <div class="ecran" data-rv>
+            <div class="dossiers">
+              <div class="apps" aria-hidden="true"><span style="color:#3B82F6"><svg><use href="#doc"/></svg></span><span style="color:#22A06B"><svg><use href="#tableur"/></svg></span><span>+7</span></div>
+              <ul>
+                <li><svg aria-hidden="true"><use href="#dossier"/></svg>Tableaux de suivi<em>Télécharger</em></li>
+                <li><svg aria-hidden="true"><use href="#dossier"/></svg>Rapports<em>Télécharger</em></li>
+                <li><svg aria-hidden="true"><use href="#dossier"/></svg>Scripts d'appel<em>Télécharger</em></li>
+                <li><svg aria-hidden="true"><use href="#dossier"/></svg>Messages types<em>Télécharger</em></li>
+                <li><svg aria-hidden="true"><use href="#dossier"/></svg>Listes de contrôle<em>Télécharger</em></li>
+              </ul>
+            </div>
+          </div>
+          <div data-rv>
+            <div class="kicker"><svg><use href="#engrenage"/></svg>Outils</div>
+            <h3>Le kit de documents pour <em>vendre à haut niveau</em></h3>
+            <p>Une collection de tableaux, de messages types, de scripts de prospection et de listes de contrôle, prêts à servir pour accélérer vos résultats.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="offre" id="offre">
+  <div class="wrap">
+    <div class="gauche" data-rv><h2>Votre investissement<br><em>sera seulement de</em></h2></div>
+    <div class="prix" data-rv>
+      <span class="medaille" aria-hidden="true"><svg><use href="#etiq"/></svg></span>
+      <div class="nom">VENDI<b>X</b></div>
+      <div class="avant">AU LIEU DE <s>390 000 F</s></div>
+      <div class="fois">12 × de</div>
+      <span class="gros">19 900<small> F</small></span>
+      <div class="comptant">ou 199 000 F comptant</div>
+      <div class="moyens" aria-label="Moyens de paiement acceptés"><span>Orange Money</span><span>MTN MoMo</span><span>Wave</span><span>Visa</span><span>Mastercard</span></div>
+      <a class="btn reflet" href="https://wa.me/22500000000?text=Bonjour%2C%20je%20veux%20rejoindre%20Vendix." target="_blank" rel="noopener" data-aimant>Je m'inscris <svg><use href="#fleche"/></svg></a>
+      <span class="sur">Achat 100 % sécurisé</span>
+    </div>
+    <ul class="liste" data-rv>
+      <li><svg aria-hidden="true"><use href="#coche"/></svg>La formation Vendix complète</li>
+      <li><svg aria-hidden="true"><use href="#coche"/></svg>L'accès à notre groupe privé WhatsApp</li>
+      <li><svg aria-hidden="true"><use href="#coche"/></svg>La masterclass de signature des ventes</li>
+      <li><svg aria-hidden="true"><use href="#coche"/></svg>Des séances de suivi en groupe chaque semaine</li>
+      <li><svg aria-hidden="true"><use href="#coche"/></svg>Un certificat de fin de formation</li>
+    </ul>
+  </div>
+  <div class="descente" aria-hidden="true"><svg><use href="#bas"/></svg></div>
+</section>
+
+<section class="garantie" id="garantie">
+  <div class="wrap">
+    <div class="sceau" data-rv role="img" aria-label="Sceau : 7 jours de garantie">
+      <svg class="s" viewBox="0 0 240 240" aria-hidden="true"><circle cx="120" cy="120" r="98" fill="#C6EA0B"/><circle cx="120" cy="120" r="98" fill="none" stroke="#C6EA0B" stroke-width="26" stroke-linecap="round" stroke-dasharray="0 25.65"/><circle cx="120" cy="120" r="82" fill="none" stroke="#0B051B" stroke-width="3"/></svg>
+      <div class="txt" aria-hidden="true"><span class="etoiles">★★★★★</span><span class="sept">7</span><span class="jours">jours de<br>garantie</span></div>
+    </div>
+    <div>
+      <h2 data-lignes>Votre risque est NUL !<br><em>Vous avez 7 jours de garantie</em></h2>
+      <p data-rv>Si, pour une raison ou une autre, le contenu ou vos premiers résultats ne vous satisfont pas, il suffit de nous écrire dans les 7 jours qui suivent l'achat : nous vous remboursons 100 % du montant payé.</p>
+      <p data-rv><span class="j">Sans complication, sans question.</span> Notre priorité : que vous vous sentiez en confiance au moment d'investir dans la méthode.</p>
+    </div>
+  </div>
+</section>
+
+<section class="histoires centre" id="histoires">
+  <div class="wrap">
+    <h2 data-lignes>Des histoires <em>vraies</em> d'élèves</h2>
+    <p class="chapo" data-rv>Voyez comment Vendix a porté des équipes commerciales et mené des entreprises plus haut.</p>
+    <div class="cartes-h">
+      <div class="c-h" data-rv><div><span class="tag">Élève</span><h3>Nadège<em class="j">Fotso</em></h3><p>« Nos conversions ont grimpé de 50 % en 3 mois. »</p></div><div class="photo"><div class="emplacement" data-img="L-temoin-1" data-format="3:4" data-alt="Portrait souriant de Nadège Fotso, cheffe d'équipe commerciale"><img src="images/L-temoin-1.jpg" alt="Portrait souriant de Nadège Fotso, cheffe d'équipe commerciale" loading="lazy" decoding="async" onerror="this.remove()"></div></div><span class="lecture" aria-hidden="true"><svg><use href="#play"/></svg></span></div>
+      <div class="c-h" data-rv><div><span class="tag">Élève</span><h3>Ibrahim<em class="j">Sow</em></h3><p>« Cette méthode nous donne des résultats réguliers. »</p></div><div class="photo"><div class="emplacement" data-img="L-temoin-2" data-format="3:4" data-alt="Portrait d'Ibrahim Sow, chemise bleu clair, sourire franc"><img src="images/L-temoin-2.jpg" alt="Portrait d'Ibrahim Sow, chemise bleu clair, sourire franc" loading="lazy" decoding="async" onerror="this.remove()"></div></div><span class="lecture" aria-hidden="true"><svg><use href="#play"/></svg></span></div>
+      <div class="c-h" data-rv><div><span class="tag">Élève</span><h3>Estelle<em class="j">Kaboré</em></h3><p>« Notre façon de conclure a complètement changé. »</p></div><div class="photo"><div class="emplacement" data-img="L-temoin-3" data-format="3:4" data-alt="Portrait d'Estelle Kaboré, tailleur bleu nuit, bras croisés"><img src="images/L-temoin-3.jpg" alt="Portrait d'Estelle Kaboré, tailleur bleu nuit, bras croisés" loading="lazy" decoding="async" onerror="this.remove()"></div></div><span class="lecture" aria-hidden="true"><svg><use href="#play"/></svg></span></div>
+    </div>
+  </div>
+</section>
+<div class="filet" aria-hidden="true"></div>
+
+<section class="formateur" id="formateur">
+  <div class="wrap">
+    <div data-rv><div class="cadre-jaune"><div class="emplacement" data-img="L-portrait" data-format="1:1" data-alt="Portrait de Yannick Ekambi, sourire, bras croisés, sur fond jaune fluo"><img src="images/L-portrait.jpg" alt="Portrait de Yannick Ekambi, sourire, bras croisés, sur fond jaune fluo" loading="lazy" decoding="async" onerror="this.remove()"></div></div></div>
+    <div>
+      <h2 data-lignes>Yannick <em>Ekambi</em></h2>
+      <p data-rv>Yannick a plus de 12 ans d'expérience à la tête d'équipes commerciales qui performent, à Douala puis dans toute la sous-région.</p>
+      <p data-rv>Connu pour transformer des équipes en vraies machines à ventes, il a aidé des dizaines d'entreprises à augmenter leurs conversions et à tenir des objectifs ambitieux.</p>
+      <p data-rv>Sa méthode est pratique, tournée vers le résultat, et appliquée par des professionnels qui veulent faire grandir leur chiffre de façon régulière.</p>
+      <a class="btn reflet" href="#offre" data-rv data-aimant>Rejoindre Vendix <svg><use href="#fleche"/></svg></a>
+    </div>
+  </div>
+</section>
+<div class="filet" aria-hidden="true"></div>
+
+<section class="faq centre trame" id="faq">
+  <div class="wrap">
+    <div class="trait" aria-hidden="true"></div>
+    <h2 data-rv>Questions <em>fréquentes</em></h2>
+    <div class="liste">
+      <details data-rv><summary>1. La formation convient-elle aux débutants ?</summary><p>Oui. Le premier module reprend les bases ; les suivants vont jusqu'aux techniques de signature avancées.</p></details>
+      <details data-rv><summary>2. Combien de temps dure la formation ?</summary><p>Huit modules, à suivre en six semaines à votre rythme, avec une séance de groupe chaque semaine.</p></details>
+      <details data-rv><summary>3. Comment accéder au contenu ?</summary><p>Après le paiement, vous recevez vos accès par WhatsApp et par e-mail, sur téléphone comme sur ordinateur.</p></details>
+      <details data-rv><summary>4. Y a-t-il un suivi pendant la formation ?</summary><p>Oui : le groupe privé WhatsApp et les séances hebdomadaires avec Yannick et son équipe.</p></details>
+      <details data-rv><summary>5. Les contenus sont-ils mis à jour ?</summary><p>Oui, chaque trimestre, et les mises à jour sont incluses dans votre accès.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer id="pied">
+  <div class="wrap">
+    <span>Tous droits réservés, Vendix 2026</span>
+    <div class="pf-centre"><span class="pf-par">Réalisé par <strong>Yedidia Ruben - Digital Strategist</strong></span></div><div class="droite"><a href="#pied">Politique de confidentialité</a><a href="#pied">Conditions d'utilisation</a></div>
+  </div>
+</footer>
+
+<script src="../../commun/anim.js" defer></script>
+
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template L<b>Ruban jaune nuit</b></span><nav aria-label="Autour du template L"><ul><li><a href="./">Template</a></li><li><a href="avec-images.html" aria-current=page>Template avec images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html">Design<small>DESIGN.md</small></a></li><li><a href="prompt.html">Prompt de la page<small>kit</small></a></li><li><a href="prompts.html">Prompts des images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template L : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">L</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+</body>
+</html>

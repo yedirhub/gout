@@ -97,16 +97,16 @@ Construis une page de vente façon carnet de collage : fond crème quadrillé `#
 
 ## 2. Les sections, dans l'ordre
 
-01. #haut · « Votre meilleur portfolio de social media, c'est votre propre profil. »
-02. #pour-qui · « Cette méthode est pour vous qui : »
-03. #secret · « Parce qu'une social media qui devient une référence (et se paie comme telle), c'est une social media qui le prouve sur son propre profil. »
-04. #methode · « La méthode ÉCLAT est une méthode à moi, en 5 étapes, créée pour les social media qui ne savent pas créer du contenu pour elles-mêmes. »
-05. #avis · « et détendez-vous, je ne vous demande pas de me croire les yeux fermés. Croyez plutôt ce que d'autres social media ont dit après leur premier contact avec la méthode : »
-06. #contenu · « Jetez un œil à ce que vous allez trouver à l'intérieur (petits spoilers) »
-07. #prix
-08. #qui · « Maëlle Ouattara ? »
-09. #faq · « Il vous reste une question ? Détendez-vous, j'y réponds »
-10. #fin · « montez sur cette scène, une bonne fois pour toutes »
+01. #haut · Le hero : Dire qui, quoi, pour qui en une phrase, puis faire cliquer. Le geste : bords déchirés et gribouillis.
+02. #pour-qui · Pour qui : Trier : celui qui n'est pas la cible s'en va, celui qui l'est se sent choisi.
+03. #secret · La bascule : Montrer pourquoi cette solution est différente.
+04. #methode · Le contenu : Rendre l'offre concrète, morceau par morceau.
+05. #avis · La preuve : Faire parler les autres : « ça a marché pour des gens comme moi ».
+06. #contenu · Le contenu : Rendre l'offre concrète, morceau par morceau.
+07. #prix · L'offre : Convertir : le prix, ce qu'il contient, le bouton.
+08. #qui · Qui est derrière : Un humain derrière l'offre, et un lieu réel.
+09. #faq · La FAQ : Lever les dernières objections.
+10. #fin · La relance : Redonner le bouton à celui qui s'est décidé en route.
 
 ## 3. Les animations
 

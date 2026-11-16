@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Template X · Braise de cinéma · Prompt · Yedidia Ruben - Digital Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/flottant.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0E0E0D;color:#E9E5DE;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 24px;background:rgba(14,14,13,.9);backdrop-filter:blur(10px);border-bottom:1px solid #262624;font-size:14px}
+header .titre{color:#A9A298;white-space:nowrap} header .titre b{color:#E9E5DE;font-weight:500}
+.onglets{display:flex;gap:2px;padding:4px;border:1px solid #2C2A27;border-radius:999px}
+.onglets a{height:32px;padding:0 14px;display:inline-flex;align-items:center;border-radius:999px;color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s,background .25s}
+.onglets a:hover{color:#fff}
+.onglets a[aria-current]{background:#E9E5DE;color:#141312}
+.retour{color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s} .retour:hover{color:#D9B48A}
+main{padding:40px 20px 0}
+.credit{width:min(1200px,100%);margin:0 auto 22px;font-size:14px;line-height:1.6;color:#A9A298}
+.credit b{color:#E9E5DE;font-weight:500} .credit a{color:#D9B48A;border-bottom:1px solid rgba(217,180,138,.4)}
+main img{display:block;width:min(1200px,100%);margin-inline:auto;border-radius:10px;box-shadow:0 30px 80px -40px #000}
+main img.tel{width:min(390px,100%)}
+.etiquette{width:min(1200px,100%);margin:48px auto 14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A847C}
+.outils{width:min(980px,100%);margin:0 auto 16px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.outils p{font-size:14px;color:#A9A298;line-height:1.6;max-width:560px}
+.outils div{display:flex;gap:8px}
+.outils button,.outils a{font:inherit;font-size:13px;height:38px;padding:0 16px;border-radius:999px;border:1px solid #3A3733;background:none;color:#E9E5DE;cursor:pointer;display:inline-flex;align-items:center;transition:border-color .25s}
+.outils button{background:#D9B48A;border-color:#D9B48A;color:#141312;font-weight:500}
+.outils a:hover{border-color:#D9B48A}
+pre{width:min(980px,100%);margin:0 auto;padding:28px;background:#151514;border:1px solid #262624;border-radius:12px;overflow:auto;max-height:72vh;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#D8D2C8;white-space:pre-wrap;word-break:break-word}
+footer{text-align:center;padding:48px 20px 56px;font-size:13px;color:#8A847C;line-height:1.6}
+footer strong{display:block;color:#E9E5DE;font-weight:500;font-size:15px}
+@media (max-width:1180px){.onglets a{padding:0 10px}}
+@media (max-width:980px){header{justify-content:center;padding:14px 16px} .onglets,.retour{display:none} header .titre{white-space:normal;text-align:center}}
+/* ancien : sous 980 px, onglets en bande qui défilait de côté ; retirée le 16/11/2026, le bouton flottant porte la navigation */
+</style>
+</head>
+<body>
+<header>
+  <span class="titre">Template X · <b>Braise de cinéma</b></span>
+  <nav class="onglets" aria-label="Autour du template"><a href="./">La page</a><a href="avec-images.html">Avec images</a><a href="source.html">Source</a><a href="apercu.html">Notre version</a><a href="design.html">DESIGN.md</a><a href="prompt.html" aria-current=page>Prompt</a><a href="prompts.html">Prompts images</a></nav>
+  <a class="retour" href="/">Tous les templates</a>
+</header>
+<main>
+<div class="outils"><p>Le prompt complet pour refaire cette page avec le même rendu : la fiche de style, les sections dans l'ordre, le moteur d'animation et les règles.</p><div><button type="button" id="copier">Copier</button><a href="PROMPT.md" download>Télécharger</a></div></div>
+<pre id="texte"># Prompt complet · Template X « Braise de cinéma »
+# Par Yedidia Ruben - Digital Strategist. À coller tel quel dans une IA qui code (Claude, ChatGPT, Gemini).
+
+Tu es un designer web senior. Construis une page de vente complète en un seul fichier HTML, avec exactement le rendu décrit ci-dessous : couleurs, polices, tailles, espacements, boutons, cartes, animations. La fiche de style fait foi ; en cas de doute, applique-la à la lettre plutôt que d&#x27;improviser.
+
+## 1. La fiche de style (DESIGN.md)
+
+# DESIGN.md : Style X « Braise de cinéma » (d&#x27;après la page « Página Castrum Mídias - Tráfego Pago », Jose Justo)
+
+&gt; **Source** : `inspi/behance/236475491/` (01.png bureau 2880 × 10365, 02.png téléphone 630 × 13694), page d&#x27;une agence de publicité payante « Castrum Mídias », Behance 236475491. Relevé le 16/11/2026.
+&gt; **Demande de Ruben** : pas de consigne de détail, lot du 16/11/2026.
+
+## 1. Ambiance et intention
+
+- Une agence de publicité vendue comme un film noir : tout est sombre, la lumière vient d&#x27;une lampe et d&#x27;une lueur orange dans les coins.
+- Le noir n&#x27;est jamais plat : des halos braise (`#7F341D`) glissent en haut à gauche du hero, en coin du tableau, au bord de la décision.
+- Un seul accent, l&#x27;orange brûlé, réservé à l&#x27;action : boutons, pastilles d&#x27;icônes, têtes de tableau, numéros, flèches.
+- Les titres mêlent une fine en capitales ou en bas de casse avec une chute en **italique extra-grasse** : le mot qui compte claque.
+- La preuve est mise en scène : des notifications « Vous avez reçu un paiement » flottent sur le portrait.
+
+## 2. Palette et rôles
+
+Relevés au pixel (PIL) sur `01.png` réduit à 1000 px.
+
+- **Noir** `#000000` : fond du hero, de la FAQ, du pied.
+- **Nuit** `#070707` : fond des sections problème et piliers.
+- **Carte** `#0C0C0C` / `#101010` : panneau « Qui », cartes d&#x27;avis, bande des témoignages.
+- **Rangée** `#0D0F12` (relevé `#0B0F10` / `#0E0F11`) : rangées de la FAQ, très légèrement bleutées.
+- **Orange** `#FF4C01` : tête droite du tableau, boutons carrés de la FAQ, pastilles ; `#F85707` : dégradé des boutons.
+- **Orange brûlé** `#B03702` : tête gauche du tableau (« les autres »).
+- **Braise** `#7F341D` / `#88381F` : halos de lumière dans les coins.
+- **Fond portrait** `#D4592F` : le fond orange de la photo « Qui dirige ».
+- **Gris** `#8A8A8A` (relevé `#737373`, éclairci pour AA) : colonne « les autres » du tableau.
+
+## 3. Typographie
+
+- Non nommée par l&#x27;auteur. Relevé à l&#x27;œil : grotesque géométrique à graisses extrêmes, fine 300 et italique 800. La plus proche sur Google Fonts : **Inter Tight**. Le logo du pied est manuscrit : **Caveat** 700.
+
+| Rôle | Police | Taille bureau / téléphone | Graisse | Interligne | Approche |
+|---|---|---|---|---|---|
+| Titre du hero | Inter Tight capitales | 48 / 32 px | 300 puis 800 | 1,08 | -0,01 em |
+| Titre de section | Inter Tight | 32 / 26 px | 300 + italique 800 | 1,3 | -0,01 em |
+| Surtitre | Inter Tight italique capitales | 12 px | 300 | 1 | 0,55 em (0,32 au téléphone) |
+| Texte | Inter Tight | 12,5 à 16 px | 400 | 1,5 | 0 |
+| Bouton | Inter Tight capitales | 13 px | 700 | 1,2 | 0,02 em |
+| Question FAQ | Inter Tight | 14 px | 600 | 1,35 | 0 |
+| Logo du pied | Caveat | 34 px | 700 | 0,8 | 0 |
+
+## 4. Composants
+
+- **Bouton** : bloc orange `#FF4C01` aux coins 6 px, 48 px de haut, capitales grasses, petit carré translucide à flèche à droite, halo orange dessous.
+- **Surtitre** : capitales italiques fines très espacées, orange, au-dessus de chaque titre.
+- **Notification de paiement** : carte vitrée sombre, carré orange à flamme, « Vous avez reçu un paiement », montant en FCFA et heure ; elle flotte (6 s).
+- **Pastilles de chiffres** : petits cadres à filet `#2A2A2A`, chiffre orange puis libellé blanc gras.
+- **Carte pilier** : filet orange en haut, pastille orange accrochée au filet (coins bas arrondis), dégradé noir vers transparent.
+- **Tableau comparatif** : deux têtes (brûlé / orange vif), rangées séparées d&#x27;un filet, colonne gauche grise, colonne droite blanche.
+- **Chemin numéroté** : carte sombre avec un carré orange chiffré collé au bord haut (1 à droite, 2 à gauche).
+- **Panneau scindé** : photo sur fond orange à gauche, texte sur carte noire à droite, coins 10 px.
+- **Carrousel d&#x27;avis** : cartes de 230 px, vignette carrée, 5 étoiles orange, bords effacés par masque, flèches rondes orange.
+- **FAQ** : rangée sombre à filet, bouton carré orange à chevron collé à droite ; accordéon natif.
+
+## 5. Mise en page
+
+- Colonne de 1080 px ; FAQ resserrée à 1000 px.
+- Ordre : hero, problème (image gauche / texte droite), piliers en 4 colonnes, comparaison en tableau, décision (2 cartes autour d&#x27;une image), qui (panneau scindé), témoignages en carrousel, FAQ (titre à gauche / questions à droite), pied à 4 colonnes.
+- Sections séparées par un filet `#1E1E1E` ; chaque section relance avec le même bouton orange.
+- Espacement vertical : 60 à 110 px.
+
+## 6. Profondeur et élévation
+
+- Profondeur par la lumière, pas par l&#x27;ombre : halos braise en `radial-gradient` dans les coins, portrait fondu dans le noir à gauche et en bas.
+- Seuls les boutons et les notifications portent une ombre (halo orange, ombre noire profonde).
+- La nav est une barre vitrée (`backdrop-filter`) posée sur le hero.
+
+## 7. À faire, à ne pas faire
+
+- Faire : un seul accent orange, uniquement sur ce qui se clique ou se compte.
+- Faire : finir chaque titre par un mot en italique 800.
+- Ne pas faire : de fond gris clair ou de section blanche ; tout reste entre `#000` et `#121212`.
+- Ne pas faire : le gris relevé `#737373` pour du texte : trop faible sur noir, monter à `#8A8A8A`.
+
+## 8. Comportement responsive
+
+- Le téléphone suit 02.png : portrait en haut, texte centré dessous, piliers empilés, tableau gardé en 2 colonnes serrées, chemins 1 et 2 côte à côte sous l&#x27;image, panneau « Qui » photo au-dessus, FAQ centrée puis questions.
+- Sous 1000 px : nav réduite au logo et au bouton Contact ; piliers en 2 × 2.
+- Sous 560 px : piliers en 1 colonne, une seule notification, pied en 1 colonne.
+
+## 9. Mouvement
+
+- Moteur commun : `data-rv` partout, `data-lignes` sur les titres, `data-aimant` sur les boutons, barre de progression orange.
+- Propre à X : **les notifications de paiement flottent** en décalé ; **le carrousel** défile par flèches et au doigt (scroll-snap), démarré au centre.
+
+## 10. Images
+
+Le personnage : **Kevin Ondo**, 28 ans, Brazzaville, peau brun foncé, mini-dreads courts, mince, décontracté ; signature : casque audio autour du cou, sweat à capuche. Ici gestionnaire de publicité payante, fondateur de Mayombe Médias.
+
+| id | Format | Section | Rôle | Kevin |
+|---|---|---|---|---|
+| X-hero | 3:4 | hero | portrait en clair-obscur, fondu dans le noir | oui |
+| X-probleme | 1:1 | probleme | patron de dos dans un couloir, billets qui tombent | non |
+| X-decision | 4:3 | decision | Kevin confiant devant un commerçant inquiet | oui |
+| X-portrait | 3:4 | qui | portrait sur fond orange, main au menton | oui |
+| X-temoin-1 | 1:1 | temoignages | vignette d&#x27;avis, Aminata Koné | non |
+| X-temoin-2 | 1:1 | temoignages | vignette d&#x27;avis, Merveille Nzaba | non |
+| X-temoin-3 | 1:1 | temoignages | vignette d&#x27;avis, Fatou Diop | non |
+| X-faq | 4:3 | faq | Kevin au bureau, de nuit, répond à un message | oui |
+
+- Commandes détaillées : `images/commandes.json`.
+
+## 11. Non mesuré, et choix tranchés seul
+
+- Les polices (§3).
+- La marque « Mayombe Médias », les textes, les montants en FCFA.
+- Le décor du hall à colonnes derrière les piliers : rendu en dégradés CSS, pas en photo.
+- Les avatars du hero : initiales en CSS. Les 2 avis du bord du carrousel : sans photo, décoratifs (`aria-hidden`).
+- L&#x27;emplacement `X-faq` : ajouté (la source n&#x27;a pas d&#x27;image en FAQ) pour que Kevin tienne la moitié des images.
+- Le gris de la colonne « les autres » éclairci pour le contraste.
+
+## 12. Consigne pour l&#x27;IA
+
+Construis une page d&#x27;agence de publicité payante en noir profond `#000000`, avec un seul accent orange `#FF4C01` et des halos braise `#7F341D` dans les coins. Titres en Inter Tight fine, chaque titre finit par un mot en italique extra-gras. Surtitres orange en capitales italiques très espacées. Le hero montre un portrait en clair-obscur fondu dans le noir, avec des notifications de paiement qui flottent. Puis : problème en image et texte, 4 piliers à pastille orange, un tableau comparatif à deux têtes orange, deux chemins numérotés, un panneau « qui » sur fond orange, un carrousel d&#x27;avis, une FAQ à boutons carrés orange.
+
+## 2. Les sections, dans l&#x27;ordre
+
+01. #hero · Le hero : Dire qui, quoi, pour qui en une phrase, puis faire cliquer. Le geste : portrait en clair-obscur, paiements qui flottent.
+02. #probleme · La douleur : Le visiteur se reconnaît : « c&#x27;est moi ». Le geste : photo carrée à gauche, chute en italique grasse.
+03. #piliers · La bascule : Montrer pourquoi cette solution est différente. Le geste : 4 cartes à pastille orange accrochée au filet.
+04. #comparaison · La bascule : Montrer pourquoi cette solution est différente. Le geste : tableau à deux têtes : braise contre orange vif.
+05. #decision · La relance : Redonner le bouton à celui qui s&#x27;est décidé en route. Le geste : deux chemins numérotés autour d&#x27;une image.
+06. #qui · Qui est derrière : Un humain derrière l&#x27;offre, et un lieu réel. Le geste : panneau scindé, portrait sur fond orange.
+07. #temoignages · La preuve : Faire parler les autres : « ça a marché pour des gens comme moi ». Le geste : carrousel aux bords effacés, flèches orange.
+08. #faq · La FAQ : Lever les dernières objections. Le geste : rangées sombres à bouton orange carré.
+09. #pied · Le pied : La légitimité : nom, mentions, contact. Le geste : logo manuscrit, 4 colonnes de liens.
+
+## 3. Les animations
+
+Les animations passent par un petit moteur commun (anim.js + anim.css, fournis plus bas). On ne code pas d&#x27;animation à la main : on pose des attributs.
+- data-rv : l&#x27;élément apparaît au défilement, décalé de 70 ms dans son groupe.
+- data-lignes : un titre à &lt;br&gt; monte ligne par ligne derrière un masque.
+- data-compte=&quot;3200&quot; : le chiffre compte jusqu&#x27;à sa valeur quand il entre à l&#x27;écran.
+- data-parallaxe=&quot;0.15&quot; : l&#x27;élément glisse plus lentement que la page.
+- data-incline : la carte s&#x27;incline vers la souris (6° au plus).
+- data-aimant : le bouton est attiré par la souris (6 px au plus).
+- data-progression : la barre de lecture en haut de page.
+Tout s&#x27;arrête sous prefers-reduced-motion : la page reste lisible et complète.
+
+Le moteur, à coller tel quel dans la page :
+
+```css
+/* anim.css : les états de départ des effets de anim.js. Sans la classe .anime (JS absent ou
+   reduced-motion), tout est visible : une page ne doit jamais dépendre du JS pour s&#x27;afficher. */
+.anime [data-rv]{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.16,1,.3,1) var(--d,0ms),transform .8s cubic-bezier(.16,1,.3,1) var(--d,0ms)}
+.anime [data-rv].vu{opacity:1;transform:none}
+.anime [data-rv][data-lignes]{opacity:1;transform:none}
+.ligne{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.ligne&gt;span{display:block}
+.anime [data-lignes] .ligne&gt;span{transform:translateY(105%);transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.anime [data-lignes].vu .ligne&gt;span{transform:none}
+[data-parallaxe]{will-change:transform}
+[data-aimant]{transition:translate .35s cubic-bezier(.16,1,.3,1)}
+[data-progression]{position:fixed;top:0;left:0;right:0;height:2px;transform-origin:0 50%;transform:scaleX(0);z-index:100;pointer-events:none}
+/* Reflet qui balaie un bouton au survol : ajouter la classe .reflet au bouton. */
+.reflet{position:relative;overflow:hidden;isolation:isolate}
+.reflet::after{content:&quot;&quot;;position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.28) 50%,transparent 65%);transform:translateX(-120%)}
+.reflet:hover::after{transform:translateX(120%);transition:transform .9s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){.reflet::after{display:none}}
+```
+
+```js
+/* anim.js : le moteur de mouvement commun aux 4 styles (Goût IA, cycle 1).
+   Chaque page choisit ses effets par attributs ; le style (couleurs, durées) reste dans la page.
+   Rien ne bouge sous prefers-reduced-motion : tout est montré tel quel.
+
+   data-rv               apparaît au défilement (classe .vu posée), décalé de 70 ms dans son groupe
+   data-lignes           titre découpé ligne par ligne (&lt;br&gt;), chaque ligne monte à son tour
+   data-compte=&quot;3200&quot;    chiffre qui compte jusqu&#x27;à sa valeur quand il entre à l&#x27;écran
+   data-parallaxe=&quot;0.15&quot; glisse plus lentement que la page (facteur de vitesse)
+   data-incline          carte qui s&#x27;incline vers la souris (max 6°)
+   data-aimant           bouton attiré par la souris (max 6 px)
+   data-progression      barre de lecture en haut de page
+*/
+(() =&gt; {
+  const calme = matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;).matches;
+  const tactile = matchMedia(&#x27;(hover: none)&#x27;).matches;
+  const $$ = (s, r = document) =&gt; [...r.querySelectorAll(s)];
+
+  // Titres en lignes : on enveloppe chaque ligne pour la faire monter derrière un masque.
+  $$(&#x27;[data-lignes]&#x27;).forEach(t =&gt; {
+    const lignes = t.innerHTML.split(/&lt;br\s*\/?&gt;/i);
+    t.innerHTML = lignes.map((l, i) =&gt;
+      `&lt;span class=&quot;ligne&quot;&gt;&lt;span style=&quot;transition-delay:${i * 90}ms&quot;&gt;${l}&lt;/span&gt;&lt;/span&gt;`).join(&#x27;&#x27;);
+    t.setAttribute(&#x27;data-rv&#x27;, &#x27;&#x27;);
+  });
+
+  if (calme) {
+    $$(&#x27;[data-rv]&#x27;).forEach(e =&gt; e.classList.add(&#x27;vu&#x27;));
+    $$(&#x27;[data-compte]&#x27;).forEach(e =&gt; e.textContent = Number(e.dataset.compte).toLocaleString(&#x27;fr-FR&#x27;));
+    return;
+  }
+  document.documentElement.classList.add(&#x27;anime&#x27;);
+
+  // Apparition : décalage par fratrie, pour que les cartes d&#x27;une grille arrivent l&#x27;une après l&#x27;autre.
+  const vu = new IntersectionObserver(es =&gt; es.forEach(e =&gt; {
+    if (!e.isIntersecting) return;
+    e.target.classList.add(&#x27;vu&#x27;);
+    vu.unobserve(e.target);
+  }), { threshold: 0.12, rootMargin: &#x27;0px 0px -6% 0px&#x27; });
+  $$(&#x27;[data-rv]&#x27;).forEach(el =&gt; {
+    const freres = [...el.parentElement.children].filter(f =&gt; f.hasAttribute(&#x27;data-rv&#x27;));
+    el.style.setProperty(&#x27;--d&#x27;, `${Math.min(freres.indexOf(el), 6) * 70}ms`);
+    vu.observe(el);
+  });
+
+  // Compteurs.
+  const compte = new IntersectionObserver(es =&gt; es.forEach(e =&gt; {
+    if (!e.isIntersecting) return;
+    // Le chiffre final reste écrit tant qu&#x27;on ne le voit pas : une capture ou un robot lit la vraie valeur.
+    const el = e.target, fin = Number(el.dataset.compte), t0 = performance.now(), duree = 1600;
+    el.textContent = &#x27;0&#x27;;
+    const pas = t =&gt; {
+      const p = Math.min((t - t0) / duree, 1), v = 1 - Math.pow(1 - p, 4);
+      el.textContent = Math.round(fin * v).toLocaleString(&#x27;fr-FR&#x27;);
+      if (p &lt; 1) requestAnimationFrame(pas);
+    };
+    requestAnimationFrame(pas);
+    compte.unobserve(el);
+  }), { threshold: 0.6 });
+  $$(&#x27;[data-compte]&#x27;).forEach(e =&gt; compte.observe(e));
+
+  // Parallaxe et barre de lecture, sur une seule boucle.
+  const para = $$(&#x27;[data-parallaxe]&#x27;), barre = document.querySelector(&#x27;[data-progression]&#x27;);
+  let attente = false;
+  const defile = () =&gt; {
+    attente = false;
+    const h = innerHeight;
+    para.forEach(el =&gt; {
+      const r = el.getBoundingClientRect();
+      if (r.bottom &lt; -200 || r.top &gt; h + 200) return;
+      const decal = (r.top + r.height / 2 - h / 2) * Number(el.dataset.parallaxe);
+      el.style.transform = `translate3d(0,${decal.toFixed(1)}px,0)`;
+    });
+    if (barre) barre.style.transform = `scaleX(${scrollY / Math.max(1, document.body.scrollHeight - h)})`;
+  };
+  addEventListener(&#x27;scroll&#x27;, () =&gt; { if (!attente) { attente = true; requestAnimationFrame(defile); } }, { passive: true });
+  defile();
+
+  if (tactile) return;
+
+  // Inclinaison des cartes.
+  $$(&#x27;[data-incline]&#x27;).forEach(c =&gt; {
+    c.style.transition = &#x27;transform .5s cubic-bezier(.16,1,.3,1)&#x27;;
+    c.addEventListener(&#x27;mousemove&#x27;, e =&gt; {
+      const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      c.style.transform = `perspective(900px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 6).toFixed(2)}deg) translateY(-3px)`;
+    });
+    c.addEventListener(&#x27;mouseleave&#x27;, () =&gt; c.style.transform = &#x27;&#x27;);
+  });
+
+  // Boutons aimantés.
+  $$(&#x27;[data-aimant]&#x27;).forEach(b =&gt; {
+    b.addEventListener(&#x27;mousemove&#x27;, e =&gt; {
+      const r = b.getBoundingClientRect();
+      b.style.translate = `${((e.clientX - r.left) / r.width - .5) * 12}px ${((e.clientY - r.top) / r.height - .5) * 8}px`;
+    });
+    b.addEventListener(&#x27;mouseleave&#x27;, () =&gt; b.style.translate = &#x27;&#x27;);
+  });
+})();
+```
+
+## 4. Les règles
+
+- Un seul fichier HTML, CSS dans &lt;style&gt;, aucune bibliothèque en dehors des polices Google.
+- Textes en français, écrits pour le métier donné. Aucun tiret long (cadratin ou demi-cadratin) dans les textes.
+- Images : des silhouettes ou des dégradés de remplacement, jamais une photo inventée d&#x27;une vraie personne.
+- Chaque section porte un id (celui de la liste plus haut) pour qu&#x27;on puisse la viser.
+- Contraste du texte de 4,5 au moins. La page tient de 360 à 1920 px de large sans débordement horizontal.
+- Le bouton principal et sa preuve tiennent dans le premier écran du téléphone.
+
+## 5. Ce que tu rends
+
+Le fichier HTML complet, prêt à ouvrir. Puis, en 5 lignes, ce que tu as dû deviner faute de précision dans la fiche.
+</pre>
+</main>
+<script>
+const b=document.getElementById('copier');
+b.onclick=async()=>{await navigator.clipboard.writeText(document.getElementById('texte').textContent);b.textContent='Copié';setTimeout(()=>b.textContent='Copier',1800)};
+</script>
+<footer>Réalisé par<strong>Yedidia Ruben - Digital Strategist</strong></footer>
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template X<b>Braise de cinéma</b></span><nav aria-label="Autour du template X"><ul><li><a href="./">Template</a></li><li><a href="avec-images.html">Template avec images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html">Design<small>DESIGN.md</small></a></li><li><a href="prompt.html" aria-current=page>Prompt de la page<small>kit</small></a></li><li><a href="prompts.html">Prompts des images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template X : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">X</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+
+</body>
+</html>

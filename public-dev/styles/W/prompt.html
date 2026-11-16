@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Template W · Bleu clinique · Prompt · Yedidia Ruben - Digital Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/flottant.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0E0E0D;color:#E9E5DE;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 24px;background:rgba(14,14,13,.9);backdrop-filter:blur(10px);border-bottom:1px solid #262624;font-size:14px}
+header .titre{color:#A9A298;white-space:nowrap} header .titre b{color:#E9E5DE;font-weight:500}
+.onglets{display:flex;gap:2px;padding:4px;border:1px solid #2C2A27;border-radius:999px}
+.onglets a{height:32px;padding:0 14px;display:inline-flex;align-items:center;border-radius:999px;color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s,background .25s}
+.onglets a:hover{color:#fff}
+.onglets a[aria-current]{background:#E9E5DE;color:#141312}
+.retour{color:#A9A298;font-size:13px;white-space:nowrap;transition:color .25s} .retour:hover{color:#D9B48A}
+main{padding:40px 20px 0}
+.credit{width:min(1200px,100%);margin:0 auto 22px;font-size:14px;line-height:1.6;color:#A9A298}
+.credit b{color:#E9E5DE;font-weight:500} .credit a{color:#D9B48A;border-bottom:1px solid rgba(217,180,138,.4)}
+main img{display:block;width:min(1200px,100%);margin-inline:auto;border-radius:10px;box-shadow:0 30px 80px -40px #000}
+main img.tel{width:min(390px,100%)}
+.etiquette{width:min(1200px,100%);margin:48px auto 14px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#8A847C}
+.outils{width:min(980px,100%);margin:0 auto 16px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.outils p{font-size:14px;color:#A9A298;line-height:1.6;max-width:560px}
+.outils div{display:flex;gap:8px}
+.outils button,.outils a{font:inherit;font-size:13px;height:38px;padding:0 16px;border-radius:999px;border:1px solid #3A3733;background:none;color:#E9E5DE;cursor:pointer;display:inline-flex;align-items:center;transition:border-color .25s}
+.outils button{background:#D9B48A;border-color:#D9B48A;color:#141312;font-weight:500}
+.outils a:hover{border-color:#D9B48A}
+pre{width:min(980px,100%);margin:0 auto;padding:28px;background:#151514;border:1px solid #262624;border-radius:12px;overflow:auto;max-height:72vh;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#D8D2C8;white-space:pre-wrap;word-break:break-word}
+footer{text-align:center;padding:48px 20px 56px;font-size:13px;color:#8A847C;line-height:1.6}
+footer strong{display:block;color:#E9E5DE;font-weight:500;font-size:15px}
+@media (max-width:1180px){.onglets a{padding:0 10px}}
+@media (max-width:980px){header{justify-content:center;padding:14px 16px} .onglets,.retour{display:none} header .titre{white-space:normal;text-align:center}}
+/* ancien : sous 980 px, onglets en bande qui défilait de côté ; retirée le 16/11/2026, le bouton flottant porte la navigation */
+</style>
+</head>
+<body>
+<header>
+  <span class="titre">Template W · <b>Bleu clinique</b></span>
+  <nav class="onglets" aria-label="Autour du template"><a href="./">La page</a><a href="avec-images.html">Avec images</a><a href="source.html">Source</a><a href="apercu.html">Notre version</a><a href="design.html">DESIGN.md</a><a href="prompt.html" aria-current=page>Prompt</a><a href="prompts.html">Prompts images</a></nav>
+  <a class="retour" href="/">Tous les templates</a>
+</header>
+<main>
+<div class="outils"><p>Le prompt complet pour refaire cette page avec le même rendu : la fiche de style, les sections dans l'ordre, le moteur d'animation et les règles.</p><div><button type="button" id="copier">Copier</button><a href="PROMPT.md" download>Télécharger</a></div></div>
+<pre id="texte"># Prompt complet · Template W « Bleu clinique »
+# Par Yedidia Ruben - Digital Strategist. À coller tel quel dans une IA qui code (Claude, ChatGPT, Gemini).
+
+Tu es un designer web senior. Construis une page de vente complète en un seul fichier HTML, avec exactement le rendu décrit ci-dessous : couleurs, polices, tailles, espacements, boutons, cartes, animations. La fiche de style fait foi ; en cas de doute, applique-la à la lettre plutôt que d&#x27;improviser.
+
+## 1. La fiche de style (DESIGN.md)
+
+# DESIGN.md : Style W « Bleu clinique » (d&#x27;après la page « Site Institucional - MedicZ Empresas », Jean Lucas)
+
+&gt; **Source** : `inspi/behance/253385723/01.png` (1920 x 7 867 px), page d&#x27;accueil institutionnelle d&#x27;une offre de télémédecine pour entreprises, Behance 253385723. Relevé le 16/11/2026.
+&gt; **Demande de Ruben** : pas de consigne de détail, lot du 16/11/2026.
+
+## 1. Ambiance et intention
+
+- Un site d&#x27;entreprise, pas une page de vente : il présente, rassure et mène vers une demande de proposition.
+- Propre comme une clinique : blanc, gris très pâle, bleu vif pour l&#x27;action, bleu marque pour les grands aplats.
+- L&#x27;application est le héros : tablette et téléphone mis en scène, entourés de petites bulles bleu pâle qui nomment les services.
+- Chaque bloc s&#x27;ouvre sur une petite pastille bleue qui dit de quoi on parle.
+
+## 2. Palette et rôles
+
+Relevés au pixel sur `01.png` (PIL).
+
+- **Bleu vif** `#125CFE` : boutons pleins, chevrons de la FAQ, phrase finale en lien.
+- **Bleu marque** `#005AB2` (relevé `#005AB2`) : bande derrière la tablette, carte de formule vedette, pied, filets des listes.
+- **Marine** `#0D2D3D` (relevé `#0D2D3D`) : titres ; **bleu nuit** `#021B52` : le logo.
+- **Texte** `#484F58` ; **texte doux** `#6B7076` (relevé `#7E8182`, foncé pour le contraste).
+- **Fond gris** `#EFF1F3` : hero, formules, application ; **bleu pâle** `#F0F6FF` : panneaux et encarts.
+- **Pastille** `#E4EDFF` avec texte `#2350C9` (relevé `#325FE2`, foncé pour le contraste).
+- **Vert** `#1FA35B` : coches ; **jaune** `#FFC83D` : badge « La plus choisie ».
+
+## 3. Typographie
+
+- Non nommée par l&#x27;auteur. Relevé à l&#x27;œil : grotesque serrée, titres en graisse moyenne, approche négative. Le plus proche sur Google Fonts : **Inter Tight** pour les titres, **Inter** pour le texte.
+
+| Rôle | Police | Taille bureau / téléphone | Graisse | Interligne | Approche |
+|---|---|---|---|---|---|
+| Titre du hero | Inter Tight | 44 / 30 px | 500 | 1,12 | -0,03 em |
+| Titre de section | Inter Tight | 30 à 36 / 24 px | 500 (2e ligne en 600) | 1,12 | -0,03 em |
+| Titre de carte | Inter Tight | 17 px | 600 | 1,12 | -0,015 em |
+| Logo | Inter Tight | 26 px | 800 | 1 | -0,05 em |
+| Texte | Inter | 12 à 13,5 px | 400, gras 600 | 1,55 | 0 |
+| Pastille, bulle | Inter | 11 à 12 px | 600 | 1,2 | 0 |
+| Bouton | Inter | 13 px | 600 | 1,25 | 0 |
+| Étiquette de champ | Inter | 9,5 px | 700, capitales | 1 | 0,06 em |
+
+## 4. Composants
+
+- **Bouton plein** : 46 px, coins 9 px, bleu vif, flèche à droite, ombre bleue douce. **Bouton contour** : blanc, filet gris, texte marine.
+- **Pastille de section** : capsule bleu pâle, texte bleu en 11 px.
+- **Bulle flottante** : capsule bleu pâle à bord blanc, ombre légère, posée à cheval sur les images ; une version pleine bleu marque pour l&#x27;idée forte.
+- **Bandeau d&#x27;atouts** : capsule large filetée, 5 coches vertes en ligne.
+- **Carte de service** : blanche qui tourne au bleu très pâle en bas, icône dans un carré bleu pâle, titre, texte gris, photo en bas.
+- **Liste à filet** : chaque avantage précédé d&#x27;un trait vertical bleu marque.
+- **Carte de formule** : blanche ou bleu marque (vedette, badge jaune), nom en capitales espacées, coches vertes, bouton pleine largeur.
+- **Formulaire** : carte blanche à grande ombre, champs gris pâle de 44 px, étiquettes en capitales.
+- **FAQ** : questions en cartes blanches fines, chevron bleu qui pivote.
+- **Application dessinée en CSS** : tablette et téléphone avec en-tête bleu, recherche, liste des spécialités.
+
+## 5. Mise en page
+
+- Colonne de 1040 px ; encarts resserrés à 700 à 840 px.
+- Ordre : hero, intro (panneau), solution (6 cartes), encart « du discours au quotidien », application, formules, marque employeur, contact, FAQ, relance, pied.
+- Alternance de fonds : gris, blanc, panneau bleu pâle, gris ; l&#x27;encart « quotidien » chevauche la frontière blanc / gris.
+- Une grande bande bleu marque en biais passe derrière la tablette de l&#x27;application.
+- Espacement vertical : 40 à 60 px, plus serré qu&#x27;une page de vente.
+
+## 6. Profondeur et élévation
+
+- Ombres longues et bleutées sous les appareils, le formulaire et la formule vedette.
+- Les bulles débordent des images et de leur cadre ; le cadre de la photo « marque employeur » est doublé d&#x27;un aplat bleu pâle décalé.
+- Le hero porte deux grands anneaux blancs transparents en fond.
+
+## 7. Images
+
+| Id | Format | Section | Rôle |
+|---|---|---|---|
+| W-hero | 4:3 | hero | téléconsultation vue sur tablette, la médecin à l&#x27;écran |
+| W-equipe | 4:3 | intro | collègues autour d&#x27;un téléphone |
+| W-collaboratrice | 1:1 | intro | collaboratrice qui ouvre l&#x27;application |
+| W-generaliste | 16:9 | solution | consultation vidéo sur téléphone |
+| W-specialites | 16:9 | solution | téléphone sur la liste des spécialités |
+| W-suivi | 16:9 | solution | deux soignantes devant une tablette |
+| W-trajet | 16:9 | solution | application utilisée dans un bus |
+| W-examens | 16:9 | solution | téléphone sur des résultats d&#x27;analyse |
+| W-ordonnances | 16:9 | solution | la médecin valide une ordonnance |
+| W-equipe-medicale | 4:3 | marque-employeur | visioconférence de l&#x27;équipe médicale |
+
+- **Personnage** : Aïcha Mahamat, 44 ans, N&#x27;Djamena ; peau brun moyen, voile léger, visage serein, petites rides d&#x27;expression ; signature : blouse blanche, stéthoscope autour du cou. Métier : médecin généraliste, directrice médicale. Elle apparaît sur 5 images sur 10.
+- Les consignes complètes sont dans `images/commandes.json`.
+
+## 8. À faire, à ne pas faire
+
+- Faire : une pastille au-dessus de chaque titre de section.
+- Faire : nommer les services en bulles autour des images.
+- Ne pas faire : de ton « vendeur » ni de compte à rebours : c&#x27;est un site institutionnel.
+- Ne pas faire : le texte gris relevé `#7E8182` sur blanc pour du petit texte (3,9) : passer à `#6B7076`.
+
+## 9. Comportement responsive
+
+- Behance ne montre que le bureau. Le téléphone est notre proposition.
+- Sous 820 px : toutes les grilles à deux colonnes passent en une, cartes de service en 2 colonnes, formules empilées, bande en biais retirée.
+- Sous 560 px : cartes en 1 colonne, boutons du hero pleine largeur, atouts en liste, téléphone de la section application masqué.
+
+## 10. Mouvement
+
+- Moteur commun : `data-rv` partout, `data-lignes` sur trois titres, `data-aimant` sur les boutons pleins, barre de progression bleue.
+- Pas d&#x27;effet propre : un site institutionnel reste calme.
+
+## 11. Non mesuré, et choix tranchés seul
+
+- Les polices (§3).
+- La marque « MédiKa », les textes, les formules sans prix affiché (proposition sur demande, comme la source).
+- L&#x27;application dessinée en CSS ; les photos de la source deviennent des emplacements.
+- Le formulaire envoie vers WhatsApp.
+- Les gris et le bleu des pastilles foncés pour le contraste.
+- Le téléphone (§9).
+
+## 12. Consigne pour l&#x27;IA
+
+Construis la page d&#x27;accueil institutionnelle d&#x27;une offre de télémédecine pour entreprises, sur fond blanc et gris pâle `#EFF1F3`. Titres en Inter Tight 500 marine `#0D2D3D`, texte en Inter. Boutons bleu vif `#125CFE` à coins de 9 px. Chaque section s&#x27;ouvre sur une petite pastille bleu pâle. Mets l&#x27;application en scène sur tablette et téléphone, entourée de bulles qui nomment les services. Six cartes de service à photo, deux formules dont une bleu marque `#005AB2` avec badge jaune, un formulaire de demande de proposition, une FAQ en cartes fines et un pied bleu marque.
+
+## 2. Les sections, dans l&#x27;ordre
+
+01. #hero · Le hero : Dire qui, quoi, pour qui en une phrase, puis faire cliquer. Le geste : tablette et téléphone entourés de bulles flottantes.
+02. #intro · La valeur : Faire sentir le prix avant de le montrer. Le geste : collage de deux photos dans un panneau bleu pâle.
+03. #solution · Le contenu : Rendre l&#x27;offre concrète, morceau par morceau. Le geste : six cartes à icône, photo en bas.
+04. #quotidien · Le bandeau : Remettre du mouvement entre deux sections calmes. Le geste : encart bleu pâle à cheval sur deux fonds.
+05. #appli · La bascule : Montrer pourquoi cette solution est différente. Le geste : tablette inclinée sur une bande bleue.
+06. #plans · L&#x27;offre : Convertir : le prix, ce qu&#x27;il contient, le bouton. Le geste : carte blanche face à carte bleue vedette.
+07. #marque-employeur · La valeur : Faire sentir le prix avant de le montrer. Le geste : photo cadrée, quatre bulles qui débordent.
+08. #contact · La relance : Redonner le bouton à celui qui s&#x27;est décidé en route. Le geste : formulaire en carte blanche flottante.
+09. #faq · La FAQ : Lever les dernières objections. Le geste : questions en cartes fines, chevron bleu.
+10. #relance · La relance : Redonner le bouton à celui qui s&#x27;est décidé en route. Le geste : encart logo et deux boutons.
+11. #pied · Le pied : La légitimité : nom, mentions, contact. Le geste : pied bleu marque en trois colonnes.
+
+## 3. Les animations
+
+Les animations passent par un petit moteur commun (anim.js + anim.css, fournis plus bas). On ne code pas d&#x27;animation à la main : on pose des attributs.
+- data-rv : l&#x27;élément apparaît au défilement, décalé de 70 ms dans son groupe.
+- data-lignes : un titre à &lt;br&gt; monte ligne par ligne derrière un masque.
+- data-compte=&quot;3200&quot; : le chiffre compte jusqu&#x27;à sa valeur quand il entre à l&#x27;écran.
+- data-parallaxe=&quot;0.15&quot; : l&#x27;élément glisse plus lentement que la page.
+- data-incline : la carte s&#x27;incline vers la souris (6° au plus).
+- data-aimant : le bouton est attiré par la souris (6 px au plus).
+- data-progression : la barre de lecture en haut de page.
+Tout s&#x27;arrête sous prefers-reduced-motion : la page reste lisible et complète.
+
+Le moteur, à coller tel quel dans la page :
+
+```css
+/* anim.css : les états de départ des effets de anim.js. Sans la classe .anime (JS absent ou
+   reduced-motion), tout est visible : une page ne doit jamais dépendre du JS pour s&#x27;afficher. */
+.anime [data-rv]{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.16,1,.3,1) var(--d,0ms),transform .8s cubic-bezier(.16,1,.3,1) var(--d,0ms)}
+.anime [data-rv].vu{opacity:1;transform:none}
+.anime [data-rv][data-lignes]{opacity:1;transform:none}
+.ligne{display:block;overflow:hidden;padding-bottom:.08em;margin-bottom:-.08em}
+.ligne&gt;span{display:block}
+.anime [data-lignes] .ligne&gt;span{transform:translateY(105%);transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.anime [data-lignes].vu .ligne&gt;span{transform:none}
+[data-parallaxe]{will-change:transform}
+[data-aimant]{transition:translate .35s cubic-bezier(.16,1,.3,1)}
+[data-progression]{position:fixed;top:0;left:0;right:0;height:2px;transform-origin:0 50%;transform:scaleX(0);z-index:100;pointer-events:none}
+/* Reflet qui balaie un bouton au survol : ajouter la classe .reflet au bouton. */
+.reflet{position:relative;overflow:hidden;isolation:isolate}
+.reflet::after{content:&quot;&quot;;position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.28) 50%,transparent 65%);transform:translateX(-120%)}
+.reflet:hover::after{transform:translateX(120%);transition:transform .9s cubic-bezier(.16,1,.3,1)}
+@media (prefers-reduced-motion:reduce){.reflet::after{display:none}}
+```
+
+```js
+/* anim.js : le moteur de mouvement commun aux 4 styles (Goût IA, cycle 1).
+   Chaque page choisit ses effets par attributs ; le style (couleurs, durées) reste dans la page.
+   Rien ne bouge sous prefers-reduced-motion : tout est montré tel quel.
+
+   data-rv               apparaît au défilement (classe .vu posée), décalé de 70 ms dans son groupe
+   data-lignes           titre découpé ligne par ligne (&lt;br&gt;), chaque ligne monte à son tour
+   data-compte=&quot;3200&quot;    chiffre qui compte jusqu&#x27;à sa valeur quand il entre à l&#x27;écran
+   data-parallaxe=&quot;0.15&quot; glisse plus lentement que la page (facteur de vitesse)
+   data-incline          carte qui s&#x27;incline vers la souris (max 6°)
+   data-aimant           bouton attiré par la souris (max 6 px)
+   data-progression      barre de lecture en haut de page
+*/
+(() =&gt; {
+  const calme = matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;).matches;
+  const tactile = matchMedia(&#x27;(hover: none)&#x27;).matches;
+  const $$ = (s, r = document) =&gt; [...r.querySelectorAll(s)];
+
+  // Titres en lignes : on enveloppe chaque ligne pour la faire monter derrière un masque.
+  $$(&#x27;[data-lignes]&#x27;).forEach(t =&gt; {
+    const lignes = t.innerHTML.split(/&lt;br\s*\/?&gt;/i);
+    t.innerHTML = lignes.map((l, i) =&gt;
+      `&lt;span class=&quot;ligne&quot;&gt;&lt;span style=&quot;transition-delay:${i * 90}ms&quot;&gt;${l}&lt;/span&gt;&lt;/span&gt;`).join(&#x27;&#x27;);
+    t.setAttribute(&#x27;data-rv&#x27;, &#x27;&#x27;);
+  });
+
+  if (calme) {
+    $$(&#x27;[data-rv]&#x27;).forEach(e =&gt; e.classList.add(&#x27;vu&#x27;));
+    $$(&#x27;[data-compte]&#x27;).forEach(e =&gt; e.textContent = Number(e.dataset.compte).toLocaleString(&#x27;fr-FR&#x27;));
+    return;
+  }
+  document.documentElement.classList.add(&#x27;anime&#x27;);
+
+  // Apparition : décalage par fratrie, pour que les cartes d&#x27;une grille arrivent l&#x27;une après l&#x27;autre.
+  const vu = new IntersectionObserver(es =&gt; es.forEach(e =&gt; {
+    if (!e.isIntersecting) return;
+    e.target.classList.add(&#x27;vu&#x27;);
+    vu.unobserve(e.target);
+  }), { threshold: 0.12, rootMargin: &#x27;0px 0px -6% 0px&#x27; });
+  $$(&#x27;[data-rv]&#x27;).forEach(el =&gt; {
+    const freres = [...el.parentElement.children].filter(f =&gt; f.hasAttribute(&#x27;data-rv&#x27;));
+    el.style.setProperty(&#x27;--d&#x27;, `${Math.min(freres.indexOf(el), 6) * 70}ms`);
+    vu.observe(el);
+  });
+
+  // Compteurs.
+  const compte = new IntersectionObserver(es =&gt; es.forEach(e =&gt; {
+    if (!e.isIntersecting) return;
+    // Le chiffre final reste écrit tant qu&#x27;on ne le voit pas : une capture ou un robot lit la vraie valeur.
+    const el = e.target, fin = Number(el.dataset.compte), t0 = performance.now(), duree = 1600;
+    el.textContent = &#x27;0&#x27;;
+    const pas = t =&gt; {
+      const p = Math.min((t - t0) / duree, 1), v = 1 - Math.pow(1 - p, 4);
+      el.textContent = Math.round(fin * v).toLocaleString(&#x27;fr-FR&#x27;);
+      if (p &lt; 1) requestAnimationFrame(pas);
+    };
+    requestAnimationFrame(pas);
+    compte.unobserve(el);
+  }), { threshold: 0.6 });
+  $$(&#x27;[data-compte]&#x27;).forEach(e =&gt; compte.observe(e));
+
+  // Parallaxe et barre de lecture, sur une seule boucle.
+  const para = $$(&#x27;[data-parallaxe]&#x27;), barre = document.querySelector(&#x27;[data-progression]&#x27;);
+  let attente = false;
+  const defile = () =&gt; {
+    attente = false;
+    const h = innerHeight;
+    para.forEach(el =&gt; {
+      const r = el.getBoundingClientRect();
+      if (r.bottom &lt; -200 || r.top &gt; h + 200) return;
+      const decal = (r.top + r.height / 2 - h / 2) * Number(el.dataset.parallaxe);
+      el.style.transform = `translate3d(0,${decal.toFixed(1)}px,0)`;
+    });
+    if (barre) barre.style.transform = `scaleX(${scrollY / Math.max(1, document.body.scrollHeight - h)})`;
+  };
+  addEventListener(&#x27;scroll&#x27;, () =&gt; { if (!attente) { attente = true; requestAnimationFrame(defile); } }, { passive: true });
+  defile();
+
+  if (tactile) return;
+
+  // Inclinaison des cartes.
+  $$(&#x27;[data-incline]&#x27;).forEach(c =&gt; {
+    c.style.transition = &#x27;transform .5s cubic-bezier(.16,1,.3,1)&#x27;;
+    c.addEventListener(&#x27;mousemove&#x27;, e =&gt; {
+      const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      c.style.transform = `perspective(900px) rotateX(${(-y * 6).toFixed(2)}deg) rotateY(${(x * 6).toFixed(2)}deg) translateY(-3px)`;
+    });
+    c.addEventListener(&#x27;mouseleave&#x27;, () =&gt; c.style.transform = &#x27;&#x27;);
+  });
+
+  // Boutons aimantés.
+  $$(&#x27;[data-aimant]&#x27;).forEach(b =&gt; {
+    b.addEventListener(&#x27;mousemove&#x27;, e =&gt; {
+      const r = b.getBoundingClientRect();
+      b.style.translate = `${((e.clientX - r.left) / r.width - .5) * 12}px ${((e.clientY - r.top) / r.height - .5) * 8}px`;
+    });
+    b.addEventListener(&#x27;mouseleave&#x27;, () =&gt; b.style.translate = &#x27;&#x27;);
+  });
+})();
+```
+
+## 4. Les règles
+
+- Un seul fichier HTML, CSS dans &lt;style&gt;, aucune bibliothèque en dehors des polices Google.
+- Textes en français, écrits pour le métier donné. Aucun tiret long (cadratin ou demi-cadratin) dans les textes.
+- Images : des silhouettes ou des dégradés de remplacement, jamais une photo inventée d&#x27;une vraie personne.
+- Chaque section porte un id (celui de la liste plus haut) pour qu&#x27;on puisse la viser.
+- Contraste du texte de 4,5 au moins. La page tient de 360 à 1920 px de large sans débordement horizontal.
+- Le bouton principal et sa preuve tiennent dans le premier écran du téléphone.
+
+## 5. Ce que tu rends
+
+Le fichier HTML complet, prêt à ouvrir. Puis, en 5 lignes, ce que tu as dû deviner faute de précision dans la fiche.
+</pre>
+</main>
+<script>
+const b=document.getElementById('copier');
+b.onclick=async()=>{await navigator.clipboard.writeText(document.getElementById('texte').textContent);b.textContent='Copié';setTimeout(()=>b.textContent='Copier',1800)};
+</script>
+<footer>Réalisé par<strong>Yedidia Ruben - Digital Strategist</strong></footer>
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template W<b>Bleu clinique</b></span><nav aria-label="Autour du template W"><ul><li><a href="./">Template</a></li><li><a href="avec-images.html">Template avec images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html">Design<small>DESIGN.md</small></a></li><li><a href="prompt.html" aria-current=page>Prompt de la page<small>kit</small></a></li><li><a href="prompts.html">Prompts des images</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template W : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">W</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+
+</body>
+</html>

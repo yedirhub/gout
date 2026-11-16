@@ -311,6 +311,7 @@ footer u{text-underline-offset:3px;text-decoration-color:#555}
 <meta name="robots" content="noindex">
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../../commun/portfolio.css">
+<link rel="stylesheet" href="../../commun/flottant.css">
 </head>
 <body>
 <div data-progression style="background:linear-gradient(90deg,#8F5737,#FF8A3D,#FFC48A);height:2px;box-shadow:0 0 10px rgba(255,138,61,.7)"></div>
@@ -686,7 +687,7 @@ footer u{text-underline-offset:3px;text-decoration-color:#555}
   <p class="dec">La décision vous appartient. Mais elle a une échéance.</p>
   <div class="cta" style="margin-top:28px"><a class="btn" data-aimant href="#offre">Rejoindre sans risque</a></div>
 </section>
-<footer id="pied"><u>Tous droits réservés · Copyright © 2026 Henri Valmont.</u><br>Template · Style A « Luxe sombre »<div class="pf-centre"><span class="pf-par">Réalisé par <strong>Yedidia Ruben - Digital Strategist</strong></span><nav class="pf-liens" aria-label="Autour de ce template"><a href="source.html">Source</a><a href="design.html">DESIGN.md</a><a href="prompt.html">Prompt</a><a href="/">Tous les templates</a></nav></div></footer>
+<footer id="pied"><u>Tous droits réservés · Copyright © 2026 Henri Valmont.</u><br>Template · Style A « Luxe sombre »<div class="pf-centre"><span class="pf-par">Réalisé par <strong>Yedidia Ruben - Digital Strategist</strong></span></div></footer>
 <div class="barre-fin"></div>
 
 <script>
@@ -694,5 +695,8 @@ let t=24*3600-1;const z=n=>String(n).padStart(2,'0');
 setInterval(()=>{t=t>0?t-1:24*3600-1;h.textContent=z(Math.floor(t/3600));m.textContent=z(Math.floor(t%3600/60));s.textContent=z(t%60)},1000);
 </script>
 <script src="../../commun/anim.js" defer></script>
+
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template A<b>Luxe sombre</b></span><nav aria-label="Autour du template A"><ul><li><a href="./" aria-current=page>Template</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html">Design<small>DESIGN.md</small></a></li><li><a href="prompt.html">Prompt de la page<small>kit</small></a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template A : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">A</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
 </body>
 </html>

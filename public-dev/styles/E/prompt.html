@@ -6,6 +6,7 @@
 <meta name="robots" content="noindex">
 <title>Template E · Néon vert · Prompt · Yedidia Ruben - Digital Strategist</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../commun/flottant.css">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{background:#0E0E0D;color:#E9E5DE;font-family:'Inter Tight',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -32,7 +33,9 @@ main img.tel{width:min(390px,100%)}
 pre{width:min(980px,100%);margin:0 auto;padding:28px;background:#151514;border:1px solid #262624;border-radius:12px;overflow:auto;max-height:72vh;font:13px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#D8D2C8;white-space:pre-wrap;word-break:break-word}
 footer{text-align:center;padding:48px 20px 56px;font-size:13px;color:#8A847C;line-height:1.6}
 footer strong{display:block;color:#E9E5DE;font-weight:500;font-size:15px}
-@media (max-width:980px){header{justify-content:center;padding:10px 8px} header .titre,.retour{display:none} .onglets{max-width:100%;overflow-x:auto;scrollbar-width:none} .onglets a{padding:0 10px}}
+@media (max-width:1180px){.onglets a{padding:0 10px}}
+@media (max-width:980px){header{justify-content:center;padding:14px 16px} .onglets,.retour{display:none} header .titre{white-space:normal;text-align:center}}
+/* ancien : sous 980 px, onglets en bande qui défilait de côté ; retirée le 16/11/2026, le bouton flottant porte la navigation */
 </style>
 </head>
 <body>
@@ -144,15 +147,15 @@ Construis une page noire posée dans un cadre aux coins très arrondis bordé d&
 
 ## 2. Les sections, dans l&#x27;ordre
 
-01. #hero · « Devenez stratège de lancements à fort impact avec Malik Diallo ! »
-02. #carriere · « Faites grimper votre carrière »
-03. #pour-qui · « C&#x27;est pour qui ? »
-04. #temoignages · « Ce que disent mes élèves »
-05. #inclus
-06. #offre
-07. #qui · « Qui est Malik Diallo ? »
-08. #faq
-09. #support · « Encore une question ? Écrivez à notre équipe sur WhatsApp. »
+01. #hero · Le hero : Dire qui, quoi, pour qui en une phrase, puis faire cliquer. Le geste : duo en hero, cartes vitrées.
+02. #carriere · La douleur : Le visiteur se reconnaît : « c&#x27;est moi ».
+03. #pour-qui · Pour qui : Trier : celui qui n&#x27;est pas la cible s&#x27;en va, celui qui l&#x27;est se sent choisi.
+04. #temoignages · La preuve : Faire parler les autres : « ça a marché pour des gens comme moi ».
+05. #inclus · Le contenu : Rendre l&#x27;offre concrète, morceau par morceau.
+06. #offre · L&#x27;offre : Convertir : le prix, ce qu&#x27;il contient, le bouton.
+07. #qui · Qui est derrière : Un humain derrière l&#x27;offre, et un lieu réel.
+08. #faq · La FAQ : Lever les dernières objections.
+09. #support · La relance : Redonner le bouton à celui qui s&#x27;est décidé en route.
 
 ## 3. Les animations
 
@@ -309,5 +312,8 @@ const b=document.getElementById('copier');
 b.onclick=async()=>{await navigator.clipboard.writeText(document.getElementById('texte').textContent);b.textContent='Copié';setTimeout(()=>b.textContent='Copier',1800)};
 </script>
 <footer>Réalisé par<strong>Yedidia Ruben - Digital Strategist</strong></footer>
+<div id="pf-flottant"><div class="pf-f-menu" id="pf-f-menu" hidden><span class="pf-f-titre">Template E<b>Néon vert</b></span><nav aria-label="Autour du template E"><ul><li><a href="./">Template</a></li><li class="pf-f-sep" role="presentation"></li><li><a href="source.html">Source<small>Behance</small></a></li><li><a href="design.html">Design<small>DESIGN.md</small></a></li><li><a href="prompt.html" aria-current=page>Prompt de la page<small>kit</small></a></li><li class="pf-f-sep" role="presentation"></li><li><a href="../../">Tous les templates<small>25</small></a></li><li><a href="../../sections/">Sections<small>banque</small></a></li></ul></nav></div><button type="button" class="pf-f-bouton" aria-expanded="false" aria-controls="pf-f-menu" aria-label="Menu du template E : source, design, prompts, autres templates"><span class="pf-f-lettre" aria-hidden="true">E</span><span class="pf-f-mot">Menu</span><span class="pf-f-fleche" aria-hidden="true"></span></button></div>
+<script src="../../commun/flottant.js" defer></script>
+
 </body>
 </html>
